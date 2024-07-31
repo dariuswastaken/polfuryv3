@@ -1,6 +1,6 @@
 {
   "client": {
-    "version": "2.0.0 dev"
+    "version": "3.0.0-1"
   },
   "pulsar": {
     "version": "0.0.2-2",
