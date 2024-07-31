@@ -1,0 +1,16 @@
+const mongoose = require("mongoose");
+
+const logSchema = new mongoose.Schema(
+  {
+    tip_: String,
+    id: String,
+    data: Object,
+  },
+  { collection: "logs" }
+);
+
+const Log = new mongoose.model("Log", logSchema);
+
+module.exports = {
+  schema: Log,
+};

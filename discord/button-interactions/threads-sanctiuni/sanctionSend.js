@@ -1,0 +1,47 @@
+module.exports = {
+  name: 'sanction-thread-send',
+  enabled: false,
+  async execute(pulsar, interaction, mongo, utils) {
+    await interaction.deferReply({ ephemeral: true });
+
+    const sanctionID = interaction.customId.split('/')[1];
+
+    const sanction = await mongo.getSanction(sanctionID);
+    if (sanction.active === false) {
+      await utils.discord.errors.threadClosedError(pulsar, interaction);
+      return;
+    }
+
+    const formattedSanctionList = [];
+    for (let sanc of sanction.sanctions) {
+      formattedSanctionList.push(sanc.split(' - ')[0]);
+    }
+
+    if (formattedSanctionList.includes('demitere')) {
+    } else if (formattedSanctionList.includes('down')) {
+    } else {
+      await utils.quickFunctions.createSanctionPrivateChannel({
+        pulsar: pulsar,
+        interaction: interaction,
+        mongo: mongo,
+        sanctionID: sanctionID
+      });
+      await utils.quickFunctions.addSanctionToMember({
+        pulsar: pulsar,
+        mongo: mongo,
+        userID: sanction.sanctionedID,
+        sanctions: sanction.sanctions
+      });
+
+      await mongo.closeSanction(sanctionID);
+
+      await utils.discord.embeds.sendSuccessEmbed(
+        'Sanctiunea a fost acordata, thread-ul a fost marcat ca si **INCHIS**.',
+        {
+          pulsar: pulsar,
+          interaction: interaction
+        }
+      );
+    }
+  }
+};

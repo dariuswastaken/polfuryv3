@@ -1,0 +1,14 @@
+{
+  "client": {
+    "version": "2.0.0 dev"
+  },
+  "pulsar": {
+    "version": "0.0.2-2",
+    "namespace": "pulsar-fw",
+    "database": {
+      "type": "mongodb",
+      "url": "mongodb://127.0.0.1:27017/PolDB",
+      "wrapper": "mongoose"
+    }
+  }
+}

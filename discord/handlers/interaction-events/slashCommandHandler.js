@@ -1,0 +1,54 @@
+const mongo = require('../../../src/mongo/mongoQueries.js');
+const path = require('path');
+
+module.exports = {
+  name: 'slashCommandHandler',
+  type: 'interactionBased',
+  enabled: false,
+  async execute(Pulsar) {
+    Pulsar().client.on('interactionCreate', async (interaction) => {
+      if (!interaction.isCommand()) return;
+
+      const client = Pulsar().client;
+
+      const pulsar = {
+        client: client,
+        config: await Pulsar().config(),
+        utilsManager: Pulsar().utilsManager.createInstance(),
+        discordManager: Pulsar().discordManager.createInstance(),
+        fileManager: Pulsar().fileManager.createInstance(),
+        webManager: Pulsar().webManager.createInstance()
+      };
+
+      const call = path.resolve(__dirname);
+      const utils = Pulsar().utilsManager.createNew(
+        call,
+        '../../src/utils/exports/utilsExports.js'
+      );
+
+      const { commandName } = interaction;
+      if (!client.collections.slashCommands.has(commandName)) return;
+
+      try {
+        const slashCommand = await client.collections.slashCommands.get(commandName)
+        if(slashCommand.enabled === false && interaction.user.id !== "1027526587031232552") {
+          await pulsar.discordManager.embeds.createErrorEmbed(
+            'Eroare',
+            `Aceasta optiune este dezactivata.`,
+            {
+              interaction: interaction,
+              ephemeral: true,
+            }
+          );
+          return;
+        }
+        await slashCommand.execute(pulsar, interaction, mongo, utils);
+        console.log(
+          `[SLASH COMMANDS] Command ${commandName} was executed by ${interaction.user.tag}`
+        );
+      } catch (err) {
+        console.error(`[SLASH COMMAND ERROR] ${err}\n${err.stack}`);
+      }
+    });
+  }
+};

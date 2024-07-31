@@ -1,0 +1,1256 @@
+[22.7.2024 23:32:37] [WEB ERROR] Failed to fetch: Error: 504
+[22.7.2024 23:32:37] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by albert26p
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[22.7.2024 23:32:37] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by albert26p
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[22.7.2024 23:39:44] [WEB ERROR] Failed to fetch: Error: 504
+[22.7.2024 23:39:44] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii failed to execute by neasonic.
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/meniu-conducere/infoMembru.js:9:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:13)
+[23.7.2024 02:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 05:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 08:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 08:29:51] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 08:29:51] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by bengalezu5464
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 08:29:51] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by bengalezu5464
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[23.7.2024 09:10:52] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 09:10:52] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 09:10:52] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[23.7.2024 10:26:29] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 10:26:29] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 10:26:29] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[23.7.2024 10:43:18] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by albert26p
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 10:43:19] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by albert26p
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:13)
+[23.7.2024 10:51:01] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 10:51:01] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii failed to execute by dariusss1337
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/meniu-conducere/infoMembru.js:9:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:13)
+[23.7.2024 11:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 11:07:49] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by deniss23
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 11:07:49] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by deniss23
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:13)
+[23.7.2024 11:14:12] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by albert26p
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 11:14:12] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by albert26p
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:13)
+[23.7.2024 11:17:29] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 11:17:29] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii failed to execute by dariusss1337
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/meniu-conducere/infoMembru.js:9:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:13)
+[23.7.2024 12:00:40] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 12:00:40] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by raulws.
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 12:00:40] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by raulws.
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[23.7.2024 12:44:15] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 12:44:15] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 12:44:15] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[23.7.2024 13:49:12] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 13:49:12] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 13:49:12] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[23.7.2024 14:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 15:19:01] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 15:19:01] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by sulmaking
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 15:19:01] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by sulmaking
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[23.7.2024 15:56:44] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 15:56:44] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by alexxnsjs
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 15:56:44] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by alexxnsjs
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[23.7.2024 17:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 19:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 19:12:46] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 19:12:46] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by f0rest
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 19:12:46] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by f0rest
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[23.7.2024 21:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 21:50:39] [WEB ERROR] Failed to fetch: Error: 504
+[23.7.2024 21:50:39] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ciotoi
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[23.7.2024 21:50:39] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ciotoi
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[24.7.2024 02:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 02:46:00] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 02:46:00] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by saidnfx
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[24.7.2024 02:46:00] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by saidnfx
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[24.7.2024 05:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 08:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 10:27:31] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 10:27:31] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by sulmaking
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[24.7.2024 10:27:31] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by sulmaking
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[24.7.2024 11:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 12:25:53] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 12:25:53] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by coxsefu
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[24.7.2024 12:25:53] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by coxsefu
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[24.7.2024 14:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 15:11:26] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 15:11:26] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ionutjr
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[24.7.2024 15:11:26] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ionutjr
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[24.7.2024 17:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 17:19:33] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 17:19:33] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by _thebeamer
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[24.7.2024 17:19:33] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by _thebeamer
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[24.7.2024 17:58:48] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 17:58:48] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[24.7.2024 17:58:48] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[24.7.2024 19:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[24.7.2024 21:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 00:28:39] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 00:28:39] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ace4415
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 00:28:39] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ace4415
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 02:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 05:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 07:58:18] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 07:58:18] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by albert26p
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 07:58:18] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by albert26p
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 08:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 09:25:14] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 09:25:14] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by exe4299
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 09:25:14] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by exe4299
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 09:37:52] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 09:37:52] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by beculetul
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 09:37:52] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by beculetul
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 10:54:45] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 10:54:45] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii failed to execute by justdexter
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/meniu-conducere/infoMembru.js:9:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:13)
+[25.7.2024 11:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 12:40:46] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 12:40:46] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by pandi1234
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 12:40:46] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by pandi1234
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 13:00:32] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 13:00:32] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by 7nelu
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 13:00:32] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by 7nelu
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 14:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 15:32:08] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 15:32:08] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by raulws.
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 15:32:08] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by raulws.
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 15:53:05] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 15:53:05] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by xprosebyktms
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 15:53:05] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by xprosebyktms
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 17:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 19:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 19:29:14] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 19:29:14] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by antiurss.
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 19:29:14] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by antiurss.
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 20:22:58] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 20:22:58] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by _thebeamer
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 20:22:58] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by _thebeamer
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 20:25:00] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 20:25:00] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by _thebeamer
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 20:25:00] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by _thebeamer
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 20:31:34] [WEB ERROR] Failed to fetch: Error: 504
+[25.7.2024 20:31:34] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by f0rest
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[25.7.2024 20:31:34] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by f0rest
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[25.7.2024 21:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 05:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 08:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 08:04:56] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 08:04:56] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ionutjr
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[26.7.2024 08:04:56] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ionutjr
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[26.7.2024 11:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 11:17:31] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 11:17:31] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by antiurss.
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[26.7.2024 11:17:31] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by antiurss.
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[26.7.2024 11:20:37] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 11:20:37] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[26.7.2024 11:20:37] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[26.7.2024 14:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 15:52:53] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 15:52:53] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by m1n3ru
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[26.7.2024 15:52:53] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by m1n3ru
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[26.7.2024 16:12:33] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 16:12:33] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ciotoi
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[26.7.2024 16:12:33] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ciotoi
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[26.7.2024 17:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 18:48:21] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 18:48:21] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[26.7.2024 18:48:21] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[26.7.2024 19:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 20:44:21] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 20:44:21] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by aka.wxy_
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[26.7.2024 20:44:21] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by aka.wxy_
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[26.7.2024 21:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 21:08:21] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 21:08:21] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by raulws.
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[26.7.2024 21:08:21] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by raulws.
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[26.7.2024 21:59:24] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by _mr.luca_
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[26.7.2024 21:59:24] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by _mr.luca_
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:13)
+[26.7.2024 22:05:10] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 22:05:10] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by 30andrei
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[26.7.2024 22:05:10] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by 30andrei
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[26.7.2024 23:03:10] [WEB ERROR] Failed to fetch: Error: 504
+[26.7.2024 23:03:10] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by raulws.
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[26.7.2024 23:03:10] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by raulws.
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[27.7.2024 02:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 02:20:22] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by saityzxc
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[27.7.2024 02:20:22] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by saityzxc
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:13)
+[27.7.2024 05:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 08:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 08:58:02] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 08:58:02] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by berrt69
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[27.7.2024 08:58:02] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by berrt69
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[27.7.2024 09:06:28] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 09:06:28] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ciotoi
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[27.7.2024 09:06:28] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ciotoi
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[27.7.2024 11:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 11:04:48] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 11:04:48] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by cheptanstate
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[27.7.2024 11:04:48] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by cheptanstate
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[27.7.2024 11:52:15] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 11:52:15] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by matei9670
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[27.7.2024 11:52:15] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by matei9670
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[27.7.2024 13:48:32] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 13:48:32] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[27.7.2024 13:48:32] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[27.7.2024 14:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 14:26:23] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 14:26:23] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by antiurss.
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[27.7.2024 14:26:23] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by antiurss.
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[27.7.2024 17:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 19:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 21:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 21:02:00] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 23:14:31] [WEB ERROR] Failed to fetch: Error: 504
+[27.7.2024 23:14:31] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ionutss12
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[27.7.2024 23:14:31] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ionutss12
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 02:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 03:31:26] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 03:31:26] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by eldosunosiempre
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 03:31:26] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by eldosunosiempre
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 05:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 07:12:57] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 07:12:57] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by cheptanstate
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 07:12:57] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by cheptanstate
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 08:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 09:17:29] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 09:17:29] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by matei9670
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 09:17:29] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by matei9670
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 11:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 11:24:10] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 11:24:10] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 11:24:10] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 12:43:01] [BUTTON INTERACTION EVENT ERROR] Button interaction: formular-trecere-test failed to execute by neasonic.
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.showModal (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:256:5)
+    at async Object.displayFormularTrecereTest (/home/halvapi/Dev/polfury/src/utils/functions/discord/modals.js:73:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/formulare/formularEvidentaTeste.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 12:43:10] [BUTTON INTERACTION EVENT ERROR] Button interaction: formular-trecere-test failed to execute by neasonic.
+ConnectTimeoutError: Connect Timeout Error
+    at onConnectTimeout (/home/halvapi/Dev/polfury/node_modules/.pnpm/undici@6.13.0/node_modules/undici/lib/core/connect.js:190:24)
+    at /home/halvapi/Dev/polfury/node_modules/.pnpm/undici@6.13.0/node_modules/undici/lib/core/connect.js:133:46
+    at Immediate._onImmediate (/home/halvapi/Dev/polfury/node_modules/.pnpm/undici@6.13.0/node_modules/undici/lib/core/connect.js:174:9)
+    at process.processImmediate (node:internal/timers:471:21)
+[28.7.2024 12:43:10] [BUTTON INTERACTION EVENT ERROR] Button interaction: formular-trecere-test failed to execute by neasonic.
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:730:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:835:23)
+    at async _REST.request (/home/halvapi/Dev/polfury/node_modules/.pnpm/@discordjs+rest@2.3.0/node_modules/@discordjs/rest/dist/index.js:1278:22)
+    at async ButtonInteraction.showModal (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:256:5)
+    at async Object.displayFormularTrecereTest (/home/halvapi/Dev/polfury/src/utils/functions/discord/modals.js:73:5)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/formulare/formularEvidentaTeste.js:5:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:13)
+[28.7.2024 12:43:11] [BUTTON INTERACTION EVENT ERROR] Button interaction: formular-trecere-test failed to execute by neasonic.
+ConnectTimeoutError: Connect Timeout Error
+    at onConnectTimeout (/home/halvapi/Dev/polfury/node_modules/.pnpm/undici@6.13.0/node_modules/undici/lib/core/connect.js:190:24)
+    at /home/halvapi/Dev/polfury/node_modules/.pnpm/undici@6.13.0/node_modules/undici/lib/core/connect.js:133:46
+    at Immediate._onImmediate (/home/halvapi/Dev/polfury/node_modules/.pnpm/undici@6.13.0/node_modules/undici/lib/core/connect.js:174:9)
+    at process.processImmediate (node:internal/timers:471:21)
+[28.7.2024 13:21:24] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 13:21:24] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 13:21:24] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 13:41:06] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 13:41:06] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 13:41:06] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by porcea
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 13:47:55] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 13:47:55] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by duinea
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 13:47:55] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by duinea
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 14:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 15:23:37] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 15:23:37] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by stephanie0509
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 15:23:37] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by stephanie0509
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 15:52:20] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 15:52:20] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by eduardirm
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 15:52:20] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by eduardirm
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 16:37:08] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 16:37:08] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by duinea
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 16:37:08] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by duinea
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 17:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 18:53:07] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 18:53:07] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by f0rest
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 18:53:07] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by f0rest
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 19:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 19:53:29] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 19:53:29] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 19:53:29] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 21:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 23:03:00] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 23:03:00] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by gamlenciaga
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 23:03:00] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by gamlenciaga
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 23:08:14] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 23:08:14] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by comeata
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 23:08:14] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by comeata
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 23:31:37] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 23:31:37] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by matei.0505
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 23:31:37] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by matei.0505
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[28.7.2024 23:53:35] [WEB ERROR] Failed to fetch: Error: 504
+[28.7.2024 23:53:35] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by .vlad.albanezu.
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[28.7.2024 23:53:35] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by .vlad.albanezu.
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 01:28:13] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 01:28:13] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by vlady.dev
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 01:28:13] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by vlady.dev
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 01:33:19] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 01:33:19] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by eldosunosiempre
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 01:33:19] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by eldosunosiempre
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 02:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 04:31:42] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 04:31:42] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 04:31:42] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by nostradamus.info
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 05:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 06:16:45] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 06:16:45] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ionuut.dominikan.
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 06:16:45] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ionuut.dominikan.
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 07:07:02] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 07:07:02] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ionutss12
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 07:07:02] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ionutss12
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 08:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 08:36:56] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 08:36:56] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by covritm
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 08:36:56] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by covritm
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 09:42:14] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 09:42:14] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by aleczzz23
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 09:42:14] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by aleczzz23
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 09:44:24] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 09:44:24] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by aleczzz23
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 09:44:24] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by aleczzz23
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 09:53:18] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 09:53:18] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by alexgg10
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 09:53:18] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by alexgg10
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 11:01:00] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 11:18:26] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 11:18:26] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by 30andrei
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 11:18:26] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by 30andrei
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 11:58:21] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 11:58:21] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by xenn654
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 11:58:21] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by xenn654
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 12:13:04] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 12:13:04] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by matei184
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 12:13:04] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by matei184
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[29.7.2024 12:23:30] [WEB ERROR] Failed to fetch: Error: 504
+[29.7.2024 12:23:30] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ciotoi
+TypeError: Cannot read properties of undefined (reading 'data')
+    at Object.isOnDuty (/home/halvapi/Dev/polfury/pulsar/src/web/functions/web.js:12:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.sendUserInfoEmbed (/home/halvapi/Dev/polfury/src/utils/functions/discord/embeds.js:68:20)
+    at async Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:13:5)
+    at async Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:47:13)
+[29.7.2024 12:23:30] [BUTTON INTERACTION EVENT ERROR] Button interaction: informatii-membru failed to execute by ciotoi
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (/home/halvapi/Dev/polfury/node_modules/.pnpm/discord.js@14.15.2/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:69:46)
+    at Object.execute (/home/halvapi/Dev/polfury/discord/button-interactions/info-membru/informatii.js:5:23)
+    at Client.<anonymous> (/home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:73:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

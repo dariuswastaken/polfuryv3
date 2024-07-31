@@ -1,0 +1,28 @@
+const mongoose = require("mongoose");
+
+const eivdentaHighspeedSchema = new mongoose.Schema(
+  {
+    tip_: String,
+    uniqueID: String,
+    reference: String,
+    active: Boolean,
+    data: {
+      nume: String,
+      tip: String,
+      IDDiscord: String,
+      numarInmatriculare: String,
+      dataClockIn: Date,
+      dataClockOut: Date || null,
+    },
+  },
+  { collection: "evidenteHighspeed" }
+);
+
+const EvidentaHighspeed = new mongoose.model(
+  "EvidentaHighspeed",
+  eivdentaHighspeedSchema
+);
+
+module.exports = {
+  schema: EvidentaHighspeed,
+};
