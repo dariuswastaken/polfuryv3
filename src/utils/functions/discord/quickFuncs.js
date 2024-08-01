@@ -144,85 +144,6 @@ module.exports = {
         break;
     }
   },
-  async createActivityList({ pulsar, utils, interaction, mongo, week }) {
-    const members = await mongo.getAllMembers();
-
-    for (let member of members) {
-      if (
-        member.certificate.radio === true &&
-        member.certificate.mdt === true
-      ) {
-        const profile = await mongo.getProfile(member.IDDiscord);
-        const userActivity = await mongo.getActivity(member.IDDiscord, week);
-        const [day, month, year] = await profile.dataActualizare.split('.');
-        const dataActualizareF = `${year}-${month}-${day}`;
-
-        const dataActualizare = new Date(dataActualizareF);
-        const dataCurenta = new Date();
-
-        const diffInDays = await utils.dayConversion.getDifferenceInDays(
-          dataActualizare,
-          dataCurenta
-        );
-
-        if (userActivity) {
-          const actions = await utils.activity.utils.getActionActivity(
-            week,
-            member.IDDiscord,
-            profile.grad,
-            pulsar.client
-          );
-
-          let concediu = await mongo.getLeave(member.IDDiscord, week);
-          if (!concediu) concediu = { days: [] };
-
-          let activityGrade = await utils.algorithms.gradeAlgorithm(
-            profile.grad,
-            {
-              activity: userActivity.data.pontaj,
-              reports: userActivity.data.rapoarte,
-              fines: userActivity.data.amenzi,
-              calls: userActivity.data.apeluri,
-              actions: actions,
-              leaveDays: concediu.days.length
-            }
-          );
-
-          let gradeRating = await utils.activity.utils.gradeRating(
-            activityGrade,
-            concediu.days.length
-          );
-
-          if(activityGrade >= 10) {
-            console.log(
-              `${member.IDDiscord} | ${profile.IDServer} | ${profile.nume} | ${profile.grad} | ${diffInDays} zile | Rating: ${gradeRating} | Nota: ${activityGrade}`
-            );
-          }
-
-          if (profile.grad === 'Cadet' && diffInDays >= 4) {
-            if (gradeRating === 'B' || gradeRating === 'A') {
-              console.log(
-                `${member.IDDiscord} | ${profile.IDServer} | ${profile.nume} | ${profile.grad} | ${diffInDays} zile | Rating: ${gradeRating} | Nota: ${activityGrade}`
-              );
-            }
-          } else if (profile.grad === 'Agent' && diffInDays >= 12) {
-            if (gradeRating === 'B' || gradeRating === 'A') {
-              console.log(
-                `${member.IDDiscord} | ${profile.IDServer} | ${profile.nume} | ${profile.grad} | ${diffInDays} zile | Rating: ${gradeRating} | Nota: ${activityGrade}`
-              );
-            }
-          } else if (profile.grad === 'Agent-Principal' && diffInDays >= 18) {
-            if (gradeRating === 'B' || gradeRating === 'A') {
-              console.log(
-                `${member.IDDiscord} | ${profile.IDServer} | ${profile.nume} | ${profile.grad} | ${diffInDays} zile | Rating: ${gradeRating} | Nota: ${activityGrade}`
-              );
-            }
-          }
-        }
-      }
-    }
-    console.log('Loop ended');
-  },
   async createSanctionThread({
     pulsar,
     utils,
@@ -376,7 +297,7 @@ module.exports = {
 
     const buttons = [
       {
-        id: 'close-sanction-channel',
+        id: `close-sanction-channel/${sanctionedProfile.IDDiscord}/${sanctionID}`,
         style: 'Primary',
         label: '✅ Am inteles'
       }
@@ -430,8 +351,8 @@ module.exports = {
       'Instr. HS': '1102705257802387518',
       'Instr. Pilot': '1094603228668248094',
       'Instr. Moto': '1094603206203547758',
-      'Tester': '1094603202734854225'
-    }
+      Tester: '1094603202734854225'
+    };
     const member = await interaction.guild.members.fetch(userID);
     await member.roles.add(roleIDs[func]);
     await mongo.addFunc(userID, func);
@@ -444,10 +365,58 @@ module.exports = {
       'Instr. HS': '1102705257802387518',
       'Instr. Pilot': '1094603228668248094',
       'Instr. Moto': '1094603206203547758',
-      'Tester': '1094603202734854225'
-    }
+      Tester: '1094603202734854225'
+    };
     const member = await interaction.guild.members.fetch(userID);
     await member.roles.remove(roleIDs[func]);
     await mongo.removeFunc(userID, func);
+  },
+  async createChannelTranscript({ interaction, channelID, type}) {
+    const channel = await interaction.guild.channels.cache.get(channelID);
+    let messages = await channel.messages.fetch({ limit: 100 });
+    let sortedMessages = Array.from(messages.values()).sort(
+      (a, b) => a.createdTimestamp - b.createdTimestamp
+    );
+
+    let transcriptHTML = `
+    <html>
+    <head>
+        <title>Transcript ${type}</title>
+        <style>
+            body { font-family: Arial, sans-serif; background-color: #36393f; color: #dcddde; }
+            .message { margin-bottom: 1em; }
+            .timestamp { color: #72767d; font-size: 0.8em; }
+            .username { color: #b9bbbe; font-weight: bold; }
+            .content { color: #dcddde; }
+            .avatar { border-radius: 50%; width: 32px; height: 32px; }
+            .role { color: #b9bbbe; font-size: 0.8em; }
+        </style>
+    </head>
+    <body>
+        ${sortedMessages
+          .map(
+            (message) => `
+            <div class="message">
+                <img class="avatar" src="${message.author.displayAvatarURL({
+                  format: 'png',
+                  dynamic: true
+                })}" alt="${message.author.username}/userAvatar">
+                <span class="timestamp">${new Date(
+                  message.createdTimestamp
+                ).toLocaleString('ro-RO', {
+                  timeZone: 'Europe/Bucharest'
+                })}</span>
+                <span class="username">${message.author.username}</span>
+                <p class="content">${message.cleanContent}</p>
+            </div>
+        `
+          )
+          .join('')}
+    </body>
+    </html>
+    `;
+
+    const transcript = Buffer.from(transcriptHTML, 'utf-8');
+    return transcript;
   }
 };
