@@ -1,6 +1,6 @@
 module.exports = {
   name: 'sanction-thread-send',
-  enabled: false,
+  enabled: true,
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 
