@@ -317,14 +317,25 @@ module.exports = {
         );
       }
     } else if (type === 'all') {
-      await db.update(
-        'Concediu',
-        {
+      console.log('passed all');
+
+      if (!leave) {
+        await db.create('Concediu', {
           IDDiscord: discordID,
-          perioada: `${currentWeek[0]} - ${currentWeek[6]}`
-        },
-        { $set: { days: currentWeek } }
-      );
+          perioada: `${currentWeek[0]} - ${currentWeek[6]}`,
+          reason: '-',
+          days: days
+        });
+      } else {
+        await db.update(
+          'Concediu',
+          {
+            IDDiscord: discordID,
+            perioada: `${currentWeek[0]} - ${currentWeek[6]}`
+          },
+          { $set: { days: currentWeek } }
+        );
+      }
     }
   },
 
@@ -496,11 +507,18 @@ module.exports = {
   },
 
   async getFuncActivity(userID, type) {
-    if(type === 'tester') {
-      const result = await db.findMore('Log', { tip_: 'evidentaTest', ['data.testerID']: userID });
+    if (type === 'tester') {
+      const result = await db.findMore('Log', {
+        tip_: 'evidentaTest',
+        ['data.testerID']: userID
+      });
       return result.length;
     } else {
-      const result = await db.findMore('Log', { tip_: 'adaugareCertificat', ['data.authorID']: userID, ['data.certificat']: type });
+      const result = await db.findMore('Log', {
+        tip_: 'adaugareCertificat',
+        ['data.authorID']: userID,
+        ['data.certificat']: type
+      });
       return result.length;
     }
   },
@@ -534,5 +552,5 @@ module.exports = {
   async getCooldowns(userID) {
     const result = await db.findMore('Cooldown', { IDDiscord: userID });
     return result;
-  }
+  },
 };
