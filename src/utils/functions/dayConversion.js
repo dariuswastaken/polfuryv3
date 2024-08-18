@@ -15,7 +15,7 @@ module.exports = {
     return `${day}.${month}.${year}`;
   },
   async getCurrentWeek() {
-    let today = new Date(new Date().setHours(new Date().getHours() + 3));
+    let today = new Date();
     let day = today.getDay();
 
     let mondayDiff = day - 1;
