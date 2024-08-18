@@ -6,12 +6,29 @@ module.exports = {
 
     const week = interaction.values[0];
 
-    await utils.quickFunctions.createActivityList({
+    const hasList = await mongo.getEntryList('up', week);
+    if(hasList) {
+      await utils.discord.errors.listAlreadyExistsError(pulsar, interaction);
+      return;
+    }
+
+    const upList = await utils.quickFunctions.createUpList({
+      interaction: interaction,
       pulsar: pulsar,
       utils: utils,
-      interaction: interaction,
       mongo: mongo,
       week: week
     })
+
+    const outList = await utils.quickFunctions.createOutList({
+      interaction: interaction,
+      pulsar: pulsar,
+      utils: utils,
+      mongo: mongo,
+      week: week
+    })
+
+    await mongo.createEntryList('up', week, upList.userIDList);
+    await mongo.createEntryList('out', week, outList.userIDList);
   }
 };

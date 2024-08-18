@@ -97,7 +97,7 @@ module.exports = {
         {
           id: 'm-sanction-callsign-input',
           label: 'Callsign',
-          placeholder: 'Introdu callsign-ul sanctionatului',
+          placeholder: 'Introdu callsign-ul persoanei sanctionate',
           style: 'Short',
           required: true
         }

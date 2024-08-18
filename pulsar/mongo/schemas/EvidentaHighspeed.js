@@ -4,7 +4,7 @@ const eivdentaHighspeedSchema = new mongoose.Schema(
   {
     tip_: String,
     uniqueID: String,
-    reference: String,
+    userID: String,
     active: Boolean,
     data: {
       nume: String,

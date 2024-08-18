@@ -136,7 +136,60 @@ module.exports = {
       }
     );
   },
+  async sendListWeekChoiceMenu({ pulsar, interaction, mongo }) {
+    const activityWeeks = await mongo.getAllActivityWeeks();
+    let options = [];
+    for (let week of activityWeeks) {
+      options.push({
+        label: `${week}`,
+        value: `${week}`
+      });
+    }
+    const menu = await pulsar.discordManager.menus.createSelectMenu({
+      type: 'string',
+      options: options,
+      id: `list-select/${interaction.user.id}`,
+      placeholder: 'Alege o saptamana'
+    }); 
 
+    await pulsar.discordManager.embeds.createDefaultEmbed(
+      'Alege o saptamana din meniul de mai jos.',
+      {
+        title: 'Meniu Selectare Saptamana - Liste',
+        interaction: interaction,
+        components: [menu],
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async sendListDeleteWeekChoiceMenu({ pulsar, interaction, mongo }) {
+    const activityWeeks = await mongo.getAllActivityWeeks();
+    let options = [];
+    for (let week of activityWeeks) {
+      options.push({
+        label: `${week}`,
+        value: `${week}`
+      });
+    }
+    const menu = await pulsar.discordManager.menus.createSelectMenu({
+      type: 'string',
+      options: options,
+      id: `list-delete-select/${interaction.user.id}`,
+      placeholder: 'Alege o saptamana'
+    });
+
+    await pulsar.discordManager.embeds.createDefaultEmbed(
+      'Alege o saptamana din meniul de mai jos.',
+      {
+        title: 'Meniu Selectare Saptamana - Stergere Liste',
+        interaction: interaction,
+        components: [menu],
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
   async sendSanctionDurationChoiceMenu({
     pulsar,
     interaction,

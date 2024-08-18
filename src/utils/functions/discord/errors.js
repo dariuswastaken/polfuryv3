@@ -68,7 +68,7 @@ module.exports = {
   async selfError(pulsar, interaction) {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
-      'Nu te poti demite singur.',
+      'Nu te poti demite singur/a.',
       {
         interaction: interaction,
         ephemeral: true,
@@ -307,7 +307,7 @@ module.exports = {
   async invalidFuncRankError(pulsar, interaction) {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
-      'Functiile pot fi adaugate persoanelor cu gradul de **Agent+**.',
+      'Functiile pot fi adaugate doar persoanelor cu gradul de **Agent+**.',
       {
         interaction: interaction,
         ephemeral: true,
@@ -330,6 +330,116 @@ module.exports = {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Membrul respectiv nu are cooldown-uri active.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async alreadyInMotoSessionError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Ai deja un motor activ.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async alreadyInHighspeedSessionError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Ai deja o masina activa.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async alreadyInPilotSessionError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Ai deja un elicopter activ.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async noMotoCertificateError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Nu detii certificatul **MOTO**.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async noHighspeedCertificateError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Nu detii certificatul **HIGHSPEED**.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async noPilotCertificateError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Nu detii certificatul **PILOT**.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async noUpListError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Nu exista lista de UP pentru saptamana respectiva.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async noOutListError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Nu exista lista de OUT pentru saptamana respectiva.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async listAlreadyExistsError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Listele pentru saptamana respectiva au fost deja generate.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async noListsError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Nu exista liste pentru saptamana respectiva.',
       {
         interaction: interaction,
         ephemeral: true,

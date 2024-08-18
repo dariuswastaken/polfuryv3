@@ -7,9 +7,9 @@ module.exports = {
     const targetID = interaction.customId.split('/')[1];
 
     const userActivity = await mongo.getAllActivity(targetID);
+    const profile = await mongo.getProfile(targetID);
 
-    const hasProfile = await utils.discord.cmds.validateProfile(targetID, mongo);
-    if (!hasProfile) {
+    if (!profile) {
       await utils.discord.errors.noProfileError(pulsar, interaction);
       return;
     }

@@ -1,15 +1,15 @@
 module.exports = {
-  name: 'moto-menu',
+  name: 'list-select',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 
-    await utils.discord.buttonMenus.sendSubdepSubMenu({
+    let week = interaction.values[0];
+
+    await utils.discord.buttonMenus.sendListTypeSelectMenu({
       pulsar: pulsar,
       interaction: interaction,
-      mongo: mongo,
-      subdep: 'Moto',
-      type: 'moto'
+      week: week
     });
   }
 };

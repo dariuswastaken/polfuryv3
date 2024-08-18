@@ -1,15 +1,13 @@
 module.exports = {
-  name: 'moto-menu',
+  name: 'chestor-stergere-lista',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 
-    await utils.discord.buttonMenus.sendSubdepSubMenu({
+    await utils.discord.selectMenus.sendListDeleteWeekChoiceMenu({
       pulsar: pulsar,
       interaction: interaction,
-      mongo: mongo,
-      subdep: 'Moto',
-      type: 'moto'
+      mongo: mongo
     });
   }
 };

@@ -317,8 +317,6 @@ module.exports = {
         );
       }
     } else if (type === 'all') {
-      console.log('passed all');
-
       if (!leave) {
         await db.create('Concediu', {
           IDDiscord: discordID,
@@ -553,4 +551,47 @@ module.exports = {
     const result = await db.findMore('Cooldown', { IDDiscord: userID });
     return result;
   },
+
+  async createSession(schema, { tip_, uniqueID, userID, data }) {
+    await db.create(schema, {
+      tip_: tip_,
+      uniqueID: uniqueID,
+      userID: userID,
+      active: true,
+      data: data
+    });
+  },
+
+  async endSession(schema, uID) {
+    await db.update(
+      schema,
+      { uniqueID: uID },
+      { $set: { 'data.dataClockOut': new Date(), active: false } }
+    );
+  },
+
+  async hasSession(schema, userID) {
+    const result = await db.find(schema, { userID: userID, active: true });
+    if (result === null) {
+      return false;
+    }
+  },
+
+  async getUserSessions(schema, userID) {
+    const result = await db.findMore(schema, { userID: userID });
+    return result;
+  },
+
+  async createEntryList(tip, week, list) {
+    await db.create('EntryList', { tip_: tip, week: week, list: list });
+  },
+
+  async getEntryList(tip, week) {
+    const result = await db.find('EntryList', { tip_: tip, week: week });
+    return result;
+  },
+
+  async deleteEntryList(tip, week) {
+    await db.delete('EntryList', { tip_: tip, week: week });
+  }
 };

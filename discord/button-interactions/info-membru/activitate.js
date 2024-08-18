@@ -5,9 +5,9 @@ module.exports = {
     await interaction.deferReply({ ephemeral: true });
 
     const userActivity = await mongo.getAllActivity(interaction.user.id);
+    const profile = await mongo.getProfile(interaction.user.id);
 
-    const hasProfile = await utils.discord.cmds.validateProfile(interaction.user.id, mongo);
-    if (!hasProfile) {
+    if (!profile) {
       await utils.discord.errors.noProfileError(pulsar, interaction);
       return;
     }

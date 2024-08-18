@@ -1,3 +1,5 @@
+const flags = require('./flags')
+
 module.exports = {
   async createNotices(rank, { pontaj, rapoarte, amenzi, apeluri, actiuni }) {
     let noticeList = [];
@@ -182,5 +184,5 @@ module.exports = {
       rating = 'A';
     }
     return rating;
-  }
+  },
 };
