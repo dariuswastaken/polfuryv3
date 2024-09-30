@@ -12,5 +12,10 @@ module.exports = {
     const data = await response.data.find(user => user[0].startsWith(`[${userId}]`));
     if(data === undefined) return false;
     return data[9];
+  },
+  async resetMDT() {
+    await webClient.post('https://panel.furyrp.ro/api/server/raportPolitie/reset', {
+      reset: true
+    });
   }
 };
