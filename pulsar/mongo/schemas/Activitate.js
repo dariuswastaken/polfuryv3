@@ -17,7 +17,7 @@ const activitateSchema = new mongoose.Schema(
   { collection: "activitate-new" }
 );
 
-const ActivitateBeta = new mongoose.model("ActivitateBeta", activitateSchema);
+const ActivitateBeta = new mongoose.model("Activitate", activitateSchema);
 
 module.exports = {
   schema: ActivitateBeta,

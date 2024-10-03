@@ -43,18 +43,6 @@ module.exports = {
     }
 
     let sanctiuniFormatted = [];
-    /*for (let sanctiune of targetProfile.sanctiuni) {
-      let sancSplit = sanctiune.split(' | ');
-      let formattedDate = await pulsar.utilsManager.time.formatTimestamp(
-        parseInt(sancSplit[1]),
-        'Europe/Bucharest'
-      );
-      const expiryDate = new Date(parseInt(sancSplit[1]));
-      const currentDate = new Date();
-      if (expiryDate > currentDate) {
-        sanctiuniFormatted.push(`${sancSplit[0]} | ${formattedDate}`);
-      }
-    }*/
 
     if (targetProfile.sanctiuni.length === 0)
       targetProfile.sanctiuni.push('Nici o sanctiune activa.');
