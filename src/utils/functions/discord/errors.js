@@ -446,5 +446,27 @@ module.exports = {
         deferReply: true
       }
     );
+  },
+  async noAvailableCallsignError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Nu a fost gasit nici un callsign disponibil pentru gradul respectiv.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async noSnapshotsError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Nu exista snapshot-uri pentru persoana respectiva.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
   }
 };

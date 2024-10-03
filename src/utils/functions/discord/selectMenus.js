@@ -63,6 +63,34 @@ module.exports = {
       }
     );
   },
+  async sendChestorRankChoiceMenu({ pulsar, interaction, targetID }) {
+    const menu = await pulsar.discordManager.menus.createSelectMenu({
+      type: 'string',
+      options: [
+        {
+          label: 'Comisar',
+          value: 'Comisar'
+        },
+        {
+          label: 'Inspector',
+          value: 'Inspector'
+        }
+      ],
+      id: `chestor-schimbare-grad-select/${targetID}`,
+      placeholder: 'Alege un grad'
+    });
+
+    await pulsar.discordManager.embeds.createDefaultEmbed(
+      'Alege un grad din meniul de mai jos.',
+      {
+        title: 'Meniu Chestor Schimbare Grad',
+        interaction: interaction,
+        components: [menu],
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
   async sendCertificateChoiceMenu({
     pulsar,
     interaction,
@@ -150,7 +178,7 @@ module.exports = {
       options: options,
       id: `list-select/${interaction.user.id}`,
       placeholder: 'Alege o saptamana'
-    }); 
+    });
 
     await pulsar.discordManager.embeds.createDefaultEmbed(
       'Alege o saptamana din meniul de mai jos.',
@@ -275,7 +303,12 @@ module.exports = {
       }
     );
   },
-  async sendCooldownCertificatDurationSelect({ pulsar, interaction, targetID, certificat }) {
+  async sendCooldownCertificatDurationSelect({
+    pulsar,
+    interaction,
+    targetID,
+    certificat
+  }) {
     const menu = await pulsar.discordManager.menus.createSelectMenu({
       type: 'string',
       options: [
@@ -300,6 +333,44 @@ module.exports = {
       'Alege durata din meniul de mai jos.',
       {
         title: 'Meniu Durata Cooldown Certificat',
+        interaction: interaction,
+        components: [menu],
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async sendUserSnapshotChoiceMenu({ pulsar, interaction, mongo, targetID, type }) {
+    const snapshots = await mongo.getUserSnapshots(targetID);
+
+    let options = [];
+    for (let snapshot of snapshots) {
+      const date = new Date(snapshot.snapshotDate).toLocaleDateString('ro-RO', {
+        timeZone: 'Europe/Bucharest',
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        minute: 'numeric',
+        hour: 'numeric',
+      });
+      options.push({
+        label: `${snapshot.snapshotID} / ${date}`,
+        value: `${snapshot.snapshotID}`
+      });
+    }
+
+    const menu = await pulsar.discordManager.menus.createSelectMenu({
+      type: 'string',
+      options: options,
+      id: `user-snapshot-select-${type}/${targetID}`,
+      placeholder: 'Alege un snapshot'
+    });
+
+    await pulsar.discordManager.embeds.createDefaultEmbed(
+      'Alege un snapshot din meniul de mai jos.',
+      {
+        title: `${type === 'load' ? 'Meniu Incarcare Snapshot' : 'Meniu Stergere Snapshot'}`,
         interaction: interaction,
         components: [menu],
         ephemeral: true,

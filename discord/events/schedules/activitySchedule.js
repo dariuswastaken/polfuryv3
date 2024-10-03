@@ -6,7 +6,7 @@ module.exports = {
   name: 'activitySchedule',
   async execute(Pulsar) {
     const updateActivityRetry = async () => {
-      let updateCount = 2;
+      let updateCount = 3;
       while (updateCount > 0) {
         await updateActivity();
         updateCount--;

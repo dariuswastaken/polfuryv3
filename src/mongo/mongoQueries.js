@@ -74,6 +74,42 @@ module.exports = {
     return result;
   },
 
+  async updateProfileName(id, name) {
+    const result = await db.update(
+      'Member',
+      { IDDiscord: id },
+      { $set: { nume: name } }
+    );
+    return result;
+  },
+
+  async updateProfileIDServer(id, serverID) {
+    const result = await db.update(
+      'Member',
+      { IDDiscord: id },
+      { $set: { IDServer: serverID } }
+    );
+    return result;
+  },
+
+  async updateProfileIDDiscord(id, discordID) {
+    const result = await db.update(
+      'Member',
+      { IDDiscord: id },
+      { $set: { IDDiscord: discordID } }
+    );
+    return result;
+  },
+
+  async updateProfileEntryDate(id, entryDate) {
+    const result = await db.update(
+      'Member',
+      { IDDiscord: id },
+      { $set: { dataIntrare: entryDate } }
+    );
+    return result;
+  },
+
   async updateProfileCallsign(id, callsign) {
     const result = await db.update(
       'Member',
@@ -360,6 +396,7 @@ module.exports = {
 
   async getAvailableCallsign(rank) {
     const result = await db.find('Callsign', { tip_: rank, taken: false });
+    if(result.length === 0) return null;
     return result;
   },
 
@@ -593,5 +630,43 @@ module.exports = {
 
   async deleteEntryList(tip, week) {
     await db.delete('EntryList', { tip_: tip, week: week });
+  },
+
+  async createMemberSnapshot(memberID, snapshotID) {
+    const member = await db.find('Member', { IDDiscord: memberID });
+    await db.create('MemberSnapshot', {
+      userData: member,
+      IDDiscord: memberID,
+      snapshotID: snapshotID,
+      snapshotDate: new Date()
+    });
+  },
+
+  async getUserSnapshots(memberID) {
+    const result = await db.findMore('MemberSnapshot', { IDDiscord: memberID });
+    return result;
+  },
+
+  async getUserSnapshot(memberID, snapshotID) {
+    const result = await db.find('MemberSnapshot', {
+      IDDiscord: memberID,
+      snapshotID: snapshotID
+    });
+    return result;
+  },
+
+  async loadMemberSnapshot(snapshotID, memberID) {
+    const result = await db.find('MemberSnapshot', { snapshotID: snapshotID });
+    await db.update('Member', { IDDiscord: memberID }, { $set: result.userData });
+    return result;
+  },
+
+  async deleteMemberSnapshot(snapshotID) {
+    await db.delete('MemberSnapshot', { snapshotID: snapshotID });
+  },
+
+  async createActivitySnapshot(week, snapshotID) {
+
   }
+
 };

@@ -77,18 +77,31 @@ module.exports = {
         id: `chestor-adauga-ci/${targetID}`,
         style: 'Secondary',
         label: '➕ Adauga Comisar/Inspector',
-        disabled: true
       },
       {
         id: `chestor-edit-menu/${targetID}`,
         style: 'Secondary',
         label: '🔧 Edit User',
-        disabled: true
       },
       {
         id: 'update-activitate',
         style: 'Secondary',
         label: '📅 Updateaza Activitate'
+      },
+      {
+        id: `activitate-snapshot-create`,
+        style: 'Secondary',
+        label: '📸 Creaza Snapshot Activitate',
+      },
+      {
+        id: `activitate-snapshot-load`,
+        style: 'Secondary',
+        label: '📥 Incarca Snapshot Activitate',
+      },
+      {
+        id: `activitate-snapshot-delete`,
+        style: 'Danger',
+        label: '🗑️ Sterge Snapshot Activitate',
       }
     ];
 
@@ -143,6 +156,49 @@ module.exports = {
     await pulsar.discordManager.embeds.createWarningEmbed(
       'Demitere',
       `Esti sigur ca vrei sa il demiti pe membrul \`${targetProfile.nume} (${targetProfile.callsign})\`?\n\n⚠️ **__Aceasta actiune este ireversibila si toate datele lui/ei vor fi sterse.__**`,
+      {
+        interaction: interaction,
+        components: rows,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async sendMenuDeleteUser({ pulsar, interaction, mongo, targetID }) {
+    const uID = await pulsar.utilsManager.uniques.createUniqueID();
+    const targetProfile = await mongo.getProfile(targetID);
+    const buttons = [
+      {
+        id: `menu-delete-user/confirm/${targetID}/${uID}`,
+        style: 'Danger',
+        label: '✅ Confirmare'
+      },
+      {
+        id: `menu-delete-user/cancel/${targetID}/${uID}`,
+        style: 'Secondary',
+        label: '❌ Anulare'
+      }
+    ];
+
+    await mongo.createComponent({
+      tip_: 'button',
+      componentDiscordID: buttons[0].id,
+      componentID: uID
+    });
+    await mongo.createComponent({
+      tip_: 'button',
+      componentDiscordID: buttons[1].id,
+      componentID: uID
+    });
+
+    const rows = await pulsar.discordManager.menus.createButtonMenu({
+      perLine: 2,
+      buttons: buttons
+    });
+
+    await pulsar.discordManager.embeds.createWarningEmbed(
+      'Sterge User',
+      `Esti sigur ca vrei sa stergi userul \`${targetProfile.nume} (${targetProfile.callsign})\`?\n\n⚠️ **__Aceasta actiune este ireversibila si toate datele lui/ei vor fi sterse.__**\n\n**Poti creea un snapshot pentru a avea un backup.**`,
       {
         interaction: interaction,
         components: rows,
@@ -552,5 +608,188 @@ module.exports = {
         deferReply: true
       }
     );
+  },
+  async sendUserEditMenu({ pulsar, interaction, targetID }) {
+    const buttons = [
+      {
+        id: `edit-user-name/${targetID}`,
+        style: 'Secondary',
+        label: '✏️ Nume',
+      },
+      {
+        id: `edit-user-idserver/${targetID}`,
+        style: 'Secondary',
+        label: '✏️ ID Server',
+      },
+      {
+        id: `edit-user-id/${targetID}`,
+        style: 'Danger',
+        label: '✏️ ID Discord',
+      },
+      {
+        id: `edit-user-data-intrare/${targetID}`,
+        style: 'Secondary',
+        label: '✏️ Data Intrare',
+      },
+      {
+        id: `edit-user-scoatere-av/${targetID}`,
+        style: 'Secondary',
+        label: '✏️ Scoate Avertisment',
+      },
+      {
+        id: `edit-user-delete/${targetID}`,
+        style: 'Danger',
+        label: '🗑️ Sterge User',
+      },
+      {
+        id: `edit-user-snapshot/${targetID}`,
+        style: 'Success',
+        label: '📸 Creeaza Snapshot',
+      },
+      {
+        id: `edit-user-snapshot-load/${targetID}`,
+        style: 'Secondary',
+        label: '📥 Incarca Snapshot',
+      },
+      {
+        id: `edit-user-snapshot-delete/${targetID}`,
+        style: 'Secondary',
+        label: '🗑️ Sterge Snapshot',
+      }
+    ];
+
+    const rows = await pulsar.discordManager.menus.createButtonMenu({
+      perLine: 3,
+      buttons: buttons
+    });
+
+    await pulsar.discordManager.embeds.createDefaultEmbed(
+      'Alege o optiune de mai jos.',
+      {
+        title: 'Meniu Editare User',
+        interaction: interaction,
+        components: rows,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async sendSnapshotOverview({ pulsar, interaction, mongo, targetID, snapshotID, type }) {
+    let snapshot = await mongo.getUserSnapshot(targetID, snapshotID);
+
+    const buttons = [
+      {
+        id: `user-snapshot-confirm-${type}/${targetID}/${snapshotID}`,
+        style: 'Secondary',
+        label: `${type === 'load' ? '📥 Incarca Snapshot' : '🗑️ Sterge Snapshot'}`,
+      }
+    ]
+
+    const rows = await pulsar.discordManager.menus.createButtonMenu({
+      perLine: 1,
+      buttons: buttons
+    });
+
+    let certificateList = [];
+    for (let certificat of Object.keys(snapshot.userData.certificate)) {
+      if (snapshot.userData.certificate[certificat] === true) {
+        certificateList.push(certificat.toUpperCase());
+      }
+    }
+
+    let sanctiuniFormatted = [];
+
+    if (snapshot.userData.sanctiuni.length === 0)
+      snapshot.userData.sanctiuni.push('Nici o sanctiune activa.');
+
+    if (sanctiuniFormatted.length === 0)
+      sanctiuniFormatted.push('Nici o sanctiune activa.');
+    if (snapshot.userData.functii.length === 0)
+      snapshot.userData.functii.push('Nici o functie.');
+    if (snapshot.userData.notite.length === 0)
+      snapshot.userData.notite.push('Nici o notita.');
+
+    let title = `Esti sigur ca vrei sa **${type === 'load' ? 'incarci' : 'stergi'} acest snapshot?**`
+
+    const snapshotDate = new Date(snapshot.snapshotDate).toLocaleDateString('ro-RO', {
+      timeZone: 'Europe/Bucharest',
+      weekday: 'short',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      minute: 'numeric',
+      hour: 'numeric',
+    });
+
+    await pulsar.discordManager.embeds.createEmbed({
+      title: title,
+      footer: { text: `Snapshot ${snapshotID} | Creat ${snapshotDate}` },
+      fields: [
+        {
+          name: 'NUME',
+          value: `${snapshot.userData.nume}`,
+          inline: true
+        },
+        {
+          name: 'CALLSIGN',
+          value: `${snapshot.userData.callsign}`,
+          inline: true
+        },
+        {
+          name: 'GRAD',
+          value: `${snapshot.userData.grad}`,
+          inline: true
+        },
+        {
+          name: 'ID',
+          value: `${snapshot.userData.IDServer}`,
+          inline: true
+        },
+        {
+          name: 'DATA INTRARE',
+          value: `${snapshot.userData.dataIntrare}`,
+          inline: true
+        },
+        {
+          name: 'ULTIMA ACTUALIZARE',
+          value: `${snapshot.userData.dataActualizare}`,
+          inline: true
+        },
+        {
+          name: 'ON-DUTY?',
+          value: `-`,
+          inline: true
+        },
+        {
+          name: 'AVERTISMENTE',
+          value: `${snapshot.userData.avertismente}`,
+          inline: true
+        },
+        {
+          name: 'CERTIFICATE',
+          value: `\`\`\`\n${certificateList.join(' / ')}\`\`\``,
+          inline: true
+        },
+        {
+          name: 'FUNCTII',
+          value: `\`\`\`\n${snapshot.userData.functii.join('\n')}\n\`\`\``,
+          inline: true
+        },
+        {
+          name: 'SANCTIUNI',
+          value: `\`\`\`\n${snapshot.userData.sanctiuni.join('\n')}\n\`\`\``,
+          inline: false
+        },
+        {
+          name: 'NOTITE',
+          value: `\`\`\`\n${snapshot.userData.notite.join('\n')}\n\`\`\``,
+          inline: false
+        }
+      ],
+      interaction: interaction,
+      deferReply: true,
+      ephemeral: true,
+      components: rows
+    });
   }
 };
