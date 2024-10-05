@@ -9,7 +9,7 @@ module.exports = {
     .setName('Meniu Instructor')
     .setType(ApplicationCommandType.User)
     .setDefaultMemberPermissions(PermissionsBitField.Flags.ChangeNickname),
-  enabled: false,
+  enabled: true,
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 

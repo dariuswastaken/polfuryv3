@@ -9,7 +9,7 @@ module.exports = {
     .setName('Meniu Conducere')
     .setType(ApplicationCommandType.User)
     .setDefaultMemberPermissions(PermissionsBitField.Flags.Administrator),
-  enabled: false,
+  enabled: true,
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 
