@@ -16,7 +16,7 @@ module.exports = {
 
     if (validate === 'invalid') return;
 
-    await utils.quickFunctions.addFunc(
+    await utils.discord.quickFunctions.addFunc(
       interaction,
       validate.profile.IDDiscord,
       mongo,

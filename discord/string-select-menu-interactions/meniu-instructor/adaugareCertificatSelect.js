@@ -20,7 +20,7 @@ module.exports = {
       return;
     }
 
-    await utils.quickFunctions.addCertificat({
+    await utils.discord.quickFunctions.addCertificat({
       interaction: interaction,
       mongo: mongo,
       targetID: targetID,

@@ -18,7 +18,7 @@ module.exports = {
     const token = await mongo.getToken(inputToken);
 
     if (token.type === 'default') {
-      await utils.quickFunctions.addAcademiePD({
+      await utils.discord.quickFunctions.addAcademiePD({
         interaction: interaction,
         mongo: mongo,
         targetID: interaction.user.id,
@@ -40,7 +40,7 @@ module.exports = {
     } else if (token.type === 'reintegrare') {
       const currentDate = await utils.dayConversion.getCurrentDate();
 
-      await utils.quickFunctions.addReintegrarePD({
+      await utils.discord.quickFunctions.addReintegrarePD({
         interaction: interaction,
         mongo: mongo,
         targetID: interaction.user.id,

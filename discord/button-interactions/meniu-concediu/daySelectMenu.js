@@ -1,6 +1,6 @@
 module.exports = {
   name: 'meniu-concediu',
-  enabled: true,
+  enabled: false,
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 

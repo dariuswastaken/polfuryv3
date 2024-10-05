@@ -1,6 +1,6 @@
 module.exports = {
   name: 'adaugare-motiv-concediu',
-  enabled: true,
+  enabled: false,
   async execute(pulsar, interaction, mongo, utils) {
     const week = await utils.dayConversion.getCurrentWeek();
     const leave = await mongo.getLeave(interaction.user.id, `${week[0]} - ${week[6]}`);

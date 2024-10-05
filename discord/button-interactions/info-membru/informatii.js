@@ -1,6 +1,6 @@
 module.exports = {
   name: 'informatii-membru',
-  enabled: true,
+  enabled: false,
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 

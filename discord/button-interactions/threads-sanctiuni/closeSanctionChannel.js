@@ -1,13 +1,13 @@
 module.exports = {
   name: 'close-sanction-channel',
-  enabled: true,
+  enabled: false,
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 
     const userID = interaction.customId.split('/')[1];
     const sanctionID = interaction.customId.split('/')[2];
 
-    const transcript = await utils.quickFunctions.createChannelTranscript({
+    const transcript = await utils.discord.quickFunctions.createChannelTranscript({
       interaction: interaction,
       channelID: interaction.channel.id,
       type: 'Sanctiune'

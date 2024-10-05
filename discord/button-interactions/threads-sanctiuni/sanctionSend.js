@@ -1,6 +1,6 @@
 module.exports = {
   name: 'sanction-thread-send',
-  enabled: true,
+  enabled: false,
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 
@@ -20,13 +20,13 @@ module.exports = {
     if (formattedSanctionList.includes('demitere')) {
     } else if (formattedSanctionList.includes('down')) {
     } else {
-      await utils.quickFunctions.createSanctionPrivateChannel({
+      await utils.discord.quickFunctions.createSanctionPrivateChannel({
         pulsar: pulsar,
         interaction: interaction,
         mongo: mongo,
         sanctionID: sanctionID
       });
-      await utils.quickFunctions.addSanctionToMember({
+      await utils.discord.quickFunctions.addSanctionToMember({
         pulsar: pulsar,
         mongo: mongo,
         userID: sanction.sanctionedID,

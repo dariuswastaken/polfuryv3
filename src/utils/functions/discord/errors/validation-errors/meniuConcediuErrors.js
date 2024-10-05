@@ -1,0 +1,34 @@
+module.exports = {
+  async noDaysLeftError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Nu poti adauga mai multe zile.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async hasDayAlreadyError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Ai deja concediu in ziua respectiva.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+  async noLeaveError(pulsar, interaction) {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Nu ai nici o zi de concediu.',
+      {
+        interaction: interaction,
+        ephemeral: true
+      }
+    );
+  }
+};

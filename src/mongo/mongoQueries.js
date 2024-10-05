@@ -2,7 +2,7 @@ const { db } = require('../handlers/mongoConnectionHandler');
 const {
   timeConversion,
   dayConversion
-} = require('../utils/exports/utilsExports');
+} = require('../utils/exports/globalExports');
 
 module.exports = {
   async createToken(token, userID, type, authorID) {
@@ -89,6 +89,13 @@ module.exports = {
       { IDDiscord: id },
       { $set: { IDServer: serverID } }
     );
+
+    await db.updateBulk('Activitate', {
+      IDDiscord: id
+    }, 
+    {
+      $set: { IDDiscord: id, IDServer: serverID }
+    })
     return result;
   },
 
@@ -98,6 +105,13 @@ module.exports = {
       { IDDiscord: id },
       { $set: { IDDiscord: discordID } }
     );
+
+    await db.updateBulk('Activitate', {
+      IDDiscord: id
+    }, 
+    {
+      $set: { IDDiscord: discordID }
+    })
     return result;
   },
 
@@ -658,6 +672,7 @@ module.exports = {
   async loadMemberSnapshot(snapshotID, memberID) {
     const result = await db.find('MemberSnapshot', { snapshotID: snapshotID });
     await db.update('Member', { IDDiscord: memberID }, { $set: result.userData });
+
     return result;
   },
 

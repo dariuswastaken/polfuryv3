@@ -26,7 +26,7 @@ module.exports = {
 
     await mongo.updateSanctionReason(sanctionID, validate.reason);
 
-    await utils.quickFunctions.createSanctionThread({
+    await utils.discord.quickFunctions.createSanctionThread({
       pulsar: pulsar,
       utils: utils,
       interaction: interaction,

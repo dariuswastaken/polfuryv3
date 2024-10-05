@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   name: 'buttonInteractionEventHandler',
   type: 'interactionBased',
-  enabled: false,
+  enabled: true,
   async execute(Pulsar) {
     Pulsar().client.on('interactionCreate', async (interaction) => {
       if (interaction.user.bot) return;
@@ -24,7 +24,7 @@ module.exports = {
       const call = path.resolve(__dirname);
       const utils = Pulsar().utilsManager.createNew(
         call,
-        '../../src/utils/exports/utilsExports.js'
+        '../../src/utils/exports/globalExports.js'
       );
 
       const dynamicIDslash = interaction.customId.split('/')[0];

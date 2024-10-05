@@ -20,7 +20,7 @@ module.exports = {
       return;
     }
 
-    await utils.quickFunctions.removeCertificat({
+    await utils.discord.quickFunctions.removeCertificat({
       interaction: interaction,
       mongo: mongo,
       targetID: targetID,

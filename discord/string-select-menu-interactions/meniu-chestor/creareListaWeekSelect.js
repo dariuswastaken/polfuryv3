@@ -12,7 +12,7 @@ module.exports = {
       return;
     }
 
-    const upList = await utils.quickFunctions.createUpList({
+    const upList = await utils.discord.quickFunctions.createUpList({
       interaction: interaction,
       pulsar: pulsar,
       utils: utils,
@@ -20,7 +20,7 @@ module.exports = {
       week: week
     })
 
-    const outList = await utils.quickFunctions.createOutList({
+    const outList = await utils.discord.quickFunctions.createOutList({
       interaction: interaction,
       pulsar: pulsar,
       utils: utils,

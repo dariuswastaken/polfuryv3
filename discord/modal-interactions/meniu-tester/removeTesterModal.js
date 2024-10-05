@@ -16,7 +16,7 @@ module.exports = {
 
     if (validate === 'invalid') return;
 
-    await utils.quickFunctions.removeFunc(
+    await utils.discord.quickFunctions.removeFunc(
       interaction,
       validate.profile.IDDiscord,
       mongo,

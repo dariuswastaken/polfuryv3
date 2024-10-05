@@ -21,7 +21,7 @@ module.exports = {
     const testerProfile = await mongo.getProfile(interaction.user.id);
 
     if (validate.result === true) {
-      await utils.quickFunctions.addMemberPD({
+      await utils.discord.quickFunctions.addMemberPD({
         interaction: interaction,
         mongo: mongo,
         targetID: targetID,
