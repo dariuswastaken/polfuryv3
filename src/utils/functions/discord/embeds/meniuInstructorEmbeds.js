@@ -1,5 +1,5 @@
 module.exports = {
-  async sendUserCooldownList({ pulsar, interaction, mongo, targetID }) {
+  sendUserCooldownList: async ({ pulsar, interaction, mongo, targetID }) => {
     const userCooldowns = await mongo.getCooldowns(targetID);
 
     let fields = [];

@@ -4,9 +4,10 @@ const path = require('path');
 const modules = exportModules(path.join(__dirname, '../../functions/discord'));
 
 module.exports.embeds = {
-  sendUpList: modules.activityListMenus.sendUpList,
-  sendOutList: modules.activityListMenus.sendOutList,
-  sendActivityUpdateRetryEmbed: modules.activityManagementEmbeds.sendActivityUpdateRetryEmbed,
+  sendUpList: modules.activityListsEmbeds.sendUpList,
+  sendOutList: modules.activityListsEmbeds.sendOutList,
+  sendActivityUpdateRetryEmbed:
+    modules.activityManagementEmbeds.sendActivityUpdateRetryEmbed,
   sendSuccessEmbed: modules.baseEmbeds.sendSuccessEmbed,
   sendWarningEmbed: modules.baseEmbeds.sendWarningEmbed,
   sendUserCooldownList: modules.meniuInstructorEmbeds.sendUserCooldownList,

@@ -1,5 +1,5 @@
 module.exports = {
-  async sendMenuChestor({ pulsar, interaction, mongo, targetID }) {
+  sendMenuChestor: async ({ pulsar, interaction, mongo, targetID }) => {
     const targetProfile = await mongo.getProfile(targetID);
     const buttons = [
       {

@@ -1,5 +1,5 @@
 module.exports = {
-  async sendSubdepMenu({ pulsar, interaction, mongo }) {
+  sendSubdepMenu: async ({ pulsar, interaction, mongo }) => {
     const subdepLeadRoles = {
       Radio: '1199988024851841055',
       Highspeed: '1202382407446315071',
@@ -49,7 +49,7 @@ module.exports = {
     );
   },
 
-  async sendSubdepSubMenu({ pulsar, interaction, subdep, type }) {
+  sendSubdepSubMenu: async ({ pulsar, interaction, subdep, type }) => {
     const buttons = [
       {
         id: `${type}-menu-instructori`,

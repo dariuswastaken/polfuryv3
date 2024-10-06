@@ -11,6 +11,7 @@ module.exports.selectMenus = {
   sendRankChoiceMenu: modules.meniuConducereSelectMenus.sendRankChoiceMenu,
   sendCertificatChoiceMenuCooldown: modules.meniuInstructorSelectMenus.sendCertificatChoiceMenuCooldown,
   sendCooldownCertificatDurationSelect: modules.meniuInstructorSelectMenus.sendCooldownCertificatDurationSelect,
+  sendCertificateChoiceMenu: modules.meniuInstructorSelectMenus.sendCertificateChoiceMenu,
   sendSanctionDurationChoiceMenu: modules.sanctionThreadsSelectMenus.sendSanctionDurationChoiceMenu,
   sendActivityWeekChoiceMenu: modules.userActivitySelectMenus.sendActivityWeekChoiceMenu,
   sendUserSnapshotChoiceMenu: modules.userSnapshotSelectMenus.sendUserSnapshotChoiceMenu

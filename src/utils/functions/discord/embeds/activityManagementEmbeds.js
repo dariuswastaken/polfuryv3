@@ -1,5 +1,5 @@
 module.exports = {
-  async sendActivityUpdateRetryEmbed(message, { pulsar, interaction }) {
+  sendActivityUpdateRetryEmbed: async (message, { pulsar, interaction }) => {
     await pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       `${message}`,

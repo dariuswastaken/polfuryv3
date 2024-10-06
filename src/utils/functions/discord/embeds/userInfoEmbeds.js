@@ -1,5 +1,5 @@
 module.exports = {
-  async sendUserInfoEmbed({ pulsar, interaction, mongo, targetID }) {
+  sendUserInfoEmbed: async ({ pulsar, interaction, mongo, targetID }) => {
     const targetProfile = await mongo.getProfile(targetID);
 
     let certificateList = [];

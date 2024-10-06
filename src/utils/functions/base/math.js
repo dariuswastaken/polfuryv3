@@ -1,9 +1,9 @@
 module.exports = {
-  async percentage(min, max) {
+  percentage: async (min, max) => {
     let percentage = (min / max) * 100;
     return percentage.toFixed(2);
   },
-  async calculateAverageMin(min, days) {
+  calculateAverageMin: async (min, days) => {
     return (min / days).toFixed(2);
-  },
+  }
 };

@@ -1,5 +1,5 @@
 module.exports = {
-  async sendSanctionMenu({ pulsar, interaction, mongo, targetID, sanctionID }) {
+  sendSanctionMenu: async ({ pulsar, interaction, mongo, targetID, sanctionID }) => {
     const buttons = [
       {
         id: `sanction-select/${targetID}/${sanctionID}/ts25`,

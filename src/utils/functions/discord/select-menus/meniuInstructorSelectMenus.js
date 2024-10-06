@@ -63,5 +63,51 @@ module.exports = {
         deferReply: true
       }
     );
+  },
+  async sendCertificateChoiceMenu({
+    pulsar,
+    interaction,
+    menuTitle,
+    type,
+    targetID
+  }) {
+    const menu = await pulsar.discordManager.menus.createSelectMenu({
+      type: 'string',
+      options: [
+        {
+          label: 'RADIO',
+          value: 'radio'
+        },
+        {
+          label: 'MDT',
+          value: 'mdt'
+        },
+        {
+          label: 'MOTO',
+          value: 'moto'
+        },
+        {
+          label: 'PILOT',
+          value: 'pilot'
+        },
+        {
+          label: 'HIGHSPEED',
+          value: 'highspeed'
+        }
+      ],
+      id: `${type}-certificat-select/${targetID}`,
+      placeholder: 'Alege un certificat'
+    });
+
+    await pulsar.discordManager.embeds.createDefaultEmbed(
+      'Alege un certificat din meniul de mai jos.',
+      {
+        title: `Meniu ${menuTitle}`,
+        interaction: interaction,
+        components: [menu],
+        ephemeral: true,
+        deferReply: true
+      }
+    );
   }
 };

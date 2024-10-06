@@ -1,5 +1,5 @@
 module.exports = {
-  async sendUserEditMenu({ pulsar, interaction, targetID }) {
+  sendUserEditMenu: async ({ pulsar, interaction, targetID }) => {
     const buttons = [
       {
         id: `edit-user-name/${targetID}`,
@@ -65,7 +65,7 @@ module.exports = {
     );
   },
 
-  async sendMenuDeleteUser({ pulsar, interaction, mongo, targetID }) {
+  sendMenuDeleteUser: async ({ pulsar, interaction, mongo, targetID }) => {
     const uID = await pulsar.utilsManager.uniques.createUniqueID();
     const targetProfile = await mongo.getProfile(targetID);
     const buttons = [

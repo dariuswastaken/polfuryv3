@@ -1,5 +1,5 @@
 module.exports = {
-  async calculateActivityScore(pontaj, minPontaj, { gradeIncrease, minIncrease, gradeDecrease }) {
+  calculateActivityScore: async (pontaj, minPontaj, { gradeIncrease, minIncrease, gradeDecrease }) => {
     let rangePontaj = [0];
     let min = 0;
     let grade = 0;
@@ -23,7 +23,7 @@ module.exports = {
     return grade.toFixed(2);
   },
 
-  async calculateReportScore(reports, minReports, { gradeIncrease, reportIncrease, gradeDecrease }) {
+  calculateReportScore: async (reports, minReports, { gradeIncrease, reportIncrease, gradeDecrease }) => {
     let rangeReports = [0];
     let rapoarte = 0;
     let grade = 0;
@@ -48,7 +48,7 @@ module.exports = {
     return grade.toFixed(2);
   },
 
-  async calculateFineScore(amenzi, minFines, { gradeIncrease, fineIncrease, gradeDecrease }) {
+  calculateFineScore: async (amenzi, minFines, { gradeIncrease, fineIncrease, gradeDecrease }) => {
     let rangeFines = [0];
     let fines = 0;
     let grade = 0;
@@ -72,7 +72,7 @@ module.exports = {
     return grade.toFixed(2);
   },
 
-  async calculateCallsScore(calls, minCalls, { gradeIncrease, callIncrease, gradeDecrease }) {
+  calculateCallsScore: async (calls, minCalls, { gradeIncrease, callIncrease, gradeDecrease }) => {
     let rangeCalls = [0];
     let apeluri = 0;
     let grade = 0;
@@ -96,7 +96,7 @@ module.exports = {
     return grade.toFixed(2);
   },
   
-  async calculateActionActivityScore(actionActivity, minActionActivity, { gradeIncrease, actionActivityIncrease, gradeDecrease }) {
+  calculateActionActivityScore: async (actionActivity, minActionActivity, { gradeIncrease, actionActivityIncrease, gradeDecrease }) => {
     let rangeActionActivity = [0];
     let actiuni = 0;
     let grade = 0;
@@ -119,7 +119,7 @@ module.exports = {
     
     return grade.toFixed(2);
   },
-  async gradeAdjust(rank, grade, { reports, fines, calls, actionActivity }) {
+  gradeAdjust: async (rank, grade, { reports, fines, calls, actionActivity }) => {
    let adjustedGrade = grade;
    if(rank === 'Agent Sef Principal') {
     if(reports < 1 && grade >= 9) {

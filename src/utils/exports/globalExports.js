@@ -1,16 +1,18 @@
-const { exportModules } = require('../../core/baseExportFSModule');
 const path = require('path');
+const { exportModules } = require('../../core/baseExportFSModule');
 
-const baseUtilModules = exportModules(path.join(__dirname, './base-util-exports'));
+const baseUtilModules = exportModules(
+  path.join(__dirname, './base-util-exports')
+);
 
 module.exports = {
-  timeConversion: require('../functions/timeConversion'),
-  dayConversion: require('../functions/dayConversion'),
-  math: require('../functions/math'),
-  checks: require('../functions/checks'),
+  timeConversion: baseUtilModules.baseFuncExports.timeConversion,
+  dayConversion: baseUtilModules.baseFuncExports.dayConversion,
+  math: baseUtilModules.baseFuncExports.math,
+  checks: baseUtilModules.baseFuncExports.checks,
   discord: {
     buttonMenus: baseUtilModules.buttonMenuExports.buttonMenus,
-    embeds:  baseUtilModules.embedExports.embeds,
+    embeds: baseUtilModules.embedExports.embeds,
     errors: baseUtilModules.errorEmbedExports.errors,
     validate: baseUtilModules.inputValidationExports.validate,
     logging: baseUtilModules.loggingExports.logging,
@@ -19,8 +21,8 @@ module.exports = {
     roles: baseUtilModules.roleExports.roles,
     selectMenus: baseUtilModules.selectMenuExports.selectMenus
   },
-  algorithms: require('../functions/algorithms/algos'),
+  algorithms: baseUtilModules.algExports.algos,
   activity: {
-    utils: require('../functions/activity/utils')
+    utils: baseUtilModules.activityUtilExports.utils
   },
 };

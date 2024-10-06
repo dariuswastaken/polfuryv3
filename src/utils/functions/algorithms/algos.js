@@ -2,10 +2,7 @@ const { parse } = require('dotenv');
 const algoUtils = require('./algoUtils');
 
 module.exports = {
-  async gradeAlgorithm(
-    rank,
-    { activity, reports, fines, calls, actions, leaveDays }
-  ) {
+  gradeAlgorithm: async (rank, { activity, reports, fines, calls, actions, leaveDays }) => {
     let grade = 0;
     switch (rank) {
       case 'Cadet':

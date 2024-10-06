@@ -1,5 +1,5 @@
 module.exports = {
-  async sendListTypeSelectMenu({ pulsar, interaction, week }) {
+  sendListTypeSelectMenu: async ({ pulsar, interaction, week }) => {
     const buttons = [
       {
         id: `up-list/${week}`,

@@ -1,5 +1,5 @@
 module.exports = {
-  async sendMenuDemitere({ pulsar, interaction, mongo, targetID }) {
+  sendMenuDemitere: async ({ pulsar, interaction, mongo, targetID }) => {
     const uID = await pulsar.utilsManager.uniques.createUniqueID();
     const targetProfile = await mongo.getProfile(targetID);
     const buttons = [

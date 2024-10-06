@@ -1,5 +1,5 @@
 module.exports = {
-  async sendUserActivityEmbed({ pulsar, interaction, mongo, targetID, utils, week }) {
+  sendUserActivityEmbed: async ({ pulsar, interaction, mongo, targetID, utils, week }) => {
     const targetProfile = await mongo.getProfile(targetID);
     const userActivity = await mongo.getActivity(targetID, week);
 

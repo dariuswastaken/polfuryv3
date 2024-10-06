@@ -1,7 +1,7 @@
 const flags = require('./flags')
 
 module.exports = {
-  async createNotices(rank, { pontaj, rapoarte, amenzi, apeluri, actiuni }) {
+  createNotices: async (rank, { pontaj, rapoarte, amenzi, apeluri, actiuni }) => {
     let noticeList = [];
     switch (rank) {
       case 'Cadet':
@@ -86,7 +86,7 @@ module.exports = {
     }
     return noticeList;
   },
-  async getActionActivity(period, id, rank, client) {
+  getActionActivity: async (period, id, rank, client) => {
     try {
       const startDateStr = period.split(' - ')[0];
       const endDateStr = period.split(' - ')[1];
@@ -167,7 +167,7 @@ module.exports = {
       console.log(error);
     }
   },
-  async gradeRating(grade, leaveDays) {
+  gradeRating: async (grade, leaveDays) => {
     let rating = '';
     if (leaveDays >= 5) {
       return 'CONCEDIU';

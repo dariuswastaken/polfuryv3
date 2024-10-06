@@ -1,5 +1,7 @@
+const dayConversion = require('../../base/dayConversion');
+
 module.exports = {
-  async sendMenuConcediu({ pulsar, interaction, mongo }) {
+  sendMenuConcediu: async ({ pulsar, interaction, mongo }) => {
     const currentWeek = await dayConversion.getCurrentWeek();
 
     let leave = await mongo.getLeave(

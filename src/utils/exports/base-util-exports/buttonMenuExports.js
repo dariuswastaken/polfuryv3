@@ -17,5 +17,4 @@ module.exports.buttonMenus = {
   sendUserEditMenu: modules.userEditMenus.sendUserEditMenu,
   sendMenuDeleteUser: modules.userEditMenus.sendMenuDeleteUser,
   sendSnapshotOverview: modules.userSnapshotMenus.sendSnapshotOverview,
-  modules: modules
 };

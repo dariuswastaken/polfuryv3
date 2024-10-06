@@ -1,14 +1,5 @@
 module.exports = {
-  async sendSubdepMemberList({
-    pulsar,
-    interaction,
-    mongo,
-    type,
-    subdep,
-    title,
-    mongoQuery,
-    depType
-  }) {
+  sendSubdepMemberList: async ({ pulsar, interaction, mongo, type, subdep, title, mongoQuery, depType }) => {
     const members = await mongo.getAllMembers();
 
     let rankAbbreviations = {
@@ -115,7 +106,7 @@ module.exports = {
     });
   },
 
-  async sendInstrActivityEmbed({ pulsar, interaction, mongo, targetID, subdep, type }) {
+  sendInstrActivityEmbed: async ({ pulsar, interaction, mongo, targetID, subdep, type }) => {
     const userActivity = await mongo.getFuncActivity(targetID, type);
     const userProfile = await mongo.getProfile(targetID);
 

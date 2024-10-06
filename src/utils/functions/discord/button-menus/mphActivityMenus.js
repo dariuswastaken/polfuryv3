@@ -1,5 +1,5 @@
 module.exports = {
-  async mphClockInSelect({ pulsar, interaction, type }) {
+  mphClockInSelect: async ({ pulsar, interaction, type }) => {
     const buttons = {
       moto: [
         {

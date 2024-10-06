@@ -1,5 +1,5 @@
 module.exports = {
-  async sendUpList({ pulsar, interaction, utils, mongo, week }) {
+  sendUpList: async ({ pulsar, interaction, utils, mongo, week }) => {
     const upList = await mongo.getEntryList('up', week);
 
     let formattedArray = [];
@@ -61,7 +61,7 @@ module.exports = {
       ephemeral: true
     });
   },
-  async sendOutList({ pulsar, interaction, utils, mongo, week }) {
+  sendOutList: async ({ pulsar, interaction, utils, mongo, week }) => {
     const outList = await mongo.getEntryList('out', week);
 
     let formattedArray = [];

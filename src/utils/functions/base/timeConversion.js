@@ -1,18 +1,18 @@
 const moment = require('moment-timezone');
 
 module.exports = {
-  async calculateMinutes(startTime, endTime) {
+  calculateMinutes: async (startTime, endTime) => {
     const start = moment(startTime, 'HH:mm');
     const end = moment(endTime, 'HH:mm');
     const duration = moment.duration(end.diff(start));
     return duration.asMinutes();
   },
-  async getCurrentHour() {
+  getCurrentHour: async () => {
     const date = moment.tz('Europe/Bucharest');
     const hour = date.format('HH:mm');
     return hour.split(':')[0];
   },
-  async createTimes(time_1, time_2) {
+  createTimes: async (time_1, time_2) => {
     const startDate = new Date();
     const endDate = new Date();
 
@@ -33,7 +33,7 @@ module.exports = {
       }
     };
   },
-  async validateTimeFormat(time, format) {
+  validateTimeFormat: async (time, format) => {
     let timeFormat;
     switch (format) {
       case 'HH:mm':
@@ -48,9 +48,9 @@ module.exports = {
     }
     return timeFormat.test(time);
   },
-  async getCurrentTime() {
+  getCurrentTime: async () => {
     const date = moment.tz('Europe/Bucharest');
     const time = date.format('HH:mm:ss');
     return time;
-  },
+  }
 };

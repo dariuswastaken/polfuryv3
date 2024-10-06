@@ -1,20 +1,20 @@
 const moment = require('moment');
 
 module.exports = {
-  async getDayAsString() {
+  getDayAsString: async () => {
     const date = new Date().toLocaleDateString('en-EN', {
       timeZone: 'Europe/Bucharest',
       weekday: 'long'
     });
     return date;
   },
-  async getCurrentDate() {
+  getCurrentDate: async () => {
     const date = moment.tz('Europe/Bucharest');
     const dateFormatted = date.format('YYYY-MM-DD');
     const [year, month, day] = dateFormatted.split('-');
     return `${day}.${month}.${year}`;
   },
-  async getCurrentWeek() {
+  getCurrentWeek: async () => {
     let today = new Date();
     let day = today.getDay();
 
@@ -33,7 +33,7 @@ module.exports = {
 
     return weekDates;
   },
-  async isDateInWeek(date, weekStart, weekEnd) {
+  isDateInWeek: async (date, weekStart, weekEnd) => {
     date = new Date(date);
     weekStart = new Date(weekStart);
     weekEnd = new Date(weekEnd);
@@ -43,7 +43,7 @@ module.exports = {
 
     return date >= weekStart && date <= weekEnd;
   },
-  async getCurrentMonthAsString() {
+  getCurrentMonthAsString: async () => {
     const months = [
       'Ianuarie',
       'Februarie',
@@ -57,11 +57,11 @@ module.exports = {
       'Octombrie',
       'Noiembrie',
       'Decembrie'
-    ]
+    ];
     const currentMonth = new Date().getMonth();
     return months[currentMonth];
   },
-  async getDifferenceInDays(date1, date2) {
+  getDifferenceInDays: async (date1, date2) => {
     const diffTime = Math.abs(date2 - date1);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     return diffDays;

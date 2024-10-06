@@ -1,5 +1,5 @@
 module.exports = {
-  async sendMenuInstructor({ pulsar, interaction, mongo, targetID }) {
+  sendMenuInstructor: async ({ pulsar, interaction, mongo, targetID }) => {
     const targetProfile = await mongo.getProfile(targetID);
     const buttons = [
       {

@@ -1,5 +1,5 @@
 module.exports = {
-  async sendSuccessEmbed(message, { pulsar, interaction }) {
+  sendSuccessEmbed: async (message, { pulsar, interaction }) => {
     await pulsar.discordManager.embeds.createSuccessEmbed(
       'Succes',
       `${message}`,
@@ -10,7 +10,7 @@ module.exports = {
       }
     );
   },
-  async sendWarningEmbed(message, { pulsar, interaction }) {
+  sendWarningEmbed: async (message, { pulsar, interaction }) => {
     await pulsar.discordManager.embeds.createWarningEmbed(
       'Atentie',
       `${message}`,
