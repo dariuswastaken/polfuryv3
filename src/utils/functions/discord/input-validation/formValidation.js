@@ -1,5 +1,5 @@
 module.exports = {
-  async formIntrare({ pulsar, interaction, utils, mongo }) {
+  formIntrare: async ({ pulsar, interaction, utils, mongo }) => {
     const nameInput = interaction.fields.getTextInputValue('form-intrare-nume');
     const idInput = interaction.fields.getTextInputValue('form-intrare-id');
     const tokenInput =
@@ -44,7 +44,8 @@ module.exports = {
       serverID: parseInt(idInput)
     };
   },
-  async formTrecereTest({ pulsar, interaction, utils, mongo }) {
+  
+  formTrecereTest: async ({ pulsar, interaction, utils, mongo }) => {
     const idInput = interaction.fields.getTextInputValue(
       'form-trecere-test-id'
     );

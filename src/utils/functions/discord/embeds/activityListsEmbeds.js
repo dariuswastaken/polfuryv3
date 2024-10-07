@@ -61,6 +61,7 @@ module.exports = {
       ephemeral: true
     });
   },
+  
   sendOutList: async ({ pulsar, interaction, utils, mongo, week }) => {
     const outList = await mongo.getEntryList('out', week);
 

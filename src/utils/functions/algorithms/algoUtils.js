@@ -119,6 +119,7 @@ module.exports = {
     
     return grade.toFixed(2);
   },
+  
   gradeAdjust: async (rank, grade, { reports, fines, calls, actionActivity }) => {
    let adjustedGrade = grade;
    if(rank === 'Agent Sef Principal') {

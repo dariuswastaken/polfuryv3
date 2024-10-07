@@ -1,5 +1,5 @@
 module.exports = {
-  async noUpListError(pulsar, interaction) {
+  noUpListError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu exista lista de UP pentru saptamana respectiva.',
@@ -10,7 +10,8 @@ module.exports = {
       }
     );
   },
-  async noOutListError(pulsar, interaction) {
+  
+  noOutListError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu exista lista de OUT pentru saptamana respectiva.',
@@ -21,7 +22,8 @@ module.exports = {
       }
     );
   },
-  async listAlreadyExistsError(pulsar, interaction) {
+  
+  listAlreadyExistsError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Listele pentru saptamana respectiva au fost deja generate.',
@@ -32,7 +34,8 @@ module.exports = {
       }
     );
   },
-  async noListsError(pulsar, interaction) {
+  
+  noListsError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu exista liste pentru saptamana respectiva.',

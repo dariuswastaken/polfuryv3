@@ -1,5 +1,5 @@
 module.exports = {
-  async sendChestorRankChoiceMenu({ pulsar, interaction, targetID }) {
+  sendChestorRankChoiceMenu: async ({ pulsar, interaction, targetID }) => {
     const menu = await pulsar.discordManager.menus.createSelectMenu({
       type: 'string',
       options: [
@@ -28,7 +28,7 @@ module.exports = {
     );
   },
 
-  async sendWeekChoiceMenu({ pulsar, interaction, mongo }) {
+  sendWeekChoiceMenu: async ({ pulsar, interaction, mongo }) => {
     const activityWeeks = await mongo.getAllActivityWeeks();
     let options = [];
     for (let week of activityWeeks) {
@@ -56,7 +56,7 @@ module.exports = {
     );
   },
 
-  async sendListWeekChoiceMenu({ pulsar, interaction, mongo }) {
+  sendListWeekChoiceMenu: async ({ pulsar, interaction, mongo }) => {
     const activityWeeks = await mongo.getAllActivityWeeks();
     let options = [];
     for (let week of activityWeeks) {
@@ -84,7 +84,7 @@ module.exports = {
     );
   },
   
-  async sendListDeleteWeekChoiceMenu({ pulsar, interaction, mongo }) {
+  sendListDeleteWeekChoiceMenu: async ({ pulsar, interaction, mongo }) => {
     const activityWeeks = await mongo.getAllActivityWeeks();
     let options = [];
     for (let week of activityWeeks) {

@@ -5,14 +5,7 @@ const {
 } = require('discord.js');
 
 module.exports = {
-  async createSanctionThread({
-    pulsar,
-    utils,
-    interaction,
-    mongo,
-    sanction,
-    reason
-  }) {
+  createSanctionThread: async ({ pulsar, utils, interaction, mongo, sanction, reason }) => {
     const forum = await interaction.guild.channels.cache.get(
       '1205145266349670440'
     );
@@ -92,7 +85,8 @@ module.exports = {
       }
     );
   },
-  async addSanctionToMember({ pulsar, mongo, userID, sanctions }) {
+  
+  addSanctionToMember: async ({ pulsar, mongo, userID, sanctions }) => {
     const sanctionKeys = {
       ts25: 'Taiere Salariala 25%',
       ts50: 'Taiere Salariala 50%',
@@ -128,12 +122,8 @@ module.exports = {
 
     await mongo.addSanctionsM(userID, formattedSancList);
   },
-  async createSanctionPrivateChannel({
-    pulsar,
-    interaction,
-    mongo,
-    sanctionID
-  }) {
+  
+  createSanctionPrivateChannel: async ({ pulsar, interaction, mongo, sanctionID }) => {
     const sanction = await mongo.getSanction(sanctionID);
     const sanctionedProfile = await mongo.getProfile(sanction.sanctionedID);
 

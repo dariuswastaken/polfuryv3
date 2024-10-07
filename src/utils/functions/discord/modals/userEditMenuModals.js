@@ -1,12 +1,5 @@
 module.exports = {
-  async displayUserEditModal({
-    pulsar,
-    interaction,
-    targetID,
-    type,
-    title,
-    placeholder
-  }) {
+  displayUserEditModal: async ({ pulsar, interaction, targetID, type, title, placeholder }) => {
     const modal = await pulsar.discordManager.modals.createModal({
       id: `modal-edit-user-${type.toLowerCase()}/${targetID}`,
       title: `Meniu Editare User | ${title}`,

@@ -7,11 +7,13 @@ module.exports = {
     const duration = moment.duration(end.diff(start));
     return duration.asMinutes();
   },
+  
   getCurrentHour: async () => {
     const date = moment.tz('Europe/Bucharest');
     const hour = date.format('HH:mm');
     return hour.split(':')[0];
   },
+  
   createTimes: async (time_1, time_2) => {
     const startDate = new Date();
     const endDate = new Date();
@@ -33,6 +35,7 @@ module.exports = {
       }
     };
   },
+  
   validateTimeFormat: async (time, format) => {
     let timeFormat;
     switch (format) {
@@ -48,6 +51,7 @@ module.exports = {
     }
     return timeFormat.test(time);
   },
+  
   getCurrentTime: async () => {
     const date = moment.tz('Europe/Bucharest');
     const time = date.format('HH:mm:ss');

@@ -1,5 +1,5 @@
 module.exports = {
-  async displayInstrMenuCallsignInputModal(pulsar, interaction, subdep, type) {
+  displayInstrMenuCallsignInputModal: async (pulsar, interaction, subdep, type) => {
     const modal = await pulsar.discordManager.modals.createModal({
       id: `modal-${subdep}-instr-${type.toLowerCase()}`,
       title: `Meniu ${subdep.toUpperCase()} | ${type} Instructor`,
@@ -16,7 +16,8 @@ module.exports = {
 
     await interaction.showModal(modal);
   },
-  async displayInstrActivityCallsignInputModal(pulsar, interaction, subdep) {
+  
+  displayInstrActivityCallsignInputModal: async (pulsar, interaction, subdep) => {
     const modal = await pulsar.discordManager.modals.createModal({
       id: `modal-${subdep}-instr-activity`,
       title: `Meniu ${subdep.toUpperCase()} | Activitate`,

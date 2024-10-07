@@ -1,5 +1,5 @@
 module.exports = {
-  async noSnapshotsError(pulsar, interaction) {
+  noSnapshotsError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu exista snapshot-uri pentru persoana respectiva.',

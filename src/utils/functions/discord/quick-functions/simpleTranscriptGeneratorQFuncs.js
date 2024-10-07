@@ -1,5 +1,5 @@
 module.exports = {
-  async createChannelTranscript({ interaction, channelID, type }) {
+  createChannelTranscript: async ({ interaction, channelID, type }) => {
     const channel = await interaction.guild.channels.cache.get(channelID);
     let messages = await channel.messages.fetch({ limit: 100 });
     let sortedMessages = Array.from(messages.values()).sort(

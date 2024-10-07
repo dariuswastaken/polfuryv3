@@ -1,5 +1,5 @@
 module.exports = {
-  async noAvailableCallsignError(pulsar, interaction) {
+  noAvailableCallsignError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu a fost gasit nici un callsign disponibil pentru gradul respectiv.',

@@ -8,12 +8,14 @@ module.exports = {
     });
     return date;
   },
+  
   getCurrentDate: async () => {
     const date = moment.tz('Europe/Bucharest');
     const dateFormatted = date.format('YYYY-MM-DD');
     const [year, month, day] = dateFormatted.split('-');
     return `${day}.${month}.${year}`;
   },
+  
   getCurrentWeek: async () => {
     let today = new Date();
     let day = today.getDay();
@@ -33,6 +35,7 @@ module.exports = {
 
     return weekDates;
   },
+  
   isDateInWeek: async (date, weekStart, weekEnd) => {
     date = new Date(date);
     weekStart = new Date(weekStart);
@@ -43,6 +46,7 @@ module.exports = {
 
     return date >= weekStart && date <= weekEnd;
   },
+  
   getCurrentMonthAsString: async () => {
     const months = [
       'Ianuarie',
@@ -61,6 +65,7 @@ module.exports = {
     const currentMonth = new Date().getMonth();
     return months[currentMonth];
   },
+  
   getDifferenceInDays: async (date1, date2) => {
     const diffTime = Math.abs(date2 - date1);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));

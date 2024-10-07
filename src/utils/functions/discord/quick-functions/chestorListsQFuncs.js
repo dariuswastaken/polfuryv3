@@ -1,7 +1,7 @@
 const { flags } = require('../../activity/flags');
 
 module.exports = {
-  async createUpList({ interaction, pulsar, utils, mongo, week }) {
+  createUpList: async ({ interaction, pulsar, utils, mongo, week }) => {
     await pulsar.discordManager.embeds.createDefaultEmbed(
       `**(UP)** Se creeaza lista pentru saptamana ${week}...`,
       {
@@ -165,7 +165,8 @@ module.exports = {
       userIDList: userIDList
     };
   },
-  async createOutList({ interaction, pulsar, utils, mongo, week }) {
+  
+  createOutList: async ({ interaction, pulsar, utils, mongo, week }) => {
     await pulsar.discordManager.embeds.createDefaultEmbed(
       `**(OUT)** Se creeaza lista pentru saptamana ${week}...`,
       {

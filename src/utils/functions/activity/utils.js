@@ -86,6 +86,7 @@ module.exports = {
     }
     return noticeList;
   },
+  
   getActionActivity: async (period, id, rank, client) => {
     try {
       const startDateStr = period.split(' - ')[0];
@@ -167,6 +168,7 @@ module.exports = {
       console.log(error);
     }
   },
+  
   gradeRating: async (grade, leaveDays) => {
     let rating = '';
     if (leaveDays >= 5) {

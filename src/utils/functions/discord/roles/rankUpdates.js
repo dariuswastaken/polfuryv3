@@ -1,5 +1,5 @@
 module.exports = {
-  async updateRankRoles(user, rank) {
+  updateRankRoles: async (user, rank) => {
     await user.roles.remove([
       '1094603198695755816',
       '1094603197718478938',
@@ -16,7 +16,8 @@ module.exports = {
     };
     await user.roles.add(ranks[rank]);
   },
-  async updateRankRolesCI(user, rank) {
+  
+  updateRankRolesCI: async (user, rank) => {
     await user.roles.remove([
       '1094603198695755816',
       '1094603197718478938',

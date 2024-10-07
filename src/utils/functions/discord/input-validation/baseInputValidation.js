@@ -1,5 +1,5 @@
 module.exports = {
-  async callsignInput({ pulsar, interaction, utils, mongo }) {
+  callsignInput: async ({ pulsar, interaction, utils, mongo }) => {
     const callsignInput = interaction.fields.getTextInputValue(
       'm-sanction-callsign-input'
     );
@@ -16,7 +16,8 @@ module.exports = {
       profile: profile
     };
   },
-  async reasonInput({ pulsar, interaction, utils }) {
+  
+  reasonInput: async ({ pulsar, interaction, utils }) => {
     const reasonInput = interaction.fields.getTextInputValue(
       'm-sanction-reason-input'
     );

@@ -1,5 +1,5 @@
 module.exports = {
-  async displayMotivConcediuModal(pulsar, interaction, targetID) {
+  displayMotivConcediuModal: async (pulsar, interaction, targetID) => {
     const modal = await pulsar.discordManager.modals.createModal({
       id: `modal-motiv-concediu/${targetID}`,
       title: 'Formular Concediu',

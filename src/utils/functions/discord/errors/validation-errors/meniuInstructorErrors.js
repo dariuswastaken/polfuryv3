@@ -1,5 +1,5 @@
 module.exports = {
-  async alreadyHasCertificateError(pulsar, interaction) {
+  alreadyHasCertificateError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Membrul respectiv detine deja acest certificat.',
@@ -10,7 +10,8 @@ module.exports = {
       }
     );
   },
-  async doesNotHaveCertificateError(pulsar, interaction) {
+  
+  doesNotHaveCertificateError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Membrul respectiv nu detine acest certificat.',
@@ -21,7 +22,8 @@ module.exports = {
       }
     );
   },
-  async alreadyHasCooldownError(pulsar, interaction) {
+  
+  alreadyHasCooldownError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Membrul respectiv are deja un cooldown.',
@@ -32,7 +34,8 @@ module.exports = {
       }
     );
   },
-  async noCooldownsError(pulsar, interaction) {
+  
+  noCooldownsError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Membrul respectiv nu are cooldown-uri active.',

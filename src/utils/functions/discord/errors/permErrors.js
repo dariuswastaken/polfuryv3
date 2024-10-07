@@ -1,5 +1,5 @@
 module.exports = {
-  async noPermissionError(pulsar, interaction) {
+  noPermissionError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu ai permisiunea necesara pentru a folosi aceasta comanda.',
@@ -10,7 +10,8 @@ module.exports = {
       }
     );
   },
-  async selfError(pulsar, interaction) {
+  
+  selfError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu te poti demite singur/a.',
@@ -21,7 +22,8 @@ module.exports = {
       }
     );
   },
-  async roleHierarchyError(pulsar, interaction) {
+  
+  roleHierarchyError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu poti face asta pe cineva cu un rol superior sau egal.',
@@ -32,7 +34,8 @@ module.exports = {
       }
     );
   },
-  async selfUseError(pulsar, interaction) {
+  
+  selfUseError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu poti folosi acest meniu pe tine.',
@@ -43,7 +46,8 @@ module.exports = {
       }
     );
   },
-  async invalidSanctionPermError(pulsar, interaction) {
+  
+  invalidSanctionPermError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu poti deschide un thread pe aceasta persoana.',

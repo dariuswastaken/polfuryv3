@@ -1,5 +1,5 @@
 module.exports = {
-  async invalidCallsignError(pulsar, interaction) {
+  invalidCallsignError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Callsign-ul introdus nu este valid.',
@@ -10,7 +10,8 @@ module.exports = {
       }
     );
   },
-  async noSanctionsError(pulsar, interaction) {
+  
+  noSanctionsError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Trebuie sa adaugi minim o sanctiune pentru a continua.',
@@ -20,7 +21,8 @@ module.exports = {
       }
     );
   },
-  async hasSanctionAlreadyError(pulsar, interaction) {
+  
+  hasSanctionAlreadyError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Sanctiunea respectiva este deja adaugata.',
@@ -31,7 +33,8 @@ module.exports = {
       }
     );
   },
-  async cannotAddSanctionError(pulsar, interaction) {
+  
+  cannotAddSanctionError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu mai poti adauga sanctiuni.',
@@ -42,7 +45,8 @@ module.exports = {
       }
     );
   },
-  async cannotCreateThreadAgainError(pulsar, interaction) {
+  
+  cannotCreateThreadAgainError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Acest thread nu poate fi creat din nou.',
@@ -52,7 +56,8 @@ module.exports = {
       }
     );
   },
-  async threadClosedError(pulsar, interaction) {
+  
+  threadClosedError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Acest thread este inchis.',

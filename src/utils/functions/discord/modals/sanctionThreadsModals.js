@@ -1,5 +1,5 @@
 module.exports = {
-  async displaySanctionCallsignInputModal(pulsar, interaction) {
+  displaySanctionCallsignInputModal: async (pulsar, interaction) => {
     const modal = await pulsar.discordManager.modals.createModal({
       id: `modal-sanction-callsign-input`,
       title: 'Threads Sanctiuni | Callsign',
@@ -16,7 +16,8 @@ module.exports = {
 
     await interaction.showModal(modal);
   },
-  async displaySanctionMotivInputModal(pulsar, interaction, sanctionID) {
+  
+  displaySanctionMotivInputModal: async (pulsar, interaction, sanctionID) => {
     const modal = await pulsar.discordManager.modals.createModal({
       id: `modal-sanction-reason-input/${sanctionID}`,
       title: 'Threads Sanctiuni | Motiv',

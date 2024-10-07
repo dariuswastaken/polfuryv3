@@ -1,5 +1,5 @@
 module.exports = {
-  async sendActivityWeekChoiceMenu({ pulsar, interaction, mongo, targetID }) {
+  sendActivityWeekChoiceMenu: async ({ pulsar, interaction, mongo, targetID }) => {
     const weeks = await mongo.getAllActivity(targetID);
     let options = [];
     for (let week of weeks) {

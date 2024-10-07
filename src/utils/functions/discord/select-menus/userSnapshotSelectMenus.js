@@ -1,11 +1,5 @@
 module.exports = {
-  async sendUserSnapshotChoiceMenu({
-    pulsar,
-    interaction,
-    mongo,
-    targetID,
-    type
-  }) {
+  sendUserSnapshotChoiceMenu: async ({ pulsar, interaction, mongo, targetID, type }) => {
     const snapshots = await mongo.getUserSnapshots(targetID);
 
     let options = [];

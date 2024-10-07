@@ -1,5 +1,5 @@
 module.exports = {
-  async addFunc(interaction, userID, mongo, func) {
+  addFunc: async (interaction, userID, mongo, func) => {
     const roleIDs = {
       'Instr. Radio': '1094603229456769155',
       'Instr. MDT': '1147540100327157780',
@@ -13,7 +13,7 @@ module.exports = {
     await mongo.addFunc(userID, func);
   },
 
-  async removeFunc(interaction, userID, mongo, func) {
+  removeFunc: async (interaction, userID, mongo, func) => {
     const roleIDs = {
       'Instr. Radio': '1094603229456769155',
       'Instr. MDT': '1147540100327157780',

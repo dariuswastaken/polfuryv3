@@ -1,13 +1,5 @@
 module.exports = {
-  async callsignInputSubdep({
-    pulsar,
-    interaction,
-    utils,
-    mongo,
-    subdep,
-    type,
-    modalType
-  }) {
+  callsignInputSubdep: async ({ pulsar, interaction, utils, mongo, subdep, type, modalType }) => {
     const callsignInput = interaction.fields.getTextInputValue(
       `m-instr-${subdep}-callsign-input`
     );
@@ -37,13 +29,8 @@ module.exports = {
       profile: profile
     };
   },
-  async callsignInputInstrActivity({
-    pulsar,
-    interaction,
-    utils,
-    mongo,
-    subdep
-  }) {
+  
+  callsignInputInstrActivity: async ({ pulsar, interaction, utils, mongo, subdep }) => {
     const callsignInput = interaction.fields.getTextInputValue(
       `m-instr-activity-${subdep}-callsign-input`
     );

@@ -1,10 +1,5 @@
 module.exports = {
-  async sendSanctionDurationChoiceMenu({
-    pulsar,
-    interaction,
-    sanctionID,
-    sanction
-  }) {
+  sendSanctionDurationChoiceMenu: async ({ pulsar, interaction, sanctionID, sanction }) => {
     const menu = await pulsar.discordManager.menus.createSelectMenu({
       type: 'string',
       options: [

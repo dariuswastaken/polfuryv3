@@ -1,5 +1,5 @@
 module.exports = {
-  async sendCertificatChoiceMenuCooldown({ pulsar, interaction, targetID }) {
+  sendCertificatChoiceMenuCooldown: async ({ pulsar, interaction, targetID }) => {
     const menu = await pulsar.discordManager.menus.createSelectMenu({
       type: 'string',
       options: [
@@ -27,12 +27,8 @@ module.exports = {
       }
     );
   },
-  async sendCooldownCertificatDurationSelect({
-    pulsar,
-    interaction,
-    targetID,
-    certificat
-  }) {
+  
+  sendCooldownCertificatDurationSelect: async ({ pulsar, interaction, targetID, certificat }) => {
     const menu = await pulsar.discordManager.menus.createSelectMenu({
       type: 'string',
       options: [
@@ -64,13 +60,8 @@ module.exports = {
       }
     );
   },
-  async sendCertificateChoiceMenu({
-    pulsar,
-    interaction,
-    menuTitle,
-    type,
-    targetID
-  }) {
+  
+  sendCertificateChoiceMenu: async ({ pulsar, interaction, menuTitle, type, targetID }) => {
     const menu = await pulsar.discordManager.menus.createSelectMenu({
       type: 'string',
       options: [

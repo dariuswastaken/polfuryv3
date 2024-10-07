@@ -1,5 +1,5 @@
 module.exports = {
-  async tokenExpiredError(pulsar, interaction) {
+  tokenExpiredError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Token-ul este expirat.',

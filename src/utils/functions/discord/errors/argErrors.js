@@ -1,5 +1,5 @@
 module.exports = {
-  async invalidNameArgumentsError(pulsar, interaction) {
+  invalidNameArgumentsError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Numele trebuie sa fie format din **Nume + Prenume**.',
@@ -10,7 +10,8 @@ module.exports = {
       }
     );
   },
-  async invalidResultError(pulsar, interaction) {
+  
+  invalidResultError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Rezultatul introdus nu este valid (Acceptat/Admis - Refuzat/Respins).',
@@ -21,7 +22,8 @@ module.exports = {
       }
     );
   },
-  async invalidReasonLengthError(pulsar, interaction) {
+  
+  invalidReasonLengthError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Motivul trebuie sa aibe minim 5 caractere.',

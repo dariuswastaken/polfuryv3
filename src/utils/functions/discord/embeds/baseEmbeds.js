@@ -10,6 +10,7 @@ module.exports = {
       }
     );
   },
+  
   sendWarningEmbed: async (message, { pulsar, interaction }) => {
     await pulsar.discordManager.embeds.createWarningEmbed(
       'Atentie',

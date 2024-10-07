@@ -1,5 +1,5 @@
 module.exports = {
-  async addCertificat({ interaction, mongo, targetID, certificat }) {
+  addCertificat: async ({ interaction, mongo, targetID, certificat }) => {
     const targetUser = await interaction.guild.members.fetch(targetID);
     switch (certificat) {
       case 'radio':
@@ -31,7 +31,8 @@ module.exports = {
         break;
     }
   },
-  async removeCertificat({ interaction, mongo, targetID, certificat }) {
+  
+  removeCertificat: async ({ interaction, mongo, targetID, certificat }) => {
     const targetUser = await interaction.guild.members.fetch(targetID);
     switch (certificat) {
       case 'radio':

@@ -1,5 +1,5 @@
 module.exports = {
-  async alreadyInMotoSessionError(pulsar, interaction) {
+  alreadyInMotoSessionError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Ai deja un motor activ.',
@@ -10,7 +10,8 @@ module.exports = {
       }
     );
   },
-  async alreadyInHighspeedSessionError(pulsar, interaction) {
+  
+  alreadyInHighspeedSessionError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Ai deja o masina activa.',
@@ -21,7 +22,8 @@ module.exports = {
       }
     );
   },
-  async alreadyInPilotSessionError(pulsar, interaction) {
+  
+  alreadyInPilotSessionError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Ai deja un elicopter activ.',
@@ -32,7 +34,8 @@ module.exports = {
       }
     );
   },
-  async noMotoCertificateError(pulsar, interaction) {
+  
+  noMotoCertificateError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu detii certificatul **MOTO**.',
@@ -43,7 +46,8 @@ module.exports = {
       }
     );
   },
-  async noHighspeedCertificateError(pulsar, interaction) {
+  
+  noHighspeedCertificateError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu detii certificatul **HIGHSPEED**.',
@@ -54,7 +58,8 @@ module.exports = {
       }
     );
   },
-  async noPilotCertificateError(pulsar, interaction) {
+  
+  noPilotCertificateError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu detii certificatul **PILOT**.',

@@ -1,5 +1,5 @@
 module.exports = {
-  async invalidTokenError(pulsar, interaction) {
+  invalidTokenError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Token-ul introdus este invalid.',

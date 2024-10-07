@@ -1,5 +1,5 @@
 module.exports = {
-  async addAcademiePD({ interaction, mongo, targetID, data }) {
+  addAcademiePD: async ({ interaction, mongo, targetID, data }) => {
     await mongo.createProfileAcademician({
       nume: data.nume,
       IDDiscord: data.IDDiscord,
@@ -17,7 +17,8 @@ module.exports = {
     await user.setNickname(`[AC] ${data.nume}`);
     await user.roles.add('1094603212213989436');
   },
-  async addReintegrarePD({ interaction, mongo, targetID, data }) {
+  
+  addReintegrarePD: async ({ interaction, mongo, targetID, data }) => {
     const user = await interaction.guild.members.fetch(targetID);
     const callsign = await mongo.getAvailableCallsign('Agent');
 
@@ -48,7 +49,8 @@ module.exports = {
       '1094603202051194990'
     ]);
   },
-  async addMemberPD({ interaction, mongo, targetID, data }) {
+  
+  addMemberPD: async ({ interaction, mongo, targetID, data }) => {
     const user = await interaction.guild.members.fetch(targetID);
     const callsign = await mongo.getAvailableCallsign('Cadet');
 

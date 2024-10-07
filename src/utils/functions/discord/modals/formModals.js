@@ -1,5 +1,5 @@
 module.exports = {
-  async displayFormularIntrare(pulsar, interaction, targetID) {
+  displayFormularIntrare: async (pulsar, interaction, targetID) => {
     const modal = await pulsar.discordManager.modals.createModal({
       id: `modal-formular-intrare/${targetID}`,
       title: 'Formular Intrare',
@@ -31,7 +31,8 @@ module.exports = {
 
     await interaction.showModal(modal);
   },
-  async displayFormularDemisie(pulsar, interaction, targetID) {
+  
+  displayFormularDemisie: async (pulsar, interaction, targetID) => {
     const modal = await pulsar.discordManager.modals.createModal({
       id: `modal-formular-demisie/${targetID}`,
       title: 'Formular Demisie',
@@ -48,7 +49,8 @@ module.exports = {
 
     await interaction.showModal(modal);
   },
-  async displayFormularTrecereTest(pulsar, interaction, targetID) {
+  
+  displayFormularTrecereTest: async (pulsar, interaction, targetID) => {
     const modal = await pulsar.discordManager.modals.createModal({
       id: `modal-formular-trecere-test`,
       title: 'Formular Trecere Test',

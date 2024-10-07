@@ -1,5 +1,5 @@
 module.exports = {
-  async noProfileError(pulsar, interaction) {
+  noProfileError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Acel membru nu are un profil in baza de date.',
@@ -10,7 +10,8 @@ module.exports = {
       }
     );
   },
-  async noActivityError(pulsar, interaction) {
+  
+  noActivityError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu s-a gasit activitate pentru membrul respectiv.',
@@ -21,7 +22,8 @@ module.exports = {
       }
     );
   },
-  async userNotInAcademy(pulsar, interaction) {
+  
+  userNotInAcademy: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Membrul respectiv nu face parte din academie.',
