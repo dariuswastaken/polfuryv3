@@ -4,20 +4,20 @@ const fs = require('fs')
 
 module.exports = {
   getUserMdtData: async (userId) => {
-    const response = await webClient.get('https://panel.furyrp.ro/api/server/raportPolitie');
+    const response = await webClient.get('/server/raportPolitie');
     return response.data.find(user => user[0].startsWith(`[${userId}]`));
   },
   isOnDuty: async (userId) => {
-    const response = await webClient.get('https://panel.furyrp.ro/api/server/raportPolitie');
+    const response = await webClient.get('/server/raportPolitie');
     const data = await response.data.find(user => user[0].startsWith(`[${userId}]`));
     if(data === undefined) return false;
     return data[9];
   },
   getUserServerProfile: async (userId) => {
-    const response = await webClient.get('https://panel.furyrp.ro/api/profile');
+    const response = await webClient.get('/profile');
   },
   resetMDT: async () => {
-    await webClient.post('https://panel.furyrp.ro/api/server/raportPolitie/reset', {
+    await webClient.post('/raportPolitie/reset', {
       reset: true
     });
   }

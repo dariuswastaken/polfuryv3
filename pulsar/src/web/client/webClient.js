@@ -8,7 +8,10 @@ const axiosInstance = axios.create({
   }
 });
 
-axiosRetry(axiosInstance, { retries: 3 });
+axiosRetry(axiosInstance, {
+  retries: 3,
+  retryDelay: axiosRetry.exponentialDelay
+});
 
 module.exports = class WebClient {
   async get(url) {
