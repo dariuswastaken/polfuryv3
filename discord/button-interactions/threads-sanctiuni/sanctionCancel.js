@@ -4,7 +4,7 @@ module.exports = {
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 
-    if (!interaction.member.roles.has(['1119645178148442152'])) {
+    if (!interaction.user.roles.cache.has(['1119645178148442152'])) {
       await utils.discord.errors.sanctionPermError(pulsar, interaction);
       return;
     }
