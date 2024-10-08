@@ -1,4 +1,4 @@
-const { db } = require('../handlers/mongoConnectionHandler');
+const { db } = require('../../../handlers/mongoConnectionHandler');
 const { timeConversion, dayConversion } = require('../../utils/exports/globalExports');
 
 module.exports = {

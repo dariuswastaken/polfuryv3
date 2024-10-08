@@ -1,4 +1,4 @@
-const { db } = require('../handlers/mongoConnectionHandler');
+const { db } = require('../../handlers/mongoConnectionHandler');
 
 const countItems = (items, filter) => {
   return items.filter(filter).length;

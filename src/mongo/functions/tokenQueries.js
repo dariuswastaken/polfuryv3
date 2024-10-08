@@ -1,4 +1,4 @@
-const { db } = require('../handlers/mongoConnectionHandler');
+const { db } = require('../../handlers/mongoConnectionHandler');
 
 module.exports = {
   createToken: async (token, userID, type, authorID) => {

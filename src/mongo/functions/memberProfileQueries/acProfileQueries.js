@@ -1,4 +1,4 @@
-const { db } = require('../handlers/mongoConnectionHandler');
+const { db } = require('../../../handlers/mongoConnectionHandler');
 
 module.exports = {
   getProfileAcademician: async (id) => {

@@ -1,4 +1,4 @@
-const { db } = require('../handlers/mongoConnectionHandler');
+const { db } = require('../../../handlers/mongoConnectionHandler');
 
 module.exports = {
   createSession: async (schema, { tip_, uniqueID, userID, data }) => {
