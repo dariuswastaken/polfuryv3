@@ -10,6 +10,7 @@ const pendingSanctionSchema = new mongoose.Schema(
     reason: String || null,
     active: Boolean,
     date: Date,
+    scheduled: Array,
   },
   { collection: 'pendingSanctions' }
 );
