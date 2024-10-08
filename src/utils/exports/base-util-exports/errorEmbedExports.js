@@ -48,5 +48,6 @@ module.exports.errors = {
   doesNotHaveFuncError: modules.subdepManagementErrors.doesNotHaveFuncError,
   invalidFuncRankError: modules.subdepManagementErrors.invalidFuncRankError,
   invalidTokenError: modules.tokenErrors.invalidTokenError,
-  noSnapshotsError: modules.userSnapshotErrors.noSnapshotsError
+  noSnapshotsError: modules.userSnapshotErrors.noSnapshotsError,
+  sanctionPermError: modules.permErrors.sanctionPermError,
 };

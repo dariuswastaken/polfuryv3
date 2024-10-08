@@ -10,7 +10,7 @@ module.exports = {
       }
     );
   },
-  
+
   selfError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
@@ -22,7 +22,7 @@ module.exports = {
       }
     );
   },
-  
+
   roleHierarchyError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
@@ -34,7 +34,7 @@ module.exports = {
       }
     );
   },
-  
+
   selfUseError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
@@ -46,11 +46,23 @@ module.exports = {
       }
     );
   },
-  
+
   invalidSanctionPermError: async (pulsar, interaction) => {
     pulsar.discordManager.embeds.createErrorEmbed(
       'Eroare',
       'Nu poti deschide un thread pe aceasta persoana.',
+      {
+        interaction: interaction,
+        ephemeral: true,
+        deferReply: true
+      }
+    );
+  },
+
+  sanctionPermError: async (pulsar, interaction) => {
+    pulsar.discordManager.embeds.createErrorEmbed(
+      'Eroare',
+      'Doar un chestor poate trimite/anula sanctiunile.',
       {
         interaction: interaction,
         ephemeral: true,
