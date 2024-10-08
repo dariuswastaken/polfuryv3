@@ -2,13 +2,13 @@ const Discord = require('discord.js');
 
 module.exports = {
   createButtonMenu: async ({ perLine, buttons }) => {
-    const perLine = perLine || 4;
-    const buttons = buttons || [];
+    const bPerLine = perLine || 4;
+    const bButtons = buttons || [];
 
     const rows = [];
 
-    for (let i = 0; i < buttons.length; i += perLine) {
-      const currentLine = buttons.slice(i, i + perLine);
+    for (let i = 0; i < bButtons.length; i += bPerLine) {
+      const currentLine = bButtons.slice(i, i + bPerLine);
 
       let row = new Discord.ActionRowBuilder();
 
