@@ -66,5 +66,10 @@ module.exports = {
       sanctionID: sanctionID
     });
     return result;
-  }
+  },
+  
+  getAllSanctions: async () => {
+    const result = await db.findMore('PendingSanction', {});
+    return result;
+  },
 };

@@ -113,4 +113,12 @@ module.exports = {
   addAvM: async (userID) => {
     await db.add('Member', { IDDiscord: userID }, { avertismente: 1 });
   },
+  
+  removeAvM: async (userID) => {
+    await db.update(
+      'Member',
+      { IDDiscord: userID },
+      { $inc: { avertismente: -1 } }
+    );
+  },
 }
