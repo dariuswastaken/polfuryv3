@@ -1,23 +1,20 @@
-module.exports = class WebClient {
-  constructor() {
-    this.get = this.get.bind(this);
+const axiosRetry = require('axios-retry').default;
+const axios = require('axios');
+
+const axiosInstance = axios.create({
+  baseURL: 'https://panel.furyrp.ro/api',
+  headers: {
+    'x-api-key': process.env.WEB_API_KEY
   }
+});
+
+axiosRetry(axiosInstance, { retries: 3 });
+
+module.exports = class WebClient {
   async get(url) {
-    const options = {
-      path: url,
-      method: 'GET',
-      host: 'panel.furyrp.ro',
-      headers: {
-        'x-api-key': process.env.WEB_API_KEY
-      }
-    };
     try {
-      const response = await fetch(url, options);
-      if (response.ok) {
-        return await response.json();
-      } else {
-        throw new Error(response.status);
-      }
+      const response = await axiosInstance.get(url);
+      return response.data;
     } catch (error) {
       console.error('[WEB ERROR] Failed to fetch: ' + error);
     }
@@ -42,5 +39,5 @@ module.exports = class WebClient {
     } catch (error) {
       console.error('[WEB ERROR] Failed to fetch: ' + error);
     }
-  }
+  },
 };

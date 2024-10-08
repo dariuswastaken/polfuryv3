@@ -13,6 +13,9 @@ module.exports = {
     if(data === undefined) return false;
     return data[9];
   },
+  getUserServerProfile: async (userId) => {
+    const response = await webClient.get(`https://panel.furyrp.ro/api/profile`);
+  },
   resetMDT: async () => {
     await webClient.post('https://panel.furyrp.ro/api/server/raportPolitie/reset', {
       reset: true
