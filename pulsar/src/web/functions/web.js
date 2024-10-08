@@ -9,13 +9,13 @@ module.exports = {
   },
   isOnDuty: async (userId) => {
     const response = await webClient.get('/server/raportPolitie');
-    console.log(response);
     const data = await response.data.find(user => user[0].startsWith(`[${userId}]`));
     if(data === undefined) return false;
     return data[9];
   },
   getUserServerProfile: async (userId) => {
-    const response = await webClient.get('/profile');
+    const response = await webClient.get(`/profile/${userId}`);
+    return response.data;
   },
   resetMDT: async () => {
     await webClient.post('/raportPolitie/reset', {
