@@ -9,8 +9,10 @@ module.exports = class WebClient {
     });
 
     axiosRetry(this.axiosInstance, {
-      retries: 3,
-      retryDelay: axiosRetry.exponentialDelay
+      retries: 5,
+      retryDelay: (retryCount) => {
+        return retryCount * 1000;
+      }
     });
   }
 
