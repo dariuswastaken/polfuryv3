@@ -5,7 +5,8 @@ module.exports = {
   name: 'sanctionRemovalSchedules',
   async execute(Pulsar) {
     const sanctions = await mongo.getAllSanctions();
-
+    console.log(sanctions)
+    
     for (let sanction of sanctions) {
       if (sanction.pending === false) {
         continue;

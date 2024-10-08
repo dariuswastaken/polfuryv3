@@ -69,7 +69,7 @@ module.exports = {
   },
   
   getAllSanctions: async () => {
-    const result = await db.findMore('PendingSanction', {});
+    const result = await db.getAll('PendingSanction');
     return result;
   },
 };
