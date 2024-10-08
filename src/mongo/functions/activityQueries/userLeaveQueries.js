@@ -1,5 +1,5 @@
 const { db } = require('../../../handlers/mongoConnectionHandler');
-const { timeConversion, dayConversion } = require('../../utils/exports/globalExports');
+const { timeConversion, dayConversion } = require('../../../utils/exports/globalExports');
 
 module.exports = {
   createLeave: async (discordID, days, type) => {
