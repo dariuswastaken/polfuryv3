@@ -17,7 +17,7 @@ module.exports = {
         .setDescription('tipul intrari (reintegrare/default)')
         .setRequired(false)
     ),
-  enabled: false,
+  enabled: true,
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 

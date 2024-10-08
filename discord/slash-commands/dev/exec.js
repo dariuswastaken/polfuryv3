@@ -9,7 +9,5 @@ module.exports = {
   async execute(pulsar, interaction, mongo, utils) {
     if (interaction.user.id !== '1027526587031232552') return;
 
-    await mongo.wipeSanctions();
-
   }
 };

@@ -5,7 +5,7 @@ module.exports = {
     .setName('subdep-menu')
     .setDescription('Deschide meniul de gestionare a subdepartamentelor')
     .setDefaultMemberPermissions(PermissionsBitField.Flags.ManageNicknames),
-  enabled: false,
+  enabled: true,
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 
