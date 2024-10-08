@@ -14,7 +14,7 @@ module.exports = class WebClient {
   async get(url) {
     try {
       const response = await axiosInstance.get(url);
-      return response.data;
+      return response;
     } catch (error) {
       console.error('[WEB ERROR] Failed to fetch: ' + error);
     }
