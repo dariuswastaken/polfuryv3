@@ -26,5 +26,7 @@ module.exports = {
         });
       }
     }
+    
+    console.log('[SCHEDULER] Sanction removal schedules have been set.');
   }
 };
