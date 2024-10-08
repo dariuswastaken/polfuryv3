@@ -22,10 +22,17 @@ module.exports = {
       return;
     }
 
-    if(duration === 'permanent') {
-      await mongo.updateSanctionList(sanctionID, `${option} - Permanent`);
+    if (duration === 'permanent') {
+      await mongo.updateSanctionList(sanctionID, `${option} - Permanent`, []);
     } else {
-      await mongo.updateSanctionList(sanctionID, `${option} - ${duration} zile`);
+      let expiryDate = new Date().setDate(
+        new Date().getDate() + parseInt(duration)
+      );
+      await mongo.updateSanctionList(
+        sanctionID,
+        `${option} - ${duration} zile`,
+        [{ sanction: option, expiryDate: expiryDate }]
+      );
     }
 
     await utils.discord.embeds.sendSuccessEmbed('Sanctiunea a fost adaugata.', {

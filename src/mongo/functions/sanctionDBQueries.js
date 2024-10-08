@@ -10,21 +10,30 @@ module.exports = {
       sanctions: null,
       reason: null,
       active: true,
-      date: new Date()
+      date: new Date(),
+      scheduled: null
     });
   },
 
-  updateSanctionList: async (sanctionID, sanctionList) => {
+  updateSanctionList: async (sanctionID, sanctionList, schedules) => {
     let sanction = await db.find('PendingSanction', {
       sanctionID: sanctionID
     });
     if (sanction.sanctions === null) {
       sanction.sanctions = [];
     }
+    if (sanction.scheduled === null) {
+      sanction.scheduled = [];
+    }
     await db.update(
       'PendingSanction',
       { sanctionID: sanctionID },
-      { $set: { sanctions: sanction.sanctions.concat(sanctionList) } }
+      {
+        $set: {
+          sanctions: sanction.sanctions.concat(sanctionList),
+          scheduled: sanction.scheduled.concat(schedules)
+        }
+      }
     );
   },
 
@@ -57,5 +66,5 @@ module.exports = {
       sanctionID: sanctionID
     });
     return result;
-  },
-}
+  }
+};
