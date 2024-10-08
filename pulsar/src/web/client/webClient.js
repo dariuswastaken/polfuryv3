@@ -21,7 +21,7 @@ module.exports = class WebClient {
           'x-api-key': process.env.WEB_API_KEY
         }
       });
-      return response;
+      return response.data;
     } catch (error) {
       console.error('[WEB ERROR] Failed to fetch: ' + error);
     }
