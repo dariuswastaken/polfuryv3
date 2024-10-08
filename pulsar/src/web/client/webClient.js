@@ -39,5 +39,5 @@ module.exports = class WebClient {
     } catch (error) {
       console.error('[WEB ERROR] Failed to fetch: ' + error);
     }
-  },
+  }
 };
