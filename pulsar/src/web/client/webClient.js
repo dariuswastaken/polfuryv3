@@ -3,6 +3,7 @@ const axios = require('axios');
 
 module.exports = class WebClient {
   constructor() {
+    console.log(process.env.WEB_API_KEY)
     this.axiosInstance = axios.create({
       baseURL: 'https://panel.furyrp.ro/api',
       headers: {
