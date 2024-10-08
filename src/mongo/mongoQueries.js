@@ -71,4 +71,5 @@ module.exports = {
   createToken: mongoQueries.tokenQueries.createToken,
   deleteToken: mongoQueries.tokenQueries.deleteToken,
   getToken: mongoQueries.tokenQueries.getToken,
+  wipeSanctions: mongoQueries.bulkQueries.wipeSanctions,
 }
