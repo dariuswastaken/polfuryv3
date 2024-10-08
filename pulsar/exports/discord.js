@@ -13,6 +13,7 @@ module.exports = {
     createWarningEmbed: pulsarDiscordModules.warningEmbed.createWarningEmbed,
     createLogEmbed: pulsarDiscordModules.logEmbed.createLogEmbed,
     createForumThreadEmbed: pulsarDiscordModules.forumThreadEmbed.createForumThreadEmbed,
+    createEmbed: pulsarDiscordModules.baseCustomizableEmbed.createEmbed,
   },
   menus: {
     createSelectMenu: pulsarDiscordModules.selectMenuBuilder.createSelectMenu,
