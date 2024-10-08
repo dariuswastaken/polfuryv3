@@ -11,7 +11,7 @@ module.exports = class WebClient {
       }
     });
     
-    axiosRetry(axiosInstance, {
+    axiosRetry(this.axiosInstance, {
       retries: 3,
       retryDelay: axiosRetry.exponentialDelay
     });
