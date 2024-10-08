@@ -4,7 +4,8 @@ module.exports = {
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 
-    if (!interaction.user.roles.cache.has(['1119645178148442152'])) {
+    const user = await interaction.guild.members.fetch(interaction.user.id);
+    if (!user.roles.cache.some((r) => r.id === '1119645178148442152')) {
       await utils.discord.errors.sanctionPermError(pulsar, interaction);
       return;
     }
