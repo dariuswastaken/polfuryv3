@@ -11,6 +11,7 @@ module.exports = class WebClient {
     axiosRetry(this.axiosInstance, {
       retries: 5,
       retryDelay: (retryCount) => {
+        console.log(`[WEB] Retrying request...`);
         return retryCount * 1000;
       }
     });
