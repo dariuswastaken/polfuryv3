@@ -19,7 +19,7 @@ module.exports = {
         }
         
         const expiryDate = new Date(entry.expiryDate);
-        console.log(`Scheduling removal of ${sanction.sanctionedID} for ${expiryDate}`);
+        console.log(`Scheduling removal of ${sanction.sanctionedID} for ${expiryDate} (sanction: ${entry.sanction})`);
         await nodeSchedule.scheduleJob(expiryDate, async () => {
           if(entry.sanction === 'av') {
             await mongo.removeAvM(sanction.sanctionedID)
