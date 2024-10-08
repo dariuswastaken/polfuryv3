@@ -1,13 +1,13 @@
 const { glob } = require('glob');
 
 module.exports = {
-  async getModule(moduleName) {
+  getModule: function (moduleName) {
     const module = require(`${moduleName}`);
 
     return module;
   },
 
-  async getFile(filePath) {
+  getFile: async (filePath) => {
     return new Promise((resolve, reject) => {
       glob(`**/${filePath}`, (err, files) => {
         if (err) {

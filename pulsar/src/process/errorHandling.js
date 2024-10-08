@@ -4,7 +4,7 @@ const path = require('path');
 const folder = '.cache';
 
 module.exports = {
-  async createErrorHandler() {
+  createErrorHandler: async () => {
     const logger = winston.createLogger({
       level: 'info',
       format: winston.format.combine(

@@ -4,7 +4,7 @@
   },
   "pulsar": {
     "version": "0.0.3-1",
-    "namespace": "pulsar-fw",
+    "namespace": "pulsar-fury",
     "database": {
       "type": "mongodb",
       "url": "mongodb://127.0.0.1:27017/PolDB",

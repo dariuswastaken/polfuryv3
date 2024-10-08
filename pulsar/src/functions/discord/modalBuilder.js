@@ -3,18 +3,17 @@ const {
   TextInputBuilder,
   ActionRowBuilder,
   TextInputStyle,
-  StringSelectMenuBuilder
 } = require('discord.js');
 
 module.exports = {
-  async createModal(options = {}) {
+  createModal: async ({ id, title, inputs }) => {
     const modal = new ModalBuilder()
-      .setCustomId(options.id)
-      .setTitle(options.title);
+      .setCustomId(id)
+      .setTitle(title);
 
     let rows = [];
 
-    for (let input of options.inputs) {
+    for (let input of inputs) {
       rows.push(
         new ActionRowBuilder().addComponents(
           new TextInputBuilder()

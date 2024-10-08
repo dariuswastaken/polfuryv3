@@ -1,5 +1,5 @@
 module.exports = {
-  async createUniqueID() {
+  createUniqueID: async () => {
     const timestamp = new Date().getTime();
     const minRandom = 100000;
     const maxRandom = 9999999;
@@ -12,7 +12,7 @@ module.exports = {
 
     return uniqueID;
   },
-  async generateToken(length, tip) {
+  generateToken: async (length, tip) => {
     const characters =
       'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let token = '';

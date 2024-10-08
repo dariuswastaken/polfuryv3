@@ -1,7 +1,7 @@
 const moment = require('moment');
 
 module.exports = {
-  async formatUptime(uptime) {
+  formatUptime: async (uptime) => {
     const days = Math.floor(uptime / (60 * 60 * 24));
     const hours = Math.floor((uptime / (60 * 60)) % 24);
     const minutes = Math.floor((uptime / 60) % 60);
@@ -10,13 +10,13 @@ module.exports = {
     return `${days} zile, ${hours} ore, ${minutes} minute si ${seconds} secunde`;
   },
 
-  async formatTime(time, timezone) {
+  formatTime: async (time, timezone) => {
     return moment(time).utcOffset(timezone).format('DD/MM/YYYY HH:mm:ss');
   },
 
-  async formatTimestamp(time, timezone) {
+  formatTimestamp: async (time, timezone) => {
     const date = new Date(time);
-    const formattedDate = await date.toLocaleDateString('ro-RO', {
+    const formattedDate = date.toLocaleDateString('ro-RO', {
       timeZone: timezone,
       hour: '2-digit',
       minute: '2-digit',
@@ -26,9 +26,9 @@ module.exports = {
     return formattedDate;
   },
 
-  async formatDefTime(time, timezone) {
+  formatDefTime: async (time, timezone) => {
     const date = new Date(time);
-    const formattedDate = await date.toLocaleDateString('ro-RO', {
+    const formattedDate = date.toLocaleDateString('ro-RO', {
       timeZone: timezone
     });
 
