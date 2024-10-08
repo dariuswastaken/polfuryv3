@@ -4,7 +4,7 @@ const mongo = require('../../../src/mongo/mongoQueries.js');
 module.exports = {
   name: 'sanctionRemovalSchedules',
   async execute(Pulsar) {
-    const sanctions = mongo.getAllSanctions();
+    const sanctions = await mongo.getAllSanctions();
 
     for (let sanction of sanctions) {
       if (sanction.pending === false) {
