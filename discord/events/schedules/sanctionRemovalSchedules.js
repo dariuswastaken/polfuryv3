@@ -8,7 +8,7 @@ module.exports = {
     console.log(sanctions)
     
     for (let sanction of sanctions) {
-      if (sanction.pending === false) {
+      if (sanction.pending === true) {
         continue;
       }
       
