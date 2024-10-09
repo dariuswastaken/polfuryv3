@@ -5,7 +5,7 @@ module.exports = class WebClient {
   constructor() {
     this.axiosInstance = axios.create({
       baseURL: 'https://panel.furyrp.ro/api',
-      timeout: 10000
+      timeout: 5000
     });
 
     axiosRetry(this.axiosInstance, {
