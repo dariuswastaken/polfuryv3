@@ -14,13 +14,10 @@ module.exports = {
     const buttons = [];
 
     if (leave) {
-      const { dayIsChecked, dayNotChecked } =
-        botconfig.meniuConcediuFeatureMenusButtons.loopButtons[0];
-
+      const { dayIsChecked, dayNotChecked } = botconfig.meniuConcediuFeatureMenusButtons.loopButtons[0];
+      
       for (let day of currentWeek) {
-        const buttonTemplate = leave.days.includes(day)
-          ? dayIsChecked
-          : dayNotChecked;
+        const buttonTemplate = leave.days.includes(day) ? dayIsChecked : dayNotChecked;
         buttons.push(
           replaceButtonPlaceholders(buttonTemplate, {
             targetid: interaction.user.id,
@@ -29,9 +26,8 @@ module.exports = {
         );
       }
     } else {
-      const nonFormattedLoopButtons =
-        botconfig.meniuConcediuFeatureMenusButtons.loopButtons[0].dayNotChecked;
-
+      const nonFormattedLoopButtons = botconfig.meniuConcediuFeatureMenusButtons.loopButtons[0].dayNotChecked;
+      
       for (let day of currentWeek) {
         buttons.push(
           replaceButtonPlaceholders(nonFormattedLoopButtons, {
@@ -42,22 +38,15 @@ module.exports = {
       }
     }
 
-    console.log(buttons);
-
-    return;
-
     buttons.push(
-      {
-        id: `concediu/${interaction.user.id}/all`,
-        style: 'Secondary',
-        label: '➕ Toata Saptamana'
-      },
-      {
-        id: `adaugare-motiv-concediu/${interaction.user.id}/`,
-        style: 'Secondary',
-        label: '🗒️ Adaugare Motiv'
-      }
+      replaceButtonPlaceholders(botconfig.meniuConcediuFeatureMenusButtons.buttons, {
+        targetid: interaction.user.id,
+      })
     );
+    
+    console.log(buttons);
+    
+    return;
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 3,
