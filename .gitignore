@@ -6,4 +6,3 @@ cache
 *.csv
 .package-lock.json
 .package.json
-```
