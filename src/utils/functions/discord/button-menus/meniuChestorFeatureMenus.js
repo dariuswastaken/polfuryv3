@@ -4,10 +4,8 @@ const botconfig = require('../../../../botconfig/botconfig.js');
 module.exports = {
   sendMenuChestor: async ({ pulsar, interaction, mongo, targetID }) => {
     const targetProfile = await mongo.getProfile(targetID);
-
-    console.log(botconfig)
     
-    const nonFormattedButtons = botconfig.meniuChestorFeatureMenus.buttons;
+    const nonFormattedButtons = botconfig.meniuChestorFeatureMenusButtons.buttons;
     const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
       targetid: targetID
     });
