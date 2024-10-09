@@ -40,7 +40,7 @@ module.exports = {
   addAvM: mongoQueries.profileUpdateQueries.addAvM,
   createMemberSnapshot: mongoQueries.userSnapshotQueries.createMemberSnapshot,
   getUserSnapshot: mongoQueries.userSnapshotQueries.getUserSnapshot,
-  getUserSnapshots: mongoQueries.userSnapshotQueries.getMemberSnapshots,
+  getUserSnapshots: mongoQueries.userSnapshotQueries.getUserSnapshots,
   loadMemberSnapshot: mongoQueries.userSnapshotQueries.loadMemberSnapshot,
   deleteMemberSnapshot: mongoQueries.userSnapshotQueries.deleteMemberSnapshot,
   hasSession: mongoQueries.sessionChecks.hasSession,
