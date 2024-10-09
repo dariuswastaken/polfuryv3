@@ -1,4 +1,4 @@
-const { replaceButtonPlaceholder } = require('../../../../core/placeholderModifier.js');
+const { replaceButtonPlaceholders } = require('../../../../core/placeholderModifier.js');
 const botconfig = require('../../../../botconfig/botconfig.js');
 
 module.exports = {
