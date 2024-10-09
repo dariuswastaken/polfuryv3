@@ -45,9 +45,6 @@ module.exports = {
     );
     
     buttons = Array.prototype.concat.apply([], buttons);
-    console.log(buttons);
-    
-    return;
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 3,
