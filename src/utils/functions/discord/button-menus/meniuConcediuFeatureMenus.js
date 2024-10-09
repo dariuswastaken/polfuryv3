@@ -43,10 +43,6 @@ module.exports = {
         targetid: interaction.user.id,
       })
     );
-    
-    console.log(buttons);
-    
-    return;
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 3,

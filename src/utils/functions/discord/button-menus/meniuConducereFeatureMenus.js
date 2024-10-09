@@ -1,41 +1,14 @@
+const { replaceButtonPlaceholders } = require('../../../../core/placeholderModifier.js');
+const botconfig = require('../../../../botconfig/botconfig.js');
+
 module.exports = {
   sendMenuConducere: async ({ pulsar, interaction, mongo, targetID }) => {
     const targetProfile = await mongo.getProfile(targetID);
-    const buttons = [
-      {
-        id: `activitate/${targetID}`,
-        style: 'Secondary',
-        label: '📅 Activitate'
-      },
-      {
-        id: `informatii/${targetID}`,
-        style: 'Secondary',
-        label: '👤 Informatii'
-      },
-      {
-        id: `schimbare-grad/${targetID}`,
-        style: 'Secondary',
-        label: '🔃 Schimbare Grad'
-      },
-      {
-        id: `adauga-notita/${targetID}`,
-        style: 'Secondary',
-        label: '🗒️ Adauga Notita',
-        disabled: true
-      },
-      {
-        id: `statistici-globale/${targetID}`,
-        style: 'Secondary',
-        label: '📊 Statistici Globale',
-        disabled: true
-      },
-      {
-        id: `top-activitate/${targetID}`,
-        style: 'Secondary',
-        label: '📈 Top Activitate',
-        disabled: true
-      }
-    ];
+    
+    const nonFormattedButtons = botconfig.meniuConducereFeatureMenusButtons.buttons;
+    const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
+      targetid: targetID
+    });
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 3,

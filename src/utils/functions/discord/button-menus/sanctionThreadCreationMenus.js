@@ -1,57 +1,16 @@
+const { replaceButtonPlaceholders } = require('../../../../core/placeholderModifier.js');
+const botconfig = require('../../../../botconfig/botconfig.js');
+
 module.exports = {
   sendSanctionMenu: async ({ pulsar, interaction, mongo, targetID, sanctionID }) => {
-    const buttons = [
-      {
-        id: `sanction-select/${targetID}/${sanctionID}/ts25`,
-        style: 'Secondary',
-        label: '✂️ Taiere Salariala 25%'
-      },
-      {
-        id: `sanction-select/${targetID}/${sanctionID}/ts50`,
-        style: 'Secondary',
-        label: '✂️ Taiere Salariala 50%'
-      },
-      {
-        id: `sanction-select/${targetID}/${sanctionID}/ts75`,
-        style: 'Secondary',
-        label: '✂️ Taiere Salariala 75%'
-      },
-      {
-        id: `sanction-select/${targetID}/${sanctionID}/suspendareup`,
-        style: 'Secondary',
-        label: '⛔ Suspendare UP'
-      },
-      {
-        id: `sanction-select/${targetID}/${sanctionID}/suspendaresias`,
-        style: 'Secondary',
-        label: '⛔ Suspendare SIAS'
-      },
-      {
-        id: `sanction-select/${targetID}/${sanctionID}/pifd`,
-        style: 'Secondary',
-        label: '🚓 Punere in folosul Dep.'
-      },
-      {
-        id: `sanction-select/${targetID}/${sanctionID}/av`,
-        style: 'Secondary',
-        label: '⚠️ Avertisment'
-      },
-      {
-        id: `sanction-select/${targetID}/${sanctionID}/down`,
-        style: 'Danger',
-        label: '⬇️ Down'
-      },
-      {
-        id: `sanction-select/${targetID}/${sanctionID}/demitere`,
-        style: 'Danger',
-        label: '👋 Demitere'
-      },
-      {
-        id: `sanction-confirm/${targetID}/${sanctionID}`,
-        style: 'Success',
-        label: '✅ Confirmare'
-      }
-    ];
+    
+    const nonFormattedButtons = botconfig.sanctionThreadCreationMenusButtons.buttons;
+    const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
+      targetid: targetID,
+      sanctionid: sanctionID
+    });
+    
+    console.log(buttons);
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 3,
