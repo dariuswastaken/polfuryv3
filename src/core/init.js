@@ -7,14 +7,19 @@ const processManager = Pulsar().processManager.createInstance();
 module.exports = {
   readyState: 0,
   init: function () {
-    if (this.readyState === 1)
-      throw new Error('[INIT] readyState is set to 1, cannot init again');
-    this.readyState = 1;
-    fileManager.createCacheManager();
-    processManager.createErrorHandler();
+    try {
+      if (this.readyState === 1)
+        throw new Error('[INIT] readyState is set to 1, cannot init again');
+      this.readyState = 1;
+      fileManager.createCacheManager();
+      processManager.createErrorHandler();
 
-    fileHandler.loadFilesystem();
+      fileHandler.loadFilesystem();
 
-    client.login(process.env.DISCORD_TOKEN);
+      client.login(process.env.DISCORD_TOKEN);
+    } catch (error) {
+      console.error(error);
+      this.readyState = 0;
+    }
   }
 };
