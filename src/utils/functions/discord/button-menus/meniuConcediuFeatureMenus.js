@@ -11,7 +11,7 @@ module.exports = {
       `${currentWeek[0]} - ${currentWeek[6]}`
     );
 
-    const buttons = [];
+    let buttons = [];
 
     if (leave) {
       const { dayIsChecked, dayNotChecked } = botconfig.meniuConcediuFeatureMenusButtons.loopButtons[0];
@@ -19,7 +19,7 @@ module.exports = {
       for (let day of currentWeek) {
         const buttonTemplate = leave.days.includes(day) ? dayIsChecked : dayNotChecked;
         buttons.push(
-          replaceButtonPlaceholders(buttonTemplate[0], {
+          replaceButtonPlaceholders(buttonTemplate, {
             targetid: interaction.user.id,
             day: day
           })
@@ -30,11 +30,11 @@ module.exports = {
       
       for (let day of currentWeek) {
         buttons.push(
-          replaceButtonPlaceholders(nonFormattedLoopButtons[0], {
+          replaceButtonPlaceholders(nonFormattedLoopButtons, {
             targetid: interaction.user.id,
-          day: day
-        })
-       );
+            day: day
+          })
+        );
       }
     }
 
@@ -44,6 +44,7 @@ module.exports = {
       })
     );
     
+    buttons = Array.prototype.concat.apply([], buttons);
     console.log(buttons);
     
     return;
