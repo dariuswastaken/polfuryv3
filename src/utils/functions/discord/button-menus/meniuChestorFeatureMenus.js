@@ -1,7 +1,20 @@
+const { replaceButtonPlaceholder } = require('../../../../botconfig/placeholderModifier.js');
+const botconfig = require('../../../../botconfig/botconfig.js');
+
 module.exports = {
   sendMenuChestor: async ({ pulsar, interaction, mongo, targetID }) => {
     const targetProfile = await mongo.getProfile(targetID);
-    const buttons = [
+
+    const nonFormattedButtons = botconfig.meniuChestorFeatureMenus.buttons;
+    const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
+      targetid: targetID
+    });
+    
+    console.log(buttons)
+    
+    return;
+
+    /*const buttons = [
       {
         id: `chestor-creare-lista/${targetID}`,
         style: 'Success',
@@ -47,7 +60,7 @@ module.exports = {
         style: 'Danger',
         label: '🗑️ Sterge Snapshot Activitate'
       }
-    ];
+      ];*/
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 3,

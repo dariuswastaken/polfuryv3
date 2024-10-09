@@ -8,7 +8,8 @@ module.exports = {
       return {
         id: module.exports.replacePlaceholder(button.id, placeholders),
         style: button.style,
-        label: button.label
+        label: module.exports.replacePlaceholder(button.label, placeholders),
+        disabled: button.disabled || false
       };
     }); 
   }
