@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const testDir = path.join(__dirname, 'tests');
+const testDir = path.join(__dirname, 'main');
 
 function runTests() {
   fs.readdir(testDir, (err, files) => {
