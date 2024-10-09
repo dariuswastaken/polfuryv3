@@ -5,4 +5,5 @@ describe('botconfig', () => {
     expect(botconfig).toBeInstanceOf(Object);
     expect(botconfig).not.toBe(null);
   });
+  
 });
