@@ -1,17 +1,12 @@
+const { replaceButtonPlaceholders } = require('../../../../core/placeholderModifier.js');
+const botconfig = require('../../../../botconfig/botconfig.js');
+
 module.exports = {
   sendListTypeSelectMenu: async ({ pulsar, interaction, week }) => {
-    const buttons = [
-      {
-        id: `up-list/${week}`,
-        style: 'Secondary',
-        label: '🗒️ Lista UP'
-      },
-      {
-        id: `out-list/${week}`,
-        style: 'Secondary',
-        label: '🗒️ Lista OUT'
-      }
-    ];
+    const nonFormattedButtons = botconfig.activityListMenusButtons.buttons;
+    const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
+      week: week
+    });
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 2,
