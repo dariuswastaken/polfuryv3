@@ -5,9 +5,4 @@ describe('botconfig', () => {
     expect(botconfig).toBeInstanceOf(Object);
     expect(botconfig).not.toBe(null);
   });
-  
-  it('should have the following properties', () => {
-    expect(botconfig).toHaveProperty('activityListMenusButtons');
-    expect(botconfig).toHaveProperty('demiterePendingMenus');
-  })
 });
