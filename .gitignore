@@ -4,3 +4,6 @@ test
 cache
 .cache
 *.csv
+.package-lock.json
+.package.json
+```
