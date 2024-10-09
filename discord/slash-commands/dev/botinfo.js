@@ -37,12 +37,7 @@ module.exports = {
           inline: true
         },
         {
-          name: 'Developer',
-          value: 'dariusss1337',
-          inline: true
-        },
-        {
-          name: 'Engine',
+          name: 'Runtime',
           value: `node.js ${process.version}`,
           inline: true
         },
@@ -63,7 +58,7 @@ module.exports = {
         },
         {
           name: 'Discord.js Version',
-          value: `14.15.2`,
+          value: `14.16.3`,
           inline: true
         },
         {
@@ -111,16 +106,6 @@ module.exports = {
           value: `${await pulsar.utilsManager.time.formatUptime(process.uptime())}`,
           inline: true
         },
-        {
-          name: '\u200B',
-          value: '\u200B',
-          inline: true
-        },
-        {
-          name: '\u200B',
-          value: '\u200B',
-          inline: true
-        }
       ],
     });
   }
