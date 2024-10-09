@@ -10,58 +10,6 @@ module.exports = {
       targetid: targetID
     });
     
-    console.log(buttons)
-    
-    return;
-
-    /*const buttons = [
-      {
-        id: `chestor-creare-lista/${targetID}`,
-        style: 'Success',
-        label: '📋 Creare Lista'
-      },
-      {
-        id: `chestor-stergere-lista/${targetID}`,
-        style: 'Danger',
-        label: '📤 Stergere Lista'
-      },
-      {
-        id: `chestor-liste/${targetID}`,
-        style: 'Secondary',
-        label: '📜 Liste'
-      },
-      {
-        id: `chestor-adauga-ci/${targetID}`,
-        style: 'Secondary',
-        label: '➕ Adauga Comisar/Inspector'
-      },
-      {
-        id: `chestor-edit-menu/${targetID}`,
-        style: 'Secondary',
-        label: '🔧 Edit User'
-      },
-      {
-        id: 'update-activitate',
-        style: 'Secondary',
-        label: '📅 Updateaza Activitate'
-      },
-      {
-        id: `activitate-snapshot-create`,
-        style: 'Secondary',
-        label: '📸 Creaza Snapshot Activitate'
-      },
-      {
-        id: `activitate-snapshot-load`,
-        style: 'Secondary',
-        label: '📥 Incarca Snapshot Activitate'
-      },
-      {
-        id: `activitate-snapshot-delete`,
-        style: 'Danger',
-        label: '🗑️ Sterge Snapshot Activitate'
-      }
-      ];*/
-
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 3,
       buttons: buttons
