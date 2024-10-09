@@ -12,16 +12,13 @@ module.exports = {
       uid: uID
     })
 
-    await mongo.createComponent({
-      tip_: 'button',
-      componentDiscordID: buttons[0].id,
-      componentID: uID
-    });
-    await mongo.createComponent({
-      tip_: 'button',
-      componentDiscordID: buttons[1].id,
-      componentID: uID
-    });
+    for(let button of buttons) {
+      await mongo.createComponent({
+        tip_: 'button',
+        componentDiscordID: button.id,
+        componentID: uID
+      })
+    }
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 2,
