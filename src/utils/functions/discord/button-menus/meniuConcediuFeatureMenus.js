@@ -1,4 +1,6 @@
 const dayConversion = require('../../base/dayConversion');
+const { replaceButtonPlaceholders } = require('../../../../core/placeholderModifier.js');
+const botconfig = require('../../../../botconfig/botconfig.js');
 
 module.exports = {
   sendMenuConcediu: async ({ pulsar, interaction, mongo }) => {
@@ -12,31 +14,37 @@ module.exports = {
     const buttons = [];
 
     if (leave) {
+      const { dayIsChecked, dayNotChecked } =
+        botconfig.meniuConcediuFeatureMenusButtons.loopButtons[0];
+
       for (let day of currentWeek) {
-        if (leave.days.includes(day)) {
-          buttons.push({
-            id: `concediu/${interaction.user.id}/${day}`,
-            style: 'Danger',
-            label: `📅 ${day}`,
-            disabled: true
-          });
-        } else {
-          buttons.push({
-            id: `concediu/${interaction.user.id}/${day}`,
-            style: 'Success',
-            label: `📅 ${day}`
-          });
-        }
+        const buttonTemplate = leave.days.includes(day)
+          ? dayIsChecked
+          : dayNotChecked;
+        buttons.push(
+          replaceButtonPlaceholders(buttonTemplate, {
+            targetid: interaction.user.id,
+            day: day
+          })
+        );
       }
     } else {
+      const nonFormattedLoopButtons =
+        botconfig.meniuConcediuFeatureMenusButtons.loopButtons[0].dayNotChecked;
+
       for (let day of currentWeek) {
-        buttons.push({
-          id: `concediu/${interaction.user.id}/${day}`,
-          style: 'Success',
-          label: `📅 ${day}`
-        });
+        buttons.push(
+          replaceButtonPlaceholders(nonFormattedLoopButtons, {
+            targetid: interaction.user.id,
+            day: day
+          })
+        );
       }
     }
+
+    console.log(buttons);
+
+    return;
 
     buttons.push(
       {
