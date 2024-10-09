@@ -21,8 +21,13 @@ module.exports = {
     if (targetProfile.notite.length === 0)
       targetProfile.notite.push('Nici o notita.');
 
-    let isOnDuty = await pulsar.webManager.isOnDuty(targetProfile.IDServer);
-    let dutyStatus = isOnDuty ? 'Da' : 'Nu';
+    let dutyStatus;
+    try {
+      let isOnDuty = await pulsar.webManager.isOnDuty(targetProfile.IDServer);
+      dutyStatus = isOnDuty ? 'Da' : 'Nu';
+    } catch (error) {
+      dutyStatus = 'Eroare in timpul verificarii';
+    }
 
     await pulsar.discordManager.embeds.createEmbed({
       footer: { text: `Informatii - ${targetProfile.nume}` },
