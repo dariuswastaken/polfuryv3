@@ -19,7 +19,7 @@ module.exports = {
       for (let day of currentWeek) {
         const buttonTemplate = leave.days.includes(day) ? dayIsChecked : dayNotChecked;
         buttons.push(
-          replaceButtonPlaceholders(buttonTemplate, {
+          replaceButtonPlaceholders(buttonTemplate[0], {
             targetid: interaction.user.id,
             day: day
           })
@@ -30,11 +30,11 @@ module.exports = {
       
       for (let day of currentWeek) {
         buttons.push(
-          replaceButtonPlaceholders(nonFormattedLoopButtons, {
+          replaceButtonPlaceholders(nonFormattedLoopButtons[0], {
             targetid: interaction.user.id,
-            day: day
-          })
-        );
+          day: day
+        })
+       );
       }
     }
 
