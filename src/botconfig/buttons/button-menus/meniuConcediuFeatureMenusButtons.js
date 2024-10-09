@@ -13,17 +13,21 @@ module.exports = {
   ],
   loopButtons: [
     {
-      dayIsChecked: {
-        id: `concediu/%targetid%/%day%`,
-        style: 'Danger',
-        label: `📅 %day%`,
-        disabled: true
-      },
-      dayNotChecked: {
-        id: `concediu/%targetid%/%day%`,
-        style: 'Success',
-        label: `📅 %day%`
-      }
+      dayIsChecked: [
+        {
+          id: `concediu/%targetid%/%day%`,
+          style: 'Danger',
+          label: `📅 %day%`,
+          disabled: true
+        }
+      ],
+      dayNotChecked: [
+        {
+          id: `concediu/%targetid%/%day%`,
+          style: 'Success',
+          label: `📅 %day%`
+        }
+      ]
     }
   ]
 };
