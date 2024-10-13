@@ -9,8 +9,6 @@ module.exports = {
       targetid: targetID,
       sanctionid: sanctionID
     });
-    
-    console.log(buttons);
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 3,
