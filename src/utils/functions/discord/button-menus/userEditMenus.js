@@ -3,7 +3,7 @@ const botconfig = require('../../../../botconfig/botconfig.js');
 
 module.exports = {
   sendUserEditMenu: async ({ pulsar, interaction, targetID }) => {
-    const nonFormattedButtons = botconfig.userEditMenusButtons.editMenu;
+    const nonFormattedButtons = botconfig.userEditMenusButtons.buttons.editMenu;
     const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
       targetid: targetID
     });
@@ -29,7 +29,7 @@ module.exports = {
     const uID = await pulsar.utilsManager.uniques.createUniqueID();
     const targetProfile = await mongo.getProfile(targetID);
     
-    const nonFormattedButtons = botconfig.userEditMenusButtons.deleteUser;
+    const nonFormattedButtons = botconfig.userEditMenusButtons.buttons.deleteUser;
     const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
       targetid: targetID,
       uid: uID
