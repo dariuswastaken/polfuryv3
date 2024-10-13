@@ -32,7 +32,7 @@ module.exports = {
       }
     };
 
-    const nonFormattedButtons = botconfig.subdepManagementMenusButtons.buttons;
+    const nonFormattedButtons = botconfig.subdepManagementMenusButtons;
 
     let buttons = [];
     const member = await interaction.guild.members.fetch(interaction.user.id);
