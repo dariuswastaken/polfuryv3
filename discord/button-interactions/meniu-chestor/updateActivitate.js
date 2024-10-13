@@ -35,7 +35,6 @@ module.exports = {
       return;
     }
 
-    await mongo.lastUpdate('activity');
     await utils.discord.embeds.sendSuccessEmbed(
       'Activitatea a fost actualizata cu succes.',
       {
