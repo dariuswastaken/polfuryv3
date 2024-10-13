@@ -6,10 +6,7 @@ module.exports = {
     const nonFormattedButtons = botconfig.mphActivityMenusButtons.buttons;
     const buttonOptions = nonFormattedButtons[type];
     
-    console.log(nonFormattedButtons)
-    
     const buttons = replaceButtonPlaceholders(buttonOptions, {});
-    console.log(buttons)
     
     const embedOptions = {
       moto: {
@@ -28,7 +25,7 @@ module.exports = {
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 2,
-      buttons: buttons[type]
+      buttons: buttons
     });
 
     await pulsar.discordManager.embeds.createDefaultEmbed(
