@@ -84,29 +84,10 @@ module.exports = {
   },
 
   sendSubdepSubMenu: async ({ pulsar, interaction, subdep, type }) => {
-    const buttons = [
-      {
-        id: `${type}-menu-instructori`,
-        style: 'Secondary',
-        label: '📋 Instructori'
-      },
-      {
-        id: `${type}-menu-aplicatii`,
-        style: 'Secondary',
-        label: '🗒️ Meniu Aplicatii',
-        disabled: true
-      },
-      {
-        id: `${type}-menu-add-instr`,
-        style: 'Success',
-        label: '➕ Adauga Instructori'
-      },
-      {
-        id: `${type}-menu-remove-instr`,
-        style: 'Danger',
-        label: '➖ Scoate Instructori'
-      }
-    ];
+    const nonFormattedButtons = botconfig.subdepManagementMenusButtons.subdepSubMenu.buttons;
+    const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
+      type: type,
+    })
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 2,
