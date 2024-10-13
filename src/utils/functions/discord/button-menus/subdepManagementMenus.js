@@ -42,7 +42,8 @@ module.exports = {
         const preButtonArray = replaceButtonPlaceholders(
           nonFormattedButtons.subdepMenu.loopedButton,
           {
-            subdep: subdepLeadRoles[subdep].subdepName
+            subdep: subdepLeadRoles[subdep].subdepName.toLowerCase(),
+            subdepCapitalized: subdepLeadRoles[subdep].subdepName
           }
         );
         buttons.push(preButtonArray);
