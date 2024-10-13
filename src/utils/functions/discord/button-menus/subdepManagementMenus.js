@@ -1,3 +1,8 @@
+const {
+  replaceButtonPlaceholders
+} = require('../../../../core/placeholderModifier.js');
+const botconfig = require('../../../../botconfig/botconfig.js');
+
 module.exports = {
   sendSubdepMenu: async ({ pulsar, interaction, mongo }) => {
     const subdepLeadRoles = {
@@ -9,28 +14,37 @@ module.exports = {
       Tester: '1199989240616976525'
     };
 
+    const nonFormattedButtons = botconfig.subdepManagementMenusButtons.buttons;
+
     let buttons = [];
     const member = await interaction.guild.members.fetch(interaction.user.id);
-    for (let subdep in subdepLeadRoles) {
-      if (member.roles.cache.has(subdepLeadRoles[subdep])) {
-        buttons.push({
-          id: `${subdep.toLowerCase()}-menu`,
-          style: 'Secondary',
-          label: `🛠️ ${subdep}`
-        });
+    
+    if (member.roles.cache.has(subdepLeadRoles[subdep])) {
+      for (let subdep in subdepLeadRoles) {
+        const preButtonArray = replaceButtonPlaceholders(
+          nonFormattedButtons.subdepMenu.loopedButton,
+          {
+            subdep: subdep
+          }
+        );
+        buttons.push(preButtonArray);
       }
     }
 
     if (member.roles.cache.has('1094603192945344522')) {
       buttons = [];
       for (let subdep in subdepLeadRoles) {
-        buttons.push({
-          id: `${subdep.toLowerCase()}-menu`,
-          style: 'Secondary',
-          label: `🛠️ ${subdep}`
-        });
+        const preButtonArray = replaceButtonPlaceholders(
+          nonFormattedButtons.subdepMenu.loopedButton,
+          {
+            subdep: subdep
+          }
+        );
+        buttons.push(preButtonArray);
       }
     }
+    
+    buttons = Array.prototype.concat.apply([], buttons);
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 3,
