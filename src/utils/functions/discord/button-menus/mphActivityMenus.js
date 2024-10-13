@@ -6,8 +6,11 @@ module.exports = {
     const nonFormattedButtons = botconfig.mphActivityMenusButtons.buttons;
     const buttonOptions = nonFormattedButtons[type];
     
+    console.log(nonFormattedButtons)
+    console.log(buttonOptions)
+    
     const buttons = replaceButtonPlaceholders(buttonOptions, {});
-
+    
     const embedOptions = {
       moto: {
         description: '**Alege tipul de motor de mai jos**',
