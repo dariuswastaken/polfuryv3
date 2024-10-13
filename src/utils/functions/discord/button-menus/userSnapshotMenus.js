@@ -1,23 +1,17 @@
+const { replaceButtonPlaceholders } = require('../../../../core/placeholderModifier.js');
+const botconfig = require('../../../../botconfig/botconfig.js');
+
 module.exports = {
-  sendSnapshotOverview: async ({
-    pulsar,
-    interaction,
-    mongo,
-    targetID,
-    snapshotID,
-    type
-  }) => {
+  sendSnapshotOverview: async ({ pulsar, interaction, mongo, targetID, snapshotID, type }) => {
     let snapshot = await mongo.getUserSnapshot(targetID, snapshotID);
 
-    const buttons = [
-      {
-        id: `user-snapshot-confirm-${type}/${targetID}/${snapshotID}`,
-        style: 'Secondary',
-        label: `${
-          type === 'load' ? '📥 Incarca Snapshot' : '🗑️ Sterge Snapshot'
-        }`
-      }
-    ];
+    const nonFormattedButtons = botconfig.userSnapshotMenusButtons.buttons;
+    const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
+      type: type,
+      targetid: targetID,
+      snapshotid: snapshotID,
+      ternary: type === 'load' ? '📥 Incarca Snapshot' : '🗑️ Sterge Snapshot'
+    });
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 1,
