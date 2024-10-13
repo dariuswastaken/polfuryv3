@@ -7,9 +7,9 @@ module.exports = {
     const buttonOptions = nonFormattedButtons[type];
     
     console.log(nonFormattedButtons)
-    console.log(buttonOptions)
     
     const buttons = replaceButtonPlaceholders(buttonOptions, {});
+    console.log(buttons)
     
     const embedOptions = {
       moto: {
