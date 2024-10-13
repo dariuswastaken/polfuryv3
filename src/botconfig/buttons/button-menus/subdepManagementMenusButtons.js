@@ -4,7 +4,7 @@ module.exports = {
       {
         id: `%subdep%-menu`,
         style: 'Secondary',
-        label: `🛠️ %subdep%`
+        label: `🛠️ %subdep-reg%`
       }
     ]
   },

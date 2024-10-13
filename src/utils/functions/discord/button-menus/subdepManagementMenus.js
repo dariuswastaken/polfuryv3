@@ -6,25 +6,43 @@ const botconfig = require('../../../../botconfig/botconfig.js');
 module.exports = {
   sendSubdepMenu: async ({ pulsar, interaction, mongo }) => {
     const subdepLeadRoles = {
-      Radio: '1199988024851841055',
-      Highspeed: '1202382407446315071',
-      Moto: '1199988485231226960',
-      MDT: '1199988438670262272',
-      Pilot: '1199988530626175018',
-      Tester: '1199989240616976525'
+      Radio: {
+        roleID: '1199988024851841055',
+        subdepName: 'Radio'
+      },
+      Highspeed: {
+        roleID: '1202382407446315071',
+        subdepName: 'Highspeed'
+      },
+      Moto: {
+        roleID: '1199988485231226960',
+        subdepName: 'Moto'
+      },
+      MDT: {
+        roleID: '1199988438670262272',
+        subdepName: 'MDT'
+      },
+      Pilot: {
+        roleID: '1199988530626175018',
+        subdepName: 'Pilot'
+      },
+      Tester: {
+        roleID: '1199989240616976525',
+        subdepName: 'Tester'
+      }
     };
 
     const nonFormattedButtons = botconfig.subdepManagementMenusButtons.buttons;
 
     let buttons = [];
     const member = await interaction.guild.members.fetch(interaction.user.id);
-    
-    if (member.roles.cache.has(subdepLeadRoles[subdep])) {
-      for (let subdep in subdepLeadRoles) {
+
+    for (let subdep in subdepLeadRoles) {
+      if (member.roles.cache.has(subdepLeadRoles[subdep].roleID)) {
         const preButtonArray = replaceButtonPlaceholders(
           nonFormattedButtons.subdepMenu.loopedButton,
           {
-            subdep: subdep
+            subdep: subdepLeadRoles[subdep].subdepName
           }
         );
         buttons.push(preButtonArray);
@@ -37,13 +55,13 @@ module.exports = {
         const preButtonArray = replaceButtonPlaceholders(
           nonFormattedButtons.subdepMenu.loopedButton,
           {
-            subdep: subdep
+            subdep: subdepLeadRoles[subdep].subdepName
           }
         );
         buttons.push(preButtonArray);
       }
     }
-    
+
     buttons = Array.prototype.concat.apply([], buttons);
 
     const rows = await pulsar.discordManager.menus.createButtonMenu({
