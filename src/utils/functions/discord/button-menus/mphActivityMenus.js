@@ -1,48 +1,12 @@
+const { replaceButtonPlaceholders } = require('../../../../core/placeholderModifier.js');
+const botconfig = require('../../../../botconfig/botconfig.js');
+
 module.exports = {
   mphClockInSelect: async ({ pulsar, interaction, type }) => {
-    const buttons = {
-      moto: [
-        {
-          id: 'moto-choice/offroad',
-          label: '🏍️ Offroad',
-          style: 'Secondary'
-        },
-        {
-          id: 'moto-choice/speed',
-          label: '🏍️ Speed',
-          style: 'Secondary'
-        }
-      ],
-      highspeed: [
-        {
-          id: 'highspeed-choice/mustang',
-          label: '🚓 Ford Mustang',
-          style: 'Secondary'
-        },
-        {
-          id: 'highspeed-choice/porsche',
-          label: '🚓 Porsche Cayman',
-          style: 'Secondary'
-        },
-        {
-          id: 'highspeed-choice/viper',
-          label: '🚓 Dodge Viper',
-          style: 'Secondary'
-        },
-        {
-          id: 'highspeed-choice/lotus',
-          label: '🚓 Lotus Exige',
-          style: 'Secondary'
-        }
-      ],
-      pilot: [
-        {
-          id: 'pilot-choice/as350',
-          label: '🚁 AS 350 (Maverick)',
-          style: 'Secondary'
-        }
-      ]
-    };
+    const nonFormattedButtons = botconfig.mphActivityMenusButtons.buttons;
+    const buttonOptions = nonFormattedButtons[type];
+    
+    const buttons = replaceButtonPlaceholders(buttonOptions, {});
 
     const embedOptions = {
       moto: {
