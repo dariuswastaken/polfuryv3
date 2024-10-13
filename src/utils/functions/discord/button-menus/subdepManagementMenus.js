@@ -56,7 +56,8 @@ module.exports = {
         const preButtonArray = replaceButtonPlaceholders(
           nonFormattedButtons.subdepMenu.loopedButton,
           {
-            subdep: subdepLeadRoles[subdep].subdepName
+            subdep: subdepLeadRoles[subdep].subdepName.toLowerCase(),
+            subdepCapitalized: subdepLeadRoles[subdep].subdepName
           }
         );
         buttons.push(preButtonArray);
@@ -64,8 +65,6 @@ module.exports = {
     }
 
     buttons = Array.prototype.concat.apply([], buttons);
-
-    console.log(buttons)
     
     const rows = await pulsar.discordManager.menus.createButtonMenu({
       perLine: 3,
