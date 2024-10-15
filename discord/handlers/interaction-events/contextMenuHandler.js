@@ -5,7 +5,10 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-import utils from '../../src/utils/exports/globalExports.js'
+const resolvedPath = path.resolve(__dirname, '../../src/utils/exports/globalExports.js');
+const modulePath = `file://${resolvedPath}`;
+
+const utils = await import(modulePath);
 
 export default {
   name: 'contextMenuHandler',
