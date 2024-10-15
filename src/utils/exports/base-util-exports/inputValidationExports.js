@@ -1,4 +1,4 @@
-import { loadBaseUtilModules } from '../loadBaseUtilModules';
+import { loadBaseUtilModules } from '../loadBaseUtilModules.js';
 import path from 'node:path';
 
 import { fileURLToPath } from 'node:url';
