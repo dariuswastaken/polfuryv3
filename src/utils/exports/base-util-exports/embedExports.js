@@ -31,4 +31,4 @@ const embeds = {};
   console.error(error);
 }*/
 
-export default embeds;
+export { embeds };

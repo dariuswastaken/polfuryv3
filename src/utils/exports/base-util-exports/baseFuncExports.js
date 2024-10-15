@@ -23,4 +23,4 @@ const exports = {};
   console.error(error);
 }*/
 
-export default exports;
+export { exports };

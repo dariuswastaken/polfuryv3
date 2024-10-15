@@ -23,4 +23,4 @@ const logging = {};
   console.error(error);
 }*/
 
-export default logging;
+export { logging };

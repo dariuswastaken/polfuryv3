@@ -30,4 +30,4 @@ const quickFunctions = {};
   console.error(error);
 }*/
 
-export default quickFunctions;
+export { quickFunctions };

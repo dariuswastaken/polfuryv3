@@ -23,4 +23,4 @@ const roles = {};
   console.error(error);
 }*/
 
-export default roles;
+export { roles };

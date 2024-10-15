@@ -27,4 +27,4 @@ const modals = {};
   console.error(error);
 }*/
 
-export default modals;
+export { modals };

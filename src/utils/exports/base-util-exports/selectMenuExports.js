@@ -30,4 +30,4 @@ const selectMenus = {};
   console.error(error);
 }*/
 
-export default selectMenus;
+export { selectMenus };

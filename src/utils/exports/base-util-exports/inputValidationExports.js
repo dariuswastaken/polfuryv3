@@ -29,4 +29,4 @@ const validate = {};
   console.error(error);
 }*/
 
-export default validate;
+export { validate };

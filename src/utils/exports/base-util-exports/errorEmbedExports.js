@@ -39,4 +39,4 @@ const errors = {};
   console.error(error);
 }*/
 
-export default errors;
+export { errors };

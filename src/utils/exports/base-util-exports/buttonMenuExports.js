@@ -35,4 +35,4 @@ const buttonMenus = {};
   console.error(error);
 }*/
 
-export default buttonMenus;
+export { buttonMenus };
