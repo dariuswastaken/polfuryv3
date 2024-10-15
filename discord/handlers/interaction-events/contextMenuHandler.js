@@ -17,8 +17,6 @@ export default {
       if (interaction.user.bot) return;
 
       const client = Pulsar().client;
-      
-      console.log('interaction passed')
 
       const pulsar = {
         client: client,
@@ -35,6 +33,8 @@ export default {
       const { commandName } = interaction;
 
       const utils = await import(modulePath);
+      
+      console.log(client.collections.contextMenus.get(commandName)))
       
       try {
         if (interaction.isUserContextMenuCommand()) {
