@@ -1,3 +1,8 @@
-import { exportModules } from '../core/baseExportFSModule';
+import { exportModules } from '../core/baseExportFSModule.js';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-module.exports = exportModules(__dirname);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default await exportModules(__dirname);
