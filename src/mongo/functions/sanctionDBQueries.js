@@ -1,4 +1,4 @@
-import { db } from '../../handlers/mongoConnectionHandler';
+import { db } from '../../handlers/mongoConnectionHandler.js';
 
 export const createSanction = async ({ authorID, sanctionID, sanctionedID }) => {
     await db.create('PendingSanction', {

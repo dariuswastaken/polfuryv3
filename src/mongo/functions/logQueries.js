@@ -1,4 +1,4 @@
-import { db } from '../../handlers/mongoConnectionHandler';
+import { db } from '../../handlers/mongoConnectionHandler.js';
 
 const countItems = (items, filter) => {
   return items.filter(filter).length;

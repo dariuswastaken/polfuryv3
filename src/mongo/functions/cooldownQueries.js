@@ -1,4 +1,4 @@
-import { db } from '../../handlers/mongoConnectionHandler';
+import { db } from '../../handlers/mongoConnectionHandler.js';
 
 export const addCooldown = async (userID, tip_, days) => {
   const date = new Date();

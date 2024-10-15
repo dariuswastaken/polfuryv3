@@ -1,4 +1,4 @@
-import { db } from '../../handlers/mongoConnectionHandler';
+import { db } from '../../handlers/mongoConnectionHandler.js';
 
 export const createEntryList = async (tip, week, list) => {
   await db.create('EntryList', { tip_: tip, week: week, list: list });

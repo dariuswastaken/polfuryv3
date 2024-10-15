@@ -1,4 +1,4 @@
-import { db } from '../../handlers/mongoConnectionHandler';
+import { db } from '../../handlers/mongoConnectionHandler.js';
 
 export const createToken = async (token, userID, type, authorID) => {
   const expiryDate = new Date();
