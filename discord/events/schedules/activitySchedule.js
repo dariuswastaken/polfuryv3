@@ -1,6 +1,6 @@
 import nodeSchedule from 'npm:node-schedule';
 import mongo from '../../../src/mongo/mongoQueries.js';
-import recurrenceRules from '../../../src/utils/functions/schedules/scheduleRecurrenceRules.js';
+import * as recurrenceRules from '../../../src/utils/functions/schedules/scheduleRecurrenceRules.js';
 
 export default {
   name: 'activitySchedule',
