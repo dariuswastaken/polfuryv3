@@ -5,6 +5,11 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const resolvedPath = path.resolve(__dirname, '../../../src/utils/exports/globalExports.js');
+const modulePath = `file://${resolvedPath}`;
+
+const utils = await import(modulePath);
+
 export default {
   name: 'slashCommandHandler',
   type: 'interactionBased',
@@ -23,12 +28,6 @@ export default {
         fileManager: Pulsar().fileManager.createInstance(),
         webManager: Pulsar().webManager.createInstance()
       };
-
-      const call = await path.resolve(__dirname);
-      const utils = await Pulsar().utilsManager.createNew(
-        call,
-        '../../src/utils/exports/globalExports.js'
-      );
 
       const { commandName } = interaction;
       if (!client.collections.slashCommands.has(commandName)) return;
