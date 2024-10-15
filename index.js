@@ -11,7 +11,7 @@ import { exportModules } from './src/core/baseExportFSModule.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const pulsarDiscordModules = exportModules(
+const pulsarDiscordModules = await exportModules(
   path.join(__dirname, './pulsar/src/functions/discord')
 );
 
