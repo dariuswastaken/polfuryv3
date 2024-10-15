@@ -1,7 +1,7 @@
 import * as dirs from '../imports/dirs.js';
 import { Pulsar } from '../../pulsar/index.pulsar.js';
 import { printTable } from 'npm:console-table-printer';
-import { readdirSync } from 'node:fs';
+import fs from 'node:fs';
 
 const fileSystem = Pulsar().fileManager.createInstance();
 
