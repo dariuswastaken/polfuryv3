@@ -21,11 +21,15 @@ const categories = [
 
 const embeds = {};
 
-for (const category of categories) {
-  if (modules[category]) {
-    Object.assign(embeds, modules[category]);
-        console.log(`Loaded ${category} functions`)
+try {
+  for (const category of categories) {
+    if (modules[category]) {
+      Object.assign(exports, modules[category]);
+      console.log(`Loaded ${category} functions`);
+    }
   }
+} catch (error) {
+  console.error(error);
 }
 
 export default embeds;

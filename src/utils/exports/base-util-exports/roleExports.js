@@ -13,11 +13,15 @@ const categories = ['rankUpdates'];
 
 const roles = {};
 
-for (const category of categories) {
-  if (modules[category]) {
-    Object.assign(roles, modules[category]);
-        console.log(`Loaded ${category} functions`)
+try {
+  for (const category of categories) {
+    if (modules[category]) {
+      Object.assign(exports, modules[category]);
+      console.log(`Loaded ${category} functions`);
+    }
   }
+} catch (error) {
+  console.error(error);
 }
 
 export default roles;

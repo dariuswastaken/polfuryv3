@@ -13,11 +13,15 @@ const categories = ['base'];
 
 const logging = {};
 
-for (const category of categories) {
-  if (modules[category]) {
-    Object.assign(logging, modules[category]);
-        console.log(`Loaded ${category} functions`)
+try {
+  for (const category of categories) {
+    if (modules[category]) {
+      Object.assign(exports, modules[category]);
+      console.log(`Loaded ${category} functions`);
+    }
   }
+} catch (error) {
+  console.error(error);
 }
 
 export default logging;
