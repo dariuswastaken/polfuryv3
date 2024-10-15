@@ -5,13 +5,15 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
+const modules = await exportModules(
+  path.join(__dirname, '../../functions/discord/roles')
+);
 
 const categories = ['rankUpdates'];
 
 const roles = {};
 
-/*try {
+try {
   for (const category of categories) {
     if (modules[category]) {
       Object.assign(roles, modules[category]);
@@ -19,6 +21,6 @@ const roles = {};
   }
 } catch (error) {
   console.error(error);
-}*/
+}
 
 export { roles };

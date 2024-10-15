@@ -13,11 +13,7 @@ const categories = ['algos', 'algoUtils'];
 
 const exports = {};
 
-for(const category of categories) {
-  console.log(path.join(__dirname, '../../functions/discord'))
-}
-
-/*try {
+try {
   for (const category of categories) {
     if (modules[category]) {
       Object.assign(exports, modules[category]);
@@ -25,6 +21,6 @@ for(const category of categories) {
   }
 } catch (error) {
   console.error(error);
-}*/
+}
 
 export { exports };

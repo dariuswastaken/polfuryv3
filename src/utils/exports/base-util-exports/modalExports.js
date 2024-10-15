@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
+const modules = exportModules(path.join(__dirname, '../../functions/discord/modals'));
 
 const categories = [
   'formModals',
@@ -17,7 +17,7 @@ const categories = [
 
 const modals = {};
 
-/*try {
+try {
   for (const category of categories) {
     if (modules[category]) {
       Object.assign(modals, modules[category]);
@@ -25,6 +25,6 @@ const modals = {};
   }
 } catch (error) {
   console.error(error);
-}*/
+}
 
 export { modals };
