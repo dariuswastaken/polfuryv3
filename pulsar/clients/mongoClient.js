@@ -6,7 +6,6 @@ mongoose;
 export default class MongoClient {
   constructor() {
     this.mongo = init();
-    console.log(schemas);
   }
 
   async find(schema, query) {
@@ -116,7 +115,7 @@ export default class MongoClient {
     try {
       const Schema = schemas[schema];
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
-      const documents = ''
+      const documents = await Schema.find({});
       return documents;
     } catch (error) {
       console.error(`[MONGO] Error fetching documents from schema: ${schema}`);
