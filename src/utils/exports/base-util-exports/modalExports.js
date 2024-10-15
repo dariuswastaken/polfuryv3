@@ -20,7 +20,7 @@ const modals = {};
 for (const category of categories) {
   if (modules[category]) {
     Object.assign(modals, modules[category]);
-        console.log(`Loaded ${modules[category]} functions`)
+        console.log(`Loaded ${category} functions`)
   }
 }
 
