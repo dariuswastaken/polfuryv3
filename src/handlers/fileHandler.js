@@ -10,6 +10,7 @@ let events = [];
 
 const loadEvents = async (path, collection, type) => {
   const item = await import(path);
+  console.log(item);
   try {
     if (type === 'Slash Command' || type === 'Context Menu') {
       collection.set(item.data.name, item);
