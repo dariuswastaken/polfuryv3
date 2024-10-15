@@ -1,5 +1,5 @@
 import { db } from '../../../handlers/mongoConnectionHandler.js';
-import { dayConversion } from '../../../utils/exports/globalExports.js';
+import { dayConversion } from '../../../utils/functions/base/dayConversion.js';
 
 export const updateActivity = async (discordID, serverID, { pontaj, rapoarte, amenzi, apeluri, lastLogin }) => {
   const currentWeek = await dayConversion.getCurrentWeek();
