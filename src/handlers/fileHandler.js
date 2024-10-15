@@ -1,8 +1,6 @@
 import * as dirs from '../imports/dirs.js';
 import { Pulsar } from '../../pulsar/index.pulsar.js';
 import { printTable } from 'npm:console-table-printer';
-import fs from 'node:fs/promises';
-import path from 'node:path';
 
 const fileSystem = Pulsar().fileManager.createInstance();
 const client = Pulsar().client;
@@ -35,6 +33,7 @@ export const loadFilesystem = async () => {
   console.log('[FILESYSTEM] Loading filesystem...');
 
   await fileSystem.loadFilesFromDir(dirs.handlerDir, async (filePath) => {
+    console.log('Passed callback function')
     try {
       const handlerModule = await import(filePath);
       const handler = handlerModule.default;
