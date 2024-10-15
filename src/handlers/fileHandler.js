@@ -1,76 +1,62 @@
 import * as dirs from '../imports/dirs.js';
 import { Pulsar } from '../../pulsar/index.pulsar.js';
 import { printTable } from 'npm:console-table-printer';
-import fs from 'node:fs';
+import fs from 'node:fs/promises';
+import path from 'node:path';
 
 const fileSystem = Pulsar().fileManager.createInstance();
-
 const client = Pulsar().client;
-
 let events = [];
 
-const loadEvents = async (path, collection, type) => {
-  const itemModule = await import(path);
-  const item = itemModule.default;
+const loadEvents = async (filePath, collection, type) => {
   try {
+    const itemModule = await import(filePath);
+    const item = itemModule.default;
+
     if (type === 'Slash Command' || type === 'Context Menu') {
       collection.set(item.data.name, item);
-      events.push({
-        name: item.data.name,
-        type: type,
-        loaded: '✅'
-      });
+      events.push({ name: item.data.name, type, loaded: '✅' });
     } else if (type === 'Event') {
       collection.set(item.name, item);
-      item.execute(Pulsar);
-      events.push({
-        name: item.name,
-        type: type,
-        loaded: '✅'
-      });
+      await item.execute(Pulsar);
+      events.push({ name: item.name, type, loaded: '✅' });
     } else {
       collection.set(item.name, item);
-      events.push({
-        name: item.name,
-        type: type,
-        loaded: '✅'
-      });
+      events.push({ name: item.name, type, loaded: '✅' });
     }
   } catch (e) {
-    console.error(
-      '[FILESYSTEM ERROR] ' + type + 'loading has failed at: ' + path
-    );
+    console.error(`[FILESYSTEM ERROR] ${type} loading failed at: ${filePath}`);
     console.error(e);
-    events.push({
-      name: path,
-      type: type,
-      loaded: '❌'
-    });
+    events.push({ name: filePath, type, loaded: '❌' });
   }
 };
 
 export const loadFilesystem = async () => {
-  fileSystem.loadFilesFromDir(dirs.handlerDir, async (path) => {
-    const handlerModule = await import(path);
-    const handler = handlerModule.default;
-    console.log('[FILESYSTEM] Loaded handler: ' + handler.name);
-    client.collections.handlers.set(handler.name, handler);
-    if (typeof handler.execute === 'function') {
-      handler.execute(Pulsar);
-      events.push({
-        name: handler.name,
-        type: 'Handler',
-        loaded: '✅'
-      });
-    } else {
+  console.log('[FILESYSTEM] Loading filesystem...');
+
+  await fileSystem.loadFilesFromDir(dirs.handlerDir, async (filePath) => {
+    try {
+      const handlerModule = await import(filePath);
+      const handler = handlerModule.default;
+
+      console.log('[FILESYSTEM] Loaded handler: ' + handler.name);
+      client.collections.handlers.set(handler.name, handler);
+
+      if (typeof handler.execute === 'function') {
+        await handler.execute(Pulsar);
+        events.push({ name: handler.name, type: 'Handler', loaded: '✅' });
+      } else {
+        console.error(
+          '[FILESYSTEM ERROR] Handler does not have an execute function: ' +
+            filePath
+        );
+        events.push({ name: handler.name, type: 'Handler', loaded: '❌' });
+      }
+    } catch (e) {
       console.error(
-        '[FILESYSTEM ERROR] Handler does not have an execute function: ' + path
+        '[FILESYSTEM ERROR] Failed to load handler from ' + filePath
       );
-      events.push({
-        name: handler.name,
-        type: 'Handler',
-        loaded: '❌'
-      });
+      console.error(e);
     }
   });
 
@@ -107,15 +93,15 @@ export const loadFilesystem = async () => {
     }
   ];
 
-  console.log('[FILESYSTEM] Loading filesystem...');
-
   for (const { dir, collection, type } of directories) {
     try {
-      fileSystem.loadFilesFromDir(dir, async (path) => {
-        loadEvents(path, collection, type);
+      await fileSystem.loadFilesFromDir(dir, async (filePath) => {
+        await loadEvents(filePath, collection, type);
       });
     } catch (e) {
-      console.error('[FILESYSTEM ERROR] ' + type + ' loading has failed');
+      console.error(
+        `[FILESYSTEM ERROR] ${type} loading failed for directory: ${dir}`
+      );
       console.error(e);
     }
   }
