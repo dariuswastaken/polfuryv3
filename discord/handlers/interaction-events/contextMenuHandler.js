@@ -19,6 +19,8 @@ export default {
       if (interaction.user.bot) return;
 
       const client = Pulsar().client;
+      
+      console.log('interaction passed')
 
       const pulsar = {
         client: client,
