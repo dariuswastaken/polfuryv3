@@ -1,4 +1,4 @@
-import { exportModules } from '../../fs/baseExportFSModule';
+import { exportModules } from '../../fs/baseExportFSModule.js';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
