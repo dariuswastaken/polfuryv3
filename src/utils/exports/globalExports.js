@@ -9,8 +9,6 @@ const baseUtilModules = await exportModules(
   path.join(__dirname, './base-util-exports')
 );
 
-console.log(baseUtilModules);
-
 const globalExports = {
   timeConversion: baseUtilModules.baseFuncExports.timeConversion,
   dayConversion: baseUtilModules.baseFuncExports.dayConversion,
