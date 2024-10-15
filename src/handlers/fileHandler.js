@@ -17,7 +17,7 @@ const loadEvents = async (path, collection, type) => {
       events.push({
         name: item.data.name,
         type: type,
-        loaded: '✅',
+        loaded: '✅'
       });
     } else if (type === 'Event') {
       collection.set(item.name, item);
@@ -26,7 +26,7 @@ const loadEvents = async (path, collection, type) => {
         name: item.name,
         type: type,
         loaded: '✅'
-      })
+      });
     } else {
       collection.set(item.name, item);
       events.push({
@@ -43,18 +43,18 @@ const loadEvents = async (path, collection, type) => {
     events.push({
       name: path,
       type: type,
-      loaded: '❌',
+      loaded: '❌'
     });
   }
 };
 
 const directoryChecker = async (dir) => {
-  if(!fs.existsSync(dir)) {
-    console.error(`[FILESYSTEM] ${dir} does not exist in the filesystem`)
+  if (!fs.existsSync(dir)) {
+    console.error(`[FILESYSTEM] ${dir} does not exist in the filesystem`);
     return false;
   }
   return true;
-}
+};
 
 export const loadFilesystem = async () => {
   fileSystem.loadFilesFromDir(dirs.handlerDir, async (path) => {
@@ -115,15 +115,20 @@ export const loadFilesystem = async () => {
 
   console.log('[FILESYSTEM] Loading filesystem...');
 
-  for(const { dirs, collection, type } of directories) {
-    fileSystem.loadFilesFromDir(dirs, async (path) => {
-      if(!dirs || !directoryChecker(dirs)) {
-        return;
-      }
-      loadEvents(path, collection, type);
-    });
+  for (const { dirs, collection, type } of directories) {
+    try {
+      fileSystem.loadFilesFromDir(dirs, async (path) => {
+        if (!dirs || !directoryChecker(dirs)) {
+          return;
+        }
+        loadEvents(path, collection, type);
+      });
+    } catch (e) {
+      console.error('[FILESYSTEM ERROR] ' + type + ' loading has failed');
+      console.error(e);
+    }
   }
-  
+
   printTable(events);
   console.log('[FILESYSTEM] Filesystem has been loaded.');
 };
