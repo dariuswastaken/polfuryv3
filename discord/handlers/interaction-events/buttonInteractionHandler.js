@@ -10,6 +10,8 @@ export default {
       if (interaction.user.bot) return;
       if (!interaction.isButton()) return;
 
+      console.log('Passed');
+      
       const client = Pulsar().client;
 
       const pulsar = {
