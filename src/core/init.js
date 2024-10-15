@@ -19,7 +19,7 @@ const init = {
       //processManager.createErrorHandler();
       
       await fileHandler.loadHandlers();
-      //await fileHandler.loadBaseFilesystem();
+      await fileHandler.loadBaseFilesystem();
 
       client.login(process.env.DISCORD_TOKEN);
     } catch (error) {
