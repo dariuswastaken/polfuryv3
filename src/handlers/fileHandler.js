@@ -33,7 +33,9 @@ export const loadHandlers = async () => {
   console.log(dirs.handlerDir)
   fileSystem.loadFilesFromDir(dirs.handlerDir, async (filePath) => {
     try {
-      const handler = await import(filePath).default;
+      const handlerModule = await import(filePath);
+      const handler = handlerModule.default;
+      
       client.collections.handlers.set(handler.name, handler);
 
       if (typeof handler.execute === 'function') {

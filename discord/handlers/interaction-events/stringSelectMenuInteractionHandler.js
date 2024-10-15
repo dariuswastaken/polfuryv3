@@ -1,5 +1,4 @@
 import mongo from '../../../src/mongo/mongoQueries.js';
-import utils from '../../../src/utils/exports/globalExports.js';
 
 export default {
   name: 'stringSelectMenuInteractionHandler',
