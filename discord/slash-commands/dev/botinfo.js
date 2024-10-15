@@ -1,5 +1,5 @@
 import { SlashCommandBuilder, PermissionsBitField } from 'npm:discord.js';
-import os from 'os';
+import os from 'node:os';
 
 export default {
   data: new SlashCommandBuilder()
