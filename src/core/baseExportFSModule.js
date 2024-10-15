@@ -3,7 +3,6 @@ import path from 'node:path';
 
 export const exportModules = async (dir) => {
   const modules = {};
-  console.log(`[FILESYSTEM] Exporting modules from ${dir}`);
 
   const files = fs.readdirSync(dir);
 
