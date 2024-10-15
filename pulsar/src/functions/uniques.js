@@ -1,5 +1,4 @@
-module.exports = {
-  createUniqueID: async () => {
+export const createUniqueID = async () => {
     const timestamp = new Date().getTime();
     const minRandom = 100000;
     const maxRandom = 9999999;

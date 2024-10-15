@@ -16,6 +16,4 @@ const applicationSchema = new mongoose.Schema(
 
 const Application = new mongoose.model("Application", applicationSchema);
 
-module.exports = {
-  schema: Application,
-};
+export default Application;

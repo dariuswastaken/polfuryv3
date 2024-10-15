@@ -20,6 +20,4 @@ const eivdentaMotoSchema = new mongoose.Schema(
 
 const EvidentaMoto = new mongoose.model("EvidentaMoto", eivdentaMotoSchema);
 
-module.exports = {
-  schema: EvidentaMoto,
-};
+export default EvidentaMoto;

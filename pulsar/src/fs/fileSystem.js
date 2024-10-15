@@ -1,7 +1,7 @@
 import { readdirSync } from 'node:fs';
 import path from 'node:path';
 
-function loadFilesFromDir(dir, callback) {
+export function loadFilesFromDir(dir, callback) {
   const files = [];
 
   readdirSync(dir).forEach(async (folder) => {
@@ -12,7 +12,3 @@ function loadFilesFromDir(dir, callback) {
 
   files.forEach(callback);
 }
-
-module.exports = {
-  loadFilesFromDir
-};

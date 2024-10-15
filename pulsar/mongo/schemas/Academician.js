@@ -17,6 +17,4 @@ const academicianSchema = new mongoose.Schema(
 
 const Academician = new mongoose.model("Academician", academicianSchema);
 
-module.exports = {
-  schema: Academician,
-};
+export default Academician;

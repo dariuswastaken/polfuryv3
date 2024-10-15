@@ -3,8 +3,7 @@ import path from 'node:path';
 
 const folder = 'logs';
 
-module.exports = {
-  createErrorHandler: async () => {
+export const createErrorHandler = async () => {
     const logger = winston.createLogger({
       level: 'info',
       format: winston.format.combine(

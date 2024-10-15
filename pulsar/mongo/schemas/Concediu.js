@@ -12,6 +12,4 @@ const concediuSchema = new mongoose.Schema(
 
 const Concediu = new mongoose.model("Concediu", concediuSchema);
 
-module.exports = {
-  schema: Concediu,
-};
+export default Concediu;

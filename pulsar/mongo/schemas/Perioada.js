@@ -10,6 +10,4 @@ const perioadaSchema = new mongoose.Schema(
 
 const Perioada = new mongoose.model("Perioada", perioadaSchema);
 
-module.exports = {
-  schema: Perioada,
-};
+export default Perioada;

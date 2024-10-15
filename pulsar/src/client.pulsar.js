@@ -6,7 +6,7 @@ import { webManager } from '../managers/webManager.js';
 import * as clients from '../exports/clients.js';
 import config from '../.config/config.json' with { type: 'json' };
 
-module.exports.PulsarClient = class PulsarClient {
+export default class PulsarClient {
   constructor() {
     this.MongoClient = clients.MongoClient;
     this.client = clients.client;
@@ -19,4 +19,4 @@ module.exports.PulsarClient = class PulsarClient {
   async config() {
     return config.pulsar;
   }
-};
+}

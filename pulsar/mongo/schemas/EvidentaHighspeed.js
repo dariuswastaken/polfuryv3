@@ -23,6 +23,4 @@ const EvidentaHighspeed = new mongoose.model(
   eivdentaHighspeedSchema
 );
 
-module.exports = {
-  schema: EvidentaHighspeed,
-};
+export default EvidentaHighspeed;

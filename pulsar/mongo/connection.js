@@ -2,7 +2,7 @@ import mongoose from 'npm:mongoose';
 
 const url = 'mongodb://127.0.0.1:27017/PolDB';
 
-async function init() {
+export const init = async () => {
   if (mongoose.connection.readyState === 1)
     return console.log('[MONGO] Already connected to MongoDB');
 
@@ -14,8 +14,4 @@ async function init() {
 
   mongo.on('error', console.error.bind(console, '[MONGO] Connection error:'));
   console.log('[MONGO] Connected to MongoDB');
-}
-
-module.exports = {
-  init
 };

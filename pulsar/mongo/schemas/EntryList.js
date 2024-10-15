@@ -11,6 +11,4 @@ const entryListSchema = new mongoose.Schema(
 
 const EntryList = mongoose.model("EntryList", entryListSchema);
 
-module.exports = {
-  schema: EntryList,
-};
+export default EntryList;

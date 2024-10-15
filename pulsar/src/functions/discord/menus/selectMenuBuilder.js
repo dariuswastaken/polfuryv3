@@ -1,7 +1,6 @@
 import Discord from 'npm:discord.js';
 
-module.exports = {
-  createSelectMenu: async ({ type, options, id, placeholder, channelType, maxValues, minValues }) => {
+export const createSelectMenu = async ({ type, options, id, placeholder, channelType, maxValues, minValues }) => {
     if (type === 'string') {
       type = new Discord.StringSelectMenuBuilder().addOptions(
         options || []

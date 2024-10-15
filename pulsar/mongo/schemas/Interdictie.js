@@ -10,6 +10,4 @@ const interdictieSchema = new mongoose.Schema({
 
 const Interdictie = new mongoose.model("Interdictie", interdictieSchema);
 
-module.exports = {
-  schema: Interdictie,
-};
+export default Interdictie;

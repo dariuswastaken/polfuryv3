@@ -14,6 +14,4 @@ const ticketSchema = new mongoose.Schema(
 
 const Ticket = new mongoose.model("Ticket", ticketSchema);
 
-module.exports = {
-  schema: Ticket,
-};
+export default Ticket;

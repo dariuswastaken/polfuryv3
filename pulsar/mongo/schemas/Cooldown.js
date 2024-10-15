@@ -11,6 +11,4 @@ const cooldownSchema = new mongoose.Schema(
 
 const Cooldown = new mongoose.model("Cooldown", cooldownSchema);
 
-module.exports = {
-  schema: Cooldown,
-};
+export default Cooldown;

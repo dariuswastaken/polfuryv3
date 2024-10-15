@@ -20,6 +20,4 @@ const PendingSanction = new mongoose.model(
   pendingSanctionSchema
 );
 
-module.exports = {
-  schema: PendingSanction
-};
+export default PendingSanction;

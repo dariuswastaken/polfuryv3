@@ -9,6 +9,4 @@ const componentSchema = new mongoose.Schema({
 
 const Component = mongoose.model("Component", componentSchema);
 
-module.exports = {
-  schema: Component,
-};
+export default Component;

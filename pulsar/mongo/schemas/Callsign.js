@@ -11,6 +11,4 @@ const callsignSchema = new mongoose.Schema(
 
 const Callsign = new mongoose.model("Callsign", callsignSchema);
 
-module.exports = {
-  schema: Callsign,
-};
+export default Callsign;

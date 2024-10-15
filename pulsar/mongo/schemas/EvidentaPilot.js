@@ -20,6 +20,4 @@ const eivdentaPilotSchema = new mongoose.Schema(
 
 const EvidentaPilot = new mongoose.model("EvidentaPilot", eivdentaPilotSchema);
 
-module.exports = {
-  schema: EvidentaPilot,
-};
+export default EvidentaPilot;

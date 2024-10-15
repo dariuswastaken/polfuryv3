@@ -16,6 +16,4 @@ const messageLogSchema = new mongoose.Schema({
 
 const MessageLog = mongoose.model("MessageLog", messageLogSchema);
 
-module.exports = {
-  schema: MessageLog,
-};
+export default MessageLog;

@@ -1,6 +1,6 @@
 import * as webfunctions from '../src/web/functions/web.js';
 
-module.exports = {
-  getUserMdtData: webfunctions.getUserMdtData,
-  isOnDuty: webfunctions.isOnDuty
-};
+const getUserMdtData = webfunctions.getUserMdtData;
+const isOnDuty = webfunctions.isOnDuty;
+
+export { getUserMdtData, isOnDuty };

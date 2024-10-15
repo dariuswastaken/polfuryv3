@@ -27,6 +27,4 @@ const memberSchema = new mongoose.Schema(
 
 const Member = new mongoose.model("Member", memberSchema);
 
-module.exports = {
-  schema: Member,
-};
+export default Member;

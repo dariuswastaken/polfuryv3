@@ -35,6 +35,4 @@ const MemberSnapshot = new mongoose.model(
   memberSnapshotSchema
 );
 
-module.exports = {
-  schema: MemberSnapshot
-};
+export default MemberSnapshot;

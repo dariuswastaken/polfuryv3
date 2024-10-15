@@ -8,6 +8,4 @@ const occupiedNumSchema = new mongoose.Schema({
 
 const OccupiedNum = new mongoose.model("OccupiedNum", occupiedNumSchema);
 
-module.exports = {
-  schema: OccupiedNum,
-};
+export default OccupiedNum;

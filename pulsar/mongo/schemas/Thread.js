@@ -17,6 +17,4 @@ const threadSchema = new mongoose.Schema(
 
 const Thread = new mongoose.model("Thread", threadSchema);
 
-module.exports = {
-  schema: Thread,
-};
+export default Thread;

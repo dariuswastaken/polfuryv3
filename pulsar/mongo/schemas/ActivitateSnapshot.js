@@ -20,6 +20,4 @@ const activitateSnapshotSchema = new mongoose.Schema(
 
 const ActivitateSnapshot = new mongoose.model("ActivitateSnapshot", activitateSnapshotSchema);
 
-module.exports = {
-  schema: ActivitateSnapshot,
-};
+export default ActivitateSnapshot;

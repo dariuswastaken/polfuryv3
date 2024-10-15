@@ -8,6 +8,4 @@ const blacklistSchema = new mongoose.Schema({
 
 const Blacklist = mongoose.model("Blacklist", blacklistSchema);
 
-module.exports = {
-  schema: Blacklist,
-};
+export default Blacklist;

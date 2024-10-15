@@ -19,6 +19,4 @@ const activitateSchema = new mongoose.Schema(
 
 const ActivitateBeta = new mongoose.model("Activitate", activitateSchema);
 
-module.exports = {
-  schema: ActivitateBeta,
-};
+export default ActivitateBeta;

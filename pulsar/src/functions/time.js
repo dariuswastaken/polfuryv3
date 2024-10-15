@@ -1,7 +1,6 @@
 import moment from 'npm:moment'
 
-module.exports = {
-  formatUptime: async (uptime) => {
+export const formatUptime = async (uptime) => {
     const days = Math.floor(uptime / (60 * 60 * 24));
     const hours = Math.floor((uptime / (60 * 60)) % 24);
     const minutes = Math.floor((uptime / 60) % 60);

@@ -5,8 +5,7 @@ import {
   TextInputStyle
 } from 'npm:discord.js';
 
-module.exports = {
-  createModal: async ({ id, title, inputs }) => {
+export const createModal = async ({ id, title, inputs }) => {
     const modal = new ModalBuilder().setCustomId(id).setTitle(title);
 
     let rows = [];

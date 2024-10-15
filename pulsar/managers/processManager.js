@@ -1,11 +1,11 @@
 import * as processFunctions from '../exports/process.js';
 
-module.exports = {
-  processManager: {
-    createInstance: () => {
-      return {
-        createErrorHandler: processFunctions.createErrorHandler
-      };
-    }
+const processManager = {
+  createInstance: () => {
+    return {
+      createErrorHandler: processFunctions.createErrorHandler
+    };
   }
-};
+}
+
+export default processManager;

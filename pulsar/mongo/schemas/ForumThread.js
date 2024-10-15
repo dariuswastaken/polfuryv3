@@ -9,6 +9,4 @@ const forumThreadSchema = new mongoose.Schema({
 
 const ForumThread = mongoose.model("ForumThread", forumThreadSchema);
 
-module.exports = {
-  schema: ForumThread,
-};
+export default ForumThread;

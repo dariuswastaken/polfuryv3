@@ -1,5 +1,5 @@
-import { PulsarClient } from './src/client.pulsar.js';
+import PulsarClient from './src/client.pulsar.js';
 
-module.exports.Pulsar = function () {
+export const Pulsar = function () {
   return new PulsarClient();
 };
