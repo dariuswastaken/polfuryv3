@@ -5,8 +5,30 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const utilModules = await exportModules(
-  path.join(__dirname, '../functions')
+const baseUtilModules = await exportModules(
+  path.join(__dirname, './base-util-exports')
 );
 
-export default utilModules;
+/*const glbobalExports = {
+  timeConversion: baseUtilModules.baseFuncExports.timeConversion,
+  dayConversion: baseUtilModules.baseFuncExports.dayConversion,
+  math: baseUtilModules.baseFuncExports.math,
+  checks: baseUtilModules.baseFuncExports.checks,
+  discord: {
+    buttonMenus: baseUtilModules.buttonMenuExports.buttonMenus,
+    embeds: baseUtilModules.embedExports.embeds,
+    errors: baseUtilModules.errorEmbedExports.errors,
+    validate: baseUtilModules.inputValidationExports.validate,
+    logging: baseUtilModules.loggingExports.logging,
+    modals: baseUtilModules.modalExports.modals,
+    quickFunctions: baseUtilModules.quickFuncExports.quickFunctions,
+    roles: baseUtilModules.roleExports.roles,
+    selectMenus: baseUtilModules.selectMenuExports.selectMenus
+  },
+  algorithms: baseUtilModules.algExports.algos,
+  activity: {
+    utils: baseUtilModules.activityUtilExports.utils
+  }
+};*/
+
+export default baseUtilModules;
