@@ -4,7 +4,7 @@ import mongo from '../../../src/mongo/mongoQueries.js';
 export default {
   name: 'sanctionRemovalSchedules',
   async execute(Pulsar) {
-    /*const sanctions = await mongo.getAllSanctions();
+    const sanctions = await mongo.getAllSanctions();
     
     for (let sanction of sanctions) {
       if (sanction.pending === true) {
@@ -27,6 +27,6 @@ export default {
       }
     }
     
-    console.log('[SCHEDULER] Sanction removal schedules have been set.');*/
+    console.log('[SCHEDULER] Sanction removal schedules have been set.');
   }
 };
