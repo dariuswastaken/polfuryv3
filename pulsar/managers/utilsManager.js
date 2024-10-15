@@ -12,7 +12,7 @@ module.exports = {
     createNew: (call, filePath) => {
       try {
         const resolvedPath = path.resolve(path.dirname(call), filePath);
-        return require(resolvedPath);
+        return import(resolvedPath).then((module) => module.default);
       } catch (e) {
         console.error(e);
       }
