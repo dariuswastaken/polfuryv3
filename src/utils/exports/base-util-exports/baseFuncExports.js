@@ -9,18 +9,6 @@ const modules = await exportModules(
   path.join(__dirname, '../../functions/base')
 );
 
-const categories = ['checks', 'dayConversion', 'timeConversion', 'math'];
+const baseFuncExports = modules;
 
-const exports = {};
-
-try {
-  for (const category of categories) {
-    if (modules[category]) {
-      Object.assign(exports, modules[category]);
-    }
-  }
-} catch (error) {
-  console.error(error);
-}
-
-export { exports };
+export { baseFuncExports };

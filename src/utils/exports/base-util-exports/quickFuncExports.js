@@ -9,25 +9,6 @@ const modules = await exportModules(
   path.join(__dirname, '../../functions/discord/quick-functions')
 );
 
-const categories = [
-  'chestorListsQFuncs',
-  'meniuInstructorQFuncs',
-  'sanctionThreadsQFuncs',
-  'simpleTranscriptGeneratorQFuncs',
-  'subdepManagementQFuncs',
-  'userAddQFuncs'
-];
+const quickFuncExports = modules;
 
-const quickFunctions = {};
-
-try {
-  for (const category of categories) {
-    if (modules[category]) {
-      Object.assign(quickFunctions, modules[category]);
-    }
-  }
-} catch (error) {
-  console.error(error);
-}
-
-export { quickFunctions };
+export { quickFuncExports };

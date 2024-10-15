@@ -9,18 +9,6 @@ const modules = await exportModules(
   path.join(__dirname, '../../functions/discord/logging')
 );
 
-const categories = ['base'];
+const loggingExports = modules;
 
-const logging = {};
-
-try {
-  for (const category of categories) {
-    if (modules[category]) {
-      Object.assign(logging, modules[category]);
-    }
-  }
-} catch (error) {
-  console.error(error);
-}
-
-export { logging };
+export { loggingExports };

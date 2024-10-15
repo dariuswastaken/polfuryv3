@@ -9,26 +9,6 @@ const modules = await exportModules(
   path.join(__dirname, '../../functions/discord/embeds')
 );
 
-const categories = [
-  'activityListsEmbeds',
-  'activityManagementEmbeds',
-  'baseEmbeds',
-  'meniuInstructorEmbeds',
-  'subdepManagementEmbeds',
-  'userActivityEmbeds',
-  'userInfoEmbeds'
-];
+const embedExports = modules;
 
-const embeds = {};
-
-try {
-  for (const category of categories) {
-    if (modules[category]) {
-      Object.assign(embeds, modules[category]);
-    }
-  }
-} catch (error) {
-  console.error(error);
-}
-
-export { embeds };
+export { embedExports };

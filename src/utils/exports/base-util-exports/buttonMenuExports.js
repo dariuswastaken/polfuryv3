@@ -9,30 +9,6 @@ const modules = await exportModules(
   path.join(__dirname, '../../functions/discord/button-menus')
 );
 
-const categories = [
-  'activityListMenus',
-  'demiterePendingMenus',
-  'meniuChestorFeatureMenus',
-  'meniuConcediuFeatureMenus',
-  'meniuConducereFeatureMenus',
-  'meniuInstructorFeatureMenus',
-  'mphActivityMenus',
-  'sanctionThreadCreationMenus',
-  'subdepManagementMenus',
-  'userEditMenus',
-  'userSnapshotMenus'
-];
+const buttonMenuExports = modules;
 
-const buttonMenus = {};
-
-try {
-  for (const category of categories) {
-    if (modules[category]) {
-      Object.assign(buttonMenus, modules[category]);
-    }
-  }
-} catch (error) {
-  console.error(error);
-}
-
-export { buttonMenus };
+export { buttonMenuExports };

@@ -9,18 +9,6 @@ const modules = await exportModules(
   path.join(__dirname, '../../functions/discord/roles')
 );
 
-const categories = ['rankUpdates'];
+const roleExports = modules;
 
-const roles = {};
-
-try {
-  for (const category of categories) {
-    if (modules[category]) {
-      Object.assign(roles, modules[category]);
-    }
-  }
-} catch (error) {
-  console.error(error);
-}
-
-export { roles };
+export { roleExports };

@@ -7,24 +7,6 @@ const __dirname = path.dirname(__filename);
 
 const modules = exportModules(path.join(__dirname, '../../functions/discord/modals'));
 
-const categories = [
-  'formModals',
-  'meniuConcediuModals',
-  'sanctionThreadsModals',
-  'subdepManagementModals',
-  'userEditMenuModals'
-];
+const modalExports = modules;
 
-const modals = {};
-
-try {
-  for (const category of categories) {
-    if (modules[category]) {
-      Object.assign(modals, modules[category]);
-    }
-  }
-} catch (error) {
-  console.error(error);
-}
-
-export { modals };
+export { modalExports };
