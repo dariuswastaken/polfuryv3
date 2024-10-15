@@ -1,4 +1,4 @@
-import { db } from '../../../handlers/mongoConnectionHandler';
+import { db } from '../../../handlers/mongoConnectionHandler.js';
 
 module.exports = {
   createSession: async (schema, { tip_, uniqueID, userID, data }) => {

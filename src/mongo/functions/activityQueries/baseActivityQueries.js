@@ -1,5 +1,5 @@
-import { db } from '../../../handlers/mongoConnectionHandler';
-import { dayConversion } from '../../../utils/exports/globalExports';
+import { db } from '../../../handlers/mongoConnectionHandler.js';
+import { dayConversion } from '../../../utils/exports/globalExports.js';
 
 module.exports = {
   updateActivity: async ( discordID, serverID, { pontaj, rapoarte, amenzi, apeluri, lastLogin } ) => {

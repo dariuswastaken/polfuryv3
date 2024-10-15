@@ -1,4 +1,4 @@
-import { db } from '../../../handlers/mongoConnectionHandler';
+import { db } from '../../../handlers/mongoConnectionHandler.js';
 
 module.exports = {
   getProfileAcademician: async (id) => {
