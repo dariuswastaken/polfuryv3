@@ -1,15 +1,10 @@
 import { init } from '../mongo/connection.js';
 import schemas from '../exports/schemas.js';
 
-import { createRequire } from "node:module";
-const require = createRequire(import.meta.url);
-const { default: mongoose } = require("npm:mongoose");
-
-mongoose;
-
 export default class MongoClient {
   constructor() {
     this.mongo = init();
+    console.log(schemas)
   }
 
   async find(schema, query) {
