@@ -16,6 +16,3 @@ const pulsarDiscordModules = exportModules(
 );
 
 console.log(pulsarDiscordModules);
-
-
-init();
