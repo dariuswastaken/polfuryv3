@@ -4,7 +4,7 @@ export default {
   name: 'slashCommandHandler',
   type: 'interactionBased',
   enabled: true,
-  async execute(Pulsar, utils) {
+  async execute(Pulsar, utils, botconfig) {
     Pulsar().client.on('interactionCreate', async (interaction) => {
       if (!interaction.isCommand()) return;
 
@@ -35,7 +35,7 @@ export default {
           );
           return;
         }
-        await slashCommand.execute(pulsar, interaction, mongo, utils);
+        await slashCommand.execute(pulsar, interaction, mongo, utils, botconfig);
         console.log(
           `[SLASH COMMANDS] Command ${commandName} was executed by ${interaction.user.tag}`
         );

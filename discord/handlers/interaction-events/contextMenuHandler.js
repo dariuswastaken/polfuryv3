@@ -4,7 +4,7 @@ export default {
   name: 'contextMenuHandler',
   type: 'interactionBased',
   enabled: true,
-  async execute(Pulsar, utils) {
+  async execute(Pulsar, utils, botconfig) {
     Pulsar().client.on('interactionCreate', async (interaction) => {
       if (interaction.user.bot) return;
 
@@ -39,7 +39,7 @@ export default {
               );
               return;
             }
-            await contextMenu.execute(pulsar, interaction, mongo, utils);
+            await contextMenu.execute(pulsar, interaction, mongo, utils, botconfig);
           }
           console.log(
             `[CONTEXT MENU EVENT] User context menu command: ${commandName} executed by ${
@@ -63,7 +63,7 @@ export default {
               );
               return;
             }
-            await contextMenu.execute(pulsar, interaction, mongo, utils);
+            await contextMenu.execute(pulsar, interaction, mongo, utils, botconfig);
           }
           console.log(
             `[CONTEXT MENU EVENT] Message context menu command: ${commandName} executed by ${

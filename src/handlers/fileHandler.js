@@ -3,6 +3,7 @@ import { Pulsar } from '../../pulsar/index.pulsar.js';
 import { printTable } from 'npm:console-table-printer';
 
 import utils from '../../src/utils/exports/globalExports.js';
+import botconfig from '../botconfig/botconfig.js';
 
 const fileSystem = Pulsar().fileManager.createInstance();
 const client = Pulsar().client;
@@ -40,7 +41,7 @@ export const loadHandlers = async () => {
       client.collections.handlers.set(handler.name, handler);
 
       if (typeof handler.execute === 'function') {
-        await handler.execute(Pulsar, utils);
+        await handler.execute(Pulsar, utils, botconfig);
         events.push({ name: handler.name, type: 'Handler', loaded: '✅' });
       } else {
         console.error(

@@ -4,7 +4,7 @@ export default {
   name: 'stringSelectMenuInteractionHandler',
   type: 'interactionBased',
   enabled: true,
-  async execute(Pulsar, utils) {
+  async execute(Pulsar, utils, botconfig) {
     Pulsar().client.on('interactionCreate', async (interaction) => {
       if (interaction.user.bot) return;
       if (!interaction.isStringSelectMenu()) return;
@@ -35,7 +35,7 @@ export default {
             );
             return;
           }
-          await selectMenu.execute(pulsar, interaction, mongo, utils);
+          await selectMenu.execute(pulsar, interaction, mongo, utils, botconfig);
           return;
         }
         if (client.collections.stringSelectMenuInteractionEvents.has(dynamicIDslash)) {
@@ -51,7 +51,7 @@ export default {
             );
             return;
           }
-          await selectMenu.execute(pulsar, interaction, mongo, utils);
+          await selectMenu.execute(pulsar, interaction, mongo, utils, botconfig);
           return;
         }
       } catch (err) {
