@@ -3,8 +3,12 @@ import init from './src/core/init.js';
 import dotenv from 'npm:dotenv';
 dotenv.config();
 
-import baseUtilModules from './src/utils/exports/globalExports.js';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-console.log(baseUtilModules);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+console.log(path.join(__dirname, './src/utils/exports/base-utils-exports'))
 
 init.trigger();
