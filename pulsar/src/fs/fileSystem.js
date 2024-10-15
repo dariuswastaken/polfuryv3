@@ -8,7 +8,7 @@ export async function loadFilesFromDir(dir, callback) {
 
   await Promise.all(
     dirs.map(async (directory) => {
-      const dirPath = path.join(dir, folder);
+      const dirPath = path.join(dir, directory);
       const filesInDir = readdirSync(dirPath);
       
       filesInDir.forEach((file) => {
