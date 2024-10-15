@@ -30,6 +30,7 @@ const loadEvents = async (filePath, collection, type) => {
 };
 
 export const loadHandlers = async () => {
+  console.log(dirs.handlerDir)
   fileSystem.loadFilesFromDir(dirs.handlerDir, async (filePath) => {
     try {
       const handlerModule = await import(filePath);
