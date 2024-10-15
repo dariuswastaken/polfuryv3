@@ -1,4 +1,4 @@
-import processFunctions from '../exports/process.js';
+import * as processFunctions from '../exports/process.js';
 
 module.exports = {
   processManager: {

@@ -3,7 +3,7 @@ import { schemas } from '../exports/schemas.js';
 import mongoose from 'npm:mongoose';
 mongoose;
 
-module.exports = class MongoClient {
+export default class MongoClient {
   constructor() {
     this.mongo = init();
   }

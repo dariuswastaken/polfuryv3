@@ -1,7 +1,7 @@
 import axiosRetry from 'npm:axios-retry';
 import axios from 'npm:axios';
 
-module.exports = class WebClient {
+export default class WebClient {
   constructor() {
     this.axiosInstance = axios.create({
       baseURL: 'https://panel.furyrp.ro/api',

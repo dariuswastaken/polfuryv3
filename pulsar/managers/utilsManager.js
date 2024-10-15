@@ -1,5 +1,5 @@
 import path from 'node:path';
-import utils from '../exports/utils.js';
+import * as utils from '../exports/utils.js';
 
 module.exports = {
   utilsManager: {

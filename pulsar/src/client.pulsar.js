@@ -3,7 +3,7 @@ import { discordManager } from '../managers/discordManager.js';
 import { fileManager } from '../managers/fileManager.js';
 import { processManager } from '../managers/processManager.js';
 import { webManager } from '../managers/webManager.js';
-import clients from '../exports/clients.js';
+import * as clients from '../exports/clients.js';
 import config from '../.config/config.json' with { type: 'json' };
 
 module.exports.PulsarClient = class PulsarClient {
