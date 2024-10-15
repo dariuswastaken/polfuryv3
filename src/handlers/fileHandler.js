@@ -11,6 +11,7 @@ let events = [];
 const loadEvents = async (path, collection, type) => {
   const itemModule = await import(path);
   const item = itemModule.default;
+  console.log(item)
   try {
     if (type === 'Slash Command' || type === 'Context Menu') {
       collection.set(item.data.name, item);
@@ -109,7 +110,6 @@ export const loadFilesystem = () => {
 
   directories.forEach(({ dir, collection, type }) => {
     fileSystem.loadFilesFromDir(dir, async (path) => {
-      console.log(`[FILESYSTEM] Loading ${type} from ${path}`);
       await loadEvents(path, collection, type);
     });
   });
