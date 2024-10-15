@@ -53,7 +53,6 @@ export const loadFilesystem = () => {
   fileSystem.loadFilesFromDir(dirs.handlerDir, async (path) => {
     const handlerModule = await import(path);
     const handler = handlerModule.default;
-    console.log(handler)
     client.collections.handlers.set(handler.name, handler);
     if (typeof handler.execute === 'function') {
       handler.execute(Pulsar);
@@ -115,6 +114,8 @@ export const loadFilesystem = () => {
     });
   });
 
+  console.log(dirs)
+  
   printTable(events);
   console.log('[FILESYSTEM] Filesystem has been loaded.');
 };
