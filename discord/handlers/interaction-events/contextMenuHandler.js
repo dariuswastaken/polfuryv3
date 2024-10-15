@@ -1,6 +1,4 @@
 import mongo from '../../../src/mongo/mongoQueries.js';
-import path from 'node:path'
-import { fileURLToPath } from 'node:url';
 import utils from '../../../src/utils/exports/globalExports.js';
 
 export default {
@@ -12,8 +10,6 @@ export default {
       if (interaction.user.bot) return;
 
       const client = Pulsar().client;
-
-       console.log(utils)
       
       const pulsar = {
         client: client,

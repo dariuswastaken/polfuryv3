@@ -1,12 +1,5 @@
 import mongo from '../../../src/mongo/mongoQueries.js';
-import path from 'node:path'
-import { fileURLToPath } from 'node:url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const resolvedPath = path.resolve(__dirname, '../../../src/utils/exports/globalExports.js');
-const modulePath = `file://${resolvedPath}`;
+import utils from '../../../src/utils/exports/globalExports.js';
 
 export default {
   name: 'slashCommandHandler',
@@ -29,8 +22,6 @@ export default {
 
       const { commandName } = interaction;
       if (!client.collections.slashCommands.has(commandName)) return;
-
-      const utils = await import(modulePath);
       
       try {
         const slashCommand = await client.collections.slashCommands.get(commandName)
