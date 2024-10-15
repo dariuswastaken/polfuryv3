@@ -33,7 +33,6 @@ export const loadFilesystem = async () => {
   console.log('[FILESYSTEM] Loading filesystem...');
 
   await fileSystem.loadFilesFromDir(dirs.handlerDir, async (filePath) => {
-    console.log('Passed callback function')
     try {
       const handlerModule = await import(filePath);
       const handler = handlerModule.default;
