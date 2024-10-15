@@ -1,4 +1,4 @@
-import dayConversion from '../../base/dayConversion.js';
+import { dayConversion } from '../../base/dayConversion.js';
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
 import botconfig from '../../../../botconfig/botconfig.js';
 
