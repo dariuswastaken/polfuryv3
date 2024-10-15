@@ -34,7 +34,7 @@ export default {
 
       const utils = await import(modulePath);
       
-      console.log(client.collections.contextMenus.get(commandName)))
+      console.log(client.collections.contextMenus.get(commandName))
       
       try {
         if (interaction.isUserContextMenuCommand()) {
