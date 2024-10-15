@@ -30,6 +30,7 @@ export default {
         '../../src/utils/exports/globalExports.js'
       );
       
+      console.log(call)
       console.log(utils)
 
       if (!interaction.isUserContextMenuCommand() && !interaction.isMessageContextMenuCommand())
