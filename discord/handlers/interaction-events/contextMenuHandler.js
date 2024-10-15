@@ -13,6 +13,8 @@ export default {
 
       const client = Pulsar().client;
 
+       console.log(utils)
+      
       const pulsar = {
         client: client,
         config: await Pulsar().config(),
@@ -26,7 +28,6 @@ export default {
         return;
 
       const { commandName } = interaction;
-      console.log(utils)
       
       try {
         if (interaction.isUserContextMenuCommand()) {
