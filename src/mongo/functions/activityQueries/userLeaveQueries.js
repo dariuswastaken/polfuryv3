@@ -1,5 +1,5 @@
 import { db } from '../../../handlers/mongoConnectionHandler.js';
-import { dayConversion } from '../../../utils/functions/base/dayConversion.js';
+import * as dayConversion from '../../../utils/functions/base/dayConversion.js';
 
 export const createLeave = async (discordID, days, type) => {
   const currentWeek = await dayConversion.getCurrentWeek();
