@@ -24,6 +24,7 @@ export default class MongoClient {
   async findMore(schema, query) {
     try {
       const Schema = schemas[schema];
+      console.log(Schema);
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.find(query);
       return document;
