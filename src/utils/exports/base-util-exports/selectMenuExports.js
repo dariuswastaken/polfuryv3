@@ -23,7 +23,7 @@ const selectMenus = {};
 try {
   for (const category of categories) {
     if (modules[category]) {
-      Object.assign(exports, modules[category]);
+      Object.assign(selectMenus, modules[category]);
       console.log(`Loaded ${category} functions`);
     }
   }
