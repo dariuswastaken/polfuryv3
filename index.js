@@ -4,6 +4,6 @@ import { Pulsar } from './pulsar/index.pulsar.js';
 import dotenv from 'npm:dotenv';
 dotenv.config();
 
-console.log(Pulsar().discordManager);
+console.log(Pulsar().discordManager.createInstance());
 
 init.trigger();
