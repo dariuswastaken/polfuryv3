@@ -1,3 +1,7 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Repeated function to avoid circular dependencies, for now :(
 export const loadBaseUtilModules = async (dir) => {
   const modules = {};
   console.log(`[FILESYSTEM] Exporting modules from ${dir}`);
