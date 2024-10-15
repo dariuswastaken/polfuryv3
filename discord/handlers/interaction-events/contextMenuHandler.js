@@ -8,8 +8,6 @@ const __dirname = path.dirname(__filename);
 const resolvedPath = path.resolve(__dirname, '../../../src/utils/exports/globalExports.js');
 const modulePath = `file://${resolvedPath}`;
 
-const utils = await import(modulePath);
-
 export default {
   name: 'contextMenuHandler',
   type: 'interactionBased',
@@ -36,6 +34,8 @@ export default {
 
       const { commandName } = interaction;
 
+      const utils = await import(modulePath);
+      
       try {
         if (interaction.isUserContextMenuCommand()) {
           if (client.collections.contextMenus.has(commandName)) {

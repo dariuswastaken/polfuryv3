@@ -5,6 +5,9 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const resolvedPath = path.resolve(__dirname, '../../../src/utils/exports/globalExports.js');
+const modulePath = `file://${resolvedPath}`;
+
 export default {
   name: 'slashCommandHandler',
   type: 'interactionBased',
@@ -27,6 +30,8 @@ export default {
       const { commandName } = interaction;
       if (!client.collections.slashCommands.has(commandName)) return;
 
+      const utils = await import(modulePath);
+      
       try {
         const slashCommand = await client.collections.slashCommands.get(commandName)
         if(slashCommand.enabled === false && interaction.user.id !== "1027526587031232552") {
