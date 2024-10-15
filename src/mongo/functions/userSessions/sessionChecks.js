@@ -1,15 +1,13 @@
 import { db } from '../../../handlers/mongoConnectionHandler.js';
 
-module.exports = {
-  hasSession: async (schema, userID) => {
-    const result = await db.find(schema, { userID: userID, active: true });
-    if (result === null) {
-      return false;
-    }
-  },
+export const hasSession = async (schema, userID) => {
+  const result = await db.find(schema, { userID: userID, active: true });
+  if (result === null) {
+    return false;
+  }
+};
 
-  getUserSessions: async (schema, userID) => {
-    const result = await db.findMore(schema, { userID: userID });
-    return result;
-  },
-}
+export const getUserSessions = async (schema, userID) => {
+  const result = await db.findMore(schema, { userID: userID });
+  return result;
+};
