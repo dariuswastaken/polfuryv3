@@ -16,7 +16,7 @@ const init = {
       readyState = 1;
 
       fileManager.createCacheManager();
-      processManager.createErrorHandler();
+      //processManager.createErrorHandler();
       fileHandler.loadFilesystem();
 
       client.login(process.env.DISCORD_TOKEN);
