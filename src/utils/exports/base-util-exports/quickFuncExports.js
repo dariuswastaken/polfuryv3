@@ -23,6 +23,7 @@ const quickFunctions = {};
 for (const category of categories) {
   if (modules[category]) {
     Object.assign(quickFunctions, modules[category]);
+        console.log(`Loaded ${modules[category]} functions`)
   }
 }
 

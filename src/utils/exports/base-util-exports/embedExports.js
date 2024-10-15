@@ -24,6 +24,7 @@ const embeds = {};
 for (const category of categories) {
   if (modules[category]) {
     Object.assign(embeds, modules[category]);
+        console.log(`Loaded ${modules[category]} functions`)
   }
 }
 

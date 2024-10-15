@@ -28,6 +28,7 @@ const buttonMenus = {};
 for (const category of categories) {
   if (modules[category]) {
     Object.assign(buttonMenus, modules[category]);
+        console.log(`Loaded ${modules[category]} functions`)
   }
 }
 

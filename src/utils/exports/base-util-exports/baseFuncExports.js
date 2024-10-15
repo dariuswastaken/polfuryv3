@@ -16,7 +16,7 @@ const exports = {};
 for (const category of categories) {
   if (modules[category]) {
     Object.assign(exports, modules[category]);
-    console.log(exports)
+    console.log(`Loaded ${modules[category]} functions`)
   }
 }
 

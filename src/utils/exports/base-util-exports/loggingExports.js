@@ -16,6 +16,7 @@ const logging = {};
 for (const category of categories) {
   if (modules[category]) {
     Object.assign(logging, modules[category]);
+        console.log(`Loaded ${modules[category]} functions`)
   }
 }
 
