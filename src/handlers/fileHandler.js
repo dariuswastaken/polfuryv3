@@ -109,6 +109,7 @@ export const loadFilesystem = () => {
 
   directories.forEach(({ dir, collection, type }) => {
     fileSystem.loadFilesFromDir(dir, async (path) => {
+      console.log(`[FILESYSTEM] Loading ${type} from ${path}`);
       await loadEvents(path, collection, type);
     });
   });

@@ -31,8 +31,6 @@ export default {
 
       const { commandName } = interaction;
       if (!client.collections.slashCommands.has(commandName)) return;
-      
-      console.log(client.collections.slashCommands)
 
       try {
         const slashCommand = await client.collections.slashCommands.get(commandName)
