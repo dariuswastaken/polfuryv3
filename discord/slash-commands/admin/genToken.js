@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, PermissionsBitField } from 'npm:discord.js';
 
-module.exports = {
+export default {
   data: new SlashCommandBuilder()
     .setName('gen-token')
     .setDefaultMemberPermissions(PermissionsBitField.Flags.Administrator)

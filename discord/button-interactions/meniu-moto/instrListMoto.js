@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'moto-menu-instructori',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

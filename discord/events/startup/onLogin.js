@@ -1,6 +1,6 @@
 import { registerApplicationCommands } from '../../../src/handlers/restHandler.js';
 
-module.exports = {
+export default {
   name: 'onLogin',
   async execute(Pulsar) {
     Pulsar().client.on('ready', async () => {

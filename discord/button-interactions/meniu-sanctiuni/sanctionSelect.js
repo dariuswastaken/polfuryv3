@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'sanction-select',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

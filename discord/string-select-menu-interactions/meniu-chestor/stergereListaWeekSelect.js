@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'list-delete-select',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

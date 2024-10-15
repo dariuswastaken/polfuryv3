@@ -2,7 +2,7 @@ import nodeSchedule from 'npm:node-schedule';
 import mongo from '../../../src/mongo/mongoQueries.js';
 import recurrenceRules from '../../../src/utils/functions/schedules/scheduleRecurrenceRules.js';
 
-module.exports = {
+export default {
   name: 'activitySchedule',
   async execute(Pulsar) {
     const updateActivityRetry = async () => {

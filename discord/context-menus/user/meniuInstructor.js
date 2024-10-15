@@ -4,7 +4,7 @@ import {
   PermissionsBitField
 } from 'npm:discord.js';
 
-module.exports = {
+export default {
   data: new ContextMenuCommandBuilder()
     .setName('Meniu Instructor')
     .setType(ApplicationCommandType.User)

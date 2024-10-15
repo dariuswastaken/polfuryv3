@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'radio-menu-user-activity',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

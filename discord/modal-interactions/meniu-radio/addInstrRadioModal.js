@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'modal-radio-instr-adaugare',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

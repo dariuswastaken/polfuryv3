@@ -1,6 +1,6 @@
 import nodeSchedule from 'npm:node-schedule';
 
-module.exports = {
+export default {
   name: 'scheduleShutdown',
   async execute() {
     process.on('exit', async () => {

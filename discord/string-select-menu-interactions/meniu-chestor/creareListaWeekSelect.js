@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'creare-lista-week-select',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

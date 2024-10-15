@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'modal-pilot-instr-scoatere',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

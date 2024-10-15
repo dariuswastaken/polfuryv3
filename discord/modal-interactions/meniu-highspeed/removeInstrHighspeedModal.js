@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'modal-highspeed-instr-scoatere',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

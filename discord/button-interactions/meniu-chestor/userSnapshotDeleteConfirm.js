@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     name: 'user-snapshot-confirm-delete',
     enabled: true,
     async execute(pulsar, interaction, mongo, utils) {

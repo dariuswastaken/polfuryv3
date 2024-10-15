@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'edit-user-id',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

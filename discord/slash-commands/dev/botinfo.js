@@ -1,7 +1,7 @@
 import { SlashCommandBuilder, PermissionsBitField } from 'npm:discord.js';
 import os from 'os';
 
-module.exports = {
+export default {
   data: new SlashCommandBuilder()
     .setName('botinfo')
     .setDescription('Analytical information about the bot'),

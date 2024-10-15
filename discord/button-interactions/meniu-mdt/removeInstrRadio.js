@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'mdt-menu-remove-instr',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

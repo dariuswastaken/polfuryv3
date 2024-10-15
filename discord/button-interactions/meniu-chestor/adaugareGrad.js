@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'chestor-adauga-ci',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

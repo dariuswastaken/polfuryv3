@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'chestor-schimbare-grad-select',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'activitate-membru',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

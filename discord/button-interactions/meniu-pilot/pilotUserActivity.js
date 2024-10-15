@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'pilot-menu-user-activity',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

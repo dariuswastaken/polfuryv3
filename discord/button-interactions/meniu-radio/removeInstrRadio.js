@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'radio-menu-remove-instr',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

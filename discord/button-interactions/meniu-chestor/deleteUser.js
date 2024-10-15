@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'edit-user-delete',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

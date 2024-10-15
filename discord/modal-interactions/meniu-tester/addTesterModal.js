@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'modal-tester-instr-adaugare',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

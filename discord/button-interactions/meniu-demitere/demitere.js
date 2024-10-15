@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'menu-demitere',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

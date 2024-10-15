@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'user-snapshot-select-load',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

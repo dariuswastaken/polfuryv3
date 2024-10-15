@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'formular-intrare',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

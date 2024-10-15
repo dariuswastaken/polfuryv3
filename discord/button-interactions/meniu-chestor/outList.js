@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'out-list',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

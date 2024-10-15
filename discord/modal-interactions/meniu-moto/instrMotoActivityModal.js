@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'modal-moto-instr-activity',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

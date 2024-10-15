@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'modal-sanction-callsign-input',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

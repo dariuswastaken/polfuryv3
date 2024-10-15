@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'close-sanction-channel',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

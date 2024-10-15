@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'stergere-certificat-select',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

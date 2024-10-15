@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'moto-clock-in',
   enabled: false,
   async execute(pulsar, interaction, mongo, utils) {

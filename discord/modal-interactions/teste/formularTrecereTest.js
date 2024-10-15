@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'modal-formular-trecere-test',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

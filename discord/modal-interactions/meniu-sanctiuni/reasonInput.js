@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'modal-sanction-reason-input',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'chestor-edit-menu',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

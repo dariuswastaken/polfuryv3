@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'pilot-clock-in',
   enabled: false,
   async execute(pulsar, interaction, mongo, utils) {

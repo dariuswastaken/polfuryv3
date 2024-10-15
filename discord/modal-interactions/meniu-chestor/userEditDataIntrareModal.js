@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'modal-edit-user-data-intrare',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

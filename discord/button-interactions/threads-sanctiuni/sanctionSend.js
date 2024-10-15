@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'sanction-thread-send',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

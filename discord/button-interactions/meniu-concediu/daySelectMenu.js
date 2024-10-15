@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'meniu-concediu',
   enabled: true,
   async execute(pulsar, interaction, mongo, utils) {

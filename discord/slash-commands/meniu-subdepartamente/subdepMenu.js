@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, PermissionsBitField } from 'npm:discord.js';
 
-module.exports = {
+export default {
   data: new SlashCommandBuilder()
     .setName('subdep-menu')
     .setDescription('Deschide meniul de gestionare a subdepartamentelor')
