@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const util = require('util');
+import fs from 'fs';
+import path from 'path';
+import util from 'util';
 
 module.exports = {
   createCacheManager: async () => {

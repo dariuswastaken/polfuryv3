@@ -1,5 +1,5 @@
-const { readdirSync } = require('fs');
-const path = require('path');
+import { readdirSync } from 'fs';
+import path from 'path';
 
 function loadFilesFromDir(dir, callback) {
   const files = [];

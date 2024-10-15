@@ -1,5 +1,5 @@
-const utils = require('../exports/utils');
-const path = require('path');
+import path from 'path';
+import utils from '../src/utils';
 
 module.exports = {
   utilsManager: {

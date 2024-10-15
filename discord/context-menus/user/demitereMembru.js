@@ -1,8 +1,8 @@
-const {
+import {
   ContextMenuCommandBuilder,
   ApplicationCommandType,
   PermissionsBitField
-} = require('discord.js');
+} from 'npm:discord.js';
 
 module.exports = {
   data: new ContextMenuCommandBuilder()
@@ -27,7 +27,10 @@ module.exports = {
       return;
     }
 
-    if(targetMember.roles.highest.position >= interaction.member.roles.highest.position) {
+    if (
+      targetMember.roles.highest.position >=
+      interaction.member.roles.highest.position
+    ) {
       await utils.discord.errors.roleHierarchyError(pulsar, interaction);
       return;
     }

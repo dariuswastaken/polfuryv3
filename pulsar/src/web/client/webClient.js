@@ -1,5 +1,5 @@
-const axiosRetry = require('axios-retry').default;
-const axios = require('axios');
+import axiosRetry from 'npm:axios-retry';
+import axios from 'npm:axios';
 
 module.exports = class WebClient {
   constructor() {

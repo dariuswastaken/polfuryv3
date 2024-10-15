@@ -1,15 +1,13 @@
-const {
+import {
   ModalBuilder,
   TextInputBuilder,
   ActionRowBuilder,
-  TextInputStyle,
-} = require('discord.js');
+  TextInputStyle
+} from 'npm:discord.js';
 
 module.exports = {
   createModal: async ({ id, title, inputs }) => {
-    const modal = new ModalBuilder()
-      .setCustomId(id)
-      .setTitle(title);
+    const modal = new ModalBuilder().setCustomId(id).setTitle(title);
 
     let rows = [];
 

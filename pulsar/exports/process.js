@@ -1,4 +1,4 @@
-const { createErrorHandler } = require('../src/process/errorHandling');
+import { createErrorHandler } from '../src/process/errorHandling';
 
 module.exports = {
   createErrorHandler

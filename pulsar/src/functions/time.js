@@ -1,4 +1,4 @@
-const moment = require('moment');
+import moment from 'npm:moment'
 
 module.exports = {
   formatUptime: async (uptime) => {

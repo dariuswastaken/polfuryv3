@@ -1,4 +1,4 @@
-const { glob } = require('glob');
+import { glob } from 'npm:glob';
 
 module.exports = {
   getModule: function (moduleName) {

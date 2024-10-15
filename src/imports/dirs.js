@@ -1,4 +1,4 @@
-const path = require('path');
+import path from 'path'
 
 const handlerDir = path.join(__dirname, '../../discord/handlers');
 const eventDir = path.join(__dirname, '../../discord/events');

@@ -1,10 +1,10 @@
-const { utilsManager } = require('../managers/utilsManager');
-const { discordManager } = require('../managers/discordManager');
-const { fileManager } = require('../managers/fileManager');
-const { processManager } = require('../managers/processManager');
-const { webManager } = require('../managers/webManager');
-const clients = require('../exports/clients');
-const config = require('../.config/config.json');
+import { utilsManager } from '../managers/utilsManager';
+import { discordManager } from '../managers/discordManager';
+import { fileManager } from '../managers/fileManager';
+import { processManager } from '../managers/processManager';
+import { webManager } from '../managers/webManager';
+import clients from '../exports/clients';
+import config from '../.config/config.json';
 
 module.exports.PulsarClient = class PulsarClient {
   constructor() {

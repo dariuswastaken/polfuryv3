@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from 'npm:mongoose';
 
 const cooldownSchema = new mongoose.Schema(
   {

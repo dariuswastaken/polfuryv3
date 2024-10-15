@@ -1,6 +1,4 @@
-const {
-  registerApplicationCommands
-} = require('../../../src/handlers/restHandler.js');
+import { registerApplicationCommands } from '../../../src/handlers/restHandler.js';
 
 module.exports = {
   name: 'onLogin',

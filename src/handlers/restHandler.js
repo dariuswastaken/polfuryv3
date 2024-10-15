@@ -1,5 +1,5 @@
-const { REST, Routes } = require('discord.js');
-const { Pulsar } = require('../../pulsar/index.pulsar.js');
+import { REST, Routes } from 'npm:discord.js';
+import { Pulsar } from '../../pulsar/index.pulsar.js';
 
 const client = Pulsar().client;
 

@@ -1,5 +1,5 @@
-const mongo = require('../../../src/mongo/mongoQueries.js');
-const path = require('path');
+import mongo from '../../../src/mongo/mongoQueries.js';
+import path from 'path';
 
 module.exports = {
   name: 'stringSelectMenuInteractionHandler',

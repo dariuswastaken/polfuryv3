@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import path from 'path';
+import fs from 'fs';
 
 const exportModules = (dir) => {
   const modules = {};

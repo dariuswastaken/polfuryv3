@@ -1,7 +1,8 @@
-const { init } = require('../mongo/connection');
-const { schemas } = require('../exports/schemas');
-const { default: mongoose } = require('mongoose');
+import { init } from '../mongo/connection';
+import { schemas } from '../exports/schemas';
+import mongoose from 'npm:mongoose';
 mongoose;
+
 module.exports = class MongoClient {
   constructor() {
     this.mongo = init();

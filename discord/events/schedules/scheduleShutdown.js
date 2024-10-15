@@ -1,4 +1,4 @@
-const nodeSchedule = require('node-schedule');
+import nodeSchedule from 'npm:node-schedule';
 
 module.exports = {
   name: 'scheduleShutdown',

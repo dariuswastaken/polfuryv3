@@ -1,5 +1,5 @@
-const time = require('../src/functions/time');
-const uniques = require('../src/functions/uniques');
+import time from '../src/functions/time';
+import uniques from '../src/functions/uniques';
 
 module.exports = {
   time,

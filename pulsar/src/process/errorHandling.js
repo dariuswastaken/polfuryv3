@@ -1,7 +1,7 @@
-const winston = require('winston');
-const path = require('path');
+import winston from 'npm:winston';
+import path from 'path';
 
-const folder = '.cache';
+const folder = 'logs';
 
 module.exports = {
   createErrorHandler: async () => {

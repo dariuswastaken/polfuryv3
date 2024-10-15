@@ -1,6 +1,5 @@
-const { SlashCommandBuilder, PermissionsBitField } = require('discord.js');
-const { validateHeaderValue } = require('http');
-const os = require('os');
+import { SlashCommandBuilder, PermissionsBitField } from 'npm:discord.js';
+import os from 'os';
 
 module.exports = {
   data: new SlashCommandBuilder()

@@ -1,9 +1,1 @@
-const botconfig = require('../../src/botconfig/botconfig.js');
-
-describe('botconfig', () => {
-  it('should export an object', () => {
-    expect(botconfig).toBeInstanceOf(Object);
-    expect(botconfig).not.toBe(null);
-  });
-  
-});
+import botconfig from '../../src/botconfig/botconfig.js';

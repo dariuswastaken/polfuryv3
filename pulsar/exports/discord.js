@@ -1,5 +1,5 @@
-const path = require('path')
-const { exportModules } = require('../src/core/baseExportFSModule.js')
+import path from 'path'
+import { exportModules } from '../src/core/baseExportFSModule.js'
 
 const pulsarDiscordModules = exportModules(
   path.join(__dirname, '../src/functions/discord')

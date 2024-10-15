@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+import Discord from 'npm:discord.js';
 
 module.exports = {
   createSuccessEmbed: async (type, description, options) => {

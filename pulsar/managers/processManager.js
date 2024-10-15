@@ -1,4 +1,4 @@
-const processFunctions = require('../exports/process');
+import processFunctions from '../exports/process';
 
 module.exports = {
   processManager: {

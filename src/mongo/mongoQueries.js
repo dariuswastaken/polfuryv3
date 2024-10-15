@@ -1,5 +1,5 @@
-const { exportModules } = require('../core/baseExportFSModule.js');
-const path = require('path');
+import { exportModules } from '../core/baseExportFSModule';
+import path from 'path';
 
 const mongoQueries = exportModules(path.join(__dirname, './functions'));
 

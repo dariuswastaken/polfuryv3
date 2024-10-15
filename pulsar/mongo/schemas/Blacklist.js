@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from 'npm:mongoose';
 
 const blacklistSchema = new mongoose.Schema({
   IDDiscord: String,

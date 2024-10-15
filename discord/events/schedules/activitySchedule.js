@@ -1,6 +1,6 @@
-const nodeSchedule = require('node-schedule');
-const mongo = require('../../../src/mongo/mongoQueries.js');
-const recurrenceRules = require('../../../src/utils/functions/schedules/scheduleRecurrenceRules.js');
+import nodeSchedule from 'npm:node-schedule';
+import mongo from '../../../src/mongo/mongoQueries.js';
+import recurrenceRules from '../../../src/utils/functions/schedules/scheduleRecurrenceRules.js';
 
 module.exports = {
   name: 'activitySchedule',

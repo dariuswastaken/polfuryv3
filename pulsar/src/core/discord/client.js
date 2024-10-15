@@ -1,10 +1,10 @@
-const {
+import {
   Client,
   Collection,
   Partials,
   GatewayIntentBits
-} = require('discord.js');
-const config = require('../../../.config/config.json');
+} from 'npm:discord.js';
+import config from '../../../.config/config.json';
 
 const client = new Client({
   intents: [
@@ -35,7 +35,7 @@ client.collections = {
   contextMenus: new Collection(),
   handlers: new Collection(),
   modalInteractionEvents: new Collection(),
-  stringSelectMenuInteractionEvents: new Collection(),
+  stringSelectMenuInteractionEvents: new Collection()
 };
 
 client.guildID = process.env.GUILD_ID;

@@ -1,6 +1,6 @@
-const WebClient = require('../client/webClient');
+import WebClient from '../client/webClient';
+
 const webClient = new WebClient();
-const fs = require('fs')
 
 module.exports = {
   getUserMdtData: async (userId) => {

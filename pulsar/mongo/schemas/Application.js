@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from 'npm:mongoose';
 
 const applicationSchema = new mongoose.Schema(
   {

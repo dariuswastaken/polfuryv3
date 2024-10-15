@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, PermissionsBitField } = require('discord.js');
+import { SlashCommandBuilder, PermissionsBitField } from 'npm:discord.js';
 
 module.exports = {
   data: new SlashCommandBuilder()

@@ -1,5 +1,6 @@
-const fileHandler = require('../handlers/fileHandler');
-const { Pulsar } = require('../../pulsar/index.pulsar.js');
+import fileHandler from '../handlers/fileHandler';
+import { Pulsar } from '../../pulsar/index.pulsar.js';
+
 const client = Pulsar().client;
 const fileManager = Pulsar().fileManager.createInstance();
 const processManager = Pulsar().processManager.createInstance();

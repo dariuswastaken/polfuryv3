@@ -1,5 +1,5 @@
-const { client } = require('../src/core/discord/client');
-const MongoClient = require('../clients/mongoClient');
+import { client } from '../src/core/discord/client';
+import MongoClient from '../src/clients/mongoClient';
 
 module.exports = {
   client,

@@ -1,4 +1,4 @@
-const fileExports = require('../exports/files');
+import fileExports from '../exports/files';
 
 module.exports = {
   fileManager: {

@@ -1,5 +1,4 @@
-const { db } = require('../../../handlers/mongoConnectionHandler');
-const { timeConversion, dayConversion } = require('../../../utils/exports/globalExports');
+import { db } from '../../../handlers/mongoConnectionHandler';
 
 module.exports = {
   getAvailableCallsign: async (rank) => {

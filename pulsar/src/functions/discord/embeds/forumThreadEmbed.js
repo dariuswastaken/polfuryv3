@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+import Discord from 'npm:discord.js';
 
 module.exports = {
   createForumThreadEmbed: async (options) => {

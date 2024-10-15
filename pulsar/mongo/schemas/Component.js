@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from 'npm:mongoose';
 
 const componentSchema = new mongoose.Schema({
   tip_: String,

@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+import Discord from 'npm:discord.js';
 
 module.exports = {
   createWarningEmbed: async (type, description, options) => {

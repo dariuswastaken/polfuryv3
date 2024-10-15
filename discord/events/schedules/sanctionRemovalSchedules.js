@@ -1,5 +1,5 @@
-const nodeSchedule = require('node-schedule');
-const mongo = require('../../../src/mongo/mongoQueries.js');
+import nodeSchedule from 'npm:node-schedule';
+import mongo from '../../../src/mongo/mongoQueries.js';
 
 module.exports = {
   name: 'sanctionRemovalSchedules',

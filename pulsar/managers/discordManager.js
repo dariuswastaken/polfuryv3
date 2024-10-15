@@ -1,4 +1,4 @@
-const discordFunctions = require('../exports/discord');
+import discordFunctions from '../exports/discord';
 
 module.exports = {
   discordManager: {

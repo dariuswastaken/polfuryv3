@@ -1,7 +1,8 @@
-const dirs = require('../imports/dirs.js');
-const { Pulsar } = require('../../pulsar/index.pulsar.js');
+import dirs from '../imports/dirs.js';
+import { Pulsar } from '../../pulsar/index.pulsar.js';
+import { printTable } from 'npm:console-table-printer';
+
 const fileSystem = Pulsar().fileManager.createInstance();
-const { printTable } = require('console-table-printer');
 
 const client = Pulsar().client;
 

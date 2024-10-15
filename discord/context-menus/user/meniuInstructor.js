@@ -1,8 +1,8 @@
-const {
+import {
   ContextMenuCommandBuilder,
   ApplicationCommandType,
   PermissionsBitField
-} = require('discord.js');
+} from 'npm:discord.js';
 
 module.exports = {
   data: new ContextMenuCommandBuilder()

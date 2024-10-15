@@ -1,4 +1,4 @@
-const webFunctions = require('../exports/web');
+import webFunctions from '../exports/web';
 
 module.exports = {
   webManager: {
