@@ -1,6 +1,10 @@
 import { init } from '../mongo/connection.js';
 import schemas from '../exports/schemas.js';
-import mongoose from 'npm:mongoose';
+
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+const { default: mongoose } = require("mongoose");
+
 mongoose;
 
 export default class MongoClient {
