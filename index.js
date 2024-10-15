@@ -1,6 +1,6 @@
 import init from './src/core/init.js';
 
-const dotenv = require('dotenv');
+import dotenv from 'npm:dotenv';
 dotenv.config();
 
 import path from 'node:path';
