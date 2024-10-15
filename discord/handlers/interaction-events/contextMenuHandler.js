@@ -1,12 +1,7 @@
 import mongo from '../../../src/mongo/mongoQueries.js';
 import path from 'node:path'
 import { fileURLToPath } from 'node:url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const resolvedPath = path.resolve(__dirname, '../../../src/utils/exports/globalExports.js');
-const modulePath = `file://${resolvedPath}`;
+import utils from '../../../src/utils/exports/globalExports.js';
 
 export default {
   name: 'contextMenuHandler',
@@ -31,8 +26,6 @@ export default {
         return;
 
       const { commandName } = interaction;
-
-      const utils = await import(modulePath).default;
       console.log(utils)
       
       try {
