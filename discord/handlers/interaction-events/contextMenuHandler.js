@@ -25,7 +25,7 @@ export default {
 
       const { commandName } = interaction;
       
-      try {
+      /*try {
         if (interaction.isUserContextMenuCommand()) {
           if (client.collections.contextMenus.has(commandName)) {
             const contextMenu = await client.collections.contextMenus.get(commandName)
@@ -75,7 +75,7 @@ export default {
         }
       } catch (err) {
         console.error(`[CONTEXT MENU ERROR] ${err}\n${err.stack}`);
-      }
+        }*/
     });
   }
 };
