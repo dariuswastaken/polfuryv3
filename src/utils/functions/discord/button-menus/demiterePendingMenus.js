@@ -1,12 +1,9 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
-import botconfig from '../../../../botconfig/botconfig.js';
 
-export const sendMenuDemitere = async ({
-  pulsar,
-  interaction,
-  mongo,
-  targetID
-}) => {
+export const sendMenuDemitere = async (
+  { pulsar, interaction, mongo, targetID },
+  botconfig
+) => {
   const uID = await pulsar.utilsManager.uniques.createUniqueID();
   const targetProfile = await mongo.getProfile(targetID);
 

@@ -1,12 +1,9 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
-import botconfig from '../../../../botconfig/botconfig.js';
 
-export const sendMenuChestor = async ({
-  pulsar,
-  interaction,
-  mongo,
-  targetID
-}) => {
+export const sendMenuChestor = async (
+  { pulsar, interaction, mongo, targetID },
+  botconfig
+) => {
   const targetProfile = await mongo.getProfile(targetID);
 
   const nonFormattedButtons = botconfig.meniuChestorFeatureMenusButtons.buttons;

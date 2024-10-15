@@ -1,7 +1,6 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
-import botconfig from '../../../../botconfig/botconfig.js';
 
-export const sendUserEditMenu = async ({ pulsar, interaction, targetID }) => {
+export const sendUserEditMenu = async ({ pulsar, interaction, targetID }, botconfig) => {
   const nonFormattedButtons = botconfig.userEditMenusButtons.buttons.editMenu;
   const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
     targetid: targetID

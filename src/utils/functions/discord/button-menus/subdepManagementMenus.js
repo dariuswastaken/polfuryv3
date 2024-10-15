@@ -1,7 +1,9 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
-import botconfig from '../../../../botconfig/botconfig.js';
 
-export const sendSubdepMenu = async ({ pulsar, interaction, mongo }) => {
+export const sendSubdepMenu = async (
+  { pulsar, interaction, mongo },
+  botconfig
+) => {
   const subdepLeadRoles = {
     Radio: {
       roleID: '1199988024851841055',
@@ -86,7 +88,8 @@ export const sendSubdepSubMenu = async ({
   subdep,
   type
 }) => {
-  const nonFormattedButtons = botconfig.subdepManagementMenusButtons.subdepSubMenu.buttons;
+  const nonFormattedButtons =
+    botconfig.subdepManagementMenusButtons.subdepSubMenu.buttons;
   const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
     type: type
   });

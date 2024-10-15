@@ -1,15 +1,13 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
-import botconfig from '../../../../botconfig/botconfig.js';
 
-export const sendMenuConducere = async ({
-  pulsar,
-  interaction,
-  mongo,
-  targetID
-}) => {
+export const sendMenuConducere = async (
+  { pulsar, interaction, mongo, targetID },
+  botconfig
+) => {
   const targetProfile = await mongo.getProfile(targetID);
 
-  const nonFormattedButtons = botconfig.meniuConducereFeatureMenusButtons.buttons;
+  const nonFormattedButtons =
+    botconfig.meniuConducereFeatureMenusButtons.buttons;
   const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
     targetid: targetID
   });

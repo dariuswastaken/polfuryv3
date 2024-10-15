@@ -1,4 +1,4 @@
-import { exportModules } from '../fs/botconfigExportFSModule.js';
+import { exportModules } from '../../src/fs/baseExportFSModule.js';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 

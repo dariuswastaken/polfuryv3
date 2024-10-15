@@ -1,5 +1,4 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
-import botconfig from '../../../../botconfig/botconfig.js';
 
 export const sendSnapshotOverview = async ({
   pulsar,
@@ -8,7 +7,7 @@ export const sendSnapshotOverview = async ({
   targetID,
   snapshotID,
   type
-}) => {
+}, botconfig) => {
   let snapshot = await mongo.getUserSnapshot(targetID, snapshotID);
 
   const nonFormattedButtons = botconfig.userSnapshotMenusButtons.buttons;

@@ -1,8 +1,10 @@
 import * as dayConversion from '../../base/dayConversion.js';
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
-import botconfig from '../../../../botconfig/botconfig.js';
 
-export const sendMenuConcediu = async ({ pulsar, interaction, mongo }) => {
+export const sendMenuConcediu = async (
+  { pulsar, interaction, mongo },
+  botconfig
+) => {
   const currentWeek = await dayConversion.getCurrentWeek();
 
   let leave = await mongo.getLeave(
@@ -13,7 +15,8 @@ export const sendMenuConcediu = async ({ pulsar, interaction, mongo }) => {
   let buttons = [];
 
   if (leave) {
-    const { dayIsChecked, dayNotChecked } = botconfig.meniuConcediuFeatureMenusButtons.loopButtons[0];
+    const { dayIsChecked, dayNotChecked } =
+      botconfig.meniuConcediuFeatureMenusButtons.loopButtons[0];
 
     for (let day of currentWeek) {
       const buttonTemplate = leave.days.includes(day)
