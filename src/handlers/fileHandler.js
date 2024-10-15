@@ -20,7 +20,6 @@ const loadEvents = async (path, collection, type) => {
         type: type,
         loaded: '✅'
       });
-      console.log('[FILESYSTEM] Loaded ' + type + ': ' + item.data.name);
     } else if (type === 'Event') {
       collection.set(item.name, item);
       item.execute(Pulsar);
@@ -29,7 +28,6 @@ const loadEvents = async (path, collection, type) => {
         type: type,
         loaded: '✅'
       });
-      console.log('[FILESYSTEM] Loaded event: ' + item.name);
     } else {
       collection.set(item.name, item);
       events.push({
@@ -37,7 +35,6 @@ const loadEvents = async (path, collection, type) => {
         type: type,
         loaded: '✅'
       });
-      console.log('[FILESYSTEM] Loaded ' + type + ': ' + item.name);
     }
   } catch (e) {
     console.error(
@@ -66,7 +63,6 @@ export const loadFilesystem = async () => {
         type: 'Handler',
         loaded: '✅'
       });
-      console.log('[FILESYSTEM] Loaded handler: ' + handler.name);
     } else {
       console.error(
         '[FILESYSTEM ERROR] Handler does not have an execute function: ' + path
