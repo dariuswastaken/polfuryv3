@@ -15,6 +15,7 @@ const exports = {};
 
 for (const category of categories) {
   if (modules[category]) {
+    console.log(modules[category]);
     Object.assign(exports, modules[category]);
   }
 }
