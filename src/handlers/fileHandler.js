@@ -1,4 +1,4 @@
-import dirs from '../imports/dirs.js';
+import * as dirs from '../imports/dirs.js';
 import { Pulsar } from '../../pulsar/index.pulsar.js';
 import { printTable } from 'npm:console-table-printer';
 
