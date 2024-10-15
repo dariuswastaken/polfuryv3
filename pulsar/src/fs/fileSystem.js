@@ -22,6 +22,7 @@ export async function loadFilesFromDir(dir, callback) {
     );
   } catch (error) {
     console.error(`[ERROR] Failed to read directory ${dir}:`, error);
+    console.error(error);
   }
 
   return files;
