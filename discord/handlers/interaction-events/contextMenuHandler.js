@@ -28,6 +28,8 @@ export default {
         discordManager: Pulsar().discordManager.createInstance(),
         fileManager: Pulsar().fileManager.createInstance()
       };
+      
+      console.log(utils);
 
       if (!interaction.isUserContextMenuCommand() && !interaction.isMessageContextMenuCommand())
         return;
