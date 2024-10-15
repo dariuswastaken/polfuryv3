@@ -15,7 +15,6 @@ const init = {
       }
       readyState = 1;
 
-      console.log(Pulsar)
       fileManager.createCacheManager();
       //processManager.createErrorHandler();
       fileHandler.loadFilesystem();
