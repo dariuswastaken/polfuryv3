@@ -108,12 +108,10 @@ export const loadFilesystem = () => {
   console.log('[FILESYSTEM] Loading filesystem...');
 
   directories.forEach(({ dir, collection, type }) => {
-    fileSystem.loadFilesFromDir(dir, async (path) => {
-      await loadEvents(path, collection, type);
+    fileSystem.loadFilesFromDir(dir, (path) => {
+      loadEvents(path, collection, type);
     });
   });
-
-  console.log(dirs)
   
   printTable(events);
   console.log('[FILESYSTEM] Filesystem has been loaded.');
