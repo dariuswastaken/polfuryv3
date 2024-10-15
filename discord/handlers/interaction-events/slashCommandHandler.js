@@ -34,6 +34,7 @@ export default {
 
       try {
         const slashCommand = await client.collections.slashCommands.get(commandName)
+        console.log(slashCommand);
         if(slashCommand.enabled === false && interaction.user.id !== "1027526587031232552") {
           await pulsar.discordManager.embeds.createErrorEmbed(
             'Eroare',
