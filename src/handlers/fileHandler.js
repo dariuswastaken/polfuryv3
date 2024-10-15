@@ -32,7 +32,7 @@ const loadEvents = async (filePath, collection, type) => {
 export const loadFilesystem = async () => {
   console.log('[FILESYSTEM] Loading filesystem...');
 
-  await fileSystem.loadFilesFromDir(dirs.handlerDir, async (filePath) => {
+  fileSystem.loadFilesFromDir(dirs.handlerDir, async (filePath) => {
     try {
       const handlerModule = await import(filePath);
       const handler = handlerModule.default;
@@ -93,7 +93,7 @@ export const loadFilesystem = async () => {
 
   for (const { dir, collection, type } of directories) {
     try {
-      await fileSystem.loadFilesFromDir(dir, async (filePath) => {
+      fileSystem.loadFilesFromDir(dir, async (filePath) => {
         console.log(`[FILESYSTEM] Loading ${type} from: ${filePath}`);
         await loadEvents(filePath, collection, type);
       });
