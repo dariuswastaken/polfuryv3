@@ -119,6 +119,7 @@ export const loadFilesystem = async () => {
     }
   }
 
+  console.log(client.collections)
   printTable(events);
   console.log('[FILESYSTEM] Filesystem has been loaded.');
 };
