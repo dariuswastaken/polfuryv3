@@ -14,7 +14,7 @@ const exportModules = (dir) => {
       Object.assign(modules, exportModules(filePath));
     } else if (file.endsWith('.js')) {
       const moduleName = path.basename(file, path.extname(file));
-      modules[moduleName] = require(filePath);
+      modules[moduleName] = import(filePath).then((module) => module.default);
     }
   });
 

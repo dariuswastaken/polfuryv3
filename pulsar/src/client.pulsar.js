@@ -1,9 +1,9 @@
-import { utilsManager } from '../managers/utilsManager';
-import { discordManager } from '../managers/discordManager';
-import { fileManager } from '../managers/fileManager';
-import { processManager } from '../managers/processManager';
-import { webManager } from '../managers/webManager';
-import clients from '../exports/clients';
+import { utilsManager } from '../managers/utilsManager.js';
+import { discordManager } from '../managers/discordManager.js';
+import { fileManager } from '../managers/fileManager.js';
+import { processManager } from '../managers/processManager.js';
+import { webManager } from '../managers/webManager.js';
+import clients from '../exports/clients.js';
 import config from '../.config/config.json';
 
 module.exports.PulsarClient = class PulsarClient {

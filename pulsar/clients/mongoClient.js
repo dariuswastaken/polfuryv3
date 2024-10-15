@@ -1,5 +1,5 @@
-import { init } from '../mongo/connection';
-import { schemas } from '../exports/schemas';
+import { init } from '../mongo/connection.js';
+import { schemas } from '../exports/schemas.js';
 import mongoose from 'npm:mongoose';
 mongoose;
 

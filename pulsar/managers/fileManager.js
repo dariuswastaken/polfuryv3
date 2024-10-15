@@ -1,4 +1,4 @@
-import fileExports from '../exports/files';
+import fileExports from '../exports/files.js';
 
 module.exports = {
   fileManager: {

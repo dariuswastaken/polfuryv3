@@ -1,5 +1,5 @@
-import time from '../src/functions/time';
-import uniques from '../src/functions/uniques';
+import time from '../src/functions/time.js';
+import uniques from '../src/functions/uniques.js';
 
 module.exports = {
   time,

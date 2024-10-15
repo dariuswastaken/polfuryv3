@@ -1,5 +1,5 @@
-import { createCacheManager } from '../src/fs/caching';
-import { loadFilesFromDir } from '../src/fs/fileSystem';
+import { createCacheManager } from '../src/fs/caching.js';
+import { loadFilesFromDir } from '../src/fs/fileSystem.js';
 
 module.exports = {
   createCacheManager,

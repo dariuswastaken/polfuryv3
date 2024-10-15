@@ -1,4 +1,4 @@
-import webFunctions from '../exports/web';
+import webFunctions from '../exports/web.js';
 
 module.exports = {
   webManager: {

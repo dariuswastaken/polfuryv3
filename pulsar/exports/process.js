@@ -1,4 +1,4 @@
-import { createErrorHandler } from '../src/process/errorHandling';
+import { createErrorHandler } from '../src/process/errorHandling.js';
 
 module.exports = {
   createErrorHandler

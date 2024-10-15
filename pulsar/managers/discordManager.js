@@ -1,4 +1,4 @@
-import discordFunctions from '../exports/discord';
+import discordFunctions from '../exports/discord.js';
 
 module.exports = {
   discordManager: {
