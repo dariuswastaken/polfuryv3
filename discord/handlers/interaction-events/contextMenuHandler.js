@@ -1,11 +1,10 @@
 import mongo from '../../../src/mongo/mongoQueries.js';
-import utils from '../../../src/utils/exports/globalExports.js';
 
 export default {
   name: 'contextMenuHandler',
   type: 'interactionBased',
   enabled: true,
-  async execute(Pulsar) {
+  async execute(Pulsar, utils) {
     Pulsar().client.on('interactionCreate', async (interaction) => {
       if (interaction.user.bot) return;
 
@@ -25,7 +24,7 @@ export default {
 
       const { commandName } = interaction;
       
-      /*try {
+      try {
         if (interaction.isUserContextMenuCommand()) {
           if (client.collections.contextMenus.has(commandName)) {
             const contextMenu = await client.collections.contextMenus.get(commandName)
@@ -75,7 +74,7 @@ export default {
         }
       } catch (err) {
         console.error(`[CONTEXT MENU ERROR] ${err}\n${err.stack}`);
-        }*/
+      }
     });
   }
 };

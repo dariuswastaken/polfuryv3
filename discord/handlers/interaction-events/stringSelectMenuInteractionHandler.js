@@ -4,7 +4,7 @@ export default {
   name: 'stringSelectMenuInteractionHandler',
   type: 'interactionBased',
   enabled: true,
-  async execute(Pulsar) {
+  async execute(Pulsar, utils) {
     Pulsar().client.on('interactionCreate', async (interaction) => {
       if (interaction.user.bot) return;
       if (!interaction.isStringSelectMenu()) return;

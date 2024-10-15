@@ -1,11 +1,10 @@
 import mongo from '../../../src/mongo/mongoQueries.js';
-import utils from '../../../src/utils/exports/globalExports.js';
 
 export default {
   name: 'slashCommandHandler',
   type: 'interactionBased',
   enabled: true,
-  async execute(Pulsar) {
+  async execute(Pulsar, utils) {
     Pulsar().client.on('interactionCreate', async (interaction) => {
       if (!interaction.isCommand()) return;
 
