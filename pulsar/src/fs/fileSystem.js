@@ -1,14 +1,22 @@
 import { readdirSync } from 'node:fs';
 import path from 'node:path';
 
-export function loadFilesFromDir(dir, callback) {
+export async function loadFilesFromDir(dir, callback) {
   const files = [];
 
-  readdirSync(dir).forEach(async (folder) => {
-    readdirSync(path.join(dir, folder)).forEach(async (file) => {
-      files.push(path.join(dir, folder, file));
-    });
-  });
+  const dirs = readdirSync(dir);
+
+  await Promise.all(
+    dirs.map(async (directory) => {
+      const dirPath = path.join(dir, folder);
+      const filesInDir = readdirSync(dirPath);
+      
+      filesInDir.forEach((file) => {
+        const filePath = path.join(dirPath, file);
+        files.push(filePath);
+      });
+    })
+  );
 
   files.forEach(callback);
 }
