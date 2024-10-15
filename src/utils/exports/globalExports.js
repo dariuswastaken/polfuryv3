@@ -1,11 +1,15 @@
 import { exportModules } from '../../core/baseExportFSModule.js';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const baseUtilModules = exportModules(
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const baseUtilModules = await exportModules(
   path.join(__dirname, './base-util-exports')
 );
 
-module.exports = {
+const glbobalExports = {
   timeConversion: baseUtilModules.baseFuncExports.timeConversion,
   dayConversion: baseUtilModules.baseFuncExports.dayConversion,
   math: baseUtilModules.baseFuncExports.math,
@@ -24,5 +28,7 @@ module.exports = {
   algorithms: baseUtilModules.algExports.algos,
   activity: {
     utils: baseUtilModules.activityUtilExports.utils
-  },
+  }
 };
+
+export default glbobalExports;

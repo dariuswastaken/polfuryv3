@@ -1,20 +1,34 @@
 import { exportModules } from '../../../core/baseExportFSModule.js';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const modules = exportModules(path.join(__dirname, '../../functions/discord'));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-module.exports.buttonMenus = {
-  sendListTypeSelectMenu: modules.activityListMenus.sendListTypeSelectMenu,
-  sendMenuDemitere: modules.demiterePendingMenus.sendMenuDemitere,
-  sendMenuChestor: modules.meniuChestorFeatureMenus.sendMenuChestor,
-  sendMenuConcediu: modules.meniuConcediuFeatureMenus.sendMenuConcediu,
-  sendMenuConducere: modules.meniuConducereFeatureMenus.sendMenuConducere,
-  sendMenuInstructor: modules.meniuInstructorFeatureMenus.sendMenuInstructor,
-  mphClockInSelect: modules.mphActivityMenus.mphClockInSelect,
-  sendSanctionMenu: modules.sanctionThreadCreationMenus.sendSanctionMenu,
-  sendSubdepMenu: modules.subdepManagementMenus.sendSubdepMenu,
-  sendSubdepSubMenu: modules.subdepManagementMenus.sendSubdepSubMenu,
-  sendUserEditMenu: modules.userEditMenus.sendUserEditMenu,
-  sendMenuDeleteUser: modules.userEditMenus.sendMenuDeleteUser,
-  sendSnapshotOverview: modules.userSnapshotMenus.sendSnapshotOverview,
-};
+const modules = await exportModules(
+  path.join(__dirname, '../../functions/discord')
+);
+
+const categories = [
+  'activityListMenus',
+  'demiterePendingMenus',
+  'meniuChestorFeatureMenus',
+  'meniuConcediuFeatureMenus',
+  'meniuConducereFeatureMenus',
+  'meniuInstructorFeatureMenus',
+  'mphActivityMenus',
+  'sanctionThreadCreationMenus',
+  'subdepManagementMenus',
+  'userEditMenus',
+  'userSnapshotMenus'
+];
+
+const buttonMenus = {};
+
+for (const category of categories) {
+  if (modules[category]) {
+    Object.assign(buttonMenus, modules[category]);
+  }
+}
+
+export default buttonMenus;

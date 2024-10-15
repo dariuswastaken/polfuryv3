@@ -1,5 +1,5 @@
 let flags = {
-  'Cadet': {
+  Cadet: {
     up: {
       requiredDays: 4,
       gradeRating: ['B', 'A'],
@@ -15,7 +15,7 @@ let flags = {
       gradeRating: 'F'
     }
   },
-  'Agent': {
+  Agent: {
     up: {
       requiredDays: 12,
       gradeRating: ['B', 'A'],
@@ -73,6 +73,4 @@ let flags = {
   }
 };
 
-module.exports = {
-  flags
-}
+export { flags };

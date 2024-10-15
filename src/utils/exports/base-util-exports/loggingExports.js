@@ -1,9 +1,22 @@
 import { exportModules } from '../../../core/baseExportFSModule.js';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const modules = exportModules(path.join(__dirname, '../../functions/discord'));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-module.exports.logging = {
-  createLog: modules.base.createLog,
-  createSimpleLog: modules.base.createSimpleLog
-};
+const modules = await exportModules(
+  path.join(__dirname, '../../functions/discord')
+);
+
+const categories = ['base'];
+
+const logging = {};
+
+for (const category of categories) {
+  if (modules[category]) {
+    Object.assign(logging, modules[category]);
+  }
+}
+
+export default logging;

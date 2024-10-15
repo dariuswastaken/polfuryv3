@@ -1,18 +1,29 @@
 import { exportModules } from '../../../core/baseExportFSModule.js';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const modules = exportModules(path.join(__dirname, '../../functions/discord'));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-module.exports.selectMenus = {
-  sendChestorRankChoiceMenu: modules.meniuChestorSelectMenus.sendChestorRankChoiceMenu,
-  sendWeekChoiceMenu: modules.meniuChestorSelectMenus.sendWeekChoiceMenu,
-  sendListWeekChoiceMenu: modules.meniuChestorSelectMenus.sendListWeekChoiceMenu,
-  sendListDeleteWeekChoiceMenu: modules.meniuChestorSelectMenus.sendListDeleteWeekChoiceMenu,
-  sendRankChoiceMenu: modules.meniuConducereSelectMenus.sendRankChoiceMenu,
-  sendCertificatChoiceMenuCooldown: modules.meniuInstructorSelectMenus.sendCertificatChoiceMenuCooldown,
-  sendCooldownCertificatDurationSelect: modules.meniuInstructorSelectMenus.sendCooldownCertificatDurationSelect,
-  sendCertificateChoiceMenu: modules.meniuInstructorSelectMenus.sendCertificateChoiceMenu,
-  sendSanctionDurationChoiceMenu: modules.sanctionThreadsSelectMenus.sendSanctionDurationChoiceMenu,
-  sendActivityWeekChoiceMenu: modules.userActivitySelectMenus.sendActivityWeekChoiceMenu,
-  sendUserSnapshotChoiceMenu: modules.userSnapshotSelectMenus.sendUserSnapshotChoiceMenu
-};
+const modules = await exportModules(
+  path.join(__dirname, '../../functions/discord')
+);
+
+const categories = [
+  'meniuChestorSelectMenus',
+  'meniuConducereSelectMenus',
+  'meniuInstructorSelectMenus',
+  'sanctionThreadsSelectMenus',
+  'userActivitySelectMenus',
+  'userSnapshotSelectMenus'
+];
+
+const selectMenus = {};
+
+for (const category of categories) {
+  if (modules[category]) {
+    Object.assign(selectMenus, modules[category]);
+  }
+}
+
+export default selectMenus;

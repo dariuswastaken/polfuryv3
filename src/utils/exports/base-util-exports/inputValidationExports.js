@@ -1,14 +1,28 @@
 import { exportModules } from '../../../core/baseExportFSModule.js';
 import path from 'node:path';
 
-const modules = exportModules(path.join(__dirname, '../../functions/discord'));
+import { fileURLToPath } from 'node:url';
 
-module.exports.validate = {
-  callsignInput: modules.baseInputValidation.callsignInput,
-  reasonInput: modules.baseInputValidation.reasonInput,
-  formIntrare: modules.formValidation.formIntrare,
-  formTrecereTest: modules.formValidation.formTrecereTest,
-  motivConcediu: modules.meniuConcediuValidation.motivConcediu,
-  callsignInputSubdep: modules.subdepManagementValidation.callsignInputSubdep,
-  callsignInputInstrActivity: modules.subdepManagementValidation.callsignInputInstrActivity
-};
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const modules = await exportModules(
+  path.join(__dirname, '../../functions/discord')
+);
+
+const categories = [
+  'baseInputValidation',
+  'formValidation',
+  'meniuConcediuValidation',
+  'subdepManagementValidation'
+];
+
+const validate = {};
+
+for (const category of categories) {
+  if (modules[category]) {
+    Object.assign(validate, modules[category]);
+  }
+}
+
+export default validate;

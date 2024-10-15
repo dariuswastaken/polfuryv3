@@ -1,53 +1,38 @@
 import { exportModules } from '../../../core/baseExportFSModule.js';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const modules = exportModules(
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const modules = await exportModules(
   path.join(__dirname, '../../functions/discord/errors')
 );
 
-module.exports.errors = {
-  invalidNameArgumentsError: modules.argErrors.invalidNameArgumentsError,
-  invalidResultError: modules.argErrors.invalidResultError,
-  invalidReasonLengthError: modules.argErrors.invalidReasonLengthError,
-  invalidDiscordIdError: modules.idErrors.invalidDiscordIdError,
-  componentDisabledError: modules.interactionComponentErrors.componentDisabledError,
-  noPermissionError: modules.permErrors.noPermissionError,
-  selfError: modules.permErrors.selfError,
-  selfUseError: modules.permErrors.selfUseError,
-  roleHierarchyError: modules.permErrors.roleHierarchyError,
-  invalidSanctionPermError: modules.permErrors.invalidSanctionPermError,
-  noProfileError: modules.profileErrors.noProfileError,
-  noActivityError: modules.profileErrors.noActivityError,
-  userNotInAcademy: modules.profileErrors.userNotInAcademy,
-  tokenExpiredError: modules.timeErrors.tokenExpiredError,
-  noAvailableCallsignError: modules.callsignChangeErrors.noAvailableCallsignError,
-  noUpListError: modules.meniuChestorActivityListErrors.noUpListError,
-  noOutListError: modules.meniuChestorActivityListErrors.noOutListError,
-  noListsError: modules.meniuChestorActivityListErrors.noListsError,
-  listAlreadyExistsError: modules.meniuChestorActivityListErrors.listAlreadyExistsError,
-  noDaysLeftError: modules.meniuConcediuErrors.noDaysLeftError,
-  noLeaveError: modules.meniuConcediuErrors.noLeaveError,
-  hasDayAlreadyError: modules.meniuConcediuErrors.hasDayAlreadyError,
-  alreadyHasCertificateError: modules.meniuInstructorErrors.alreadyHasCertificateError,
-  doesNotHaveCertificateError: modules.meniuInstructorErrors.doesNotHaveCertificateError,
-  alreadyHasCooldownError: modules.meniuInstructorErrors.alreadyHasCooldownError,
-  noCooldownsError: modules.meniuInstructorErrors.noCooldownsError,
-  alreadyInMotoSessionError: modules.mphActivityErrors.alreadyInMotoSessionError,
-  alreadyInHighspeedSessionError: modules.mphActivityErrors.alreadyInHighspeedSessionError,
-  alreadyInPilotSessionError: modules.mphActivityErrors.alreadyInPilotSessionError,
-  noMotoCertificateError: modules.mphActivityErrors.noMotoCertificateError,
-  noHighspeedCertificateError: modules.mphActivityErrors.noHighspeedCertificateError,
-  noPilotCertificateError: modules.mphActivityErrors.noPilotCertificateError,
-  invalidCallsignError: modules.sanctionThreadsErrors.invalidCallsignError,
-  noSanctionsError: modules.sanctionThreadsErrors.noSanctionsError,
-  hasSanctionAlreadyError: modules.sanctionThreadsErrors.hasSanctionAlreadyError,
-  cannotAddSanctionError: modules.sanctionThreadsErrors.cannotAddSanctionError,
-  cannotCreateThreadAgainError: modules.sanctionThreadsErrors.cannotCreateThreadAgainError,
-  threadClosedError: modules.sanctionThreadsErrors.threadClosedError,
-  alreadHasFuncError: modules.subdepManagementErrors.alreadHasFuncError,
-  doesNotHaveFuncError: modules.subdepManagementErrors.doesNotHaveFuncError,
-  invalidFuncRankError: modules.subdepManagementErrors.invalidFuncRankError,
-  invalidTokenError: modules.tokenErrors.invalidTokenError,
-  noSnapshotsError: modules.userSnapshotErrors.noSnapshotsError,
-  sanctionPermError: modules.permErrors.sanctionPermError,
-};
+const categories = [
+  'argErrors',
+  'idErrors',
+  'interactionComponentErrors',
+  'permErrors',
+  'profileErrors',
+  'timeErrors',
+  'callsignChangeErrors',
+  'meniuChestorActivityListErrors',
+  'meniuConcediuErrors',
+  'meniuInstructorErrors',
+  'mphActivityErrors',
+  'sanctionThreadsErrors',
+  'subdepManagementErrors',
+  'tokenErrors',
+  'userSnapshotErrors'
+];
+
+const errors = {};
+
+for (const category of categories) {
+  if (modules[category]) {
+    Object.assign(errors, modules[category]);
+  }
+}
+
+export default errors;

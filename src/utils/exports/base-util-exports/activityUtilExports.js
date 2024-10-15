@@ -1,8 +1,12 @@
 import { exportModules } from '../../../core/baseExportFSModule.js';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const modules = exportModules(path.join(__dirname, '../../functions/activity'));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-module.exports = {
-  utils: modules.utils
-};
+const modules = await exportModules(path.join(__dirname, '../../functions/activity'));
+
+const utils = modules.utils;
+
+export default utils;

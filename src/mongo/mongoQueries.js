@@ -7,4 +7,32 @@ const __dirname = path.dirname(__filename);
 
 const mongoQueries = await exportModules(path.join(__dirname, './functions'));
 
-export default mongoQueries;
+const categories = [
+  'baseActivityQueries',
+  'userLeaveQueries',
+  'callsignUpdateQueries',
+  'acProfileQueries',
+  'baseProfileQueries',
+  'bulkQueries',
+  'profileDocumentChecks',
+  'profileUpdateQueries',
+  'userSnapshotQueries',
+  'sessionChecks',
+  'sessionUpdateQueries',
+  'componentQueries',
+  'cooldownQueries',
+  'entryListQueries',
+  'logQueries',
+  'sanctionDBQueries',
+  'tokenQueries'
+];
+
+const queryExports = {};
+
+for (const category of categories) {
+  if (mongoQueries[category]) {
+    Object.assign(queryExports, mongoQueries[category]);
+  }
+}
+
+export default queryExports;

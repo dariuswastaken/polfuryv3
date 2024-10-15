@@ -1,12 +1,15 @@
-module.exports = {
-  createChannelTranscript: async ({ interaction, channelID, type }) => {
-    const channel = await interaction.guild.channels.cache.get(channelID);
-    let messages = await channel.messages.fetch({ limit: 100 });
-    let sortedMessages = Array.from(messages.values()).sort(
-      (a, b) => a.createdTimestamp - b.createdTimestamp
-    );
+export const createChannelTranscript = async ({
+  interaction,
+  channelID,
+  type
+}) => {
+  const channel = await interaction.guild.channels.cache.get(channelID);
+  let messages = await channel.messages.fetch({ limit: 100 });
+  let sortedMessages = Array.from(messages.values()).sort(
+    (a, b) => a.createdTimestamp - b.createdTimestamp
+  );
 
-    let transcriptHTML = `
+  let transcriptHTML = `
         <html>
         <head>
             <title>Transcript ${type}</title>
@@ -44,7 +47,6 @@ module.exports = {
         </html>
         `;
 
-    const transcript = Buffer.from(transcriptHTML, 'utf-8');
-    return transcript;
-  }
+  const transcript = Buffer.from(transcriptHTML, 'utf-8');
+  return transcript;
 };

@@ -1,13 +1,11 @@
-module.exports = {
-  noAvailableCallsignError: async (pulsar, interaction) => {
-    pulsar.discordManager.embeds.createErrorEmbed(
-      'Eroare',
-      'Nu a fost gasit nici un callsign disponibil pentru gradul respectiv.',
-      {
-        interaction: interaction,
-        ephemeral: true,
-        deferReply: true
-      }
-    );
-  }
+export const noAvailableCallsignError = async (pulsar, interaction) => {
+  pulsar.discordManager.embeds.createErrorEmbed(
+    'Eroare',
+    'Nu a fost gasit nici un callsign disponibil pentru gradul respectiv.',
+    {
+      interaction: interaction,
+      ephemeral: true,
+      deferReply: true
+    }
+  );
 };

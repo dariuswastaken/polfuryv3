@@ -1,104 +1,117 @@
-module.exports = {
-  sendCertificatChoiceMenuCooldown: async ({ pulsar, interaction, targetID }) => {
-    const menu = await pulsar.discordManager.menus.createSelectMenu({
-      type: 'string',
-      options: [
-        {
-          label: 'RADIO',
-          value: 'radio'
-        },
-        {
-          label: 'MDT',
-          value: 'mdt'
-        }
-      ],
-      id: `certificat-cooldown-select/${targetID}`,
-      placeholder: 'Alege un certificat'
-    });
-
-    await pulsar.discordManager.embeds.createDefaultEmbed(
-      'Alege un certificat din meniul de mai jos.',
+export const sendCertificatChoiceMenuCooldown = async ({
+  pulsar,
+  interaction,
+  targetID
+}) => {
+  const menu = await pulsar.discordManager.menus.createSelectMenu({
+    type: 'string',
+    options: [
       {
-        title: 'Meniu Cooldown Certificat',
-        interaction: interaction,
-        components: [menu],
-        ephemeral: true,
-        deferReply: true
-      }
-    );
-  },
-  
-  sendCooldownCertificatDurationSelect: async ({ pulsar, interaction, targetID, certificat }) => {
-    const menu = await pulsar.discordManager.menus.createSelectMenu({
-      type: 'string',
-      options: [
-        {
-          label: '1 zi',
-          value: '1'
-        },
-        {
-          label: '2 zile',
-          value: '2'
-        },
-        {
-          label: '3 zile',
-          value: '3'
-        }
-      ],
-      id: `cooldown-certificat-duration-select/${targetID}/${certificat}`,
-      placeholder: 'Alege durata'
-    });
-
-    await pulsar.discordManager.embeds.createDefaultEmbed(
-      'Alege durata din meniul de mai jos.',
+        label: 'RADIO',
+        value: 'radio'
+      },
       {
-        title: 'Meniu Durata Cooldown Certificat',
-        interaction: interaction,
-        components: [menu],
-        ephemeral: true,
-        deferReply: true
+        label: 'MDT',
+        value: 'mdt'
       }
-    );
-  },
-  
-  sendCertificateChoiceMenu: async ({ pulsar, interaction, menuTitle, type, targetID }) => {
-    const menu = await pulsar.discordManager.menus.createSelectMenu({
-      type: 'string',
-      options: [
-        {
-          label: 'RADIO',
-          value: 'radio'
-        },
-        {
-          label: 'MDT',
-          value: 'mdt'
-        },
-        {
-          label: 'MOTO',
-          value: 'moto'
-        },
-        {
-          label: 'PILOT',
-          value: 'pilot'
-        },
-        {
-          label: 'HIGHSPEED',
-          value: 'highspeed'
-        }
-      ],
-      id: `${type}-certificat-select/${targetID}`,
-      placeholder: 'Alege un certificat'
-    });
+    ],
+    id: `certificat-cooldown-select/${targetID}`,
+    placeholder: 'Alege un certificat'
+  });
 
-    await pulsar.discordManager.embeds.createDefaultEmbed(
-      'Alege un certificat din meniul de mai jos.',
+  await pulsar.discordManager.embeds.createDefaultEmbed(
+    'Alege un certificat din meniul de mai jos.',
+    {
+      title: 'Meniu Cooldown Certificat',
+      interaction: interaction,
+      components: [menu],
+      ephemeral: true,
+      deferReply: true
+    }
+  );
+};
+
+export const sendCooldownCertificatDurationSelect = async ({
+  pulsar,
+  interaction,
+  targetID,
+  certificat
+}) => {
+  const menu = await pulsar.discordManager.menus.createSelectMenu({
+    type: 'string',
+    options: [
       {
-        title: `Meniu ${menuTitle}`,
-        interaction: interaction,
-        components: [menu],
-        ephemeral: true,
-        deferReply: true
+        label: '1 zi',
+        value: '1'
+      },
+      {
+        label: '2 zile',
+        value: '2'
+      },
+      {
+        label: '3 zile',
+        value: '3'
       }
-    );
-  }
+    ],
+    id: `cooldown-certificat-duration-select/${targetID}/${certificat}`,
+    placeholder: 'Alege durata'
+  });
+
+  await pulsar.discordManager.embeds.createDefaultEmbed(
+    'Alege durata din meniul de mai jos.',
+    {
+      title: 'Meniu Durata Cooldown Certificat',
+      interaction: interaction,
+      components: [menu],
+      ephemeral: true,
+      deferReply: true
+    }
+  );
+};
+
+export const sendCertificateChoiceMenu = async ({
+  pulsar,
+  interaction,
+  menuTitle,
+  type,
+  targetID
+}) => {
+  const menu = await pulsar.discordManager.menus.createSelectMenu({
+    type: 'string',
+    options: [
+      {
+        label: 'RADIO',
+        value: 'radio'
+      },
+      {
+        label: 'MDT',
+        value: 'mdt'
+      },
+      {
+        label: 'MOTO',
+        value: 'moto'
+      },
+      {
+        label: 'PILOT',
+        value: 'pilot'
+      },
+      {
+        label: 'HIGHSPEED',
+        value: 'highspeed'
+      }
+    ],
+    id: `${type}-certificat-select/${targetID}`,
+    placeholder: 'Alege un certificat'
+  });
+
+  await pulsar.discordManager.embeds.createDefaultEmbed(
+    'Alege un certificat din meniul de mai jos.',
+    {
+      title: `Meniu ${menuTitle}`,
+      interaction: interaction,
+      components: [menu],
+      ephemeral: true,
+      deferReply: true
+    }
+  );
 };

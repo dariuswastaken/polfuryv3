@@ -1,9 +1,22 @@
 import { exportModules } from '../../../core/baseExportFSModule.js';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const modules = exportModules(path.join(__dirname, '../../functions/discord'));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-module.exports.roles = {
-  updateRankRoles: modules.rankUpdates.updateRankRoles,
-  updateRankRolesCI: modules.rankUpdates.updateRankRolesCI
-};
+const modules = await exportModules(
+  path.join(__dirname, '../../functions/discord')
+);
+
+const categories = ['rankUpdates'];
+
+const roles = {};
+
+for (const category of categories) {
+  if (modules[category]) {
+    Object.assign(roles, modules[category]);
+  }
+}
+
+export default roles;

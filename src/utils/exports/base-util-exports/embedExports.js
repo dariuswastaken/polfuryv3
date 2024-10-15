@@ -1,18 +1,30 @@
 import { exportModules } from '../../../core/baseExportFSModule.js';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const modules = exportModules(path.join(__dirname, '../../functions/discord'));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-module.exports.embeds = {
-  sendUpList: modules.activityListsEmbeds.sendUpList,
-  sendOutList: modules.activityListsEmbeds.sendOutList,
-  sendActivityUpdateRetryEmbed:
-    modules.activityManagementEmbeds.sendActivityUpdateRetryEmbed,
-  sendSuccessEmbed: modules.baseEmbeds.sendSuccessEmbed,
-  sendWarningEmbed: modules.baseEmbeds.sendWarningEmbed,
-  sendUserCooldownList: modules.meniuInstructorEmbeds.sendUserCooldownList,
-  sendSubdepMemberList: modules.subdepManagementEmbeds.sendSubdepMemberList,
-  sendInstrActivityEmbed: modules.subdepManagementEmbeds.sendInstrActivityEmbed,
-  sendUserActivityEmbed: modules.userActivityEmbeds.sendUserActivityEmbed,
-  sendUserInfoEmbed: modules.userInfoEmbeds.sendUserInfoEmbed
-};
+const modules = await exportModules(
+  path.join(__dirname, '../../functions/discord')
+);
+
+const categories = [
+  'activityListsEmbeds',
+  'activityManagementEmbeds',
+  'baseEmbeds',
+  'meniuInstructorEmbeds',
+  'subdepManagementEmbeds',
+  'userActivityEmbeds',
+  'userInfoEmbeds'
+];
+
+const embeds = {};
+
+for (const category of categories) {
+  if (modules[category]) {
+    Object.assign(embeds, modules[category]);
+  }
+}
+
+export default embeds;
