@@ -9,7 +9,7 @@ export default {
       if (interaction.user.bot) return;
       if (!interaction.isButton()) return;
       
-      console.log('PAssed')
+      console.log(utils)
       
       return;
       
