@@ -9,7 +9,9 @@ const baseUtilModules = await exportModules(
   path.join(__dirname, './base-util-exports')
 );
 
-const glbobalExports = {
+console.log(baseUtilModules);
+
+const globalExports = {
   timeConversion: baseUtilModules.baseFuncExports.timeConversion,
   dayConversion: baseUtilModules.baseFuncExports.dayConversion,
   math: baseUtilModules.baseFuncExports.math,
