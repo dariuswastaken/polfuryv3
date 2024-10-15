@@ -49,14 +49,6 @@ const loadEvents = async (path, collection, type) => {
   }
 };
 
-const directoryChecker = async (dir) => {
-  if (!fs.existsSync(dir)) {
-    console.error(`[FILESYSTEM] ${dir} does not exist in the filesystem`);
-    return false;
-  }
-  return true;
-};
-
 export const loadFilesystem = async () => {
   fileSystem.loadFilesFromDir(dirs.handlerDir, async (path) => {
     const handlerModule = await import(path);
@@ -119,9 +111,6 @@ export const loadFilesystem = async () => {
   for (const { dir, collection, type } of directories) {
     try {
       fileSystem.loadFilesFromDir(dir, async (path) => {
-        if (!dirs || !directoryChecker(dirs)) {
-          return;
-        }
         loadEvents(path, collection, type);
       });
     } catch (e) {
