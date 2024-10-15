@@ -6,25 +6,24 @@ import {
 } from 'npm:discord.js';
 
 export const createModal = async ({ id, title, inputs }) => {
-    const modal = new ModalBuilder().setCustomId(id).setTitle(title);
+  const modal = new ModalBuilder().setCustomId(id).setTitle(title);
 
-    let rows = [];
+  let rows = [];
 
-    for (let input of inputs) {
-      rows.push(
-        new ActionRowBuilder().addComponents(
-          new TextInputBuilder()
-            .setCustomId(input.id)
-            .setPlaceholder(input.placeholder)
-            .setLabel(input.label)
-            .setRequired(input.required)
-            .setStyle(TextInputStyle[input.style])
-        )
-      );
-    }
-
-    modal.addComponents(rows);
-
-    return modal;
+  for (let input of inputs) {
+    rows.push(
+      new ActionRowBuilder().addComponents(
+        new TextInputBuilder()
+          .setCustomId(input.id)
+          .setPlaceholder(input.placeholder)
+          .setLabel(input.label)
+          .setRequired(input.required)
+          .setStyle(TextInputStyle[input.style])
+      )
+    );
   }
+
+  modal.addComponents(rows);
+
+  return modal;
 };
