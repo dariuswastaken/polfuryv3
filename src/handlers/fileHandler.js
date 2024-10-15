@@ -36,6 +36,8 @@ export const loadHandlers = async () => {
     try {
       const handlerModule = await import(filePath);
       const handler = handlerModule.default;
+      
+      console.log(handler)
 
       console.log('[FILESYSTEM] Loaded handler: ' + handler.name);
       client.collections.handlers.set(handler.name, handler);
