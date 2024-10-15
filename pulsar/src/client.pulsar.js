@@ -4,7 +4,7 @@ import { fileManager } from '../managers/fileManager.js';
 import { processManager } from '../managers/processManager.js';
 import { webManager } from '../managers/webManager.js';
 import clients from '../exports/clients.js';
-import config from '../.config/config.json';
+import config from '../.config/config.json' assert { type: 'json' };
 
 module.exports.PulsarClient = class PulsarClient {
   constructor() {
