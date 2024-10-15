@@ -16,6 +16,8 @@ const exports = {};
 try {
   for (const category of categories) {
     if (modules[category]) {
+      
+      console.log(path.join(__dirname, '../../functions/discord/input-validation'))
       Object.assign(exports, modules[category]);
     }
   }
