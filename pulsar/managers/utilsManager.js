@@ -8,10 +8,10 @@ const utilsManager = {
       uniques: utils.uniques
     };
   },
-  createNew: (call, filePath) => {
+  createNew: async (call, filePath) => {
     try {
       const resolvedPath = path.resolve(path.dirname(call), filePath);
-      return import(resolvedPath).then((module) => module.default);
+      return await import(resolvedPath);
     } catch (e) {
       console.error(e);
     }
