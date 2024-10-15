@@ -1,29 +1,22 @@
-import { readdir, stat } from 'node:fs';
+import { readdirSync } from 'node:fs';
 import path from 'node:path';
 
 export async function loadFilesFromDir(dir, callback) {
   const files = [];
 
-  try {
-    const items = await readdir(dir);
+  const dirs = readdirSync(dir);
 
-    await Promise.all(
-      items.map(async (item) => {
-        const itemPath = path.join(dir, item);
-        const itemStat = await stat(itemPath);
+  await Promise.all(
+    dirs.map(async (directory) => {
+      const dirPath = path.join(dir, directory);
+      const filesInDir = readdirSync(dirPath);
+      
+      filesInDir.forEach((file) => {
+        const filePath = path.join(dirPath, file);
+        files.push(filePath);
+      });
+    })
+  );
 
-        if (itemStat.isDirectory()) {
-          await loadFilesFromDir(itemPath, callback);
-        } else if (item.endsWith('.js')) {
-          files.push(itemPath);
-          callback(itemPath);
-        }
-      })
-    );
-  } catch (error) {
-    console.error(`[ERROR] Failed to read directory ${dir}:`, error);
-    console.error(error);
-  }
-
-  return files;
+  files.forEach(callback);
 }
