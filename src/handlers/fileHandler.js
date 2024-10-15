@@ -114,7 +114,7 @@ export const loadFilesystem = () => {
     });
   });
 
-  console.log(client.collections.slashCommands)
+  console.log(client.collections.handlers)
   printTable(events);
   console.log('[FILESYSTEM] Filesystem has been loaded.');
 };
