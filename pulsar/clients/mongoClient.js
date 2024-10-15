@@ -18,7 +18,7 @@ export default class MongoClient {
     } catch (error) {
       console.log(error);
       console.error(`[MONGO] Error fetching documents from schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -31,7 +31,7 @@ export default class MongoClient {
       return document;
     } catch (error) {
       console.error(`[MONGO] Error fetching documents from schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -43,7 +43,6 @@ export default class MongoClient {
       return document;
     } catch (error) {
       console.error(`[MONGO] Error creating document in schema: ${schema}`);
-      throw error;
     }
   }
 
@@ -55,7 +54,7 @@ export default class MongoClient {
       return document;
     } catch (error) {
       console.error(`[MONGO] Error updating document in schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -69,7 +68,7 @@ export default class MongoClient {
       console.error(
         `[MONGO] Error pushing data to document in schema: ${schema}`
       );
-      throw error;
+      console.error(error);
     }
   }
 
@@ -83,7 +82,7 @@ export default class MongoClient {
       console.error(
         `[MONGO] Error setting data to document in schema: ${schema}`
       );
-      throw error;
+      console.error(error);
     }
   }
 
@@ -97,7 +96,7 @@ export default class MongoClient {
       console.error(
         `[MONGO] Error adding data to document in schema: ${schema}`
       );
-      throw error;
+      console.error(error);
     }
   }
 
@@ -109,7 +108,7 @@ export default class MongoClient {
       return document;
     } catch (error) {
       console.error(`[MONGO] Error deleting document in schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -121,7 +120,7 @@ export default class MongoClient {
       return documents;
     } catch (error) {
       console.error(`[MONGO] Error fetching documents from schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -133,7 +132,7 @@ export default class MongoClient {
       return documents;
     } catch (error) {
       console.error(`[MONGO] Error fetching documents from schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -145,7 +144,7 @@ export default class MongoClient {
       return documents;
     } catch (error) {
       console.error(`[MONGO] Error fetching documents from schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -157,7 +156,7 @@ export default class MongoClient {
       return documents;
     } catch (error) {
       console.error(`[MONGO] Error updating documents in schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -169,7 +168,7 @@ export default class MongoClient {
       return documents;
     } catch (error) {
       console.error(`[MONGO] Error deleting documents in schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -180,7 +179,7 @@ export default class MongoClient {
       await Schema.deleteMany({});
     } catch (error) {
       console.error(`[MONGO] Error deleting documents in schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -192,7 +191,7 @@ export default class MongoClient {
       return document;
     } catch (error) {
       console.error(`[MONGO] Error fetching documents from schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -204,7 +203,7 @@ export default class MongoClient {
       return document;
     } catch (error) {
       console.error(`[MONGO] Error fetching documents from schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 
@@ -216,7 +215,7 @@ export default class MongoClient {
       return document;
     } catch (error) {
       console.error(`[MONGO] Error fetching documents from schema: ${schema}`);
-      throw error;
+      console.error(error);
     }
   }
 };
