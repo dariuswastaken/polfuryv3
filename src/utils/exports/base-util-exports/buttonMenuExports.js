@@ -25,7 +25,7 @@ const categories = [
 
 const buttonMenus = {};
 
-try {
+/*try {
   for (const category of categories) {
     if (modules[category]) {
       Object.assign(buttonMenus, modules[category]);
@@ -33,6 +33,6 @@ try {
   }
 } catch (error) {
   console.error(error);
-}
+}*/
 
 export default buttonMenus;

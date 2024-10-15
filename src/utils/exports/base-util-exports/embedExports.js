@@ -21,7 +21,7 @@ const categories = [
 
 const embeds = {};
 
-try {
+/*try {
   for (const category of categories) {
     if (modules[category]) {
       Object.assign(exports, modules[category]);
@@ -29,6 +29,6 @@ try {
   }
 } catch (error) {
   console.error(error);
-}
+}*/
 
 export default embeds;

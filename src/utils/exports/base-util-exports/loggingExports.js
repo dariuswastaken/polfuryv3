@@ -13,7 +13,7 @@ const categories = ['base'];
 
 const logging = {};
 
-try {
+/*try {
   for (const category of categories) {
     if (modules[category]) {
       Object.assign(logging, modules[category]);
@@ -21,6 +21,6 @@ try {
   }
 } catch (error) {
   console.error(error);
-}
+}*/
 
 export default logging;

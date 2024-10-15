@@ -19,7 +19,7 @@ const categories = [
 
 const validate = {};
 
-try {
+/*try {
   for (const category of categories) {
     if (modules[category]) {
       Object.assign(validate, modules[category]);
@@ -27,6 +27,6 @@ try {
   }
 } catch (error) {
   console.error(error);
-}
+}*/
 
 export default validate;

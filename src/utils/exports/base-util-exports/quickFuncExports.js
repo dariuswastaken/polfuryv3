@@ -20,7 +20,7 @@ const categories = [
 
 const quickFunctions = {};
 
-try {
+/*try {
   for (const category of categories) {
     if (modules[category]) {
       Object.assign(quickFunctions, modules[category]);
@@ -28,6 +28,6 @@ try {
   }
 } catch (error) {
   console.error(error);
-}
+}*/
 
 export default quickFunctions;

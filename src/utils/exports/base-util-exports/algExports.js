@@ -13,10 +13,14 @@ const categories = ['algos', 'algoUtils'];
 
 const exports = {};
 
-for (const category of categories) {
-  if (modules[category]) {
-    Object.assign(exports, modules[category]);
+/*try {
+  for (const category of categories) {
+    if (modules[category]) {
+      Object.assign(exports, modules[category]);
+    }
   }
-}
+} catch (error) {
+  console.error(error);
+}*/
 
 export default exports;

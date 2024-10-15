@@ -9,4 +9,4 @@ const modules = await exportModules(path.join(__dirname, '../../functions/activi
 
 const utils = modules.utils;
 
-export default utils;
+export { utils };

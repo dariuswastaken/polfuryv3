@@ -13,7 +13,7 @@ const categories = ['checks', 'dayConversion', 'timeConversion', 'math'];
 
 const exports = {};
 
-try {
+/*try {
   for (const category of categories) {
     if (modules[category]) {
       Object.assign(exports, modules[category]);
@@ -21,6 +21,6 @@ try {
   }
 } catch (error) {
   console.error(error);
-}
+}*/
 
 export default exports;
