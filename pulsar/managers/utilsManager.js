@@ -10,7 +10,7 @@ const utilsManager = {
   },
   createNew: async (call, filePath) => {
     try {
-      const resolvedPath = path.resolve(path.dirname(call), filePath);
+      const resolvedPath = await path.resolve(path.dirname(call), filePath);
       return await import(resolvedPath);
     } catch (e) {
       console.error(e);
