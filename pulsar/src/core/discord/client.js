@@ -42,6 +42,4 @@ client.guildID = process.env.GUILD_ID;
 
 client.config = config.client;
 
-module.exports = {
-  client
-};
+export default client;

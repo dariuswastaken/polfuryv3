@@ -17,6 +17,4 @@ fs.readdirSync(schemas).forEach((file) => {
   }
 });
 
-module.exports = {
-  schemas: schemaObj
-};
+export default schemaObj;
