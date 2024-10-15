@@ -14,7 +14,7 @@ export const exportModules = async (dir) => {
       Object.assign(modules, await exportModules(filePath));
     } else if (file.endsWith('.js')) {
       const moduleName = path.basename(file, path.extname(file));
-      modules[moduleName] = (await import(filePath));
+      modules[moduleName] = await import(filePath);
     }
   }));
 
