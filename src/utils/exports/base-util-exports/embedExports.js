@@ -24,7 +24,7 @@ const embeds = {};
 try {
   for (const category of categories) {
     if (modules[category]) {
-      Object.assign(exports, modules[category]);
+      Object.assign(embeds, modules[category]);
     }
   }
 } catch (error) {
