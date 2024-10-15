@@ -25,8 +25,8 @@ export default {
         fileManager: Pulsar().fileManager.createInstance()
       };
 
-      const call = path.resolve(__dirname);
-      const utils = Pulsar().utilsManager.createNew(
+      const call = await path.resolve(__dirname);
+      const utils = await Pulsar().utilsManager.createNew(
         call,
         '../../src/utils/exports/globalExports.js'
       );
