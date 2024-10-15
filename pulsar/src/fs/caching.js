@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import util from 'util';
+import util from 'node:util';
 
 module.exports = {
   createCacheManager: async () => {
