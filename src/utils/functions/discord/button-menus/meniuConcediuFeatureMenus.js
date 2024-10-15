@@ -1,6 +1,6 @@
-const dayConversion = require('../../base/dayConversion');
-const { replaceButtonPlaceholders } = require('../../../../core/placeholderModifier.js');
-const botconfig = require('../../../../botconfig/botconfig.js');
+import dayConversion from '../../base/dayConversion.js';
+import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
+import botconfig from '../../../../botconfig/botconfig.js';
 
 module.exports = {
   sendMenuConcediu: async ({ pulsar, interaction, mongo }) => {

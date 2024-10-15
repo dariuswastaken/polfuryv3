@@ -1,5 +1,4 @@
-const { parse } = require('dotenv');
-const algoUtils = require('./algoUtils');
+import algoUtils from './algoUtils.js';
 
 module.exports = {
   gradeAlgorithm: async (rank, { activity, reports, fines, calls, actions, leaveDays }) => {

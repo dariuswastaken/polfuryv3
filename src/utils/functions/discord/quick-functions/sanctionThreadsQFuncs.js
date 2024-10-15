@@ -1,11 +1,18 @@
-const {
+import {
   ThreadAutoArchiveDuration,
   ChannelType,
   PermissionsBitField
-} = require('discord.js');
+} from 'discord.js';
 
 module.exports = {
-  createSanctionThread: async ({ pulsar, utils, interaction, mongo, sanction, reason }) => {
+  createSanctionThread: async ({
+    pulsar,
+    utils,
+    interaction,
+    mongo,
+    sanction,
+    reason
+  }) => {
     const forum = await interaction.guild.channels.cache.get(
       '1205145266349670440'
     );
@@ -85,7 +92,7 @@ module.exports = {
       }
     );
   },
-  
+
   addSanctionToMember: async ({ pulsar, mongo, userID, sanctions }) => {
     const sanctionKeys = {
       ts25: 'Taiere Salariala 25%',
@@ -122,8 +129,13 @@ module.exports = {
 
     await mongo.addSanctionsM(userID, formattedSancList);
   },
-  
-  createSanctionPrivateChannel: async ({ pulsar, interaction, mongo, sanctionID }) => {
+
+  createSanctionPrivateChannel: async ({
+    pulsar,
+    interaction,
+    mongo,
+    sanctionID
+  }) => {
     const sanction = await mongo.getSanction(sanctionID);
     const sanctionedProfile = await mongo.getProfile(sanction.sanctionedID);
 

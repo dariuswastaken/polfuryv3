@@ -1,5 +1,5 @@
-const path = require('path');
-const { exportModules } = require('../../core/baseExportFSModule');
+import { exportModules } from '../../core/baseExportFSModule.js';
+import path from 'node:path';
 
 const baseUtilModules = exportModules(
   path.join(__dirname, './base-util-exports')

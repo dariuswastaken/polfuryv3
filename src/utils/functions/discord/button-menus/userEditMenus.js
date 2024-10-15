@@ -1,5 +1,5 @@
-const { replaceButtonPlaceholders } = require('../../../../core/placeholderModifier.js');
-const botconfig = require('../../../../botconfig/botconfig.js');
+import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
+import botconfig from '../../../../botconfig/botconfig.js';
 
 module.exports = {
   sendUserEditMenu: async ({ pulsar, interaction, targetID }) => {

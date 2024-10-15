@@ -1,4 +1,4 @@
-const moment = require('moment-timezone');
+import moment from 'npm:moment-timezone';
 
 module.exports = {
   calculateMinutes: async (startTime, endTime) => {

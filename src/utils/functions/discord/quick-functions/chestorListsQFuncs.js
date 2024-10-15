@@ -1,4 +1,4 @@
-const { flags } = require('../../activity/flags');
+import { flags } from '../../activity/flags.js';
 
 module.exports = {
   createUpList: async ({ interaction, pulsar, utils, mongo, week }) => {

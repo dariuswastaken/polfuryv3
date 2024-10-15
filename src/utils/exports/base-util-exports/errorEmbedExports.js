@@ -1,5 +1,5 @@
-const { exportModules } = require('../../../core/baseExportFSModule');
-const path = require('path');
+import { exportModules } from '../../../core/baseExportFSModule.js';
+import path from 'node:path';
 
 const modules = exportModules(
   path.join(__dirname, '../../functions/discord/errors')
