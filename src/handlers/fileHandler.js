@@ -41,14 +41,14 @@ const loadEvents = async (path, collection, type) => {
     );
     console.error(e);
     events.push({
-      name: item.name,
+      name: path,
       type: type,
       loaded: '❌',
     });
   }
 };
 
-export const loadFilesystem = () => {
+export const loadFilesystem = async () => {
   fileSystem.loadFilesFromDir(dirs.handlerDir, async (path) => {
     const handlerModule = await import(path);
     const handler = handlerModule.default;
@@ -107,11 +107,11 @@ export const loadFilesystem = () => {
 
   console.log('[FILESYSTEM] Loading filesystem...');
 
-  directories.forEach(({ dir, collection, type }) => {
-    fileSystem.loadFilesFromDir(dir, (path) => {
+  for(const { dirs, collection, type } of directories) {
+    fileSystem.loadFilesFromDir(dirs, async (path) => {
       loadEvents(path, collection, type);
     });
-  });
+  }
   
   printTable(events);
   console.log('[FILESYSTEM] Filesystem has been loaded.');
