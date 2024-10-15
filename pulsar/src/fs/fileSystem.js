@@ -4,7 +4,7 @@ import path from 'node:path';
 export async function loadFilesFromDir(dir, callback) {
   const files = [];
 
-  const dirs = await readdir(dir);
+  const dirs = readdir(dir);
 
   await Promise.all(
     dirs.map(async (directory) => {
