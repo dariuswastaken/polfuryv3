@@ -5,7 +5,7 @@ const client = Pulsar().client;
 const fileManager = Pulsar().fileManager.createInstance();
 const processManager = Pulsar().processManager.createInstance();
 
-module.exports = {
+export default {
   readyState: 0,
   init: function () {
     try {
