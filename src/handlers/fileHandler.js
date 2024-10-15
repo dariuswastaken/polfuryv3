@@ -50,6 +50,7 @@ const loadEvents = async (path, collection, type) => {
 export const loadFilesystem = () => {
   fileSystem.loadFilesFromDir(dirs.handlerDir, async (path) => {
     const handler = await import(path).default;
+    console.log(handler)
     client.collections.handlers.set(handler.name, handler);
     if (typeof handler.execute === 'function') {
       handler.execute(Pulsar);
