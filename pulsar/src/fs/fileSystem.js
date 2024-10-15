@@ -1,4 +1,4 @@
-import { readdirSync, readdir, stat } from 'node:fs';
+import { readdir, stat } from 'node:fs';
 import path from 'node:path';
 
 export async function loadFilesFromDir(dir, callback) {
