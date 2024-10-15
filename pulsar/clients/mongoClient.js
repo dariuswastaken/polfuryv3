@@ -9,7 +9,8 @@ export default class MongoClient {
 
   async find(schema, query) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.findOne(query);
       return document;
@@ -22,8 +23,8 @@ export default class MongoClient {
 
   async findMore(schema, query) {
     try {
-      const Schema = schemas[schema];
-      console.log(Schema);
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.find(query);
       return document;
@@ -35,7 +36,8 @@ export default class MongoClient {
 
   async create(schema, data) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.create(data);
       return document;
@@ -46,7 +48,8 @@ export default class MongoClient {
 
   async update(schema, query, data) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.updateOne(query, data);
       return document;
@@ -58,7 +61,8 @@ export default class MongoClient {
 
   async push(schema, query, data) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.updateOne(query, { $push: data });
       return document;
@@ -72,7 +76,8 @@ export default class MongoClient {
 
   async set(schema, query, data) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.updateOne(query, { $set: data });
       return document;
@@ -86,7 +91,8 @@ export default class MongoClient {
 
   async add(schema, query, data) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.updateOne(query, { $inc: data });
       return document;
@@ -100,7 +106,8 @@ export default class MongoClient {
 
   async delete(schema, query) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.deleteOne(query);
       return document;
@@ -112,7 +119,8 @@ export default class MongoClient {
 
   async getAll(schema) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const documents = await Schema.find({});
       return documents;
@@ -124,7 +132,8 @@ export default class MongoClient {
 
   async getAllWSort(schema, sort) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const documents = await Schema.find({}).sort(sort);
       return documents;
@@ -136,7 +145,8 @@ export default class MongoClient {
 
   async getAllWProjection(schema, projection) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const documents = await Schema.find({}, projection);
       return documents;
@@ -148,7 +158,8 @@ export default class MongoClient {
 
   async updateBulk(schema, query, data) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const documents = await Schema.updateMany(query, data);
       return documents;
@@ -160,7 +171,8 @@ export default class MongoClient {
 
   async deleteBulk(schema, query) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const documents = await Schema.deleteMany(query);
       return documents;
@@ -172,7 +184,8 @@ export default class MongoClient {
 
   async deleteAll(schema) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       await Schema.deleteMany({});
     } catch (error) {
@@ -183,7 +196,8 @@ export default class MongoClient {
 
   async findWProjection(schema, query, projection) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.findOne(query, projection);
       return document;
@@ -195,7 +209,8 @@ export default class MongoClient {
 
   async findWSort(schema, query, sort) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.findOne(query).sort(sort);
       return document;
@@ -207,7 +222,8 @@ export default class MongoClient {
 
   async findMoreWSort(schema, query, sort) {
     try {
-      const Schema = schemas[schema];
+      const SchemaModule = schemas[schema];
+      const Schema = SchemaModule.default;
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
       const document = await Schema.find(query).sort(sort);
       return document;
