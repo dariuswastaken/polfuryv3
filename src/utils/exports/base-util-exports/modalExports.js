@@ -21,7 +21,6 @@ try {
   for (const category of categories) {
     if (modules[category]) {
       Object.assign(modals, modules[category]);
-      console.log(`Loaded ${category} functions`);
     }
   }
 } catch (error) {

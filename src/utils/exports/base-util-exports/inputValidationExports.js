@@ -23,7 +23,6 @@ try {
   for (const category of categories) {
     if (modules[category]) {
       Object.assign(validate, modules[category]);
-      console.log(`Loaded ${category} functions`);
     }
   }
 } catch (error) {
