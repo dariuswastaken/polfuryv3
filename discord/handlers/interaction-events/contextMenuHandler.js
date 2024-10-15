@@ -9,6 +9,8 @@ export default {
     Pulsar().client.on('interactionCreate', async (interaction) => {
       if (interaction.user.bot) return;
 
+      console.log(`[CONTEXT MENU EVENT] Interaction detected: ${interaction.customId}`);
+      
       const client = Pulsar().client;
       
       const pulsar = {

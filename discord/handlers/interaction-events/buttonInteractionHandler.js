@@ -7,9 +7,6 @@ export default {
   enabled: true,
   async execute(Pulsar) {
     Pulsar().client.on('interactionCreate', async (interaction) => {
-      
-            console.log('Passed');
-      
       if (interaction.user.bot) return;
       if (!interaction.isButton()) return;
       
