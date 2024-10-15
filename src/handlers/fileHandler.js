@@ -9,7 +9,7 @@ const client = Pulsar().client;
 let events = [];
 
 const loadEvents = async (path, collection, type) => {
-  const item = require(path);
+  const item = await import(path);
   try {
     if (type === 'Slash Command' || type === 'Context Menu') {
       collection.set(item.data.name, item);
@@ -47,9 +47,9 @@ const loadEvents = async (path, collection, type) => {
   }
 };
 
-module.exports.loadFilesystem = function () {
-  fileSystem.loadFilesFromDir(dirs.handlerDir, (path) => {
-    const handler = require(path);
+export const loadFilesystem = () => {
+  fileSystem.loadFilesFromDir(dirs.handlerDir, async (path) => {
+    const handler = await import(path);
     client.collections.handlers.set(handler.name, handler);
     if (typeof handler.execute === 'function') {
       handler.execute(Pulsar);

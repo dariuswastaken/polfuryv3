@@ -1,4 +1,4 @@
-import * as fileHandler from '../handlers/fileHandler';
+import fileHandler from '../handlers/fileHandler';
 import { Pulsar } from '../../pulsar/index.pulsar.js';
 
 const client = Pulsar().client;

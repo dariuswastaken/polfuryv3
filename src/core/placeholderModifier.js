@@ -1,16 +1,14 @@
-module.exports = {
-  replacePlaceholder: function (str, placeholders) {
+export const replacePlaceholder = (str, placeholders) => {
     return str.replace(/%([^%]+)%/g, (match, p1) => placeholders[p1] || match);
-  },
-  
-  replaceButtonPlaceholders: (buttons, placeholders) => {
+}
+
+export const replaceButtonPlaceholders = (buttons, placeholders) => {
     return buttons.map(button => {
       return {
-        id: module.exports.replacePlaceholder(button.id, placeholders),
+        id: replacePlaceholder(button.id, placeholders),
         style: button.style,
-        label: module.exports.replacePlaceholder(button.label, placeholders),
+        label: replacePlaceholder(button.label, placeholders),
         disabled: button.disabled || false
       };
     }); 
-  }
 }
