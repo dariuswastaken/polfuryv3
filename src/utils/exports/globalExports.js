@@ -31,4 +31,4 @@ const glbobalExports = {
   }
 };
 
-export default glbobalExports;
+export default globalExports;
