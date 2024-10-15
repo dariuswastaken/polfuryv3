@@ -9,4 +9,4 @@ const utilModules = await exportModules(
   path.join(__dirname, '../functions')
 );
 
-export { utilModules };
+export default utilModules;
