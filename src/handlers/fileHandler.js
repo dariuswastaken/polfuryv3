@@ -29,9 +29,7 @@ const loadEvents = async (filePath, collection, type) => {
   }
 };
 
-export const loadFilesystem = async () => {
-  console.log('[FILESYSTEM] Loading filesystem...');
-
+export const loadHandlers = async () => {
   fileSystem.loadFilesFromDir(dirs.handlerDir, async (filePath) => {
     try {
       const handlerModule = await import(filePath);
@@ -57,6 +55,10 @@ export const loadFilesystem = async () => {
       console.error(e);
     }
   });
+};
+
+export const loadBaseFilesystem = async () => {
+  console.log('[FILESYSTEM] Loading filesystem...');
 
   const directories = [
     {

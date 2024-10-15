@@ -17,7 +17,9 @@ const init = {
 
       await fileManager.createCacheManager();
       //processManager.createErrorHandler();
-      await fileHandler.loadFilesystem();
+      
+      await fileHandler.loadHandlers();
+      await fileHandler.loadBaseFilesystem();
 
       client.login(process.env.DISCORD_TOKEN);
     } catch (error) {
