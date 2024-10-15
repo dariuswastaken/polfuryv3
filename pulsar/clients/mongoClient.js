@@ -3,7 +3,7 @@ import schemas from '../exports/schemas.js';
 
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
-const { default: mongoose } = require("mongoose");
+const { default: mongoose } = require("npm:mongoose");
 
 mongoose;
 
