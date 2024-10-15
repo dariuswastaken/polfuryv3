@@ -1,7 +1,6 @@
 import { db } from '../../handlers/mongoConnectionHandler';
 
-module.exports = {
-  createSanction: async ({ authorID, sanctionID, sanctionedID }) => {
+export const createSanction = async ({ authorID, sanctionID, sanctionedID }) => {
     await db.create('PendingSanction', {
       authorID: authorID,
       sanctionID: sanctionID,
@@ -13,9 +12,9 @@ module.exports = {
       date: new Date(),
       scheduled: null
     });
-  },
+  }
 
-  updateSanctionList: async (sanctionID, sanctionList, schedules) => {
+export const updateSanctionList = async (sanctionID, sanctionList, schedules) => {
     let sanction = await db.find('PendingSanction', {
       sanctionID: sanctionID
     });
@@ -35,41 +34,40 @@ module.exports = {
         }
       }
     );
-  },
+  }
 
-  updateSanctionReason: async (sanctionID, reason) => {
+export const updateSanctionReason = async (sanctionID, reason) => {
     await db.update(
       'PendingSanction',
       { sanctionID: sanctionID },
       { $set: { reason: reason } }
     );
-  },
+  }
 
-  closeSanctionList: async (sanctionID) => {
+export const closeSanctionList = async (sanctionID) => {
     await db.update(
       'PendingSanction',
       { sanctionID: sanctionID },
       { $set: { pending: false } }
     );
-  },
+  }
 
-  closeSanction: async (sanctionID) => {
+export const closeSanction = async (sanctionID) => {
     await db.update(
       'PendingSanction',
       { sanctionID: sanctionID },
       { $set: { active: false } }
     );
-  },
+  }
 
-  getSanction: async (sanctionID) => {
+export const getSanction = async (sanctionID) => {
     const result = await db.find('PendingSanction', {
       sanctionID: sanctionID
     });
     return result;
-  },
-  
-  getAllSanctions: async () => {
+  }
+
+export const getAllSanctions = async () => {
     const result = await db.getAll('PendingSanction');
     return result;
   },
-};

@@ -3,7 +3,7 @@ import { Pulsar } from '../../pulsar/index.pulsar.js';
 
 const client = Pulsar().client;
 
-module.exports.registerApplicationCommands = async function () {
+export const registerApplicationCommands = async () => {
   const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 
   try {

@@ -7,7 +7,7 @@ const processManager = Pulsar().processManager.createInstance();
 
 const init = {
   readyState: 0,
-  trigger: function () {
+  trigger: async () => {
     try {
       if (this.readyState === 1) {
         throw new Error('[INIT] readyState is set to 1, cannot init again');
@@ -17,7 +17,7 @@ const init = {
       fileManager.createCacheManager();
       processManager.createErrorHandler();
       fileHandler.loadFilesystem();
-      
+
       client.login(process.env.DISCORD_TOKEN);
     } catch (error) {
       console.error(error);

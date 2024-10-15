@@ -1,4 +1,4 @@
-const buttons = [
+export const buttons = [
   {
     id: `up-list/%week%`,
     style: 'Secondary',
@@ -10,5 +10,3 @@ const buttons = [
     label: '🗒️ Lista OUT'
   }
 ];
-
-export { buttons };
