@@ -4,7 +4,6 @@ import schemas from '../exports/schemas.js';
 export default class MongoClient {
   constructor() {
     this.mongo = init();
-    console.log(schemas)
   }
 
   async find(schema, query) {
