@@ -1,4 +1,4 @@
-import { exportAll } from './globalFSExport';
+import { exportAll } from './globalFSExport.js';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
