@@ -115,9 +115,9 @@ export const loadFilesystem = async () => {
 
   console.log('[FILESYSTEM] Loading filesystem...');
 
-  for (const { dirs, collection, type } of directories) {
+  for (const { dir, collection, type } of directories) {
     try {
-      fileSystem.loadFilesFromDir(dirs, async (path) => {
+      fileSystem.loadFilesFromDir(dir, async (path) => {
         if (!dirs || !directoryChecker(dirs)) {
           return;
         }
