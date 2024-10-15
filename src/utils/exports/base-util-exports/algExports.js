@@ -5,11 +5,17 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
+const modules = await exportModules(
+  path.join(__dirname, '../../functions/algorithms')
+);
 
 const categories = ['algos', 'algoUtils'];
 
 const exports = {};
+
+for(const category of categories) {
+  console.log(path.join(__dirname, '../../functions/discord'))
+}
 
 /*try {
   for (const category of categories) {
