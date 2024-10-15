@@ -36,9 +36,9 @@ const loadEvents = async (path, collection, type) => {
     }
   } catch (e) {
     console.error(
-      '[FILESYSTEM ERROR] ' + type + 'loading has failed at: ' + path,
-      e
+      '[FILESYSTEM ERROR] ' + type + 'loading has failed at: ' + path
     );
+    console.error(e);
     events.push({
       name: item.name,
       type: type,
