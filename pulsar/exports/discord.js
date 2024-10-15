@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import { exportModules } from '../src/core/baseExportFSModule.js'
 
 const pulsarDiscordModules = exportModules(

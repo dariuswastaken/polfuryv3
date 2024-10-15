@@ -1,5 +1,5 @@
 import winston from 'npm:winston';
-import path from 'path';
+import path from 'node:path';
 
 const folder = 'logs';
 

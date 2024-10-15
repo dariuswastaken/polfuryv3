@@ -1,5 +1,5 @@
 import mongo from '../../../src/mongo/mongoQueries.js';
-import path from 'path';
+import path from 'node:path'
 
 module.exports = {
   name: 'buttonInteractionEventHandler',

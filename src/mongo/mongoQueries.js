@@ -1,5 +1,5 @@
 import { exportModules } from '../core/baseExportFSModule';
-import path from 'path';
+import path from 'node:path';
 
 const mongoQueries = exportModules(path.join(__dirname, './functions'));
 

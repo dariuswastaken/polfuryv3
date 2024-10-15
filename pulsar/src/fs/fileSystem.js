@@ -1,5 +1,5 @@
 import { readdirSync } from 'fs';
-import path from 'path';
+import path from 'node:path';
 
 function loadFilesFromDir(dir, callback) {
   const files = [];

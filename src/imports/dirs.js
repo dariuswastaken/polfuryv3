@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path';
 
 const handlerDir = path.join(__dirname, '../../discord/handlers');
 const eventDir = path.join(__dirname, '../../discord/events');

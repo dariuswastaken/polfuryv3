@@ -1,5 +1,5 @@
 import fs from 'fs';
-import path from 'path';
+import path from 'node:path';
 
 const schemas = path.join(__dirname, '../mongo/schemas');
 
