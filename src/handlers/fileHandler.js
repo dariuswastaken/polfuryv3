@@ -11,7 +11,6 @@ let events = [];
 const loadEvents = async (path, collection, type) => {
   const itemModule = await import(path);
   const item = itemModule.default;
-  console.log(item)
   try {
     if (type === 'Slash Command' || type === 'Context Menu') {
       collection.set(item.data.name, item);
