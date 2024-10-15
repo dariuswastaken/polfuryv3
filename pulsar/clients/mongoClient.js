@@ -116,7 +116,7 @@ export default class MongoClient {
     try {
       const Schema = schemas[schema];
       if (!Schema) throw new Error(`[MONGO] Schema ${schema} not found`);
-      const documents = await Schema.find({});
+      const documents = ''
       return documents;
     } catch (error) {
       console.error(`[MONGO] Error fetching documents from schema: ${schema}`);
