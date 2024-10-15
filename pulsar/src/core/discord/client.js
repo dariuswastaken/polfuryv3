@@ -4,7 +4,7 @@ import {
   Partials,
   GatewayIntentBits
 } from 'npm:discord.js';
-import config from '../../../.config/config.json';
+import config from '../../../.config/config.json' assert { type: 'json' };
 
 const client = new Client({
   intents: [
