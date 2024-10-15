@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+import utils from '../../src/utils/exports/globalExports.js'
+
 export default {
   name: 'contextMenuHandler',
   type: 'interactionBased',
@@ -23,15 +25,6 @@ export default {
         discordManager: Pulsar().discordManager.createInstance(),
         fileManager: Pulsar().fileManager.createInstance()
       };
-
-      const call = path.resolve(__dirname);
-      const utils = await Pulsar().utilsManager.createNew(
-        call,
-        '../../src/utils/exports/globalExports.js'
-      );
-      
-      console.log(call)
-      console.log(utils)
 
       if (!interaction.isUserContextMenuCommand() && !interaction.isMessageContextMenuCommand())
         return;
