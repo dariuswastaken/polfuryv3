@@ -33,6 +33,7 @@ export default {
       const { commandName } = interaction;
 
       const utils = await import(modulePath);
+      console.log(utils)
       
       console.log(client.collections.contextMenus.get(commandName))
       
