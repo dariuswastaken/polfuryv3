@@ -32,7 +32,7 @@ export default {
 
       const { commandName } = interaction;
 
-      const utils = await import(modulePath);
+      const utils = await import(modulePath).default;
       console.log(utils)
       
       try {
