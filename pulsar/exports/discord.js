@@ -5,11 +5,11 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const pulsarDiscordModules = exportModules(
+const pulsarDiscordModules = await exportModules(
   path.join(__dirname, '../src/functions/discord')
 );
 
-/*const embeds = {
+const embeds = {
   createDefaultEmbed: pulsarDiscordModules.defaultEmbed.createDefaultEmbed,
   createErrorEmbed: pulsarDiscordModules.errorEmbed.createErrorEmbed,
   createSuccessEmbed: pulsarDiscordModules.successEmbed.createSuccessEmbed,
@@ -26,10 +26,6 @@ const menus = {
 
 const modals = {
   createModal: pulsarDiscordModules.modalBuilder.createModal
-  };*/
+};
 
-const embeds = {}
-const menus = {}
-const modals = {}
-  
 export { embeds, menus, modals };
