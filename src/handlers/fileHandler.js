@@ -32,13 +32,11 @@ const loadEvents = async (filePath, collection, type) => {
 };
 
 export const loadHandlers = async () => {
-  console.log(dirs.handlerDir)
   fileSystem.loadFilesFromDir(dirs.handlerDir, async (filePath) => {
     try {
       const handlerModule = await import(filePath);
       const handler = handlerModule.default;
       
-      console.log(handler)
       client.collections.handlers.set(handler.name, handler);
 
       if (typeof handler.execute === 'function') {
@@ -99,7 +97,6 @@ export const loadBaseFilesystem = async () => {
   for (const { dir, collection, type } of directories) {
     try {
       fileSystem.loadFilesFromDir(dir, async (filePath) => {
-        console.log(`[FILESYSTEM] Loading ${type} from: ${filePath}`);
         await loadEvents(filePath, collection, type);
       });
     } catch (e) {
