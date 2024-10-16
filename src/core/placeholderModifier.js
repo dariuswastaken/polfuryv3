@@ -14,20 +14,25 @@ export const replaceButtonPlaceholders = (buttons, placeholders) => {
 };
 
 export const replaceEmbedPlaceholders = (embed, placeholders) => {
-  return {
-    description: replacePlaceholder(embed.description, placeholders),
-    base: {
-      title: replacePlaceholder(embed.base.title, placeholders),
-      interaction: replacePlaceholder(embed.base.interaction, placeholders),
-      components: replacePlaceholder(embed.base.components, placeholders),
-      ephemeral: embed.base.ephemeral,
-      deferReply: embed.base.deferReply
+  const embedObj = Object.assign(
+    {
+      description: replacePlaceholder(embed.description, placeholders),
+      base: {
+        title: replacePlaceholder(embed.base.title, placeholders),
+        interaction: replacePlaceholder(embed.base.interaction, placeholders),
+        components: replacePlaceholder(embed.base.components, placeholders),
+        ephemeral: embed.base.ephemeral,
+        deferReply: embed.base.deferReply
+      }
     },
-    fields: embed.fields
-      ? embed.fields.map((field) => ({
-          name: replacePlaceholder(field.name, placeholders),
-          value: replacePlaceholder(field.value, placeholders)
-        }))
-      : undefined
-  };
+    embed.fields
+      ? {
+          fields: embed.fields.map((field) => ({
+            name: replacePlaceholder(field.name, placeholders),
+            value: replacePlaceholder(field.value, placeholders)
+          }))
+        }
+      : {}
+  );
+  return embedObj;
 };
