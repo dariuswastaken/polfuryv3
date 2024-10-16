@@ -1,4 +1,4 @@
-import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
+import { replaceButtonPlaceholders, replaceEmbedPlaceholders } from '../../../../core/placeholderModifier.js';
 
 export const sendListTypeSelectMenu = async (
   { pulsar, interaction, week },
@@ -13,15 +13,12 @@ export const sendListTypeSelectMenu = async (
     perLine: 2,
     buttons: buttons
   });
+  
+  const embedConstructor = botconfig.activityListMenusEmbedConstruct.embedConstructor;
+  const embed = replaceEmbedPlaceholders(embedConstructor, {
+    interaction: interaction,
+    rows: rows
+  });
 
-  await pulsar.discordManager.embeds.createDefaultEmbed(
-    'Alege o lista de mai jos.',
-    {
-      title: 'Meniu Selectare Lista',
-      interaction: interaction,
-      components: rows,
-      ephemeral: true,
-      deferReply: true
-    }
-  );
+  await pulsar.discordManager.embeds.createDefaultEmbed(embed.description, embed.base);
 };
