@@ -1,5 +1,4 @@
-//import mongo from '../../../src/mongo/mongoQueries.js';
-const mongo = {}
+import mongo from '../../../src/mongo/mongoQueries.js';
 
 export default {
   name: 'stringSelectMenuInteractionHandler',

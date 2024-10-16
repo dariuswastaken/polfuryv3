@@ -1,4 +1,3 @@
-//import utils from './exports/globalExports.js';
-import botconfig from '../botconfig/botconfig.js';
+import utils from './exports/globalExports.js';
 
-export {  botconfig };
+export { utils };
