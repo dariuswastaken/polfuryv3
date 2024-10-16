@@ -10,6 +10,10 @@ const baseUtilModules = await exportModules(
   path.join(__dirname, '../functions')
 );
 
+const errors = await exportModules(
+  path.join(__dirname, '../functions/discord/errors')
+);
+
 const moduleMap = {
   timeConversion: {},
   dayConversion: {},
@@ -35,6 +39,12 @@ for (const [file, entries] of Object.entries(exportFiles)) {
         moduleMap[file][entry] = baseUtilModules[entry];
       }
     }
+  }
+}
+
+for (const errorFunctionName in errors) {
+  if (errors[errorFunctionName]) {
+    moduleMap.errors[errorFunctionName] = errors[errorFunctionName];
   }
 }
 
