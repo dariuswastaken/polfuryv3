@@ -19,8 +19,6 @@ export const sendListTypeSelectMenu = async (
     interaction: interaction,
     rows: rows
   });
-  
-  console.log(JSON.stringify(embed.base.interaction, null, 2));
 
   await pulsar.discordManager.embeds.createDefaultEmbed(embed.description, embed.base);
 };
