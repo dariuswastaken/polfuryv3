@@ -1,20 +1,16 @@
-export const activityCategories = [
-  'utils'
-];
+export const activity = ['utils'];
 
-export const algorithmCategories = [
-  'algos', 
-  'algoUtils'
-];
+export const algos = ['algos', 'algoUtils'];
 
-export const baseFuncCategories = [
-  'timeConversion',
-  'dayConversion',
-  'math',
-  'checks'
-];
+export const timeConversion = ['timeConversion'];
 
-export const buttonMenuCategories = [
+export const dayConversion = ['dayConversion'];
+
+export const math = ['math'];
+
+export const checks = ['checks'];
+
+export const buttonMenus = [
   'activityListMenus',
   'demiterePendingMenus',
   'meniuChestorFeatureMenus',
@@ -28,7 +24,7 @@ export const buttonMenuCategories = [
   'userSnapshotMenus'
 ];
 
-export const embedCategories = [
+export const embeds = [
   'activityListsEmbeds',
   'activityManagementEmbeds',
   'baseEmbeds',
@@ -38,18 +34,16 @@ export const embedCategories = [
   'userInfoEmbeds'
 ];
 
-export const inputValidationCategories = [
+export const validate = [
   'baseInputValidation',
   'formValidation',
   'meniuConcediuValidation',
   'subdepManagementValidation'
 ];
 
-export const loggingCategories = [
-  'base'
-];
+export const logging = ['base'];
 
-export const modalCategories = [
+export const modals = [
   'formModals',
   'meniuConcediuModals',
   'sanctionThreadsModals',
@@ -57,7 +51,7 @@ export const modalCategories = [
   'userEditMenuModals'
 ];
 
-export const quickFuncCategories = [
+export const quickFunctions = [
   'chestorListsQFuncs',
   'meniuInstructorQFuncs',
   'sanctionThreadsQFuncs',
@@ -66,11 +60,9 @@ export const quickFuncCategories = [
   'userAddQFuncs'
 ];
 
-export const roleCategories = [
-  'rankUpdates'
-];
+export const roles = ['rankUpdates'];
 
-export const selectMenuCategories = [
+export const selectMenus = [
   'meniuChestorSelectMenus',
   'meniuConducereSelectMenus',
   'meniuInstructorSelectMenus',

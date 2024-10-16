@@ -10,32 +10,68 @@ const baseUtilModules = await exportModules(
   path.join(__dirname, '../functions')
 );
 
+const timeConversion = {};
+const dayConversion = {};
+const math = {};
+const checks = {};
+const buttonMenus = {};
+const embeds = {};
+const errors = {};
+const validate = {};
+const logging = {};
+const modals = {};
+const quickFunctions = {};
+const roles = {};
+const selectMenus = {};
+const algos = {};
+const activity = {};
+
+const moduleMap = {
+  activity,
+  algos,
+  timeConversion,
+  dayConversion,
+  math,
+  checks,
+  buttonMenus,
+  embeds,
+  validate,
+  logging,
+  modals,
+  quickFunctions,
+  roles,
+  selectMenus
+};
+
 for (const file of Object.keys(exportFiles)) {
-  for(const entry of exportFiles[file]) {
-    console.log(entry);
-  } 
+  const targetObject = moduleMap[file];
+  if (targetObject) {
+    for (const entry of exportFiles[file]) {
+      Object.assign(targetObject, entry);
+    }
+  }
 }
 
-/*const glbobalExports = {
-  timeConversion: baseUtilModules.baseFuncExports.timeConversion,
-  dayConversion: baseUtilModules.baseFuncExports.dayConversion,
-  math: baseUtilModules.baseFuncExports.math,
-  checks: baseUtilModules.baseFuncExports.checks,
+const globalExports = {
+  timeConversion: timeConversion,
+  dayConversion: dayConversion,
+  math: math,
+  checks: checks,
   discord: {
-    buttonMenus: baseUtilModules.buttonMenuExports.buttonMenus,
-    embeds: baseUtilModules.embedExports.embeds,
-    errors: baseUtilModules.errorEmbedExports.errors,
-    validate: baseUtilModules.inputValidationExports.validate,
-    logging: baseUtilModules.loggingExports.logging,
-    modals: baseUtilModules.modalExports.modals,
-    quickFunctions: baseUtilModules.quickFuncExports.quickFunctions,
-    roles: baseUtilModules.roleExports.roles,
-    selectMenus: baseUtilModules.selectMenuExports.selectMenus
+    buttonMenus: buttonMenus,
+    embeds: embeds,
+    errors: errors,
+    validate: validate,
+    logging: logging,
+    modals: modals,
+    quickFunctions: quickFunctions,
+    roles: roles,
+    selectMenus: selectMenus
   },
-  algorithms: baseUtilModules.algExports.algos,
+  algorithms: algos,
   activity: {
-    utils: baseUtilModules.activityUtilExports.utils
+    utils: activity
   }
-};*/
+};
 
-export default baseUtilModules;
+export default globalExports;
