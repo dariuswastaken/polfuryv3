@@ -14,6 +14,8 @@ export const sendListTypeSelectMenu = async (
     buttons: buttons
   });
   
+  console.log(interaction)
+  
   const embedConstructor = botconfig.activityListMenusEmbedConstruct.embedConstructor;
   const embed = await replaceEmbedPlaceholders(embedConstructor, {
     interaction: interaction,
