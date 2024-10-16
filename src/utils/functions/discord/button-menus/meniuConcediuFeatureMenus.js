@@ -2,8 +2,7 @@ import * as dayConversion from '../../base/dayConversion.js';
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
 
 export const sendMenuConcediu = async (
-  { pulsar, interaction, mongo },
-  botconfig
+  { pulsar, interaction, mongo }
 ) => {
   const currentWeek = await dayConversion.getCurrentWeek();
 

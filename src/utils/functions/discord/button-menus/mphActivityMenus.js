@@ -1,8 +1,7 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
 
 export const mphClockInSelect = async (
-  { pulsar, interaction, type },
-  botconfig
+  { pulsar, interaction, type }
 ) => {
   const nonFormattedButtons = botconfig.mphActivityMenusButtons.buttons;
   const buttonOptions = nonFormattedButtons[type];

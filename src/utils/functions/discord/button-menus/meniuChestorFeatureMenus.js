@@ -1,8 +1,7 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
 
 export const sendMenuChestor = async (
-  { pulsar, interaction, mongo, targetID },
-  botconfig
+  { pulsar, interaction, mongo, targetID }
 ) => {
   const targetProfile = await mongo.getProfile(targetID);
 
