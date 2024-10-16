@@ -6,9 +6,9 @@ import * as exportFiles from './exportFiles.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const baseUtilModules = await exportModules(
-  path.join(__dirname, '../functions')
-);
+for(const file of Object.keys(exportFiles)) {
+  console.log(file);
+}
 
 /*const glbobalExports = {
   timeConversion: baseUtilModules.baseFuncExports.timeConversion,
@@ -32,4 +32,4 @@ const baseUtilModules = await exportModules(
   }
 };*/
 
-export default baseUtilModules;
+export default {}
