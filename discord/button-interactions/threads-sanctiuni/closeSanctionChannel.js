@@ -17,13 +17,13 @@ export default {
 
     try {
       await user.send({
-        content: `Sanctiunea ta a fost marcata ca si **REZOLVATA**.\nMai jos ai transcriptul sanctiunii tale.\n\n**ID Sanctiune:** ${sanctionID}`,
-        files: [
+        content: `Sanctiunea ta a fost marcata ca si **REZOLVATA**\n**ID Sanctiune:** ${sanctionID}`,
+        /*files: [
           {
             attachment: transcript,
             name: `transcript-sanctiune-${userID}-${sanctionID}.html`
           }
-        ]
+          ]*/
       });
     } catch (e) {
       console.log(
