@@ -111,6 +111,6 @@ export const loadBaseFilesystem = async () => {
     }
   }
 
-  printTable(events);
+  await printTable(events);
   console.log('[FILESYSTEM] Filesystem has been loaded.');
 };
