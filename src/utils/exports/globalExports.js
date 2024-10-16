@@ -1,13 +1,18 @@
 import { exportModules } from '../../fs/baseExportFSModule.js';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import * as exportFiles from './exportFiles.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const baseUtilModules = await exportModules(
-  path.join(__dirname, './core-util-exports')
+  path.join(__dirname, '../functions')
 );
+
+for(const file of Object.keys(exportFiles)) {
+  console.log(file);
+}
 
 /*const glbobalExports = {
   timeConversion: baseUtilModules.baseFuncExports.timeConversion,
