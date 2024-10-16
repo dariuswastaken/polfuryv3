@@ -1,3 +1,5 @@
+import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
+
 export const sendSubdepMemberList = async ({
   pulsar,
   interaction,
@@ -7,7 +9,7 @@ export const sendSubdepMemberList = async ({
   title,
   mongoQuery,
   depType
-}) => {
+}, botconfig) => {
   const members = await mongo.getAllMembers();
 
   let rankAbbreviations = {
@@ -41,19 +43,10 @@ export const sendSubdepMemberList = async ({
     removedCount = await mongo.getRemoved(mongoQuery);
   }
 
-  const buttons = [
-    {
-      id: `${subdep.toLowerCase()}-menu-user-activity`,
-      style: 'Secondary',
-      label: '📋 Activitate Membru'
-    },
-    {
-      id: `${subdep.toLowerCase()}-wipe`,
-      style: 'Danger',
-      label: '🗑️ Wipe',
-      disabled: true
-    }
-  ];
+  const nonFormattedButtons = botconfig.subdepManagementEmbedsButtons.buttons;
+  const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
+    subdep: subdep.toLowerCase()
+  });
 
   const rows = await pulsar.discordManager.menus.createButtonMenu({
     perLine: 2,
