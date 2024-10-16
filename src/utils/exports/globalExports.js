@@ -6,15 +6,31 @@ import * as exportFiles from './exportFiles.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const baseUtilModules = await exportModules(path.join(__dirname, '../functions'));
+const baseUtilModules = await exportModules(
+  path.join(__dirname, '../functions')
+);
 
 const categories = [
-  'timeConversion', 'dayConversion', 'math', 'checks',
-  'buttonMenus', 'embeds', 'errors', 'validate', 'logging',
-  'modals', 'quickFunctions', 'roles', 'selectMenus', 'algos', 'activity'
+  'timeConversion',
+  'dayConversion',
+  'math',
+  'checks',
+  'buttonMenus',
+  'embeds',
+  'errors',
+  'validate',
+  'logging',
+  'modals',
+  'quickFunctions',
+  'roles',
+  'selectMenus',
+  'algos',
+  'activity'
 ];
 
-const moduleMap = Object.fromEntries(categories.map(category => [category, {}]));
+const moduleMap = Object.fromEntries(
+  categories.map((category) => [category, {}])
+);
 
 for (const [file, entries] of Object.entries(exportFiles)) {
   if (moduleMap[file]) {
@@ -38,12 +54,12 @@ const globalExports = {
     modals: moduleMap.modals,
     quickFunctions: moduleMap.quickFunctions,
     roles: moduleMap.roles,
-    selectMenus: moduleMap.selectMenus,
+    selectMenus: moduleMap.selectMenus
   },
   algorithms: moduleMap.algos,
   activity: {
-    utils: moduleMap.activity,
-  },
+    utils: moduleMap.activity
+  }
 };
 
 export default globalExports;
