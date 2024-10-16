@@ -10,9 +10,8 @@ export const sendUpList = async ({
   let formattedArray = [];
   for (let userID of upList.list) {
     const member = await mongo.getProfile(userID);
-    console.log(member);
 
-    if (member.dataActualizare) {
+    if (member.dataActualizare !== null) {
       const [day, month, year] = await member.dataActualizare.split('.');
       const dataActualizareF = `${year}-${month}-${day}`;
       const dataActualizare = new Date(dataActualizareF);
@@ -83,54 +82,56 @@ export const sendOutList = async ({
   for (let userID of outList.list) {
     const member = await mongo.getProfile(userID);
 
-    const [day, month, year] = await member.dataActualizare.split('.');
-    const dataActualizareF = `${year}-${month}-${day}`;
-    const dataActualizare = new Date(dataActualizareF);
-    const dataCurenta = new Date();
-    const diffInDays = await utils.dayConversion.getDifferenceInDays(
-      dataActualizare,
-      dataCurenta
-    );
+    if (member.dataActualizare !== null) {
+      const [day, month, year] = await member.dataActualizare.split('.');
+      const dataActualizareF = `${year}-${month}-${day}`;
+      const dataActualizare = new Date(dataActualizareF);
+      const dataCurenta = new Date();
+      const diffInDays = await utils.dayConversion.getDifferenceInDays(
+        dataActualizare,
+        dataCurenta
+      );
 
-    const userActivity = await mongo.getActivity(member.IDDiscord, week);
+      const userActivity = await mongo.getActivity(member.IDDiscord, week);
 
-    if (!userActivity) {
-      continue;
+      if (!userActivity) {
+        continue;
+      }
+
+      const actions = await utils.activity.utils.getActionActivity(
+        week,
+        member.IDDiscord,
+        member.grad,
+        pulsar.client
+      );
+
+      let concediu = await mongo.getLeave(member.IDDiscord, week);
+      if (!concediu) concediu = { days: [] };
+
+      let activityGrade = await utils.algorithms.gradeAlgorithm(member.grad, {
+        activity: userActivity.data.pontaj,
+        reports: userActivity.data.rapoarte,
+        fines: userActivity.data.amenzi,
+        calls: userActivity.data.apeluri,
+        actions: actions,
+        leaveDays: concediu.days.length
+      });
+
+      let gradeRating = await utils.activity.utils.gradeRating(
+        activityGrade,
+        concediu.days.length
+      );
+
+      if (activityGrade > 10) activityGrade = 10;
+
+      if (diffInDays < 7) {
+        continue;
+      }
+
+      formattedArray.push(
+        `[${member.callsign}] ${member.nume} | Nota: ${activityGrade} | Rating: ${gradeRating} | Zile: ${diffInDays} | Zile de concediu: ${concediu.days.length}`
+      );
     }
-
-    const actions = await utils.activity.utils.getActionActivity(
-      week,
-      member.IDDiscord,
-      member.grad,
-      pulsar.client
-    );
-
-    let concediu = await mongo.getLeave(member.IDDiscord, week);
-    if (!concediu) concediu = { days: [] };
-
-    let activityGrade = await utils.algorithms.gradeAlgorithm(member.grad, {
-      activity: userActivity.data.pontaj,
-      reports: userActivity.data.rapoarte,
-      fines: userActivity.data.amenzi,
-      calls: userActivity.data.apeluri,
-      actions: actions,
-      leaveDays: concediu.days.length
-    });
-
-    let gradeRating = await utils.activity.utils.gradeRating(
-      activityGrade,
-      concediu.days.length
-    );
-
-    if (activityGrade > 10) activityGrade = 10;
-
-    if (diffInDays < 7) {
-      continue;
-    }
-
-    formattedArray.push(
-      `[${member.callsign}] ${member.nume} | Nota: ${activityGrade} | Rating: ${gradeRating} | Zile: ${diffInDays} | Zile de concediu: ${concediu.days.length}`
-    );
   }
 
   await pulsar.discordManager.embeds.createEmbed({
