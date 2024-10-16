@@ -23,11 +23,11 @@ export const replaceEmbedPlaceholders = (embed, placeholders) => {
       ephemeral: embed.base.ephemeral,
       deferReply: embed.base.deferReply
     },
-    fields: embed.fields.map((field) => {
-      return {
-        name: replacePlaceholder(field.name, placeholders),
-        value: replacePlaceholder(field.value, placeholders)
-      };
-    })
+    fields: embed.fields
+      ? embed.fields.map((field) => ({
+          name: replacePlaceholder(field.name, placeholders),
+          value: replacePlaceholder(field.value, placeholders)
+        }))
+      : undefined
   };
 };
