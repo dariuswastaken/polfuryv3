@@ -2,14 +2,15 @@ import * as dirs from '../imports/dirs.js';
 import { Pulsar } from '../../pulsar/index.pulsar.js';
 import { printTable } from 'npm:console-table-printer';
 
-import { utils } from '../utils/dependencies.js';
+import { botconfig } from '../utils/dependencies.js';
+const utils = {}
 
-const botconfig = {}
 const fileSystem = Pulsar().fileManager.createInstance();
 const client = Pulsar().client;
 let events = [];
 
 const loadEvents = async (filePath, collection, type) => {
+  console.log(botconfig)
   try {
     const itemModule = await import(filePath);
     const item = itemModule.default;
