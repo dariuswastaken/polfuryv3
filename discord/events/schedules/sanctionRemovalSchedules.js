@@ -1,9 +1,8 @@
 import nodeSchedule from 'npm:node-schedule';
-import mongo from '../../../src/mongo/mongoQueries.js';
 
 export default {
   name: 'sanctionRemovalSchedules',
-  async execute(Pulsar) {
+  async execute(Pulsar, mongo) {
     const sanctions = await mongo.getAllSanctions();
     
     for (let sanction of sanctions) {

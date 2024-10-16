@@ -1,11 +1,13 @@
 import * as dirs from '../imports/dirs.js';
 import { Pulsar } from '../../pulsar/index.pulsar.js';
 import { exportModules } from '../fs/baseExportFSModule.js';
-
-import utils from '../../src/utils/exports/globalExports.js';
+import createGlobalUtilExports from '../../src/utils/exports/globalExports.js';
 import createBotconfig from '../botconfig/botconfig.js';
+import createMongoQueries from '../mongo/mongoQueries.js';
 
 const botconfig = await createBotconfig(exportModules);
+const utils = await createGlobalUtilExports(exportModules);
+const mongo = await createMongoQueries(exportModules);
 
 const fileSystem = Pulsar().fileManager.createInstance();
 const client = Pulsar().client;
@@ -21,7 +23,7 @@ const loadEvents = async (filePath, collection, type) => {
       events.push({ name: item.data.name, type, loaded: '✅' });
     } else if (type === 'Event') {
       collection.set(item.name, item);
-      await item.execute(Pulsar);
+      await item.execute(Pulsar, mongo);
       events.push({ name: item.name, type, loaded: '✅' });
     } else {
       collection.set(item.name, item);
@@ -43,7 +45,7 @@ export const loadHandlers = async () => {
       client.collections.handlers.set(handler.name, handler);
 
       if (typeof handler.execute === 'function') {
-        await handler.execute(Pulsar, utils, botconfig);
+        await handler.execute(Pulsar, utils, botconfig, mongo);
         events.push({ name: handler.name, type: 'Handler', loaded: '✅' });
       } else {
         console.error(

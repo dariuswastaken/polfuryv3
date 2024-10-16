@@ -1,10 +1,8 @@
-import mongo from '../../../src/mongo/mongoQueries.js';
-
 export default {
   name: 'buttonInteractionEventHandler',
   type: 'interactionBased',
   enabled: true,
-  async execute(Pulsar, utils, botconfig) {
+  async execute(Pulsar, utils, botconfig, mongo) {
     Pulsar().client.on('interactionCreate', async (interaction) => {
       if (interaction.user.bot) return;
       if (!interaction.isButton()) return;
