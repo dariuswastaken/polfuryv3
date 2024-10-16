@@ -1,7 +1,7 @@
 export default {
   name: 'modal-sanction-reason-input',
   enabled: true,
-  async execute(pulsar, interaction, mongo, utils) {
+  async execute(pulsar, interaction, mongo, utils, botconfig) {
     await interaction.deferReply({ ephemeral: true });
 
     const sanctionID = interaction.customId.split('/')[1];
@@ -26,13 +26,16 @@ export default {
 
     await mongo.updateSanctionReason(sanctionID, validate.reason);
 
-    await utils.discord.quickFunctions.createSanctionThread({
-      pulsar: pulsar,
-      utils: utils,
-      interaction: interaction,
-      mongo: mongo,
-      sanction: sanction,
-      reason: validate.reason
-    });
+    await utils.discord.quickFunctions.createSanctionThread(
+      {
+        pulsar: pulsar,
+        utils: utils,
+        interaction: interaction,
+        mongo: mongo,
+        sanction: sanction,
+        reason: validate.reason
+      },
+      botconfig
+    );
   }
 };
