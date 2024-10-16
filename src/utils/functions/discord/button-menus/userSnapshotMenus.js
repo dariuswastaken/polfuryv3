@@ -7,7 +7,7 @@ export const sendSnapshotOverview = async ({
   targetID,
   snapshotID,
   type
-}) => {
+}, botconfig) => {
   let snapshot = await mongo.getUserSnapshot(targetID, snapshotID);
 
   const nonFormattedButtons = botconfig.userSnapshotMenusButtons.buttons;

@@ -1,7 +1,8 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
 
 export const sendListTypeSelectMenu = async (
-  { pulsar, interaction, week }
+  { pulsar, interaction, week },
+  botconfig
 ) => {
   const nonFormattedButtons = botconfig.activityListMenusButtons.buttons;
   const buttons = replaceButtonPlaceholders(nonFormattedButtons, {

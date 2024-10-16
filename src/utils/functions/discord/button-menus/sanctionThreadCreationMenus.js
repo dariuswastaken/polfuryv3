@@ -1,7 +1,8 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
 
 export const sendSanctionMenu = async (
-  { pulsar, interaction, mongo, targetID, sanctionID }
+  { pulsar, interaction, mongo, targetID, sanctionID },
+  botconfig
 ) => {
   const nonFormattedButtons =
     botconfig.sanctionThreadCreationMenusButtons.buttons;

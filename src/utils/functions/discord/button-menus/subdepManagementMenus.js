@@ -1,7 +1,8 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
 
 export const sendSubdepMenu = async (
-  { pulsar, interaction, mongo }
+  { pulsar, interaction, mongo },
+  botconfig
 ) => {
   const subdepLeadRoles = {
     Radio: {
