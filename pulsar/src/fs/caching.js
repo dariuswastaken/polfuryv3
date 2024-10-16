@@ -14,7 +14,7 @@ export const createLogsManager = async () => {
     })
     .replace(', ', '_');
 
-  const logsDir = '../../../logs';
+  const logsDir = '../logs';
 
   if (!fs.existsSync(path.join(__dirname, logsDir))) {
     fs.mkdirSync(path.join(__dirname, logsDir));
