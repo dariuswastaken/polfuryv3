@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const mongoQueries = await exportModules(path.join(__dirname, './functions'));
+/*const mongoQueries = await exportModules(path.join(__dirname, './functions'));
 
 const categories = [
   'baseActivityQueries',
@@ -33,6 +33,8 @@ for (const category of categories) {
   if (mongoQueries[category]) {
     Object.assign(queryExports, mongoQueries[category]);
   }
-}
+  }*/
+  
+const queryExports = {};
 
 export default queryExports;
