@@ -3,31 +3,20 @@ import {
   ChannelType,
   PermissionsBitField
 } from 'discord.js';
+import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
 
-export const createSanctionThread = async ({
-  pulsar,
-  utils,
-  interaction,
-  mongo,
-  sanction,
-  reason
-}) => {
+export const createSanctionThread = async (
+  { pulsar, utils, interaction, mongo, sanction, reason },
+  botconfig
+) => {
   const forum = await interaction.guild.channels.cache.get(
     '1205145266349670440'
   );
 
-  const buttons = [
-    {
-      id: `sanction-thread-send/${sanction.sanctionID}`,
-      style: 'Success',
-      label: '📩 Trimite Sanctiunea'
-    },
-    {
-      id: `sanction-thread-cancel/${sanction.sanctionID}`,
-      style: 'Danger',
-      label: '❌ Anuleaza Sanctiunea'
-    }
-  ];
+  const nonFormattedButtons = botconfig.sanctionThreadsQFuncsButtons.buttons;
+  const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
+    sanctionid: sanction.sanctionID
+  });
 
   const rows = await pulsar.discordManager.menus.createButtonMenu({
     perLine: 2,
