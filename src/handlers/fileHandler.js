@@ -10,7 +10,6 @@ const client = Pulsar().client;
 let events = [];
 
 const loadEvents = async (filePath, collection, type) => {
-  console.log(botconfig)
   try {
     const itemModule = await import(filePath);
     const item = itemModule.default;
