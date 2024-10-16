@@ -1,4 +1,4 @@
-const buttons = [
+export const buttons = [
   {
     id: `sanction-thread-send/%sanctionid%`,
     style: 'Success',
