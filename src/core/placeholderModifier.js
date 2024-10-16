@@ -20,8 +20,8 @@ export const replaceEmbedPlaceholders = async (embed, placeholders) => {
       description: await replacePlaceholder(embed.description, placeholders),
       base: {
         title: await replacePlaceholder(embed.base.title, placeholders),
-        interaction: await replacePlaceholder(embed.base.interaction, placeholders),
-        components: await replacePlaceholder(embed.base.components, placeholders),
+        interaction: placeholders.interaction,
+        components: placeholders.rows,
         ephemeral: embed.base.ephemeral,
         deferReply: embed.base.deferReply
       }
