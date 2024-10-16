@@ -1,3 +1,5 @@
+import { Buffer } from "https://deno.land/std@0.185.0/io/mod.ts";
+
 export const createChannelTranscript = async ({
   interaction,
   channelID,
