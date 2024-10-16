@@ -10,10 +10,6 @@ const baseUtilModules = await exportModules(
   path.join(__dirname, '../functions')
 );
 
-for(const file of Object.keys(exportFiles)) {
-  console.log(file);
-}
-
 /*const glbobalExports = {
   timeConversion: baseUtilModules.baseFuncExports.timeConversion,
   dayConversion: baseUtilModules.baseFuncExports.dayConversion,
