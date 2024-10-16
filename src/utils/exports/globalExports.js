@@ -6,72 +6,44 @@ import * as exportFiles from './exportFiles.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const baseUtilModules = await exportModules(
-  path.join(__dirname, '../functions')
-);
+const baseUtilModules = await exportModules(path.join(__dirname, '../functions'));
 
-const timeConversion = {};
-const dayConversion = {};
-const math = {};
-const checks = {};
-const buttonMenus = {};
-const embeds = {};
-const errors = {};
-const validate = {};
-const logging = {};
-const modals = {};
-const quickFunctions = {};
-const roles = {};
-const selectMenus = {};
-const algos = {};
-const activity = {};
+const categories = [
+  'timeConversion', 'dayConversion', 'math', 'checks',
+  'buttonMenus', 'embeds', 'errors', 'validate', 'logging',
+  'modals', 'quickFunctions', 'roles', 'selectMenus', 'algos', 'activity'
+];
 
-const moduleMap = {
-  activity,
-  algos,
-  timeConversion,
-  dayConversion,
-  math,
-  checks,
-  buttonMenus,
-  embeds,
-  validate,
-  logging,
-  modals,
-  quickFunctions,
-  roles,
-  selectMenus
-};
+const moduleMap = Object.fromEntries(categories.map(category => [category, {}]));
 
-for (const file of Object.keys(exportFiles)) {
-  const targetObject = moduleMap[file];
-  if (targetObject) {
-    for (const entry of exportFiles[file]) {
-      Object.assign(targetObject, entry);
+for (const [file, entries] of Object.entries(exportFiles)) {
+  if (moduleMap[file]) {
+    for (const entry of entries) {
+      Object.assign(moduleMap[file], entry);
     }
   }
 }
 
 const globalExports = {
-  timeConversion: timeConversion,
-  dayConversion: dayConversion,
-  math: math,
-  checks: checks,
+  timeConversion: moduleMap.timeConversion,
+  dayConversion: moduleMap.dayConversion,
+  math: moduleMap.math,
+  checks: moduleMap.checks,
   discord: {
-    buttonMenus: buttonMenus,
-    embeds: embeds,
-    errors: errors,
-    validate: validate,
-    logging: logging,
-    modals: modals,
-    quickFunctions: quickFunctions,
-    roles: roles,
-    selectMenus: selectMenus
+    buttonMenus: moduleMap.buttonMenus,
+    embeds: moduleMap.embeds,
+    errors: moduleMap.errors,
+    validate: moduleMap.validate,
+    logging: moduleMap.logging,
+    modals: moduleMap.modals,
+    quickFunctions: moduleMap.quickFunctions,
+    roles: moduleMap.roles,
+    selectMenus: moduleMap.selectMenus,
   },
-  algorithms: algos,
+  algorithms: moduleMap.algos,
   activity: {
-    utils: activity
-  }
+    utils: moduleMap.activity,
+  },
 };
 
 export default globalExports;
