@@ -6,13 +6,16 @@ export default {
     .setDescription('Deschide meniul de gestionare a subdepartamentelor')
     .setDefaultMemberPermissions(PermissionsBitField.Flags.ManageNicknames),
   enabled: true,
-  async execute(pulsar, interaction, mongo, utils) {
+  async execute(pulsar, interaction, mongo, utils, botconfig) {
     await interaction.deferReply({ ephemeral: true });
 
-    await utils.discord.buttonMenus.sendSubdepMenu({
-      pulsar: pulsar,
-      interaction: interaction,
-      mongo: mongo
-    });
+    await utils.discord.buttonMenus.sendSubdepMenu(
+      {
+        pulsar: pulsar,
+        interaction: interaction,
+        mongo: mongo
+      },
+      botconfig
+    );
   }
 };

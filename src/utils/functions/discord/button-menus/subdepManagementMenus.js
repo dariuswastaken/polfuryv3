@@ -82,12 +82,10 @@ export const sendSubdepMenu = async (
   );
 };
 
-export const sendSubdepSubMenu = async ({
-  pulsar,
-  interaction,
-  subdep,
-  type
-}) => {
+export const sendSubdepSubMenu = async (
+  { pulsar, interaction, subdep, type },
+  botconfig
+) => {
   const nonFormattedButtons =
     botconfig.subdepManagementMenusButtons.subdepSubMenu.buttons;
   const buttons = replaceButtonPlaceholders(nonFormattedButtons, {

@@ -10,7 +10,7 @@ export default {
     .setType(ApplicationCommandType.User)
     .setDefaultMemberPermissions(PermissionsBitField.Flags.ChangeNickname),
   enabled: true,
-  async execute(pulsar, interaction, mongo, utils) {
+  async execute(pulsar, interaction, mongo, utils, botconfig) {
     await interaction.deferReply({ ephemeral: true });
 
     const targetID = await interaction.options.getUser('user').id;
@@ -21,17 +21,20 @@ export default {
       return;
     }
 
-    if(targetID === interaction.user.id) {
+    if (targetID === interaction.user.id) {
       await utils.discord.errors.selfUseError(pulsar, interaction);
       return;
     }
 
-    await utils.discord.buttonMenus.sendMenuInstructor({
-      pulsar: pulsar,
-      interaction: interaction,
-      mongo: mongo,
-      utils: utils,
-      targetID: targetID
-    });
+    await utils.discord.buttonMenus.sendMenuInstructor(
+      {
+        pulsar: pulsar,
+        interaction: interaction,
+        mongo: mongo,
+        utils: utils,
+        targetID: targetID
+      },
+      botconfig
+    );
   }
 };

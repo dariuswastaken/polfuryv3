@@ -1,7 +1,7 @@
 export default {
   name: 'meniu-concediu',
   enabled: true,
-  async execute(pulsar, interaction, mongo, utils) {
+  async execute(pulsar, interaction, mongo, utils, botconfig) {
     await interaction.deferReply({ ephemeral: true });
 
     const profile = await mongo.getProfile(interaction.user.id);
@@ -10,10 +10,13 @@ export default {
       return;
     }
 
-    await  utils.discord.buttonMenus.sendMenuConcediu({
-      pulsar: pulsar,
-      interaction: interaction,
-      mongo: mongo
-    });
+    await utils.discord.buttonMenus.sendMenuConcediu(
+      {
+        pulsar: pulsar,
+        interaction: interaction,
+        mongo: mongo
+      },
+      botconfig
+    );
   }
 };

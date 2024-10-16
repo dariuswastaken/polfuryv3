@@ -1,7 +1,7 @@
 export default {
   name: 'modal-sanction-callsign-input',
   enabled: true,
-  async execute(pulsar, interaction, mongo, utils) {
+  async execute(pulsar, interaction, mongo, utils, botconfig) {
     await interaction.deferReply({ ephemeral: true });
 
     const validate = await utils.discord.validate.callsignInput({
@@ -15,12 +15,15 @@ export default {
 
     const sanctionID = await pulsar.utilsManager.uniques.createUniqueID();
 
-    await utils.discord.buttonMenus.sendSanctionMenu({
-      pulsar: pulsar,
-      interaction: interaction,
-      mongo: mongo,
-      targetID: validate.profile.IDDiscord,
-      sanctionID: sanctionID,
-    });
+    await utils.discord.buttonMenus.sendSanctionMenu(
+      {
+        pulsar: pulsar,
+        interaction: interaction,
+        mongo: mongo,
+        targetID: validate.profile.IDDiscord,
+        sanctionID: sanctionID
+      },
+      botconfig
+    );
   }
 };

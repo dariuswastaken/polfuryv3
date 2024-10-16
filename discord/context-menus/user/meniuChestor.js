@@ -10,7 +10,7 @@ export default {
     .setType(ApplicationCommandType.User)
     .setDefaultMemberPermissions(PermissionsBitField.Flags.Administrator),
   enabled: true,
-  async execute(pulsar, interaction, mongo, utils) {
+  async execute(pulsar, interaction, mongo, utils, botconfig) {
     await interaction.deferReply({ ephemeral: true });
 
     if (!interaction.member.roles.cache.some((r) => r.id === '1119645178148442152')) {
@@ -25,13 +25,16 @@ export default {
       await utils.discord.errors.noProfileError(pulsar, interaction);
       return;
     }
-    
-    await utils.discord.buttonMenus.sendMenuChestor({
-      pulsar: pulsar,
-      interaction: interaction,
-      mongo: mongo,
-      utils: utils,
-      targetID: targetID
-    });
+
+    await utils.discord.buttonMenus.sendMenuChestor(
+      {
+        pulsar: pulsar,
+        interaction: interaction,
+        mongo: mongo,
+        utils: utils,
+        targetID: targetID
+      },
+      botconfig
+    );
   }
 };

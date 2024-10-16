@@ -1,6 +1,9 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
 
-export const sendUserEditMenu = async ({ pulsar, interaction, targetID }, botconfig) => {
+export const sendUserEditMenu = async (
+  { pulsar, interaction, targetID },
+  botconfig
+) => {
   const nonFormattedButtons = botconfig.userEditMenusButtons.buttons.editMenu;
   const buttons = replaceButtonPlaceholders(nonFormattedButtons, {
     targetid: targetID
@@ -23,12 +26,10 @@ export const sendUserEditMenu = async ({ pulsar, interaction, targetID }, botcon
   );
 };
 
-export const sendMenuDeleteUser = async ({
-  pulsar,
-  interaction,
-  mongo,
-  targetID
-}) => {
+export const sendMenuDeleteUser = async (
+  { pulsar, interaction, mongo, targetID },
+  botconfig
+) => {
   const uID = await pulsar.utilsManager.uniques.createUniqueID();
   const targetProfile = await mongo.getProfile(targetID);
 

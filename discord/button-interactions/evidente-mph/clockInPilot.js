@@ -1,7 +1,7 @@
 export default {
   name: 'pilot-clock-in',
   enabled: false,
-  async execute(pulsar, interaction, mongo, utils) {
+  async execute(pulsar, interaction, mongo, utils, botconfig) {
     await interaction.deferReply({ ephemeral: true });
 
     const profile = await mongo.getProfile(interaction.user.id);
@@ -27,10 +27,13 @@ export default {
       return;
     }
 
-    await utils.discord.buttonMenus.mphClockInSelect({
-      pulsar: pulsar,
-      interaction: interaction,
-      type: 'pilot'
-    });
+    await utils.discord.buttonMenus.mphClockInSelect(
+      {
+        pulsar: pulsar,
+        interaction: interaction,
+        type: 'pilot'
+      },
+      botconfig
+    );
   }
 };
