@@ -9,6 +9,8 @@ export default {
       if (interaction.user.bot) return;
       if (!interaction.isButton()) return;
       
+      console.log(utils)
+      
       const client = Pulsar().client;
 
       const pulsar = {
