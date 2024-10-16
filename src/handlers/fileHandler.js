@@ -1,9 +1,12 @@
 import * as dirs from '../imports/dirs.js';
 import { Pulsar } from '../../pulsar/index.pulsar.js';
 import { printTable } from 'npm:console-table-printer';
+import { exportModules } from '../fs/baseExportFSModule.js';
 
 import utils from '../../src/utils/exports/globalExports.js';
-import botconfig from '../botconfig/botconfig.js';
+import createBotconfig from '../botconfig/botconfig.js';
+
+const botconfig = await createBotconfig(exportModules);
 
 const fileSystem = Pulsar().fileManager.createInstance();
 const client = Pulsar().client;
