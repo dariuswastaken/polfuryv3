@@ -6,7 +6,11 @@ import * as exportFiles from './exportFiles.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-for(const file of Object.keys(exportFiles)) {
+const baseUtilModules = await exportModules(
+  path.join(__dirname, '../../functions')
+);
+
+for (const file of Object.keys(exportFiles)) {
   console.log(file);
 }
 
@@ -32,4 +36,4 @@ for(const file of Object.keys(exportFiles)) {
   }
 };*/
 
-export default {}
+export default {};
