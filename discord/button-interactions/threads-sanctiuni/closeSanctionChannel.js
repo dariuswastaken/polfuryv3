@@ -7,14 +7,11 @@ export default {
     const userID = interaction.customId.split('/')[1];
     const sanctionID = interaction.customId.split('/')[2];
 
-    const transcript =
-      await utils.discord.quickFunctions.createChannelTranscript({
+    const transcript = await utils.discord.quickFunctions.createChannelTranscript({
         interaction: interaction,
         channelID: interaction.channel.id,
         type: 'Sanctiune'
       });
-
-    Deno.writeFile(`transcript-${userID}-${sanctionID}.html`, transcript);
 
     const user = await interaction.guild.members.fetch(userID);
 
@@ -33,9 +30,7 @@ export default {
         `[DISCORD ERROR] Could not send transcript to ${userID}\n${e.stack}`
       );
     }
-
-    await Deno.remove(`transcript-${userID}-${sanctionID}.html`);
-
+    
     await interaction.channel.delete();
   }
 };
