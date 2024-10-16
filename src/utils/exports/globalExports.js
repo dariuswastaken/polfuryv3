@@ -38,25 +38,36 @@ for (const [file, entries] of Object.entries(exportFiles)) {
   }
 }
 
+const flattenModules = (module) => {
+  return Object.keys(module).reduce((acc, key) => {
+    if (typeof module[key] === 'object' && !Array.isArray(module[key])) {
+      Object.assign(acc, module[key]);
+    } else {
+      acc[key] = module[key];
+    }
+    return acc;
+  }, {});
+};
+
 const globalExports = {
-  timeConversion: moduleMap.timeConversion,
-  dayConversion: moduleMap.dayConversion,
-  math: moduleMap.math,
-  checks: moduleMap.checks,
+  timeConversion: flattenModules(moduleMap.timeConversion),
+  dayConversion: flattenModules(moduleMap.dayConversion),
+  math: flattenModules(moduleMap.math),
+  checks: flattenModules(moduleMap.checks),
   discord: {
-    buttonMenus: moduleMap.buttonMenus,
-    embeds: moduleMap.embeds,
-    errors: moduleMap.errors,
-    validate: moduleMap.validate,
-    logging: moduleMap.logging,
-    modals: moduleMap.modals,
-    quickFunctions: moduleMap.quickFunctions,
-    roles: moduleMap.roles,
-    selectMenus: moduleMap.selectMenus
+    buttonMenus: flattenModules(moduleMap.buttonMenus),
+    embeds: flattenModules(moduleMap.embeds),
+    errors: flattenModules(moduleMap.errors),
+    validate: flattenModules(moduleMap.validate),
+    logging: flattenModules(moduleMap.logging),
+    modals: flattenModules(moduleMap.modals),
+    quickFunctions: flattenModules(moduleMap.quickFunctions),
+    roles: flattenModules(moduleMap.roles),
+    selectMenus: flattenModules(moduleMap.selectMenus)
   },
-  algorithms: moduleMap.algos,
+  algorithms: flattenModules(moduleMap.algos),
   activity: {
-    utils: moduleMap.activity
+    utils: flattenModules(moduleMap.activity)
   }
 };
 
