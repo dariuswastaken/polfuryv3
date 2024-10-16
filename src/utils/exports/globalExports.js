@@ -10,32 +10,30 @@ const baseUtilModules = await exportModules(
   path.join(__dirname, '../functions')
 );
 
-const categories = [
-  'timeConversion',
-  'dayConversion',
-  'math',
-  'checks',
-  'buttonMenus',
-  'embeds',
-  'errors',
-  'validate',
-  'logging',
-  'modals',
-  'quickFunctions',
-  'roles',
-  'selectMenus',
-  'algos',
-  'activity'
-];
-
-const moduleMap = Object.fromEntries(
-  categories.map((category) => [category, {}])
-);
+const moduleMap = {
+  timeConversion: {},
+  dayConversion: {},
+  math: {},
+  checks: {},
+  buttonMenus: {},
+  embeds: {},
+  errors: {},
+  validate: {},
+  logging: {},
+  modals: {},
+  quickFunctions: {},
+  roles: {},
+  selectMenus: {},
+  algos: {},
+  activity: {}
+};
 
 for (const [file, entries] of Object.entries(exportFiles)) {
   if (moduleMap[file]) {
     for (const entry of entries) {
-      Object.assign(moduleMap[file], entry);
+      if (baseUtilModules[entry]) {
+        moduleMap[file][entry] = baseUtilModules[entry];
+      }
     }
   }
 }
