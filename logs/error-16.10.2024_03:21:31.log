@@ -1,0 +1,18 @@
+[16.10.2024 03:21:56] [WEB ERROR] Failed to fetch: AxiosError: timeout of 5000ms exceeded
+[16.10.2024 03:22:09] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by dariusss7
+TypeError: utils.discord.errors.noActivityError is not a function
+    at Object.execute (file:///home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:16:34)
+    at Object.runMicrotasks (ext:core/01_core.js:672:26)
+    at processTicksAndRejections (ext:deno_node/_next_tick.ts:57:10)
+    at runNextTicks (ext:deno_node/_next_tick.ts:75:3)
+    at eventLoopTick (ext:core/01_core.js:182:21)
+    at async Client.<anonymous> (file:///home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:40:13)
+[16.10.2024 03:22:09] [BUTTON INTERACTION EVENT ERROR] Button interaction: activitate-membru failed to execute by dariusss7
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ButtonInteraction.deferReply (file:///home/halvapi/.cache/deno/npm/registry.npmjs.org/discord.js/14.16.3/src/structures/interfaces/InteractionResponses.js:70:46)
+    at Object.execute (file:///home/halvapi/Dev/polfury/discord/button-interactions/info-membru/activitate.js:5:23)
+    at Client.<anonymous> (file:///home/halvapi/Dev/polfury/discord/handlers/interaction-events/buttonInteractionHandler.js:66:26)
+    at Object.runMicrotasks (ext:core/01_core.js:672:26)
+    at processTicksAndRejections (ext:deno_node/_next_tick.ts:57:10)
+    at runNextTicks (ext:deno_node/_next_tick.ts:75:3)
+    at eventLoopTick (ext:core/01_core.js:182:21)

@@ -1,0 +1,58 @@
+[16.10.2024 03:10:53] [SYSTEM] Error handler deployed.
+[16.10.2024 03:10:53] [FILESYSTEM] Loading filesystem...
+[16.10.2024 03:10:53] ┐
+┤
+┘
+[16.10.2024 03:10:53] [FILESYSTEM] Filesystem has been loaded.
+[16.10.2024 03:10:54] [MONGO] Connected to MongoDB
+[16.10.2024 03:10:55] [SCHEDULER] Sanction removal schedules have been set.
+[16.10.2024 03:10:56] [DISCORD API] Connected to Discord API.
+[16.10.2024 03:10:56] [DISCORD API] Started refreshing application (/) commands.
+[16.10.2024 03:10:56] [SCHEDULER] Activity update schedules have been deployed.
+[16.10.2024 03:10:56] [DISCORD API] Successfully reloaded application (/) commands.
+[16.10.2024 03:10:59] {
+  botconfig: [Module: null prototype] {
+    default: [AsyncFunction: createBotconfig]
+  },
+  userSnapshotMenusButtons: [Module: null prototype] { buttons: [ [Object] ] },
+  sanctionThreadCreationMenusButtons: [Module: null prototype] {
+    buttons: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ]
+  },
+  mphActivityMenusButtons: [Module: null prototype] {
+    buttons: { moto: [Array], highspeed: [Array], pilot: [Array] }
+  },
+  activityListMenusButtons: [Module: null prototype] { buttons: [ [Object], [Object] ] },
+  meniuConcediuFeatureMenusButtons: [Module: null prototype] {
+    buttons: [ [Object], [Object] ],
+    loopButtons: [ [Object] ]
+  },
+  demiterePendingMenusButtons: [Module: null prototype] { buttons: [ [Object], [Object] ] },
+  meniuInstructorFeatureMenusButtons: [Module: null prototype] {
+    buttons: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
+  },
+  meniuConducereFeatureMenusButtons: [Module: null prototype] {
+    buttons: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
+  },
+  meniuChestorFeatureMenusButtons: [Module: null prototype] {
+    buttons: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ]
+  },
+  userEditMenusButtons: [Module: null prototype] {
+    buttons: { editMenu: [Array], deleteUser: [Array] }
+  },
+  subdepManagementMenusButtons: [Module: null prototype] {
+    subdepMenu: { loopedButton: [Array] },
+    subdepSubMenu: { buttons: [Array] }
+  }
+}
