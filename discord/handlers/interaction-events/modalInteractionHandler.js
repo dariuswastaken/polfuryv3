@@ -1,4 +1,5 @@
-import mongo from '../../../src/mongo/mongoQueries.js';
+//import mongo from '../../../src/mongo/mongoQueries.js';
+const mongo = {}
 
 export default {
   name: 'modalInteractionEventHandler',
