@@ -14,25 +14,35 @@ export const replaceButtonPlaceholders = (buttons, placeholders) => {
 };
 
 export const replaceEmbedPlaceholders = async (embed, placeholders) => {
+  const handlePlaceholder = async (value) => {
+    if (typeof value === 'object' && value !== null) {
+      return value;
+    }
+    return await replacePlaceholder(value, placeholders);
+  };
+
   const embedObj = Object.assign(
     {
-      description: await replacePlaceholder(embed.description, placeholders),
+      description: await handlePlaceholder(embed.description),
       base: {
-        title: await replacePlaceholder(embed.base.title, placeholders),
-        interaction: await replacePlaceholder(embed.base.interaction, placeholders),
-        components: await replacePlaceholder(embed.base.components, placeholders),
+        title: await handlePlaceholder(embed.base.title),
+        interaction: await handlePlaceholder(embed.base.interaction),
+        components: await handlePlaceholder(embed.base.components),
         ephemeral: embed.base.ephemeral,
         deferReply: embed.base.deferReply
       }
     },
     embed.fields
       ? {
-          fields: embed.fields.map((field) => ({
-            name: replacePlaceholder(field.name, placeholders),
-            value: replacePlaceholder(field.value, placeholders)
-          }))
+          fields: await Promise.all(
+            embed.fields.map(async (field) => ({
+              name: await handlePlaceholder(field.name),
+              value: await handlePlaceholder(field.value)
+            }))
+          )
         }
       : {}
   );
+
   return embedObj;
 };
