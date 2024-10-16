@@ -13,14 +13,14 @@ export const replaceButtonPlaceholders = (buttons, placeholders) => {
   });
 };
 
-export const replaceEmbedPlaceholders = (embed, placeholders) => {
+export const replaceEmbedPlaceholders = async (embed, placeholders) => {
   const embedObj = Object.assign(
     {
-      description: replacePlaceholder(embed.description, placeholders),
+      description: await replacePlaceholder(embed.description, placeholders),
       base: {
-        title: replacePlaceholder(embed.base.title, placeholders),
-        interaction: replacePlaceholder(embed.base.interaction, placeholders),
-        components: replacePlaceholder(embed.base.components, placeholders),
+        title: await replacePlaceholder(embed.base.title, placeholders),
+        interaction: await replacePlaceholder(embed.base.interaction, placeholders),
+        components: await replacePlaceholder(embed.base.components, placeholders),
         ephemeral: embed.base.ephemeral,
         deferReply: embed.base.deferReply
       }

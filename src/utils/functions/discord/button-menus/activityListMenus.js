@@ -15,12 +15,10 @@ export const sendListTypeSelectMenu = async (
   });
   
   const embedConstructor = botconfig.activityListMenusEmbedConstruct.embedConstructor;
-  const embed = replaceEmbedPlaceholders(embedConstructor, {
+  const embed = await replaceEmbedPlaceholders(embedConstructor, {
     interaction: interaction,
     rows: rows
   });
 
-  console.log(embed.base.base);
-  
   await pulsar.discordManager.embeds.createDefaultEmbed(embed.description, embed.base);
 };
