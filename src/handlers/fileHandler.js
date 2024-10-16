@@ -1,6 +1,5 @@
 import * as dirs from '../imports/dirs.js';
 import { Pulsar } from '../../pulsar/index.pulsar.js';
-import { printTable } from 'npm:console-table-printer';
 import { exportModules } from '../fs/baseExportFSModule.js';
 
 import utils from '../../src/utils/exports/globalExports.js';
@@ -110,7 +109,6 @@ export const loadBaseFilesystem = async () => {
       console.error(e);
     }
   }
-
-  await printTable(events);
+  
   console.log('[FILESYSTEM] Filesystem has been loaded.');
 };
