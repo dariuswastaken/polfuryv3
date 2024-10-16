@@ -3,7 +3,7 @@ import * as fileExports from '../exports/files.js';
 const fileManager = {
   createInstance: () => {
     return {
-      createCacheManager: fileExports.createCacheManager,
+      createLogsManager: fileExports.createLogsManager,
       loadFilesFromDir: fileExports.loadFilesFromDir
     };
   }

@@ -16,7 +16,7 @@ const init = {
       readyState = 1;
 
       await fileManager.createCacheManager();
-      processManager.createErrorHandler();
+      await processManager.createErrorHandler();
       
       await fileHandler.loadHandlers();
       await fileHandler.loadBaseFilesystem();

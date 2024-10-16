@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export const createCacheManager = async () => {
+export const createLogsManager = async () => {
   const date = new Date();
   let formattedDate = date
     .toLocaleString('de-DE', {
@@ -14,14 +14,14 @@ export const createCacheManager = async () => {
     })
     .replace(', ', '_');
 
-  const cacheDir = '../../../.cache';
+  const logsDir = '../../../logs';
 
-  if (!fs.existsSync(path.join(__dirname, cacheDir))) {
-    fs.mkdirSync(path.join(__dirname, cacheDir));
+  if (!fs.existsSync(path.join(__dirname, logsDir))) {
+    fs.mkdirSync(path.join(__dirname, logsDir));
   }
 
-  const outPath = path.join(__dirname, cacheDir, `log-${formattedDate}.log`);
-  const errPath = path.join(__dirname, cacheDir, `error-${formattedDate}.log`);
+  const outPath = path.join(__dirname, logsDir, `log-${formattedDate}.log`);
+  const errPath = path.join(__dirname, logsDir, `error-${formattedDate}.log`);
 
   const out = fs.createWriteStream(outPath);
   const err = fs.createWriteStream(errPath);

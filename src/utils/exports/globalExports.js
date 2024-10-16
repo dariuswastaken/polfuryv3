@@ -11,7 +11,9 @@ const baseUtilModules = await exportModules(
 );
 
 for (const file of Object.keys(exportFiles)) {
-  console.log(file);
+  for(const entry of exportFiles[file]) {
+    console.log(entry);
+  } 
 }
 
 /*const glbobalExports = {
