@@ -2,8 +2,7 @@ import * as dirs from '../imports/dirs.js';
 import { Pulsar } from '../../pulsar/index.pulsar.js';
 import { printTable } from 'npm:console-table-printer';
 
-import utils from '../../src/utils/exports/globalExports.js';
-import botconfig from '../botconfig/botconfig.js';
+import { botconfig, utils } from '../utils/dependencies.js';
 
 const fileSystem = Pulsar().fileManager.createInstance();
 const client = Pulsar().client;
