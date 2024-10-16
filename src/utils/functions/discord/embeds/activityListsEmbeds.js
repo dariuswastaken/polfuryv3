@@ -10,6 +10,7 @@ export const sendUpList = async ({
   let formattedArray = [];
   for (let userID of upList.list) {
     const member = await mongo.getProfile(userID);
+    console.log(member);
 
     if (member.dataActualizare) {
       const [day, month, year] = await member.dataActualizare.split('.');
