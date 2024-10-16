@@ -15,9 +15,10 @@ export const replaceButtonPlaceholders = (buttons, placeholders) => {
 
 export const replaceEmbedPlaceholders = async (embed, placeholders) => {
   const handlePlaceholder = async (value) => {
-    if (typeof value === 'object' && value !== null) {
-      return value;
+    if (value === '%interaction%') {
+      return JSON.stringify(placeholders.interaction);
     }
+
     return await replacePlaceholder(value, placeholders);
   };
 
