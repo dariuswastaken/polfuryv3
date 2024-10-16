@@ -13,6 +13,8 @@ export default {
       type: 'Sanctiune'
     });
 
+    Deno.writeFile(`transcript-${type}-${channelID}.html`, transcript)
+    
     const user = await interaction.guild.members.fetch(userID);
 
     try {
@@ -30,6 +32,8 @@ export default {
         `[DISCORD ERROR] Could not send transcript to ${userID}\n${e.stack}`
       );
     }
+    
+    await Deno.remove(`transcript-${type}-${channelID}.html`)
 
     await interaction.channel.delete();
   }

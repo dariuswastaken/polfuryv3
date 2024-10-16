@@ -1,5 +1,3 @@
-import { Buffer } from "https://deno.land/std@0.185.0/io/mod.ts";
-
 export const createChannelTranscript = async ({
   interaction,
   channelID,
@@ -49,6 +47,8 @@ export const createChannelTranscript = async ({
         </html>
         `;
 
-  const transcript = Buffer.from(transcriptHTML, 'utf-8');
+  const encoder = new TextEncoder();
+  const transcript = encoder.encode(transcriptHTML);
+  
   return transcript;
 };
