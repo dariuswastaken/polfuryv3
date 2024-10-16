@@ -11,7 +11,7 @@ export const sendUpList = async ({
   for (let userID of upList.list) {
     const member = await mongo.getProfile(userID);
 
-    if (member.dataActualizare !== null) {
+    if (member) {
       const [day, month, year] = await member.dataActualizare.split('.');
       const dataActualizareF = `${year}-${month}-${day}`;
       const dataActualizare = new Date(dataActualizareF);
@@ -82,7 +82,7 @@ export const sendOutList = async ({
   for (let userID of outList.list) {
     const member = await mongo.getProfile(userID);
 
-    if (member.dataActualizare !== null) {
+    if (member) {
       const [day, month, year] = await member.dataActualizare.split('.');
       const dataActualizareF = `${year}-${month}-${day}`;
       const dataActualizare = new Date(dataActualizareF);
