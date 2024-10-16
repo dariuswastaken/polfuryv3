@@ -38,13 +38,21 @@ for (const [file, entries] of Object.entries(exportFiles)) {
   }
 }
 
+const flattenObject = (obj) => {
+  const flat = {};
+  for (const key in obj) {
+    Object.assign(flat, obj[key]);
+  }
+  return flat;
+};
+
 const globalExports = {
   timeConversion: moduleMap.timeConversion,
   dayConversion: moduleMap.dayConversion,
   math: moduleMap.math,
   checks: moduleMap.checks,
   discord: {
-    buttonMenus: moduleMap.buttonMenus,
+    buttonMenus: flattenObject(moduleMap.buttonMenus),
     embeds: moduleMap.embeds,
     errors: moduleMap.errors,
     validate: moduleMap.validate,
