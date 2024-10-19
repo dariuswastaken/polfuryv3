@@ -1,31 +1,31 @@
 export const buttons = [
   {
-    id: `global-stats/pontaj`,
+    id: `top-stats/pontaj`,
     style: 'Secondary',
     label: '⌚ Top Pontaj'
   },
   {
-    id: `global-stats/rapoarte`,
+    id: `top-stats/rapoarte`,
     style: 'Secondary',
     label: '📋 Rapoarte'
   },
   {
-    id: `global-stats/amenzi`,
+    id: `top-stats/amenzi`,
     style: 'Secondary',
     label: '🗒️ Amenzi'
   },
   {
-    id: `global-stats/apeluri`,
+    id: `top-stats/apeluri`,
     style: 'Secondary',
     label: '📞 Apeluri'
   },
   {
-    id: `global-stats/rutiera`,
+    id: `top-stats/rutiera`,
     style: 'Secondary',
     label: '🚗 Actiuni Rutiere'
   },
   {
-    id: `global-stats/licente`,
+    id: `top-stats/licente`,
     style: 'Secondary',
     label: '🚗 Actiuni Licente'
   }
