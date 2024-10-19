@@ -10,6 +10,7 @@ export default {
     const top = await mongo.getTop(week, type);
     let formattedTop = [];
     for (let i = 0; i < top.length; i++) {
+      console.log(top[i]);
       const user = await mongo.getProfile(top.IDDiscord);
       console.log(user);
       formattedTop.push(
