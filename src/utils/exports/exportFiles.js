@@ -1,17 +1,31 @@
-export const activity = ['utils'];
+export const activity = [
+  'utils'
+];
 
-export const algos = ['algos', 'algoUtils'];
+export const algos = [
+  'algos', 
+  'algoUtils'
+];
 
-export const timeConversion = ['timeConversion'];
+export const timeConversion = [
+  'timeConversion'
+];
 
-export const dayConversion = ['dayConversion'];
+export const dayConversion = [
+  'dayConversion'
+];
 
-export const math = ['math'];
+export const math = [
+  'math'
+];
 
-export const checks = ['checks'];
+export const checks = [
+  'checks'
+];
 
 export const buttonMenus = [
   'activityListMenus',
+  'activityTopStatsMenus',
   'demiterePendingMenus',
   'meniuChestorFeatureMenus',
   'meniuConcediuFeatureMenus',
@@ -41,7 +55,9 @@ export const validate = [
   'subdepManagementValidation'
 ];
 
-export const logging = ['base'];
+export const logging = [
+  'base'
+];
 
 export const modals = [
   'formModals',
@@ -60,7 +76,9 @@ export const quickFunctions = [
   'userAddQFuncs'
 ];
 
-export const roles = ['rankUpdates'];
+export const roles = [
+  'rankUpdates'
+];
 
 export const selectMenus = [
   'meniuChestorSelectMenus',
