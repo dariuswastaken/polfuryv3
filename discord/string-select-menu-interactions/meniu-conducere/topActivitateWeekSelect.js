@@ -11,6 +11,7 @@ export default {
     let formattedTop = [];
     for (let i = 0; i < top.length; i++) {
       const user = await mongo.getProfile(top.IDDiscord);
+      console.log(user);
       formattedTop.push(
         `${i}. ${user.nume} - ${top.data[type]} ${type === pontaj ? ' minute' : ''}`
       );
