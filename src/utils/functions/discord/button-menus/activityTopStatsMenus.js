@@ -1,6 +1,6 @@
 import { replaceButtonPlaceholders } from '../../../../core/placeholderModifier.js';
 
-export const sendActivityTopStatsMenu = async (
+export const sendActivityTopMenu = async (
   { pulsar, interaction },
   botconfig
 ) => {
