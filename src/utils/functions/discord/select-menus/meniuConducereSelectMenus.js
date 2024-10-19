@@ -35,7 +35,7 @@ export const sendRankChoiceMenu = async ({ pulsar, interaction, targetID }) => {
   );
 };
 
-export const sendWeekChoiceMenu = async ({ pulsar, interaction, mongo, title }) => {
+export const sendWeekChoiceMenu = async ({ pulsar, interaction, mongo, type, title }) => {
   const activityWeeks = await mongo.getAllActivityWeeks();
   let options = [];
   for (let week of activityWeeks) {
@@ -47,7 +47,7 @@ export const sendWeekChoiceMenu = async ({ pulsar, interaction, mongo, title }) 
   const menu = await pulsar.discordManager.menus.createSelectMenu({
     type: 'string',
     options: options,
-    id: `top-activity-week-select/${interaction.user.id}`,
+    id: `top-activity-week-select/${interaction.user.id}/${type}`,
     placeholder: 'Alege o saptamana'
   });
 
