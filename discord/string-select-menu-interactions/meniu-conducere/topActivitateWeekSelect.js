@@ -8,7 +8,20 @@ export default {
     const week = interaction.values[0];
 
     const top = await mongo.getTop(week, type);
-    
-    console.log(top);
+    let formattedTop = [];
+    for (let i = 0; i < top.length; i++) {
+      const user = await mongo.getProfile(top.IDDiscord);
+      formattedTop.push(
+        `${i}. ${user.nume} - ${top.data[type]} ${type === pontaj ? ' minute' : ''}`
+      );
+    }
+
+    await utils.discord.embeds.sendTopActivityEmbed({
+      pulsar: pulsar,
+      interaction: interaction,
+      type: type,
+      week: week,
+      list: formattedTop
+    });
   }
 };
