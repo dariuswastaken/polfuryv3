@@ -5,6 +5,7 @@ import {
   GatewayIntentBits
 } from 'npm:discord.js';
 import config from '../../../.config/config.json' with { type: 'json' };
+import "jsr:@std/dotenv/load";
 
 const client = new Client({
   intents: [
@@ -37,8 +38,6 @@ client.collections = {
   modalInteractionEvents: new Collection(),
   stringSelectMenuInteractionEvents: new Collection()
 };
-
-client.guildID = Deno.env.get('GUILD_ID');
 
 client.config = config.client;
 

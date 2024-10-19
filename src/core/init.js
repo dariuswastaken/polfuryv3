@@ -1,5 +1,6 @@
 import * as fileHandler from '../handlers/fileHandler.js';
 import { Pulsar } from '../../pulsar/index.pulsar.js';
+import "jsr:@std/dotenv/load";
 
 const client = Pulsar().client;
 const fileManager = Pulsar().fileManager.createInstance();

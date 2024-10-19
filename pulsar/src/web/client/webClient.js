@@ -1,5 +1,6 @@
 import axiosRetry from 'npm:axios-retry';
 import axios from 'npm:axios';
+import "jsr:@std/dotenv/load";
 
 export default class WebClient {
   constructor() {
