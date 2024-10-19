@@ -10,11 +10,9 @@ export default {
     const top = await mongo.getTop(week, type);
     let formattedTop = [];
     for (let i = 0; i < top.length; i++) {
-      console.log(top[i]);
-      const user = await mongo.getProfile(top.IDDiscord);
-      console.log(user);
+      const user = await mongo.getProfile(top[i].IDDiscord);
       formattedTop.push(
-        `${i}. ${user.nume} - ${top.data[type]} ${type === pontaj ? ' minute' : ''}`
+        `${i + 1}. ${user.nume} - ${top[i].data[type]} ${type === pontaj ? ' minute' : ''}`
       );
     }
 
