@@ -16,6 +16,9 @@ export default {
       );
     }
 
+    if (formattedTop.length === 0)
+      formattedTop.push('Nu exista date pentru aceasta saptamana.');
+
     await utils.discord.embeds.sendTopActivityEmbed({
       pulsar: pulsar,
       interaction: interaction,
