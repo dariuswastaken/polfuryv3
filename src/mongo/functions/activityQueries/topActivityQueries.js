@@ -5,7 +5,7 @@ export const getTop = async (week, type) => {
     'Activitate',
     { perioada: week },
     {
-      [`data.${type}`]: 1
+      [`data.${type}`]: -1
     }
   );
   return top.slice(0, 5);
