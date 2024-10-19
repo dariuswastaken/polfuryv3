@@ -12,7 +12,7 @@ export default {
     for (let i = 0; i < top.length; i++) {
       const user = await mongo.getProfile(top[i].IDDiscord);
       formattedTop.push(
-        `${i + 1}. ${user.nume} - ${top[i].data[type]} ${type === `pontaj` ? ' minute' : ''}`
+        `${user.nume} - ${top[i].data[type]} ${type === `pontaj` ? ' minute' : ''}`
       );
     }
 
