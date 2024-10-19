@@ -11,11 +11,9 @@ export default {
     let formattedTop = [];
     for (let i = 0; i < top.length; i++) {
       const user = await mongo.getProfile(top[i].IDDiscord);
-      if (user !== null) {
-        formattedTop.push(
-          `${user.nume} - ${top[i].data[type]} ${type === `pontaj` ? ' minute' : ''}`
-        );
-      }
+      formattedTop.push(
+        `${user.nume} - ${top[i].data[type]} ${type === `pontaj` ? ' minute' : ''}`
+      );
     }
 
     await utils.discord.embeds.sendTopActivityEmbed({
