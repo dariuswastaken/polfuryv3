@@ -30,6 +30,5 @@ export const buttons = [
     id: `top-activitate/%targetid%`,
     style: 'Secondary',
     label: '📈 Top Activitate',
-    disabled: true
   }
 ];
