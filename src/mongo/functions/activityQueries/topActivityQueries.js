@@ -8,5 +8,12 @@ export const getTop = async (week, type) => {
       [`data.${type}`]: -1
     }
   );
-  return top.slice(0, 5);
+  let filteredArray = [];
+  for (let i = 0; i < top.length; i++) {
+    const user = await db.find('Member', { IDDiscord: top[i].IDDiscord });
+    if (user !== null) {
+      filteredArray.push(top[i]);
+    }
+  }
+  return filteredArray.slice(0, 5);
 };
