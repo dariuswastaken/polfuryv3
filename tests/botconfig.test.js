@@ -1,1 +1,0 @@
-import botconfig from '../../src/botconfig/botconfig.js';

@@ -38,7 +38,7 @@ client.collections = {
   stringSelectMenuInteractionEvents: new Collection()
 };
 
-client.guildID = process.env.GUILD_ID;
+client.guildID = Deno.env.get('GUILD_ID');
 
 client.config = config.client;
 

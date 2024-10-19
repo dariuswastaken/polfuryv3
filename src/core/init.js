@@ -21,7 +21,7 @@ const init = {
       await fileHandler.loadHandlers();
       await fileHandler.loadBaseFilesystem();
 
-      client.login(process.env.DISCORD_TOKEN);
+      client.login(Deno.env.get('DISCORD_TOKEN'));
     } catch (error) {
       console.error(error);
       readyState = 0;

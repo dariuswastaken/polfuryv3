@@ -21,7 +21,7 @@ export default class WebClient {
     try {
       const response = await this.axiosInstance.get(url, {
         headers: {
-          'x-api-key': process.env.WEB_API_KEY
+          'x-api-key': Deno.env.get('WEB_API_KEY')
         }
       });
       return response.data;
