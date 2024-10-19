@@ -5,8 +5,13 @@ export default {
     await interaction.deferReply({ ephemeral: true });
 
     const type = interaction.customId.split('/')[1];
-    
-    const top = await mongo.getTop(type);
-    console.log(top);
+
+    await utils.discord.selectMenus.sendWeekChoiceMenu({
+      pulsar: pulsar,
+      interaction: interaction,
+      mongo: mongo,
+      type: type,
+      title: 'Meniu Selectare Top Activitate'
+    });
   }
 };
