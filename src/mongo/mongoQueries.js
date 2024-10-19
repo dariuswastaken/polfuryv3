@@ -9,6 +9,7 @@ export default async function createMongoQueries(exportModules) {
 
   const categories = [
     'baseActivityQueries',
+    'topActivityQueries',
     'userLeaveQueries',
     'callsignUpdateQueries',
     'acProfileQueries',
