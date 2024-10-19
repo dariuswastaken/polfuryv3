@@ -21,4 +21,5 @@ export const sendActivityTopStatsMenu = async (
       ephemeral: true,
       deferReply: true
     }
+  )
 };
