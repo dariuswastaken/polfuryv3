@@ -1,8 +1,12 @@
 import { db } from '../../../handlers/mongoConnectionHandler.js';
 
-export const getTop = async (type) => {
-  const top = await db.getAllWSort('Activitate', {
-    [`${type}`]: 1
-  });
+export const getTop = async (week, type) => {
+  const top = await db.findMoreWSort(
+    'Activitate',
+    { perioada: week },
+    {
+      [`${type}`]: 1
+    }
+  );
   return top.slice(0, 5);
 };
