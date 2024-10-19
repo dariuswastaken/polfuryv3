@@ -45,7 +45,8 @@ export const embeds = [
   'meniuInstructorEmbeds',
   'subdepManagementEmbeds',
   'userActivityEmbeds',
-  'userInfoEmbeds'
+  'userInfoEmbeds',
+  'activityTopStatsEmbeds'
 ];
 
 export const validate = [
