@@ -4,10 +4,12 @@ export default {
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 
-    await utils.discord.selectMenus.sendListDeleteWeekChoiceMenu({
+    await utils.discord.selectMenus.sendChestorWeekChoiceMenu({
       pulsar: pulsar,
       interaction: interaction,
-      mongo: mongo
+      mongo: mongo,
+      customID: 'list-delete-select',
+      title: 'Meniu Selectare Saptamana - Stergere Liste'
     });
   }
 };

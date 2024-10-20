@@ -31,7 +31,7 @@ export const sendChestorRankChoiceMenu = async ({
   );
 };
 
-export const sendWeekChoiceMenu = async ({ pulsar, interaction, mongo }) => {
+export const sendChestorWeekChoiceMenu = async ({ pulsar, interaction, mongo, customID, title }) => {
   const activityWeeks = await mongo.getAllActivityWeeks();
   let options = [];
   for (let week of activityWeeks) {
@@ -43,14 +43,14 @@ export const sendWeekChoiceMenu = async ({ pulsar, interaction, mongo }) => {
   const menu = await pulsar.discordManager.menus.createSelectMenu({
     type: 'string',
     options: options,
-    id: `creare-lista-week-select/${interaction.user.id}`,
+    id: `${customID}/${interaction.user.id}`,
     placeholder: 'Alege o saptamana'
   });
 
   await pulsar.discordManager.embeds.createDefaultEmbed(
     'Alege o saptamana din meniul de mai jos.',
     {
-      title: 'Creare Lista Activitate',
+      title: title,
       interaction: interaction,
       components: [menu],
       ephemeral: true,

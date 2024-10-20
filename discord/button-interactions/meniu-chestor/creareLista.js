@@ -4,10 +4,12 @@ export default {
   async execute(pulsar, interaction, mongo, utils) {
     await interaction.deferReply({ ephemeral: true });
 
-    await utils.discord.selectMenus.sendWeekChoiceMenu({
+    await utils.discord.selectMenus.sendChestorWeekChoiceMenu({
       pulsar: pulsar,
       interaction: interaction,
-      mongo: mongo
+      mongo: mongo,
+      customID: 'creare-lista-week-select',
+      title: 'Creare Lista Activitate'
     });
   }
 };
