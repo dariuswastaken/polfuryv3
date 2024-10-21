@@ -12,8 +12,10 @@ export default {
 
         let formattedTop = [];
         let actionTop = [];
+        console.log("Passed line 15")
         if (type === 'rutiera' || type === 'licente') {
             for (let i = 0; i < members.length; i++) {
+              console.log(members[i].IDDiscord);
                 const user = await mongo.getProfile(members[i].IDDiscord);
                 let actions = await utils.activity.utils.getActionActivity(
                     week,
@@ -28,6 +30,7 @@ export default {
             }
             actionTop.sort((a, b) => b.data[type] - a.data[type]);
             formattedTop = actionTop.slice(0, 5);
+            console.log("Passed line 33")
         } else {
             for (let i = 0; i < top.length; i++) {
                 const user = await mongo.getProfile(top[i].IDDiscord);
