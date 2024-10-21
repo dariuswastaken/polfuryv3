@@ -13,6 +13,7 @@ export default {
         let formattedTop = [];
         let actionTopOrg = [];
         let actionTopPart = [];
+        
         if (type === 'rutiera' || type === 'licente') {
             for (let i = 0; i < members.length; i++) {
                 let tip = '';
@@ -41,16 +42,18 @@ export default {
                     });
                 }
             }
+
             actionTopOrg = actionTopOrg.sort((a, b) => b.data[type] - a.data[type]);
-            actionTopOrg = actionTopOrg.slice(0, 5);
+            actionTopPart = actionTopOrg.slice(0, 5);
 
             actionTopPart = actionTopPart.sort((a, b) => b.data[type] - a.data[type]);
             actionTopPart = actionTopPart.slice(0, 5);
 
+            formattedTop.push('ORGANIZATE');
             for (let i = 0; i < actionTopOrg.length; i++) {
                 formattedTop.push(`${actionTopOrg[i].nume} - ${actionTopOrg[i].data[type]}`);
             }
-            formattedTop.push('\n\n\nORGANIZATE')  ;
+            formattedTop.push('\n\n\nPARTICIPATE');
             for (let i = 0; i < actionTopPart.length; i++) {
                 formattedTop.push(`${actionTopPart[i].nume} - ${actionTopPart[i].data[type]}`);
             }
@@ -68,11 +71,10 @@ export default {
         }
 
         await utils.discord.embeds.sendTopActivityEmbed({
-            pulsar: pulsar,
             interaction: interaction,
             type: type,
             week: week,
-            list: ['test']
+            list: formattedTop
         });
     }
 };
