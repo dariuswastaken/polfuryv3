@@ -43,7 +43,7 @@ export default {
             }
 
             actionTopOrg = actionTopOrg.sort((a, b) => b.data[type] - a.data[type]);
-            actionTopPart = actionTopOrg.slice(0, 5);
+            actionTopOrg = actionTopOrg.slice(0, 5);
 
             actionTopPart = actionTopPart.sort((a, b) => b.data[type] - a.data[type]);
             actionTopPart = actionTopPart.slice(0, 5);
