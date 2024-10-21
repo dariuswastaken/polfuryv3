@@ -97,8 +97,14 @@ export const getActionActivity = async (period, id, rank, client) => {
             rutiereChannel.messages.fetch({ limit: 100 })
         ]);
 
-        let mentions = 0;
-        let organizate = 0;
+        let mentions = {
+            licente: 0,
+            rutiere: 0
+        };
+        let organizate = {
+            licente: 0,
+            rutiere: 0
+        }
 
         const filterByIDandDate = (msg) => {
             return (
@@ -114,17 +120,17 @@ export const getActionActivity = async (period, id, rank, client) => {
 
             mentionsLicente.forEach(async (msg) => {
                 if (msg.content.includes(`<@${id}>`)) {
-                    mentions++;
+                    mentions.licente++;
                 } else {
-                    mentions = mentions;
+                    mentions.licente = mentions.licente;
                 }
             });
 
             mentionsRutiere.forEach(async (msg) => {
                 if (msg.content.includes(`<@${id}>`)) {
-                    mentions++;
+                    mentions.rutiere++;
                 } else {
-                    mentions = mentions;
+                    mentions.rutiere = mentions.rutiere;
                 }
             });
 
@@ -135,17 +141,17 @@ export const getActionActivity = async (period, id, rank, client) => {
 
             organizateLicente.forEach(async (msg) => {
                 if (msg.author.id === id) {
-                    organizate++;
+                    organizate.licente++;
                 } else {
-                    organizate = organizate;
+                    organizate.licente = organizate.licente;
                 }
             });
 
             organizateRutiere.forEach(async (msg) => {
                 if (msg.author.id === id) {
-                    organizate++;
+                    organizate.rutiere++;
                 } else {
-                    organizate = organizate;
+                    organizate.rutiere = organizate.rutiere;
                 }
             });
 
