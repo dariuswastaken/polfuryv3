@@ -11,9 +11,11 @@ export default {
         const members = await mongo.getAllMembers();
 
         let formattedTop = [];
-        let actionTop = [];
+        let actionTopOrg = [];
+        let actionTopPart = [];
         if (type === 'rutiera' || type === 'licente') {
             for (let i = 0; i < members.length; i++) {
+                let tip = '';
                 const loopPercentage = Math.floor((i / members.length) * 100);
                 await interaction.editReply({
                     content: `**Se calculeaza... (${loopPercentage}%)**`
@@ -26,15 +28,32 @@ export default {
                     members[i].grad,
                     pulsar.client
                 );
-                actionTop.push({
-                    nume: user.nume,
-                    data: actions
-                });
+
+                if (user.grad === 'Cadet' || user.grad === 'Agent') {
+                    actionTopPart.push({
+                        nume: user.nume,
+                        data: actions
+                    });
+                } else {
+                    actionTopOrg.push({
+                        nume: user.nume,
+                        data: actions
+                    });
+                }
             }
-            actionTop.sort((a, b) => b.data[type] - a.data[type]);
-            actionTop = actionTop.slice(0, 5);
-            for (let i = 0; i < actionTop.length; i++) {
-                formattedTop.push(`${actionTop[i].nume} - ${actionTop[i].data[type]}`);
+            actionTopOrg = actionTopOrg.sort((a, b) => b.data[type] - a.data[type]);
+            actionTopOrg = actionTopOrg.slice(0, 5);
+
+            actionTopPart = actionTopPart.sort((a, b) => b.data[type] - a.data[type]);
+            actionTopPart = actionTopPart.slice(0, 5);
+
+            formattedTop.push('PARTICIPATE\n\n\n');
+            for (let i = 0; i < actionTopOrg.length; i++) {
+                formattedTop.push(`${actionTopOrg[i].nume} - ${actionTopOrg[i].data[type]}`);
+            }
+            formattedTop.push('\n\n\nORGANIZATE');
+            for (let i = 0; i < actionTopPart.length; i++) {
+                formattedTop.push(`${actionTopPart[i].nume} - ${actionTopPart[i].data[type]}`);
             }
         } else {
             for (let i = 0; i < top.length; i++) {
