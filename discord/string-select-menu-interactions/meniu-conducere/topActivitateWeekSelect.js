@@ -8,12 +8,33 @@ export default {
         const week = interaction.values[0];
 
         const top = await mongo.getTop(week, type);
+        const members = await mongo.getAllMembers();
+
         let formattedTop = [];
-        for (let i = 0; i < top.length; i++) {
-            const user = await mongo.getProfile(top[i].IDDiscord);
-            formattedTop.push(
-                `${user.nume} - ${top[i].data[type]} ${type === `pontaj` ? ' minute' : ''}`
-            );
+        let actionTop = [];
+        if (type === 'rutiera' || type === 'licente') {
+            for (let i = 0; i < members.length; i++) {
+                const user = await mongo.getProfile(members[i].IDDiscord);
+                let actions = await utils.activity.utils.getActionActivity(
+                    week,
+                    members[i].IDDiscord,
+                    members[i].grad,
+                    pulsar.client
+                );
+                actionTop.push({
+                    nume: user.nume,
+                    data: actions
+                });
+            }
+            actionTop.sort((a, b) => b.data[type] - a.data[type]);
+            formattedTop = actionTop.slice(0, 5);
+        } else {
+            for (let i = 0; i < top.length; i++) {
+                const user = await mongo.getProfile(top[i].IDDiscord);
+                formattedTop.push(
+                    `${user.nume} - ${top[i].data[type]} ${type === `pontaj` ? ' minute' : ''}`
+                );
+            }
         }
 
         if (formattedTop.length === 0) {
