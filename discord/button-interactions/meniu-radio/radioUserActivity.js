@@ -1,11 +1,11 @@
 export default {
-  name: 'radio-menu-user-activity',
-  enabled: true,
-  async execute(pulsar, interaction, mongo, utils) {
-    await utils.discord.modals.displayInstrActivityCallsignInputModal(
-      pulsar,
-      interaction,
-      'radio'
-    );
-  }
+    name: 'radio-menu-user-activity',
+    enabled: true,
+    async execute(pulsar, interaction, mongo, utils) {
+        await utils.discord.modals.displayInstrActivityCallsignInputModal(
+            pulsar,
+            interaction,
+            'radio'
+        );
+    }
 };

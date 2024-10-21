@@ -1,13 +1,13 @@
 import nodeSchedule from 'npm:node-schedule';
 
 const activity = {
-  rule6AM: new nodeSchedule.RecurrenceRule(),
-  rule9AM: new nodeSchedule.RecurrenceRule(),
-  rule12PM: new nodeSchedule.RecurrenceRule(),
-  rule3PM: new nodeSchedule.RecurrenceRule(),
-  rule6PM: new nodeSchedule.RecurrenceRule(),
-  rule8PM: new nodeSchedule.RecurrenceRule(),
-  rule10PM: new nodeSchedule.RecurrenceRule()
+    rule6AM: new nodeSchedule.RecurrenceRule(),
+    rule9AM: new nodeSchedule.RecurrenceRule(),
+    rule12PM: new nodeSchedule.RecurrenceRule(),
+    rule3PM: new nodeSchedule.RecurrenceRule(),
+    rule6PM: new nodeSchedule.RecurrenceRule(),
+    rule8PM: new nodeSchedule.RecurrenceRule(),
+    rule10PM: new nodeSchedule.RecurrenceRule()
 };
 
 activity.rule6AM.hour = 6;

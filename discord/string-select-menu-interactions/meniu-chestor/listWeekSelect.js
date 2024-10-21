@@ -1,18 +1,18 @@
 export default {
-  name: 'list-select',
-  enabled: true,
-  async execute(pulsar, interaction, mongo, utils, botconfig) {
-    await interaction.deferReply({ ephemeral: true });
+    name: 'list-select',
+    enabled: true,
+    async execute(pulsar, interaction, mongo, utils, botconfig) {
+        await interaction.deferReply({ ephemeral: true });
 
-    let week = interaction.values[0];
+        let week = interaction.values[0];
 
-    await utils.discord.buttonMenus.sendListTypeSelectMenu(
-      {
-        pulsar: pulsar,
-        interaction: interaction,
-        week: week
-      },
-      botconfig
-    );
-  }
+        await utils.discord.buttonMenus.sendListTypeSelectMenu(
+            {
+                pulsar: pulsar,
+                interaction: interaction,
+                week: week
+            },
+            botconfig
+        );
+    }
 };

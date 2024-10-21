@@ -1,23 +1,23 @@
 import mongoose from 'npm:mongoose';
 
 const eivdentaMotoSchema = new mongoose.Schema(
-  {
-    tip_: String,
-    uniqueID: String,
-    userID: String,
-    active: Boolean,
-    data: {
-      nume: String,
-      tip: String,
-      IDDiscord: String,
-      numarInmatriculare: String,
-      dataClockIn: Date,
-      dataClockOut: Date || null,
+    {
+        tip_: String,
+        uniqueID: String,
+        userID: String,
+        active: Boolean,
+        data: {
+            nume: String,
+            tip: String,
+            IDDiscord: String,
+            numarInmatriculare: String,
+            dataClockIn: Date,
+            dataClockOut: Date || null
+        }
     },
-  },
-  { collection: "evidenteMoto" }
+    { collection: 'evidenteMoto' }
 );
 
-const EvidentaMoto = new mongoose.model("EvidentaMoto", eivdentaMotoSchema);
+const EvidentaMoto = new mongoose.model('EvidentaMoto', eivdentaMotoSchema);
 
 export default EvidentaMoto;

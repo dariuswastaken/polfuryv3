@@ -1,14 +1,14 @@
 import mongoose from 'npm:mongoose';
 
 const cooldownSchema = new mongoose.Schema(
-  {
-    tip_: String,
-    IDDiscord: String,
-    expiration: Date,
-  },
-  { collection: "cooldowns" }
+    {
+        tip_: String,
+        IDDiscord: String,
+        expiration: Date
+    },
+    { collection: 'cooldowns' }
 );
 
-const Cooldown = new mongoose.model("Cooldown", cooldownSchema);
+const Cooldown = new mongoose.model('Cooldown', cooldownSchema);
 
 export default Cooldown;

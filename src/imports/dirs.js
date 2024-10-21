@@ -13,11 +13,11 @@ const modalInteractionsDir = path.join(__dirname, '../../discord/modal-interacti
 const stringSelectMenuInteractionsDir = path.join(__dirname, '../../discord/string-select-menu-interactions');
 
 export {
-  handlerDir,
-  eventDir,
-  slashCommandDir,
-  contextMenuDir,
-  buttonInteractionsDir,
-  modalInteractionsDir,
-  stringSelectMenuInteractionsDir
+    buttonInteractionsDir,
+    contextMenuDir,
+    eventDir,
+    handlerDir,
+    modalInteractionsDir,
+    slashCommandDir,
+    stringSelectMenuInteractionsDir
 };

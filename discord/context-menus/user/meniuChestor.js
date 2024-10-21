@@ -1,40 +1,40 @@
 import {
-  ContextMenuCommandBuilder,
-  ApplicationCommandType,
-  PermissionsBitField
+    ApplicationCommandType,
+    ContextMenuCommandBuilder,
+    PermissionsBitField
 } from 'npm:discord.js';
 
 export default {
-  data: new ContextMenuCommandBuilder()
-    .setName('Meniu Chestor')
-    .setType(ApplicationCommandType.User)
-    .setDefaultMemberPermissions(PermissionsBitField.Flags.Administrator),
-  enabled: true,
-  async execute(pulsar, interaction, mongo, utils, botconfig) {
-    await interaction.deferReply({ ephemeral: true });
+    data: new ContextMenuCommandBuilder()
+        .setName('Meniu Chestor')
+        .setType(ApplicationCommandType.User)
+        .setDefaultMemberPermissions(PermissionsBitField.Flags.Administrator),
+    enabled: true,
+    async execute(pulsar, interaction, mongo, utils, botconfig) {
+        await interaction.deferReply({ ephemeral: true });
 
-    if (!interaction.member.roles.cache.some((r) => r.id === '1119645178148442152')) {
-      await utils.discord.errors.noPermissionError(pulsar, interaction);
-      return;
+        if (!interaction.member.roles.cache.some((r) => r.id === '1119645178148442152')) {
+            await utils.discord.errors.noPermissionError(pulsar, interaction);
+            return;
+        }
+
+        const targetID = await interaction.options.getUser('user').id;
+        const targetProfile = await mongo.getProfile(targetID);
+
+        if (!targetProfile) {
+            await utils.discord.errors.noProfileError(pulsar, interaction);
+            return;
+        }
+
+        await utils.discord.buttonMenus.sendMenuChestor(
+            {
+                pulsar: pulsar,
+                interaction: interaction,
+                mongo: mongo,
+                utils: utils,
+                targetID: targetID
+            },
+            botconfig
+        );
     }
-
-    const targetID = await interaction.options.getUser('user').id;
-    const targetProfile = await mongo.getProfile(targetID);
-
-    if (!targetProfile) {
-      await utils.discord.errors.noProfileError(pulsar, interaction);
-      return;
-    }
-
-    await utils.discord.buttonMenus.sendMenuChestor(
-      {
-        pulsar: pulsar,
-        interaction: interaction,
-        mongo: mongo,
-        utils: utils,
-        targetID: targetID
-      },
-      botconfig
-    );
-  }
 };

@@ -9,16 +9,14 @@ const schemas = path.join(__dirname, '../mongo/schemas');
 
 let schemaObj = {};
 
-fs.readdirSync(schemas).forEach(async(file) => {
-  try {
-    const schema = await import(path.join(schemas, file));
-    const fileName = path.basename(file, path.extname(file));
-    schemaObj[fileName] = schema;
-  } catch (err) {
-    console.error(
-      `[SCHEMA IMPORT ERROR] Error importing schema from file, error: ${err}`
-    );
-  }
+fs.readdirSync(schemas).forEach(async (file) => {
+    try {
+        const schema = await import(path.join(schemas, file));
+        const fileName = path.basename(file, path.extname(file));
+        schemaObj[fileName] = schema;
+    } catch (err) {
+        console.error(`[SCHEMA IMPORT ERROR] Error importing schema from file, error: ${err}`);
+    }
 });
 
 export default schemaObj;

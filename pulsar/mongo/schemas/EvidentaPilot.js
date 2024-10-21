@@ -1,23 +1,23 @@
 import mongoose from 'npm:mongoose';
 
 const eivdentaPilotSchema = new mongoose.Schema(
-  {
-    tip_: String,
-    uniqueID: String,
-    userID: String,
-    active: Boolean,
-    data: {
-      nume: String,
-      tip: String,
-      IDDiscord: String,
-      numarInmatriculare: String,
-      dataClockIn: Date,
-      dataClockOut: Date || null,
+    {
+        tip_: String,
+        uniqueID: String,
+        userID: String,
+        active: Boolean,
+        data: {
+            nume: String,
+            tip: String,
+            IDDiscord: String,
+            numarInmatriculare: String,
+            dataClockIn: Date,
+            dataClockOut: Date || null
+        }
     },
-  },
-  { collection: "evidentePilot" }
+    { collection: 'evidentePilot' }
 );
 
-const EvidentaPilot = new mongoose.model("EvidentaPilot", eivdentaPilotSchema);
+const EvidentaPilot = new mongoose.model('EvidentaPilot', eivdentaPilotSchema);
 
 export default EvidentaPilot;

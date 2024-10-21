@@ -7,54 +7,54 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const createLogsManager = async () => {
-  const date = new Date();
-  let formattedDate = date
-    .toLocaleString('de-DE', {
-      timeZone: 'Europe/Berlin'
-    })
-    .replace(', ', '_');
+    const date = new Date();
+    let formattedDate = date
+        .toLocaleString('de-DE', {
+            timeZone: 'Europe/Berlin'
+        })
+        .replace(', ', '_');
 
-  const logsDir = '../../../logs';
+    const logsDir = '../../../logs';
 
-  if (!fs.existsSync(path.join(__dirname, logsDir))) {
-    fs.mkdirSync(path.join(__dirname, logsDir));
-  }
-
-  const outPath = path.join(__dirname, logsDir, `log-${formattedDate}.log`);
-  const errPath = path.join(__dirname, logsDir, `error-${formattedDate}.log`);
-
-  const out = fs.createWriteStream(outPath);
-  const err = fs.createWriteStream(errPath);
-
-  console.log = function (msg) {
-    const time = new Date();
-    const formattedTimeAndDate = time
-      .toLocaleString('de-DE', {
-        timeZone: 'Europe/Berlin'
-      })
-      .replace(', ', ' ');
-
-    if (typeof msg === 'object') {
-      msg = util.inspect(msg);
+    if (!fs.existsSync(path.join(__dirname, logsDir))) {
+        fs.mkdirSync(path.join(__dirname, logsDir));
     }
 
-    out.write(`[${formattedTimeAndDate}] ${msg}\n`);
-    process.stdout.write(`${msg}\n`);
-  };
+    const outPath = path.join(__dirname, logsDir, `log-${formattedDate}.log`);
+    const errPath = path.join(__dirname, logsDir, `error-${formattedDate}.log`);
 
-  console.error = function (msg) {
-    const time = new Date();
-    const formattedTimeAndDate = time
-      .toLocaleString('de-DE', {
-        timeZone: 'Europe/Berlin'
-      })
-      .replace(', ', ' ');
+    const out = fs.createWriteStream(outPath);
+    const err = fs.createWriteStream(errPath);
 
-    if (typeof msg === 'object') {
-      msg = util.inspect(msg);
-    }
+    console.log = function (msg) {
+        const time = new Date();
+        const formattedTimeAndDate = time
+            .toLocaleString('de-DE', {
+                timeZone: 'Europe/Berlin'
+            })
+            .replace(', ', ' ');
 
-    err.write(`[${formattedTimeAndDate}] ${msg}\n`);
-    process.stderr.write(`${msg}\n`);
-  };
+        if (typeof msg === 'object') {
+            msg = util.inspect(msg);
+        }
+
+        out.write(`[${formattedTimeAndDate}] ${msg}\n`);
+        process.stdout.write(`${msg}\n`);
+    };
+
+    console.error = function (msg) {
+        const time = new Date();
+        const formattedTimeAndDate = time
+            .toLocaleString('de-DE', {
+                timeZone: 'Europe/Berlin'
+            })
+            .replace(', ', ' ');
+
+        if (typeof msg === 'object') {
+            msg = util.inspect(msg);
+        }
+
+        err.write(`[${formattedTimeAndDate}] ${msg}\n`);
+        process.stderr.write(`${msg}\n`);
+    };
 };

@@ -2,19 +2,19 @@ import { readdirSync } from 'node:fs';
 import path from 'node:path';
 
 export function loadFilesFromDir(dir, callback) {
-  const files = [];
+    const files = [];
 
-  const folders = readdirSync(dir);
+    const folders = readdirSync(dir);
 
-  folders.forEach((folder) => {
-    const folderPath = path.join(dir, folder);
-    const filesInFolder = readdirSync(folderPath);
-    
-    filesInFolder.forEach((file) => {
-      const filePath = path.join(folderPath, file);
-      files.push(filePath);
+    folders.forEach((folder) => {
+        const folderPath = path.join(dir, folder);
+        const filesInFolder = readdirSync(folderPath);
+
+        filesInFolder.forEach((file) => {
+            const filePath = path.join(folderPath, file);
+            files.push(filePath);
+        });
     });
-  });
 
-  files.forEach(callback);
+    files.forEach(callback);
 }

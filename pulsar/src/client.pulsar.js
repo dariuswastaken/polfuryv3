@@ -7,16 +7,16 @@ import * as clients from '../exports/clients.js';
 import config from '../.config/config.json' with { type: 'json' };
 
 export default class PulsarClient {
-  constructor() {
-    this.MongoClient = clients.MongoClient;
-    this.client = clients.client;
-    this.utilsManager = utilsManager;
-    this.discordManager = discordManager;
-    this.fileManager = fileManager;
-    this.processManager = processManager;
-    this.webManager = webManager;
-  }
-  async config() {
-    return config.pulsar;
-  }
+    constructor() {
+        this.MongoClient = clients.MongoClient;
+        this.client = clients.client;
+        this.utilsManager = utilsManager;
+        this.discordManager = discordManager;
+        this.fileManager = fileManager;
+        this.processManager = processManager;
+        this.webManager = webManager;
+    }
+    async config() {
+        return config.pulsar;
+    }
 }

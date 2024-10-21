@@ -1,42 +1,37 @@
-import {
-  Client,
-  Collection,
-  Partials,
-  GatewayIntentBits
-} from 'npm:discord.js';
+import { Client, Collection, GatewayIntentBits, Partials } from 'npm:discord.js';
 import config from '../../../.config/config.json' with { type: 'json' };
-import "jsr:@std/dotenv/load";
+import 'jsr:@std/dotenv/load';
 
 const client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.MessageContent,
-    GatewayIntentBits.GuildMessageReactions,
-    GatewayIntentBits.DirectMessageReactions,
-    GatewayIntentBits.DirectMessages,
-    GatewayIntentBits.GuildIntegrations
-  ],
-  partials: [
-    Partials.Message,
-    Partials.GuildMember,
-    Partials.GuildScheduledEvent,
-    Partials.User,
-    Partials.Channel,
-    Partials.ThreadMember,
-    Partials.Reaction
-  ]
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildMessageReactions,
+        GatewayIntentBits.DirectMessageReactions,
+        GatewayIntentBits.DirectMessages,
+        GatewayIntentBits.GuildIntegrations
+    ],
+    partials: [
+        Partials.Message,
+        Partials.GuildMember,
+        Partials.GuildScheduledEvent,
+        Partials.User,
+        Partials.Channel,
+        Partials.ThreadMember,
+        Partials.Reaction
+    ]
 });
 
 client.collections = {
-  events: new Collection(),
-  slashCommands: new Collection(),
-  buttonInteractionEvents: new Collection(),
-  contextMenus: new Collection(),
-  handlers: new Collection(),
-  modalInteractionEvents: new Collection(),
-  stringSelectMenuInteractionEvents: new Collection()
+    events: new Collection(),
+    slashCommands: new Collection(),
+    buttonInteractionEvents: new Collection(),
+    contextMenus: new Collection(),
+    handlers: new Collection(),
+    modalInteractionEvents: new Collection(),
+    stringSelectMenuInteractionEvents: new Collection()
 };
 
 client.config = config.client;

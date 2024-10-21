@@ -1,35 +1,35 @@
 import moment from 'npm:moment';
 
 export const formatUptime = async (uptime) => {
-  const days = Math.floor(uptime / (60 * 60 * 24));
-  const hours = Math.floor((uptime / (60 * 60)) % 24);
-  const minutes = Math.floor((uptime / 60) % 60);
-  const seconds = Math.floor(uptime % 60);
+    const days = Math.floor(uptime / (60 * 60 * 24));
+    const hours = Math.floor((uptime / (60 * 60)) % 24);
+    const minutes = Math.floor((uptime / 60) % 60);
+    const seconds = Math.floor(uptime % 60);
 
-  return `${days} zile, ${hours} ore, ${minutes} minute si ${seconds} secunde`;
+    return `${days} zile, ${hours} ore, ${minutes} minute si ${seconds} secunde`;
 };
 
 export const formatTime = async (time, timezone) => {
-  return moment(time).utcOffset(timezone).format('DD/MM/YYYY HH:mm:ss');
+    return moment(time).utcOffset(timezone).format('DD/MM/YYYY HH:mm:ss');
 };
 
 export const formatTimestamp = async (time, timezone) => {
-  const date = new Date(time);
-  const formattedDate = date.toLocaleDateString('ro-RO', {
-    timeZone: timezone,
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit'
-  });
+    const date = new Date(time);
+    const formattedDate = date.toLocaleDateString('ro-RO', {
+        timeZone: timezone,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
 
-  return formattedDate;
+    return formattedDate;
 };
 
 export const formatDefTime = async (time, timezone) => {
-  const date = new Date(time);
-  const formattedDate = date.toLocaleDateString('ro-RO', {
-    timeZone: timezone
-  });
+    const date = new Date(time);
+    const formattedDate = date.toLocaleDateString('ro-RO', {
+        timeZone: timezone
+    });
 
-  return formattedDate;
+    return formattedDate;
 };
