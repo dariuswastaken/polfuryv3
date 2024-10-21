@@ -16,7 +16,6 @@ export default {
         
         if (type === 'rutiera' || type === 'licente') {
             for (let i = 0; i < members.length; i++) {
-                let tip = '';
                 const loopPercentage = Math.floor((i / members.length) * 100);
                 await interaction.editReply({
                     content: `**Se calculeaza... (${loopPercentage}%)**`
@@ -43,11 +42,11 @@ export default {
                 }
             }
 
-            actionTopOrg.sort((a, b) => b.data[type] - a.data[type]);
-            actionTopOrg.slice(0, 5);
+            actionTopOrg = actionTopOrg.sort((a, b) => b.data[type] - a.data[type]);
+            actionTopPart = actionTopOrg.slice(0, 5);
 
-            actionTopPart.sort((a, b) => b.data[type] - a.data[type]);
-            actionTopPart.slice(0, 5);
+            actionTopPart = actionTopPart.sort((a, b) => b.data[type] - a.data[type]);
+            actionTopPart = actionTopPart.slice(0, 5);
 
             formattedTop.push('ORGANIZATE');
             for (let i = 0; i < actionTopOrg.length; i++) {
@@ -71,6 +70,7 @@ export default {
         }
 
         await utils.discord.embeds.sendTopActivityEmbed({
+            pulsar: pulsar,
             interaction: interaction,
             type: type,
             week: week,
