@@ -99,11 +99,11 @@ export const getActionActivity = async (period, id, rank, client) => {
 
         let mentions = {
             licente: 0,
-            rutiere: 0
+            rutiera: 0
         };
         let organizate = {
             licente: 0,
-            rutiere: 0
+            rutiera: 0
         }
 
         const filterByIDandDate = (msg) => {
@@ -128,9 +128,9 @@ export const getActionActivity = async (period, id, rank, client) => {
 
             mentionsRutiere.forEach(async (msg) => {
                 if (msg.content.includes(`<@${id}>`)) {
-                    mentions.rutiere++;
+                    mentions.rutiera++;
                 } else {
-                    mentions.rutiere = mentions.rutiere;
+                    mentions.rutiera = mentions.rutiera;
                 }
             });
 
@@ -149,9 +149,9 @@ export const getActionActivity = async (period, id, rank, client) => {
 
             organizateRutiere.forEach(async (msg) => {
                 if (msg.author.id === id) {
-                    organizate.rutiere++;
+                    organizate.rutiera++;
                 } else {
-                    organizate.rutiere = organizate.rutiere;
+                    organizate.rutiera = organizate.rutiera;
                 }
             });
 

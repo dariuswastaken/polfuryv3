@@ -28,7 +28,7 @@ export const sendUpList = async ({ pulsar, interaction, utils, mongo, week }) =>
                 pulsar.client
             );
             
-            actions = actions.licente + actions.rutiere;
+            actions = actions.licente + actions.rutiera;
 
             let concediu = await mongo.getLeave(member.IDDiscord, week);
             if (!concediu) concediu = { days: [] };

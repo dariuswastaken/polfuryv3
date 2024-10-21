@@ -23,7 +23,7 @@ export const sendUserActivityEmbed = async ({
         pulsar.client
     );
 
-    actions = actions.licente + actions.rutiere;
+    actions = actions.licente + actions.rutiera;
 
     let concediu = await mongo.getLeave(targetID, week);
     if (!concediu) concediu = { days: [] };
