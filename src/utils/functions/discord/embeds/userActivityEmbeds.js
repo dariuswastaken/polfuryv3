@@ -16,12 +16,14 @@ export const sendUserActivityEmbed = async ({
         'Europe/Bucharest'
     );
 
-    const actions = await utils.activity.utils.getActionActivity(
+    let actions = await utils.activity.utils.getActionActivity(
         week,
         targetID,
         targetProfile.grad,
         pulsar.client
     );
+
+    actions = actions.licente + actions.rutiere;
 
     let concediu = await mongo.getLeave(targetID, week);
     if (!concediu) concediu = { days: [] };
