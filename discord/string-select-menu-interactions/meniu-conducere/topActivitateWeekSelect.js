@@ -15,8 +15,10 @@ export default {
         if (type === 'rutiera' || type === 'licente') {
             for (let i = 0; i < members.length; i++) {
                 const loopPercentage = Math.floor((i / members.length) * 100);
-                await interaction.editReply({ content: `**Se calculeaza... (${loopPercentage}%)**` });
-                
+                await interaction.editReply({
+                    content: `**Se calculeaza... (${loopPercentage}%)**`
+                });
+
                 const user = await mongo.getProfile(members[i].IDDiscord);
                 let actions = await utils.activity.utils.getActionActivity(
                     week,
@@ -32,7 +34,7 @@ export default {
             actionTop.sort((a, b) => b.data[type] - a.data[type]);
             actionTop = actionTop.slice(0, 5);
             for (let i = 0; i < actionTop.length; i++) {
-              console.log(actionTop[i]);
+                formattedTop.push(`${actionTop[i].nume} - ${actionTop[i].data[type]}`);
             }
         } else {
             for (let i = 0; i < top.length; i++) {
