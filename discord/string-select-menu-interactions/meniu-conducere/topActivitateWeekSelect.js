@@ -73,7 +73,7 @@ export default {
             interaction: interaction,
             type: type,
             week: week,
-            list: formattedTop
+            list: ['Test']
         });
     }
 };
