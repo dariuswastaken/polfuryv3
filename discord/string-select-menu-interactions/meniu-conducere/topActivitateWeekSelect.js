@@ -18,7 +18,7 @@ export default {
             for (let i = 0; i < members.length; i++) {
                 const loopPercentage = Math.floor((i / members.length) * 100);
                 await interaction.editReply({
-                    content: `**Se calculeaza... (${loopPercentage}%)**`
+                    content: `**Se verifica raziile & rutierele lui ${members[i].nume}... (${loopPercentage}%)**`
                 });
 
                 const user = await mongo.getProfile(members[i].IDDiscord);
