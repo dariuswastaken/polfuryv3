@@ -14,7 +14,6 @@ export default class MongoClient {
             const document = await Schema.findOne(query);
             return document;
         } catch (error) {
-            console.log(error);
             console.error(`[MONGO] Error fetching documents from schema: ${schema}`);
             console.error(error);
         }
