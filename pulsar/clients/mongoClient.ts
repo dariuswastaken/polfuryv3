@@ -1,5 +1,5 @@
-import { init } from '../mongo/connection.js';
-import schemas from '../exports/schemas.js';
+import { init } from '../mongo/connection.ts';
+import schemas from '../exports/schemas.ts';
 import { Query, Sort, Projection } from '../@types/mongoClient.types.ts';
 
 export default class MongoClient {
