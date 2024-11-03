@@ -3,7 +3,7 @@
     "version": "3.0.1-2"
   },
   "pulsar": {
-    "version": "0.0.3-1",
+    "version": "0.0.4-1",
     "namespace": "pulsar-fury",
     "database": {
       "type": "mongodb",
