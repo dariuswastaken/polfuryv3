@@ -1,5 +1,5 @@
 import * as fileHandler from '../handlers/fileHandler.js';
-import { Pulsar } from '../../pulsar/index.pulsar.js';
+import { Pulsar } from '../../pulsar/index.pulsar.ts';
 import 'jsr:@std/dotenv/load';
 
 const client = Pulsar().client;
