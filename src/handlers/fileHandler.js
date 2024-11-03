@@ -1,5 +1,5 @@
 import * as dirs from '../imports/dirs.js';
-import { Pulsar } from '../../pulsar/index.pulsar.js';
+import { Pulsar } from '../../pulsar/index.pulsar.ts';
 import { exportModules } from '../fs/baseExportFSModule.js';
 import createGlobalUtilExports from '../../src/utils/exports/globalExports.js';
 import createBotconfig from '../botconfig/botconfig.js';

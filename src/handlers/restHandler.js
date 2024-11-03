@@ -1,5 +1,5 @@
 import { REST, Routes } from 'npm:discord.js';
-import { Pulsar } from '../../pulsar/index.pulsar.js';
+import { Pulsar } from '../../pulsar/index.pulsar.ts';
 
 const client = Pulsar().client;
 
