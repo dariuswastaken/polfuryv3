@@ -1,5 +1,5 @@
 import moment from 'npm:moment';
-import { TimestampInput } from '../../@types/timestamps.types';
+import { TimestampInput } from '../../@types/timestamps.types.ts';
 
 export const formatUptime = async (uptime: number): Promise<string> => {
     const days = Math.floor(uptime / (60 * 60 * 24));
