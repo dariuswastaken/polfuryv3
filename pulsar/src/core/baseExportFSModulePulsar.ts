@@ -13,7 +13,7 @@ export const exportModules = async (dir: string): Promise<Record<string, any>> =
 
             if (stat.isDirectory()) {
                 Object.assign(modules, await exportModules(filePath));
-            } else if (file.endsWith('.js')) {
+            } else if (file.endsWith('.ts')) {
                 const moduleName = path.basename(file, path.extname(file));
                 modules[moduleName] = await import(filePath);
             }
