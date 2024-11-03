@@ -1,8 +1,10 @@
+import { TimestampInput } from '../../@types/timestamps.types';
+
 interface TimeUtils {
     formatUptime: (uptime: number) => Promise<string>;
-    formatTime: (time: string | Date, timezone: string) => Promise<string>;
-    formatTimestamp: (time: string | Date, timezone: string) => Promise<string>;
-    formatDefTime: (time: string | Date, timezone: string) => Promise<string>;
+    formatTime: (time: TimestampInput, timezone: string) => Promise<string>;
+    formatTimestamp: (time: TimestampInput, timezone: string) => Promise<string>;
+    formatDefTime: (time: TimestampInput, timezone: string) => Promise<string>;
 }
 
 interface UniqueUtils {
