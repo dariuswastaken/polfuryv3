@@ -1,4 +1,4 @@
-import WebClient from '../client/webClient.js';
+import WebClient from '../client/webClient.ts';
 
 const webClient = new WebClient();
 
