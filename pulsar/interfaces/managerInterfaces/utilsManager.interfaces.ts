@@ -1,4 +1,4 @@
-import { TimestampInput } from '../../@types/timestamps.types';
+import { TimestampInput } from '../../@types/timestamps.types.ts';
 
 interface TimeUtils {
     formatUptime: (uptime: number) => Promise<string>;
