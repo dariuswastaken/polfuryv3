@@ -1,6 +1,6 @@
 import { Client, Collection, GatewayIntentBits, Partials } from 'npm:discord.js';
 import config from '../../../.config/config.json' with { type: 'json' };
-import { ClientCollections } from '../../../interfaces/base/client.interfaces';
+import { ClientCollections } from '../../../interfaces/base/client.interfaces.ts';
 import 'jsr:@std/dotenv/load';
 
 const client = new Client({
