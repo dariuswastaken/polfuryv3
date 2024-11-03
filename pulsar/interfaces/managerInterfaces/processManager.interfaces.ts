@@ -1,3 +1,3 @@
 export interface ProcessInstance {
-    createErrorHandler: () => void;
+    createErrorHandler: () => Promise<void>;
 }
