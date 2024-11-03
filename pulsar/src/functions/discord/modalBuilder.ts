@@ -1,5 +1,5 @@
 import { ActionRowBuilder, ModalBuilder, TextInputBuilder, TextInputStyle } from 'npm:discord.js';
-import { CreateModalOptions } from '../../../interfaces/discord/modalBuilder.interfaces';
+import { CreateModalOptions } from '../../../interfaces/discord/modalBuilder.interfaces.ts';
 
 export const createModal = async ({
     id,
