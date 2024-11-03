@@ -1,5 +1,5 @@
 import path from 'node:path';
-import * as utils from '../exports/utils.js';
+import * as utils from '../exports/utils.ts';
 import { Manager } from '../interfaces/base/managers.interfaces.ts';
 import { UtilsInstance } from '../interfaces/managerInterfaces/utilsManager.interfaces.ts';
 

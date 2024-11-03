@@ -1,6 +1,6 @@
-import * as discordFunctions from '../exports/discord.js';
-import { Manager } from '../interfaces/base/managers.interfaces.js';
-import { DiscordInstance } from '../interfaces/managerInterfaces/discordManager.interfaces.js'; 
+import * as discordFunctions from '../exports/discord.ts';
+import { Manager } from '../interfaces/base/managers.interfaces.ts';
+import { DiscordInstance } from '../interfaces/managerInterfaces/discordManager.interfaces.ts'; 
 
 const discordManager: Manager<Object> = {
     createInstance: (): DiscordInstance => {

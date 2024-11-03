@@ -1,6 +1,6 @@
-import * as processFunctions from '../exports/process.js';
-import { Manager } from '../interfaces/base/managers.interfaces.js';
-import { ProcessInstance } from '../interfaces/managerInterfaces/processManager.interfaces.js';
+import * as processFunctions from '../exports/process.ts';
+import { Manager } from '../interfaces/base/managers.interfaces.ts';
+import { ProcessInstance } from '../interfaces/managerInterfaces/processManager.interfaces.ts';
 
 const processManager: Manager<Object> = {
     createInstance: (): ProcessInstance  => {

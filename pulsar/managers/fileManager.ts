@@ -1,6 +1,6 @@
-import * as fileExports from '../exports/files.js';
-import { Manager } from '../interfaces/base/managers.interfaces.js';
-import { FileInstance } from '../interfaces/managerInterfaces/fileManager.interfaces.js';
+import * as fileExports from '../exports/files.ts';
+import { Manager } from '../interfaces/base/managers.interfaces.ts';
+import { FileInstance } from '../interfaces/managerInterfaces/fileManager.interfaces.ts';
 
 const fileManager: Manager<Object> = {
     createInstance: (): FileInstance => {
