@@ -1,14 +1,11 @@
 {
-  "client": {
-    "version": "3.0.1-2"
-  },
-  "pulsar": {
-    "version": "0.0.4-1",
-    "namespace": "pulsar-fury",
-    "database": {
-      "type": "mongodb",
-      "url": "mongodb://127.0.0.1:27017/PolDB",
-      "wrapper": "mongoose"
+    "pulsar": {
+        "version": "4.11-01",
+        "namespace": "pulsar-fury",
+        "database": {
+            "type": "mongodb",
+            "url": "mongodb://127.0.0.1:27017/PolDB",
+            "wrapper": "mongoose"
+        }
     }
-  }
 }
