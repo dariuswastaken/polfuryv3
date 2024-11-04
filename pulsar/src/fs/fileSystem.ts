@@ -6,11 +6,11 @@ export function loadFilesFromDir(dir: string, callback: (filePath: string) => vo
 
     const folders = readdirSync(dir);
 
-    folders.forEach((folder) => {
+    folders.forEach((folder: string) => {
         const folderPath = path.join(dir, folder);
         const filesInFolder = readdirSync(folderPath);
 
-        filesInFolder.forEach((file) => {
+        filesInFolder.forEach((file: string) => {
             const filePath = path.join(folderPath, file);
             files.push(filePath);
         });
