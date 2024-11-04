@@ -32,7 +32,7 @@ export default {
             fields: [
                 {
                     name: 'Version',
-                    value: `${pulsar.client.config.version}`,
+                    value: `${pulsar.version}`,
                     inline: true
                 },
                 {
