@@ -26,7 +26,7 @@ export const createLogsManager = async (): Promise<void> => {
     const out = fs.createWriteStream(outPath);
     const err = fs.createWriteStream(errPath);
 
-    console.log = function (msg) {
+    console.log = function (msg: string): void {
         const time = new Date();
         const formattedTimeAndDate = time
             .toLocaleString('de-DE', {
@@ -42,7 +42,7 @@ export const createLogsManager = async (): Promise<void> => {
         process.stdout.write(`${msg}\n`);
     };
 
-    console.error = function (msg) {
+    console.error = function (msg: string): void {
         const time = new Date();
         const formattedTimeAndDate = time
             .toLocaleString('de-DE', {
