@@ -1,4 +1,6 @@
+import { ButtonLayout } from "../../../@types/button.types.ts";
+
 export interface ButtonMenuBuilderOptions {
     perLine: number;
-    buttons: { id: string; style: string; label: string; disabled?: boolean }[];
+    buttons: ButtonLayout[];
 }
