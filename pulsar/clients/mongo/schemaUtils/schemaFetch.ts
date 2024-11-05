@@ -1,4 +1,4 @@
-import schemas from '../../exports/schemas.ts';
+import schemas from '../../../exports/schemas.ts';
 
 export async function getSchema(schema: string): Promise<any> {
     const SchemaModule = schemas[schema];
