@@ -13,6 +13,7 @@ export default {
         let totalMemory = Math.round((os.totalmem() / 1024 / 1024) * 100) / 100;
 
         let cpu = os.cpus();
+        console.log(cpu)
         let cpuData = `${cpu.model} @ ${cpu.speed}MHz`;
 
         let botLatency = Date.now() - interaction.createdTimestamp + 'ms';
