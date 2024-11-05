@@ -2,7 +2,7 @@ import * as fileHandler from '../handlers/fileHandler.js';
 import { Pulsar } from '../../pulsar/index.pulsar.ts';
 import 'jsr:@std/dotenv/load';
 
-const client = Pulsar().client;
+const client = Pulsar().createDiscordClient('all', 'all');
 const fileManager = Pulsar().fileManager.createInstance();
 const processManager = Pulsar().processManager.createInstance();
 
