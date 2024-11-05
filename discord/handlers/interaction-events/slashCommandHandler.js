@@ -3,18 +3,18 @@ export default {
     type: 'interactionBased',
     enabled: true,
     async execute(Pulsar, utils, botconfig, mongo) {
-        Pulsar().client.on('interactionCreate', async (interaction) => {
+        Pulsar.client.on('interactionCreate', async (interaction) => {
             if (!interaction.isCommand()) return;
 
-            const client = Pulsar().client;
+            const client = Pulsar.client;
 
             const pulsar = {
                 client: client,
-                config: await Pulsar().config(),
-                utilsManager: Pulsar().utilsManager.createInstance(),
-                discordManager: Pulsar().discordManager.createInstance(),
-                fileManager: Pulsar().fileManager.createInstance(),
-                webManager: Pulsar().webManager.createInstance()
+                config: await Pulsar.config(),
+                utilsManager: Pulsar.utilsManager.createInstance(),
+                discordManager: Pulsar.discordManager.createInstance(),
+                fileManager: Pulsar.fileManager.createInstance(),
+                webManager: Pulsar.webManager.createInstance()
             };
 
             const { commandName } = interaction;

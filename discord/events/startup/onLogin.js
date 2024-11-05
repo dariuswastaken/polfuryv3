@@ -3,7 +3,7 @@ import { registerApplicationCommands } from '../../../src/handlers/restHandler.j
 export default {
     name: 'onLogin',
     async execute(Pulsar) {
-        Pulsar().client.on('ready', async () => {
+        Pulsar.client.on('ready', async () => {
             try {
                 console.log('[DISCORD API] Connected to Discord API.');
                 await registerApplicationCommands();

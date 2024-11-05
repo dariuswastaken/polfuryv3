@@ -3,18 +3,18 @@ export default {
     type: 'interactionBased',
     enabled: true,
     async execute(Pulsar, utils, botconfig, mongo) {
-        Pulsar().client.on('interactionCreate', async (interaction) => {
+        Pulsar.client.on('interactionCreate', async (interaction) => {
             if (interaction.user.bot) return;
 
             const client = Pulsar().client;
 
             const pulsar = {
                 client: client,
-                config: await Pulsar().config(),
-                webManager: Pulsar().webManager.createInstance(),
-                utilsManager: Pulsar().utilsManager.createInstance(),
-                discordManager: Pulsar().discordManager.createInstance(),
-                fileManager: Pulsar().fileManager.createInstance()
+                config: await Pulsar.config(),
+                webManager: Pulsar.webManager.createInstance(),
+                utilsManager: Pulsar.utilsManager.createInstance(),
+                discordManager: Pulsar.discordManager.createInstance(),
+                fileManager: Pulsar.fileManager.createInstance()
             };
 
             if (

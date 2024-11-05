@@ -11,7 +11,7 @@ export default {
                 updateCount--;
             }
         };
-        const webManager = await Pulsar().webManager.createInstance();
+        const webManager = await Pulsar.webManager.createInstance();
         const updateActivity = async () => {
             try {
                 const members = await mongo.getAllMembers();
@@ -34,7 +34,7 @@ export default {
                 );
             }
         };
-        Pulsar().client.on('ready', async () => {
+        Pulsar.client.on('ready', async () => {
             const rules = Object.values(recurrenceRules.activity);
             for (let i = 0; i < rules.length; i++) {
                 nodeSchedule.scheduleJob(rules[i], updateActivityRetry);
