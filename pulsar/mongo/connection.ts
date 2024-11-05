@@ -1,6 +1,7 @@
 import mongoose from 'npm:mongoose';
+import config from '../.config/config.json' with { type: 'json' };
 
-const url = 'mongodb://127.0.0.1:27017/PolDB';
+const url = config.pulsar.database.url;
 
 export const init = async (): Promise<void> => {
     if (mongoose.connection.readyState === 1) {
