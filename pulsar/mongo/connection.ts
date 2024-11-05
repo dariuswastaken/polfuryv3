@@ -10,10 +10,15 @@ export const init = async (): Promise<void> => {
 
     mongoose.set('strictQuery', false);
 
-    mongoose.connect(url);
+    try {
+        mongoose.connect(url);
+    } catch (error) {
+        console.log(`[MONGO] Error connecting to MongoDB`);
+        console.error(error);
+    }
 
     const mongo = mongoose.connection;
 
     mongo.on('error', console.error.bind(console, '[MONGO] Connection error:'));
-    console.log('[MONGO] Connected to MongoDB');
+    mongo.once('open', () => console.log('[MONGO] Connected to MongoDB'));
 };
