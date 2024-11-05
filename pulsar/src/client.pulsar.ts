@@ -8,7 +8,7 @@ import config from '../.config/config.json' with { type: 'json' };
 
 export default class PulsarClient {
     public mongoClient: any;
-    public client: any;
+    public createDiscordClient: any;
     public utilsManager: any;
     public discordManager: any;
     public fileManager: any;
@@ -17,7 +17,7 @@ export default class PulsarClient {
 
     constructor() {
         this.mongoClient = clients.mongoClient;
-        this.client = clients.client;
+        this.createDiscordClient = clients.createDiscordClient;
         this.utilsManager = utilsManager;
         this.discordManager = discordManager;
         this.fileManager = fileManager;
