@@ -1,6 +1,6 @@
 {
     "pulsar": {
-        "version": "5.11-01",
+        "version": "5.11-02",
         "namespace": "pulsar-fury",
         "database": {
             "type": "mongodb",
