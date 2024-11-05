@@ -1,4 +1,4 @@
-import { getSchema } from '../schemaFetch.ts';
+import { getSchema } from '../schemaUtils/schemaFetch.ts';
 import { Query, Sort, Projection } from '../../../@types/mongoClient.types.ts';
 
 export async function findMore(schema: string, query: Query): Promise<any[]> {
