@@ -1,4 +1,4 @@
-import { EmbedField, EmbedFooter } from "../../@types/discord/embed.types";
+import { EmbedField, EmbedFooter } from "../../@types/discord/embed.types.ts";
 
 interface EmbedOptions {
     title?: string;
