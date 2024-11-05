@@ -7,7 +7,7 @@ export const getUserMdtData = async (userId: number): Promise<any[] | undefined 
     return response.data.find((user: any[]) => user[0].startsWith(`[${userId}]`));
 };
 
-export const isOnDuty = async (userId: number): Promise<any[] | undefined | boolean> => {
+export const isOnDuty = async (userId: number): Promise<undefined | boolean> => {
     const response = await webClient.get('/server/raportPolitie');
     const data = await response.data.find((user: any[]) => user[0].startsWith(`[${userId}]`));
     if (data === undefined) return false;
