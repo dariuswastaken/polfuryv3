@@ -1,6 +1,8 @@
+import { SelectMenuOptionLayout } from "../../../@types/discord/selectMenu.types.ts";
+
 export interface SelectMenuBuilderOptions {
     type: any;
-    options: { label: string; value: string }[];
+    options: SelectMenuOptionLayout[];
     id: string;
     placeholder: string;
     channelType: string;
