@@ -4,7 +4,7 @@ import client from './client.js';
 import pulsarInstance from './pulsarInstance.js';
 
 const fileManager = pulsarInstance.fileManager.createInstance();
-const processManager = pulsarInstance.fileManager.createInstance();
+const processManager = pulsarInstance.processManager.createInstance();
 
 let readyState = 0;
 
