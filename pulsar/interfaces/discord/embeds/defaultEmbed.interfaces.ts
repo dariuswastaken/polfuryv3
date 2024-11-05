@@ -1,8 +1,9 @@
 import { CommandInteraction, Guild, Message } from 'npm:discord.js';
+import { EmbedField, EmbedFooter } from '../../../@types/discord/embed.types.ts';
 
 export interface CreateDefaultEmbedOptions {
-    fields?: { name: string; value: string; inline?: boolean }[];
-    footer?: { text: string; icon_url?: string };
+    fields?: EmbedField[];
+    footer?: EmbedFooter;
     title?: string;
     image?: string;
     thumbnail?: string;

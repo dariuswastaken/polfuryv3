@@ -1,10 +1,11 @@
 import { Guild } from 'npm:discord.js';
+import { EmbedField, EmbedFooter } from '../../../@types/discord/embed.types.ts';
 
 export interface CreateLogEmbedOptions {
     title: string;
-    fields: { name: string; value: string; inline?: boolean }[];
+    fields: EmbedField[];
     description: string;
-    footer: { text: string; icon_url?: string };
+    footer: EmbedFooter;
     channel: string;
     components: any[];
     guild: Guild;
