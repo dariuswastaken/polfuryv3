@@ -1,10 +1,11 @@
 import * as fileHandler from '../handlers/fileHandler.js';
-import { Pulsar } from '../../pulsar/index.pulsar.ts';
+import pulsarInstance from './pulsarInstance.js';
 import 'jsr:@std/dotenv/load';
+import client from './client.js';
+import pulsarInstance from './pulsarInstance.js';
 
-const client = Pulsar().createDiscordClient('all', 'all');
-const fileManager = Pulsar().fileManager.createInstance();
-const processManager = Pulsar().processManager.createInstance();
+const fileManager = pulsarInstance.fileManager.createInstance();
+const processManager = pulsarInstance.fileManager.createInstance();
 
 let readyState = 0;
 
