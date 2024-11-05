@@ -1,8 +1,10 @@
+import { EmbedField, EmbedFooter } from "../../@types/discord/embed.types";
+
 interface EmbedOptions {
     title?: string;
     description?: string;
-    fields?: Array<{ name: string; value: string; inline?: boolean }>;
-    footer?: string;
+    fields?: Array<EmbedField>;
+    footer?: EmbedFooter;
     color?: string;
 }
 
