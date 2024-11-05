@@ -1,4 +1,4 @@
-import { Query, Sort, Projection } from '../../@types/mongoClient.types';
+import { Query, Sort, Projection } from '../../@types/mongoClient.types.ts';
 
 export interface MongoClient {
     find(schema: string, query: Query): Promise<any | null>;
