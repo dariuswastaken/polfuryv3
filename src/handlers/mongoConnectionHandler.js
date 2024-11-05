@@ -1,4 +1,4 @@
 import { Pulsar } from '../../pulsar/index.pulsar.ts';
-const MongoClient = Pulsar().MongoClient;
+const mongoClient = Pulsar().mongoClient;
 
-export const db = new MongoClient();
+export const db = new mongoClient();
