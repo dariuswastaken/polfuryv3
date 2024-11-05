@@ -1,7 +1,5 @@
 import { REST, Routes } from 'npm:discord.js';
-import { Pulsar } from '../../pulsar/index.pulsar.ts';
-
-const client = Pulsar().client;
+import client from '../core/client.js';
 
 export const registerApplicationCommands = async () => {
     const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);

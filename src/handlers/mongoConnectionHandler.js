@@ -1,4 +1,4 @@
-import { Pulsar } from '../../pulsar/index.pulsar.ts';
-const mongoClient = Pulsar().mongoClient;
+import pulsarInstance from '../core/pulsarInstance';
+const mongoClient = pulsarInstance.mongoClient;
 
 export const db = new mongoClient();
