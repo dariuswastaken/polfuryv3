@@ -1,4 +1,4 @@
-import PulsarClient from '../../pulsar/src/client.pulsar';
+import PulsarClient from '../../pulsar/src/client.pulsar.ts';
 
 const pulsarInstance = PulsarClient.getInstance();
 
