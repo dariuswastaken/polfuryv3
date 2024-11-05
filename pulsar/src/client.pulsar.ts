@@ -7,7 +7,7 @@ import * as clients from '../exports/clients.ts';
 import config from '../.config/config.json' with { type: 'json' };
 
 export default class PulsarClient {
-    public MongoClient: any;
+    public mongoClient: any;
     public client: any;
     public utilsManager: any;
     public discordManager: any;
@@ -16,7 +16,7 @@ export default class PulsarClient {
     public webManager: any;
 
     constructor() {
-        this.MongoClient = clients.MongoClient;
+        this.mongoClient = clients.mongoClient;
         this.client = clients.client;
         this.utilsManager = utilsManager;
         this.discordManager = discordManager;
