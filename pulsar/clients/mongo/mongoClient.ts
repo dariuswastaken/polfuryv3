@@ -1,7 +1,7 @@
-import * as singleQueries from './mongo/functions/singleQueries.ts';
-import * as bulkQueries from './mongo/functions/bulkQueries.ts';
-import { MongoClient } from '../interfaces/mongo/mongoClient.interfaces.ts';
-import { init } from '../mongo/connection.ts';
+import * as singleQueries from '../mongo/functions/singleQueries.ts';
+import * as bulkQueries from '../mongo/functions/bulkQueries.ts';
+import { MongoClient } from '../../interfaces/mongo/mongoClient.interfaces.ts';
+import { init } from '../../mongo/connection.ts';
 
 export function mongoClient(): MongoClient {
     init();
