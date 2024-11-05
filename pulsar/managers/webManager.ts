@@ -8,7 +8,6 @@ const webManager: Manager<Object> = {
             getUserMdtData: webFunctions.getUserMdtData,
             isOnDuty: webFunctions.isOnDuty,
             getUserServerProfile: webFunctions.getUserServerProfile,
-            resetMDT: webFunctions.resetMDT
         };
     }
 };
