@@ -15,7 +15,9 @@ export default class PulsarClient {
     public processManager: any;
     public webManager: any;
 
-    constructor() {
+    private static instance: PulsarClient;
+
+    private constructor() {
         this.mongoClient = clients.mongoClient;
         this.createDiscordClient = clients.createDiscordClient;
         this.utilsManager = utilsManager;
@@ -24,6 +26,14 @@ export default class PulsarClient {
         this.processManager = processManager;
         this.webManager = webManager;
     }
+
+    public static getInstance(): PulsarClient {
+        if (!PulsarClient.instance) {
+            PulsarClient.instance = new PulsarClient();
+        }
+        return PulsarClient.instance;
+    }
+
     async config() {
         return config.pulsar;
     }
