@@ -1,5 +1,5 @@
 import Discord from 'npm:discord.js';
-import { Button } from '../../../../interfaces/discord/buttonInterface.ts';
+import { ButtonLayout } from '../../../../@types/discord/button.types.ts';
 import { ButtonMenuBuilderOptions } from '../../../../interfaces/discord/menus/buttonMenuBuilder.interfaces.ts';
 
 export const createButtonMenu = async ({
@@ -16,7 +16,7 @@ export const createButtonMenu = async ({
 
         let row = new Discord.ActionRowBuilder();
 
-        currentLine.forEach(async (button: Button) => {
+        currentLine.forEach(async (button: ButtonLayout) => {
             row.addComponents(
                 new Discord.ButtonBuilder()
                     .setCustomId(button.id)
