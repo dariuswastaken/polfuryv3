@@ -1,4 +1,4 @@
-import { IntentType } from '../../../@types/discord/intents.types';
+import { IntentType } from '../../../@types/discord/intents.types.ts';
 import { GatewayIntentBits } from 'npm:discord.js';
 
 export function convertToIntentTypes(intents: string | string[]): IntentType[] {

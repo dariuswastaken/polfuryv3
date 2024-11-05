@@ -1,4 +1,4 @@
-import { PartialsType } from '../../../@types/discord/partials.types';
+import { PartialsType } from '../../../@types/discord/partials.types.ts';
 import { Partials } from 'npm:discord.js';
 
 export function convertToPartialsTypes(partials: string | string[]): PartialsType[] {
