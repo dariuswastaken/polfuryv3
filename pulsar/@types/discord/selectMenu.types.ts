@@ -1,0 +1,1 @@
+export type SelectMenuOptionLayout = { label: string; value: string };
