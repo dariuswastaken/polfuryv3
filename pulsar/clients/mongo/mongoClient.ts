@@ -23,5 +23,5 @@ export function mongoClient(): MongoClient {
         findWProjection: singleQueries.findWProjection,
         findWSort: singleQueries.findWSort,
         findMoreWSort: bulkQueries.findMoreWSort
-    };
+    } as MongoClient;
 }
