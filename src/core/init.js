@@ -1,5 +1,4 @@
 import * as fileHandler from '../handlers/fileHandler.js';
-import pulsarInstance from './pulsarInstance.js';
 import 'jsr:@std/dotenv/load';
 import client from './client.js';
 import pulsarInstance from './pulsarInstance.js';
