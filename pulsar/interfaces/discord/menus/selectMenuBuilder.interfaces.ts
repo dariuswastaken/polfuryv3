@@ -1,4 +1,4 @@
-import { SelectMenuOptionLayout } from "../../../@types/discord/selectMenu.types.ts";
+import { SelectMenuOptionLayout } from '../../../@types/discord/selectMenu.types.ts';
 
 export interface SelectMenuBuilderOptions {
     type: any;
