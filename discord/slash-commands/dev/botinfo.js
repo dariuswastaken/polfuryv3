@@ -1,4 +1,5 @@
 import { PermissionsBitField, SlashCommandBuilder } from 'npm:discord.js';
+import config from '../../../src/.config/config.json' with { type: 'json' };
 import os from 'node:os';
 
 export default {
@@ -12,7 +13,7 @@ export default {
         let totalMemory = Math.round((os.totalmem() / 1024 / 1024) * 100) / 100;
 
         let cpu = os.cpus();
-        let cpuData = `${cpu[0].model} @ ${cpu[0].speed}MHz`;
+        let cpuData = `${cpu.model} @ ${cpu.speed}MHz`;
 
         let botLatency = Date.now() - interaction.createdTimestamp + 'ms';
 
@@ -32,12 +33,12 @@ export default {
             fields: [
                 {
                     name: 'Version',
-                    value: `${pulsar.version}`,
+                    value: `${config.version}`,
                     inline: true
                 },
                 {
                     name: 'Runtime',
-                    value: `node.js ${process.version}`,
+                    value: `Deno 2.0.4`,
                     inline: true
                 },
                 {
