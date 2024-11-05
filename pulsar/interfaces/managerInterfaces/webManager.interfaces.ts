@@ -1,5 +1,5 @@
 export interface WebInstance {
-    getUserMdtData: (userId: string) => Promise<any>;
-    isOnDuty: (userId: string) => Promise<boolean>;
-    getUserServerProfile: (userId: string) => Promise<any>;
+    getUserMdtData: (userId: number) => Promise<any>;
+    isOnDuty: (userId: number) => Promise<undefined | boolean>;
+    getUserServerProfile: (userId: number) => Promise<any>;
 }
