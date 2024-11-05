@@ -7,7 +7,7 @@ export default {
             if (interaction.user.bot) return;
             if (!interaction.isModalSubmit()) return;
 
-            const client = Pulsar().client;
+            const client = Pulsar.client;
 
             const pulsar = {
                 client: client,

@@ -6,7 +6,7 @@ export default {
         Pulsar.client.on('interactionCreate', async (interaction) => {
             if (interaction.user.bot) return;
 
-            const client = Pulsar().client;
+            const client = Pulsar.client;
 
             const pulsar = {
                 client: client,
