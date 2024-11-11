@@ -4,7 +4,7 @@ module.exports = {
             name: 'polfury',
             script: './index.js',
             interpreter: 'deno',
-            interpreterArgs: 'run --allow-net --allow-read --allow-write --allow-env --allow-sys'
+            interpreterArgs: 'run --allow-net --allow-read --allow-write --allow-env --allow-sys --allow-import'
         }
     ]
 };
