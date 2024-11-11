@@ -20,41 +20,9 @@ export const createLogsManager = async (): Promise<void> => {
         fs.mkdirSync(path.join(__dirname, logsDir));
     }
 
-    const outPath = path.join(__dirname, logsDir, `log-${formattedDate}.log`);
+    /*const outPath = path.join(__dirname, logsDir, `log-${formattedDate}.log`);
     const errPath = path.join(__dirname, logsDir, `error-${formattedDate}.log`);
 
     const out = fs.createWriteStream(outPath);
-    const err = fs.createWriteStream(errPath);
-
-    console.log = function (msg: string): void {
-        const time = new Date();
-        const formattedTimeAndDate = time
-            .toLocaleString('de-DE', {
-                timeZone: 'Europe/Berlin'
-            })
-            .replace(', ', ' ');
-
-        if (typeof msg === 'object') {
-            msg = util.inspect(msg);
-        }
-
-        out.write(`[${formattedTimeAndDate}] ${msg}\n`);
-        process.stdout.write(`${msg}\n`);
-    };
-
-    console.error = function (msg: string): void {
-        const time = new Date();
-        const formattedTimeAndDate = time
-            .toLocaleString('de-DE', {
-                timeZone: 'Europe/Berlin'
-            })
-            .replace(', ', ' ');
-
-        if (typeof msg === 'object') {
-            msg = util.inspect(msg);
-        }
-
-        err.write(`[${formattedTimeAndDate}] ${msg}\n`);
-        process.stderr.write(`${msg}\n`);
-    };
+    const err = fs.createWriteStream(errPath);*/
 };
