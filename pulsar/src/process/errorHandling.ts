@@ -1,10 +1,13 @@
 import winston from 'npm:winston';
 import path from 'node:path';
+import { Loggings } from 'https://github.com/drylian/Loggings/blob/main/src/mod.ts';
+
+const logger = new Loggings('Loggings');
 
 const folder = 'logs';
 
 export const createErrorHandler = async (): Promise<void> => {
-    const logger = winston.createLogger({
+    const winstonLogger = winston.createLogger({
         level: 'info',
         format: winston.format.combine(winston.format.timestamp(), winston.format.json()),
         defaultMeta: { service: 'user-service' },
@@ -17,26 +20,26 @@ export const createErrorHandler = async (): Promise<void> => {
         ]
     });
 
-    logger.info('Logger initialized');
+    winstonLogger.info('Logger initialized');
 
     process.on('uncaughtException', (err: Error) => {
-        console.log('[ERROR LOG] ' + err.stack);
+        logger.info(`[ERROR LOG] ${err}.red`);
         process.exit(1);
     });
 
     process.on('unhandledRejection', (reason: unknown, promise: Promise<any>) => {
-        console.log('[ERROR LOG] ' + promise + ' ' + reason);
+        logger.info(`[ERROR LOG] ` + promise + ' ' + reason + '.red');
         process.exit(1);
     });
 
     process.on('warning', (warning: unknown) => {
-        console.warn('[WARNING LOG] ' + warning);
+        logger.info(`[WARNING LOG] ${warning}.yellow`);
         return;
     });
 
     process.on('beforeExit', (code: number) => {
-        console.log('[SYSTEM] Exiting with code ' + code);
+        logger.info('[SYSTEM] Exiting with code ' + code + '.red');
     });
 
-    console.log('[SYSTEM] Error handler deployed.');
+    logger.info('[SYSTEM] Error handler deployed..green');
 };
