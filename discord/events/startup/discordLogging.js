@@ -3,7 +3,7 @@ export default {
     async execute(Pulsar) {
         Pulsar.client.on('ready', async () => {
             const logsChannel = Pulsar.client.channels.cache.get('1305336008774127729');
-            const errorChannel = Pulsar.client.channels.cache.get('1305336008774127729');
+            const errorChannel = Pulsar.client.channels.cache.get('1305335975693647882');
 
             const time = new Date();
             const formattedTimeAndDate = time
