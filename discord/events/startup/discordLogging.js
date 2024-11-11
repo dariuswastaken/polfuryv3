@@ -5,6 +5,7 @@ export default {
             const logsChannel = Pulsar.client.channels.cache.get('1305336008774127729');
             const errorChannel = Pulsar.client.channels.cache.get('1305336008774127729');
 
+            const time = new Date();
             const formattedTimeAndDate = time
                 .toLocaleString('de-DE', {
                     timeZone: 'Europe/Berlin'
