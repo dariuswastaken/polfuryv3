@@ -12,8 +12,8 @@ export default {
                 })
                 .replace(', ', ' ');
 
-            logsChannel.send(`[INFO] Restart at ${formattedTimeAndDate}`);
-            errorChannel.send(`[INFO] Restart at ${formattedTimeAndDate}`);
+            logsChannel.send(`[INFO] Restart at ${formattedTimeAndDate} GMT+1`);
+            errorChannel.send(`[INFO] Restart at ${formattedTimeAndDate} GMT+1`);
 
             console.log = function (msg) {
                 const time = new Date();
